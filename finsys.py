@@ -268,74 +268,68 @@ def main_sign_in():
         dcanvas.coords("line15", dwidth/1.28, dheight/2.002, dwidth/1.28, dheight/1.274)
         dcanvas.coords("line16", dwidth/1.14, dheight/2.002, dwidth/1.14, dheight/1.274)
 
+        r1 = 25
         x1 = dwidth/63
         x2 = dwidth/1.021
         y1 = dheight/14 
         y2 = dheight/3.505
-        x1pr = dwidth/28.15
-        x2mr = dwidth/1.0514
-        y1pr = dheight/9.34
-        y2mr = dheight/4
 
-        dcanvas.coords("poly1",x1pr,y1,
-        x1pr,y1,
-        x2mr,y1,
-        x2mr,y1,     
+        dcanvas.coords("poly1",x1 + r1,y1,
+        x1 + r1,y1,
+        x2 - r1,y1,
+        x2 - r1,y1,     
         x2,y1,     
         #--------------------
-        x2,y1pr,     
-        x2,y1pr,     
-        x2,y2mr,     
-        x2,y2mr,     
+        x2,y1 + r1,     
+        x2,y1 + r1,     
+        x2,y2 - r1,     
+        x2,y2 - r1,     
         x2,y2,
         #--------------------
-        x2mr,y2,     
-        x2mr,y2,     
-        x1pr,y2,
-        x1pr,y2,
+        x2 - r1,y2,     
+        x2 - r1,y2,     
+        x1 + r1,y2,
+        x1 + r1,y2,
         x1,y2,
         #--------------------
-        x1,y2mr,
-        x1,y2mr,
-        x1,y1pr,
-        x1,y1pr,
+        x1,y2 - r1,
+        x1,y2 - r1,
+        x1,y1 + r1,
+        x1,y1 + r1,
         x1,y1,
         )
 
         dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
-
+        
+        r2 = 25
         x11 = dwidth/63
         x21 = dwidth/1.021
         y11 = dheight/2.8
         y21 = dheight/1.168
-        x11pr = dwidth/28.15
-        x21mr = dwidth/1.0514
-        y11pr = dheight/2.549
-        y21mr = dheight/1.219
 
 
-        dcanvas.coords("poly2",x11pr,y11,
-        x11pr,y11,
-        x21mr,y11,
-        x21mr,y11,     
+        dcanvas.coords("poly2",x11 + r2,y11,
+        x11 + r2,y11,
+        x21 - r2,y11,
+        x21 - r2,y11,     
         x21,y11,     
         #--------------------
-        x21,y11pr,     
-        x21,y11pr,     
-        x21,y21mr,     
-        x21,y21mr,     
+        x21,y11 + r2,     
+        x21,y11 + r2,     
+        x21,y21 - r2,     
+        x21,y21 - r2,     
         x21,y21,
         #--------------------
-        x21mr,y21,     
-        x21mr,y21,     
-        x11pr,y21,
-        x11pr,y21,
+        x21 - r2,y21,     
+        x21 - r2,y21,     
+        x11 + r2,y21,
+        x11 + r2,y21,
         x11,y21,
         #--------------------
-        x11,y21mr,
-        x11,y21mr,
-        x11,y11pr,
-        x11,y11pr,
+        x11,y21 - r2,
+        x11,y21 - r2,
+        x11,y11 + r2,
+        x11,y11 + r2,
         x11,y11,
         )
 
@@ -396,77 +390,72 @@ def main_sign_in():
             dwidth = event.width
             dheight = event.height
             dcanvas = event.widget
-            
+
+            r1 = 25
             x1 = dwidth/63
             x2 = dwidth/1.021
             y1 = dheight/14 
             y2 = dheight/3.505
-            x1pr = dwidth/28.15
-            x2mr = dwidth/1.0514
-            y1pr = dheight/9.34
-            y2mr = dheight/4
 
-            dcanvas.coords("poly1",x1pr,y1,
-            x1pr,y1,
-            x2mr,y1,
-            x2mr,y1,     
+            dcanvas.coords("poly1",x1 + r1,y1,
+            x1 + r1,y1,
+            x2 - r1,y1,
+            x2 - r1,y1,     
             x2,y1,     
             #--------------------
-            x2,y1pr,     
-            x2,y1pr,     
-            x2,y2mr,     
-            x2,y2mr,     
+            x2,y1 + r1,     
+            x2,y1 + r1,     
+            x2,y2 - r1,     
+            x2,y2 - r1,     
             x2,y2,
             #--------------------
-            x2mr,y2,     
-            x2mr,y2,     
-            x1pr,y2,
-            x1pr,y2,
+            x2 - r1,y2,     
+            x2 - r1,y2,     
+            x1 + r1,y2,
+            x1 + r1,y2,
             x1,y2,
             #--------------------
-            x1,y2mr,
-            x1,y2mr,
-            x1,y1pr,
-            x1,y1pr,
+            x1,y2 - r1,
+            x1,y2 - r1,
+            x1,y1 + r1,
+            x1,y1 + r1,
             x1,y1,
             )
 
             dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
-
+            
+            r2 = 25
             x11 = dwidth/63
             x21 = dwidth/1.021
             y11 = dheight/2.8
             y21 = dheight/0.6
-            x11pr = dwidth/28.15
-            x21mr = dwidth/1.0514
-            y11pr = dheight/2.549
-            y21mr = dheight/0.62
 
 
-            dcanvas.coords("poly2",x11pr,y11,
-            x11pr,y11,
-            x21mr,y11,
-            x21mr,y11,     
+            dcanvas.coords("poly2",x11 + r2,y11,
+            x11 + r2,y11,
+            x21 - r2,y11,
+            x21 - r2,y11,     
             x21,y11,     
             #--------------------
-            x21,y11pr,     
-            x21,y11pr,     
-            x21,y21mr,     
-            x21,y21mr,     
+            x21,y11 + r2,     
+            x21,y11 + r2,     
+            x21,y21 - r2,     
+            x21,y21 - r2,     
             x21,y21,
             #--------------------
-            x21mr,y21,     
-            x21mr,y21,     
-            x11pr,y21,
-            x11pr,y21,
+            x21 - r2,y21,     
+            x21 - r2,y21,     
+            x11 + r2,y21,
+            x11 + r2,y21,
             x11,y21,
             #--------------------
-            x11,y21mr,
-            x11,y21mr,
-            x11,y11pr,
-            x11,y11pr,
+            x11,y21 - r2,
+            x11,y21 - r2,
+            x11,y11 + r2,
+            x11,y11 + r2,
             x11,y11,
             )
+            
 
             dcanvas.coords("label1",dwidth/2,dheight/8.24)
             dcanvas.coords("label2",dwidth/2,dheight/2.4)
@@ -485,15 +474,25 @@ def main_sign_in():
             dcanvas.coords("label15",dwidth/2.1,dheight/0.97)
             dcanvas.coords("label16",dwidth/1.42,dheight/0.97)
             dcanvas.coords("label17",dwidth/1.14,dheight/0.97)
-            dcanvas.coords("label18",dwidth/1.49,dheight/0.87)
-            dcanvas.coords("label19",dwidth/1.49,dheight/0.81)
+            dcanvas.coords("label18",dwidth/1.49,dheight/0.819)
+            dcanvas.coords("label19",dwidth/1.49,dheight/0.759)
+            dcanvas.coords("label20",dwidth/16.2,dheight/0.91)
 
             dcanvas.coords("entry1",dwidth/2.5,dheight/1.68)
             dcanvas.coords("entry2",dwidth/1.35,dheight/1.68)
             dcanvas.coords("entry3",dwidth/11,dheight/1.26)
             dcanvas.coords("entry4",dwidth/1.35,dheight/1.26)
-            dcanvas.coords("entry5",dwidth/1.18,dheight/0.87)
-            dcanvas.coords("entry6",dwidth/1.18,dheight/0.81)
+            dcanvas.coords("entry5",dwidth/1.18,dheight/0.819)
+            dcanvas.coords("entry6",dwidth/1.18,dheight/0.759)
+            try:
+                dcanvas.coords("entry7",dwidth/11,dheight/1.19)
+            except:
+                pass
+            dcanvas.coords("entry8",dwidth/5.9,dheight/0.91)
+            dcanvas.coords("entry9",dwidth/3.28,dheight/0.91)
+            dcanvas.coords("entry10",dwidth/2.07,dheight/0.91)
+            dcanvas.coords("entry11",dwidth/1.42,dheight/0.91)
+            dcanvas.coords("entry12",dwidth/1.135,dheight/0.91)
 
             dcanvas.coords("combo1",dwidth/11,dheight/1.68)
             dcanvas.coords("combo2",dwidth/1.35,dheight/1.43)
@@ -501,23 +500,24 @@ def main_sign_in():
             dcanvas.coords("button1",dwidth/4,dheight/1.638)
             dcanvas.coords("button2",dwidth/1.11,dheight/1.399)
             dcanvas.coords("button3",dwidth/27,dheight/3)
-            dcanvas.coords("button4",dwidth/1.28,dheight/0.74)
+            dcanvas.coords("button4",dwidth/1.114,dheight/0.70)
 
             dcanvas.coords("line1",dwidth/31.6,dheight/1.002,dwidth/1.039,dheight/1.002)
             dcanvas.coords("line2",dwidth/31.6,dheight/0.94,dwidth/1.039,dheight/0.94)
-            dcanvas.coords("line3",dwidth/31.6,dheight/1.002,dwidth/31.6,dheight/0.94)
-            dcanvas.coords("line4",dwidth/1.039,dheight/1.002,dwidth/1.039,dheight/0.94)
-            dcanvas.coords("line5",dwidth/11,dheight/1.002,dwidth/11,dheight/0.94)
-            dcanvas.coords("line6",dwidth/4,dheight/1.002,dwidth/4,dheight/0.94)
-            dcanvas.coords("line7",dwidth/2.8,dheight/1.002,dwidth/2.8,dheight/0.94)
-            dcanvas.coords("line8",dwidth/1.65,dheight/1.002,dwidth/1.65,dheight/0.94)
-            dcanvas.coords("line9",dwidth/1.25,dheight/1.002,dwidth/1.25,dheight/0.94)
-            dcanvas.coords("line10",dwidth/1.65,dheight/0.9,dwidth/1.65,dheight/0.78)
-            dcanvas.coords("line11",dwidth/1.039,dheight/0.9,dwidth/1.039,dheight/0.78)
-            dcanvas.coords("line12",dwidth/1.65,dheight/0.9,dwidth/1.039,dheight/0.9)
-            dcanvas.coords("line13",dwidth/1.65,dheight/0.78,dwidth/1.039,dheight/0.78)
-            dcanvas.coords("line14",dwidth/1.65,dheight/0.84,dwidth/1.039,dheight/0.84)
-            dcanvas.coords("line15",dwidth/1.36,dheight/0.9,dwidth/1.36,dheight/0.78)
+            dcanvas.coords("line3",dwidth/31.6,dheight/1.002,dwidth/31.6,dheight/0.878)
+            dcanvas.coords("line4",dwidth/1.039,dheight/1.002,dwidth/1.039,dheight/0.878)
+            dcanvas.coords("line5",dwidth/11,dheight/1.002,dwidth/11,dheight/0.878)
+            dcanvas.coords("line6",dwidth/4,dheight/1.002,dwidth/4,dheight/0.878)
+            dcanvas.coords("line7",dwidth/2.8,dheight/1.002,dwidth/2.8,dheight/0.878)
+            dcanvas.coords("line8",dwidth/1.65,dheight/1.002,dwidth/1.65,dheight/0.878)
+            dcanvas.coords("line9",dwidth/1.25,dheight/1.002,dwidth/1.25,dheight/0.878)
+            dcanvas.coords("line10",dwidth/1.65,dheight/0.85,dwidth/1.65,dheight/0.73)
+            dcanvas.coords("line11",dwidth/1.039,dheight/0.85,dwidth/1.039,dheight/0.73)
+            dcanvas.coords("line12",dwidth/1.65,dheight/0.85,dwidth/1.039,dheight/0.85)
+            dcanvas.coords("line13",dwidth/1.65,dheight/0.73,dwidth/1.039,dheight/0.73)
+            dcanvas.coords("line14",dwidth/1.65,dheight/0.785,dwidth/1.039,dheight/0.785)
+            dcanvas.coords("line15",dwidth/1.36,dheight/0.85,dwidth/1.36,dheight/0.73)
+            dcanvas.coords("line16",dwidth/31.6,dheight/0.878,dwidth/1.039,dheight/0.878)
 
         sr_Canvas_1 = Canvas(sr_Frame_1,bg='#2f516f',scrollregion=(0,0,700,1200))
 
@@ -558,74 +558,68 @@ def main_sign_in():
                     dheight = event.height
                     dcanvas = event.widget
                     
+                    r1 = 25
                     x1 = dwidth/63
                     x2 = dwidth/1.021
                     y1 = dheight/14 
                     y2 = dheight/3.505
-                    x1pr = dwidth/28.15
-                    x2mr = dwidth/1.0514
-                    y1pr = dheight/9.34
-                    y2mr = dheight/4
 
-                    dcanvas.coords("poly1",x1pr,y1,
-                    x1pr,y1,
-                    x2mr,y1,
-                    x2mr,y1,     
+                    dcanvas.coords("poly1",x1 + r1,y1,
+                    x1 + r1,y1,
+                    x2 - r1,y1,
+                    x2 - r1,y1,     
                     x2,y1,     
                     #--------------------
-                    x2,y1pr,     
-                    x2,y1pr,     
-                    x2,y2mr,     
-                    x2,y2mr,     
+                    x2,y1 + r1,     
+                    x2,y1 + r1,     
+                    x2,y2 - r1,     
+                    x2,y2 - r1,     
                     x2,y2,
                     #--------------------
-                    x2mr,y2,     
-                    x2mr,y2,     
-                    x1pr,y2,
-                    x1pr,y2,
+                    x2 - r1,y2,     
+                    x2 - r1,y2,     
+                    x1 + r1,y2,
+                    x1 + r1,y2,
                     x1,y2,
                     #--------------------
-                    x1,y2mr,
-                    x1,y2mr,
-                    x1,y1pr,
-                    x1,y1pr,
+                    x1,y2 - r1,
+                    x1,y2 - r1,
+                    x1,y1 + r1,
+                    x1,y1 + r1,
                     x1,y1,
                     )
 
                     dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
-
+                    
+                    r2 = 25
                     x11 = dwidth/63
                     x21 = dwidth/1.021
                     y11 = dheight/2.8
                     y21 = dheight/0.6
-                    x11pr = dwidth/28.15
-                    x21mr = dwidth/1.0514
-                    y11pr = dheight/2.549
-                    y21mr = dheight/0.62
 
 
-                    dcanvas.coords("poly2",x11pr,y11,
-                    x11pr,y11,
-                    x21mr,y11,
-                    x21mr,y11,     
+                    dcanvas.coords("poly2",x11 + r2,y11,
+                    x11 + r2,y11,
+                    x21 - r2,y11,
+                    x21 - r2,y11,     
                     x21,y11,     
                     #--------------------
-                    x21,y11pr,     
-                    x21,y11pr,     
-                    x21,y21mr,     
-                    x21,y21mr,     
+                    x21,y11 + r2,     
+                    x21,y11 + r2,     
+                    x21,y21 - r2,     
+                    x21,y21 - r2,     
                     x21,y21,
                     #--------------------
-                    x21mr,y21,     
-                    x21mr,y21,     
-                    x11pr,y21,
-                    x11pr,y21,
+                    x21 - r2,y21,     
+                    x21 - r2,y21,     
+                    x11 + r2,y21,
+                    x11 + r2,y21,
                     x11,y21,
                     #--------------------
-                    x11,y21mr,
-                    x11,y21mr,
-                    x11,y11pr,
-                    x11,y11pr,
+                    x11,y21 - r2,
+                    x11,y21 - r2,
+                    x11,y11 + r2,
+                    x11,y11 + r2,
                     x11,y11,
                     )
 
@@ -654,6 +648,8 @@ def main_sign_in():
                     dcanvas.coords("label23",dwidth/2.62,dheight/0.76)
                     dcanvas.coords("label24",dwidth/1.7,dheight/0.76)
                     dcanvas.coords("label25",dwidth/1.185,dheight/0.76)
+                    dcanvas.coords("label26",dwidth/1.28,dheight/1.087)
+                    dcanvas.coords("label27",dwidth/6.3,dheight/0.709)
 
                     dcanvas.coords("line1",dwidth/21,dheight/2.2,dwidth/1.055,dheight/2.2)
 
@@ -681,7 +677,9 @@ def main_sign_in():
                     dcanvas.coords("entry20",dwidth/1.296,dheight/0.749)
 
                     dcanvas.coords("check1",dwidth/1.45,dheight/1.11)
+                    dcanvas.coords("check2",dwidth/20,dheight/0.72)
 
+                    dcanvas.coords("button1",dwidth/2,dheight/0.655)
                 sr_Canvas_2 = Canvas(sr_Frame_2,bg='#2f516f',scrollregion=(0,0,700,1200))
 
                 sr_Frame_2.grid_columnconfigure(0,weight=1)
@@ -838,8 +836,20 @@ def main_sign_in():
                 cust_country1 = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_country1,tags=("entry20"))
 
-                cust_sameb = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857')
+                cust_sameb = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_sameb,tags=("check1"))
+
+                cust_label26 = Label(sr_Canvas_2,width=20,height=1,text="Same as billing address",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=cust_label26,tags=('label26'))
+
+                cust_term = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_term,tags=("check2"))
+
+                cust_label27 = Label(sr_Canvas_2,width=25,height=1,text="Agree to terms and conditions",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=cust_label27,tags=('label27'))
+                
+                cust_save = Button(sr_Canvas_2,text="Save",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                sr_Canvas_2.create_window(0,0,window=cust_save,tags=("button1"))
 
             rp_plus = Button(sr_Canvas_1,text='',bd=0,image=plus,activebackground='#1b3857',background='#1b3857',command=lambda:sr_addCustomer())
             sr_Canvas_1.create_window(0,0,window=rp_plus,tags=("button1"))
@@ -859,7 +869,17 @@ def main_sign_in():
             rp_label6 = Label(sr_Canvas_1,width=20,height=1,text="Payment method",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=rp_label6,tags=("label7"))
 
-            rp_pmethod = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            def addnew_pmethod(event):
+                if rp_pmethod.get() == "Add new":
+                    rp_newmeth = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+                    sr_Canvas_1.create_window(115,476,anchor='nw',window=rp_newmeth,tags=("entry7"))
+                else:
+                    pass
+
+            rp_pmethod = ttk.Combobox(sr_Canvas_1,width=33,background='#2f516f')
+            rp_pmethod['values'] = ['Add new',]
+            rp_pmethod.current(0)
+            rp_pmethod.bind("<<ComboboxSelected>>",addnew_pmethod)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_pmethod,tags=("entry3"))
 
             rp_label7 = Label(sr_Canvas_1,width=20,height=1,text="Deposit to",font=('arial 12'),background='#1b3857',fg="white",anchor="nw")
@@ -868,7 +888,184 @@ def main_sign_in():
             rp_depositto = ttk.Combobox(sr_Canvas_1,width=28)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_depositto,tags=("combo2"))
 
-            rp_plus1 = Button(sr_Canvas_1,text='',bd=0,image=plus,activebackground='#1b3857',background='#1b3857')
+            def add_depositTo():
+                sr_Frame_1.grid_forget()
+                sr_Frame_3 = Frame(tab3_1,)
+                sr_Frame_3.grid(row=0,column=0,sticky='nsew')
+
+                def responsive_widgets3(event):
+                    dwidth = event.width
+                    dheight = event.height
+                    dcanvas = event.widget
+
+                    r1 = 25
+                    x1 = dwidth/63
+                    x2 = dwidth/1.021
+                    y1 = dheight/14 
+                    y2 = dheight/3.505
+
+                    dcanvas.coords("poly1",x1 + r1,y1,
+                    x1 + r1,y1,
+                    x2 - r1,y1,
+                    x2 - r1,y1,     
+                    x2,y1,     
+                    #--------------------
+                    x2,y1 + r1,     
+                    x2,y1 + r1,     
+                    x2,y2 - r1,     
+                    x2,y2 - r1,     
+                    x2,y2,
+                    #--------------------
+                    x2 - r1,y2,     
+                    x2 - r1,y2,     
+                    x1 + r1,y2,
+                    x1 + r1,y2,
+                    x1,y2,
+                    #--------------------
+                    x1,y2 - r1,
+                    x1,y2 - r1,
+                    x1,y1 + r1,
+                    x1,y1 + r1,
+                    x1,y1,
+                    )
+
+                    dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
+                    
+                    r2 = 25
+                    x11 = dwidth/63
+                    x21 = dwidth/1.021
+                    y11 = dheight/2.8
+                    y21 = dheight/0.95
+
+
+                    dcanvas.coords("poly2",x11 + r2,y11,
+                    x11 + r2,y11,
+                    x21 - r2,y11,
+                    x21 - r2,y11,     
+                    x21,y11,     
+                    #--------------------
+                    x21,y11 + r2,     
+                    x21,y11 + r2,     
+                    x21,y21 - r2,     
+                    x21,y21 - r2,     
+                    x21,y21,
+                    #--------------------
+                    x21 - r2,y21,     
+                    x21 - r2,y21,     
+                    x11 + r2,y21,
+                    x11 + r2,y21,
+                    x11,y21,
+                    #--------------------
+                    x11,y21 - r2,
+                    x11,y21 - r2,
+                    x11,y11 + r2,
+                    x11,y11 + r2,
+                    x11,y11,
+                    )
+
+                    dcanvas.coords("label1",dwidth/2,dheight/8.24)
+                    dcanvas.coords("label2",dwidth/4.58,dheight/2.44)
+                    dcanvas.coords("label3",dwidth/1.59,dheight/2.44)
+                    dcanvas.coords("label4",dwidth/4.58,dheight/1.99)
+                    dcanvas.coords("label5",dwidth/1.59,dheight/1.99)
+                    dcanvas.coords("label6",dwidth/1.55,dheight/1.67)
+                    dcanvas.coords("label7",dwidth/1.59,dheight/1.43)
+
+                    dcanvas.coords("entry1",dwidth/6.9,dheight/2.32)
+                    dcanvas.coords("entry2",dwidth/1.8,dheight/2.32)
+                    dcanvas.coords("entry3",dwidth/6.9,dheight/1.91)
+                    dcanvas.coords("entry4",dwidth/1.8,dheight/1.91)
+                    dcanvas.coords("entry5",dwidth/6.9,dheight/1.7)
+                    dcanvas.coords("entry6",dwidth/1.8,dheight/1.6)
+                    dcanvas.coords("entry7",dwidth/1.8,dheight/1.385)
+
+                    dcanvas.coords("check1",dwidth/1.81,dheight/1.73)
+
+                    dcanvas.coords("button1",dwidth/2,dheight/1.07)
+                    dcanvas.coords("button2",dwidth/27,dheight/3)
+
+                sr_Canvas_3 = Canvas(sr_Frame_3,bg='#2f516f',scrollregion=(0,0,700,1200))
+
+                sr_Frame_3.grid_columnconfigure(0,weight=1)
+                sr_Frame_3.grid_rowconfigure(0,weight=1)
+
+                sr_Scroll_2 = Scrollbar(sr_Frame_3,orient=VERTICAL)
+                sr_Scroll_2.grid(row=0,column=1,sticky='ns')
+                sr_Scroll_2.config(command=sr_Canvas_3.yview)
+                sr_Canvas_3.bind("<Configure>", responsive_widgets3)
+                sr_Canvas_3.config(yscrollcommand=sr_Scroll_2.set)
+                sr_Canvas_3.grid(row=0,column=0,sticky='nsew')
+
+                sr_Canvas_3.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
+                dep_label1 = Label(sr_Canvas_3,width=18,height=1,text="ACCOUNT CREATE",font=('arial 25'),background='#1b3857',fg="white")
+                sr_Canvas_3.create_window(0,0,anchor="c",window=dep_label1,tags=("label1"))
+                sr_Canvas_3.create_line(0,0,0,0,fill='gray',width=1,tags=("hline"))
+
+                sr_Canvas_3.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly2"))
+
+                dep_label2 = Label(sr_Canvas_3,width=20,height=1,text="Account type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label2,tags=("label2"))
+
+                dep_acctype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_acctype,tags=("entry1"))
+
+                dep_label3 = Label(sr_Canvas_3,width=20,height=1,text="*Name",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label3,tags=("label3"))
+
+                dep_name = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_name,tags=("entry2"))
+
+                dep_label4 = Label(sr_Canvas_3,width=20,height=1,text="*Detail Type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label4,tags=("label4"))
+
+                dep_dtype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtype,tags=("entry3"))
+
+                dep_label5 = Label(sr_Canvas_3,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label5,tags=("label5"))
+
+                dep_desp = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_desp,tags=("entry4"))
+
+                dep_term = Text(sr_Canvas_3,width=45,height=8,background='#2f516f',foreground='white')
+                term_txt = "Use Cash and Cash Equivalents to track cash or assets that can be converted into cash immediately. For example, marketable securities and Treasury bills."
+                dep_term.insert('1.0',term_txt)
+                dep_term.config(state=DISABLED)
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_term,tags=("entry5"))
+
+                def sr_subAccount():
+                    if subaccVar.get() == True:
+                        dep_subacc["state"] = NORMAL
+                    else:
+                        dep_subacc["state"] = DISABLED
+
+                subaccVar = BooleanVar()
+                dep_subcheck = Checkbutton(sr_Canvas_3,variable=subaccVar,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857",command=sr_subAccount)
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_subcheck,tags=("check1"))
+
+                dep_label6 = Label(sr_Canvas_3,width=20,height=1,text="Is sub-account",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label6,tags=("label6"))
+
+                dep_subacc = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white',state=DISABLED)
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_subacc,tags=("entry6"))
+
+                dep_label7 = Label(sr_Canvas_3,width=20,height=1,text="Default Tax Code",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+                sr_Canvas_3.create_window(0,0,window=dep_label7,tags=("label7"))
+
+                dep_dtaxcode = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtaxcode,tags=("entry7"))
+
+                dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                sr_Canvas_3.create_window(0,0,window=dep_save,tags=("button1"))
+
+                def goBack2():
+                    sr_Frame_3.grid_forget()
+                    sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+
+                back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack2())
+                sr_Canvas_3.create_window(0,0,window=back_btn,tags=("button2"))
+
+            rp_plus1 = Button(sr_Canvas_1,text='',bd=0,image=plus,activebackground='#1b3857',background='#1b3857',command=lambda:add_depositTo())
             sr_Canvas_1.create_window(0,0,window=rp_plus1,tags=("button2"))
 
             rp_label8 = Label(sr_Canvas_1,width=20,height=1,text="Amount recieved",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -892,6 +1089,7 @@ def main_sign_in():
             sr_Canvas_1.create_line(0,0,0,0,fill='gray',width=1,tags=("line7"))
             sr_Canvas_1.create_line(0,0,0,0,fill='gray',width=1,tags=("line8"))
             sr_Canvas_1.create_line(0,0,0,0,fill='gray',width=1,tags=("line9"))
+            sr_Canvas_1.create_line(0,0,0,0,fill='gray',width=1,tags=("line16"))
 
             rpt_label1 = Label(sr_Canvas_1,width=5,height=1,text="#", font=('arial 10 bold'),background='#1b3857',fg="white") 
             sr_Canvas_1.create_window(0, 0, anchor="c", window=rpt_label1,tags=("label12"))
@@ -937,14 +1135,39 @@ def main_sign_in():
             back_btn = Button(sr_Canvas_1,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack())
             sr_Canvas_1.create_window(0,0,window=back_btn,tags=("button3")) 
 
-            save_btn = Button(sr_Canvas_1,text='Save',font=('arial 10 bold'),activebackground='#2f516f',foreground='white',background='#2f516f',padx=30)
+            save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
             sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button4")) 
+
+            rpt_label9 = Label(sr_Canvas_1,width=5,height=1,text="1",font=('arial 12'),background='#1b3857',fg="white",anchor="c")
+            sr_Canvas_1.create_window(0,0,window=rpt_label9,tags=("label20"))
+
+            rpt_descp = Entry(sr_Canvas_1,width=30,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_descp,tags=("entry8")) 
+
+            rpt_due = Entry(sr_Canvas_1,width=19,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_due,tags=("entry9")) 
+
+            rpt_original = Entry(sr_Canvas_1,width=48,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_original,tags=("entry10")) 
+
+            rpt_obal = Entry(sr_Canvas_1,width=37,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_obal,tags=("entry11"))
+
+            rpt_payment = Entry(sr_Canvas_1,width=30,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_payment,tags=("entry12")) 
 
             rp_label5 = Label(sr_Canvas_1,width=20,height=1,text="Payment date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=rp_label5,tags=("label6"))
 
             rp_pdate = DateEntry(sr_Canvas_1,width=33,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(115,398,anchor='nw',window=rp_pdate)
+        elif sr_transCombo.get() == 'Sales Receipt':
+            sr_Canvas_1.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
+            rp_label = Label(sr_Canvas_1,width=18,height=1,text="CASH MEMO",font=('arial 25'),background='#1b3857',fg="white")
+            sr_Canvas_1.create_window(0,0,anchor="c",window=rp_label,tags=("label1"))
+            sr_Canvas_1.create_line(0,0,0,0,fill='gray',width=1,tags=("hline"))
+
+            sr_Canvas_1.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly2"))
         else:
             pass
         
