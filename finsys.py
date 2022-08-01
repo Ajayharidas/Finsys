@@ -495,7 +495,7 @@ def main_sign_in():
             x11 = dwidth/63
             x21 = dwidth/1.021
             y11 = dheight/2.8
-            y21 = dheight/0.55
+            y21 = dheight/0.68
 
 
             dcanvas.coords("poly4",x11 + r2,y11,
@@ -532,12 +532,12 @@ def main_sign_in():
                 dcanvas.coords("label3",dwidth/7.91,dheight/1.76)
                 dcanvas.coords("label4",dwidth/2.28,dheight/1.76)
                 dcanvas.coords("label5",dwidth/1.23,dheight/1.76)
-                dcanvas.coords("label6",dwidth/6.1,dheight/1.49)
-                dcanvas.coords("label7",dwidth/6.1,dheight/1.3)
-                dcanvas.coords("label8",dwidth/1.23,dheight/1.49)
-                dcanvas.coords("label9",dwidth/1.23,dheight/1.3)
-                dcanvas.coords("label10",dwidth/1.23,dheight/1.14)
-                dcanvas.coords("label11",dwidth/1.23,dheight/1.09)
+                dcanvas.coords("label6",dwidth/6.1,dheight/1.445)
+                dcanvas.coords("label7",dwidth/6.1,dheight/1.235)
+                dcanvas.coords("label8",dwidth/1.23,dheight/1.445)
+                dcanvas.coords("label9",dwidth/1.23,dheight/1.235)
+                dcanvas.coords("label10",dwidth/1.23,dheight/1.09)
+                dcanvas.coords("label11",dwidth/1.23,dheight/1.04)
                 dcanvas.coords("label12",dwidth/16.2,dheight/0.97)
                 dcanvas.coords("label13",dwidth/5.9,dheight/0.97)
                 dcanvas.coords("label14",dwidth/3.28,dheight/0.97)
@@ -550,12 +550,12 @@ def main_sign_in():
 
                 dcanvas.coords("entry1",dwidth/2.5,dheight/1.68)
                 dcanvas.coords("entry2",dwidth/1.35,dheight/1.68)
-                dcanvas.coords("entry3",dwidth/11,dheight/1.26)
-                dcanvas.coords("entry4",dwidth/1.35,dheight/1.26)
+                dcanvas.coords("entry3",dwidth/11,dheight/1.195)
+                dcanvas.coords("entry4",dwidth/1.35,dheight/1.195)
                 dcanvas.coords("entry5",dwidth/1.18,dheight/0.819)
                 dcanvas.coords("entry6",dwidth/1.18,dheight/0.759)
                 try:
-                    dcanvas.coords("entry7",dwidth/11,dheight/1.19)
+                    dcanvas.coords("entry7",dwidth/11,dheight/1.1)
                 except:
                     pass
                 dcanvas.coords("entry8",dwidth/5.9,dheight/0.91)
@@ -565,10 +565,10 @@ def main_sign_in():
                 dcanvas.coords("entry12",dwidth/1.135,dheight/0.91)
 
                 dcanvas.coords("combo1",dwidth/11,dheight/1.68)
-                dcanvas.coords("combo2",dwidth/1.35,dheight/1.43)
+                dcanvas.coords("combo2",dwidth/1.35,dheight/1.39)
 
-                dcanvas.coords("button1",dwidth/4,dheight/1.638)
-                dcanvas.coords("button2",dwidth/1.11,dheight/1.399)
+                dcanvas.coords("button1",dwidth/3.89,dheight/1.615)
+                dcanvas.coords("button2",dwidth/1.103,dheight/1.345)
                 dcanvas.coords("button3",dwidth/27,dheight/3)
                 dcanvas.coords("button4",dwidth/1.114,dheight/0.70)
 
@@ -639,6 +639,8 @@ def main_sign_in():
                 dcanvas.coords("label59",dwidth/2.4,dheight/1.28)
                 dcanvas.coords("label60",dwidth/1.598,dheight/1.28)
                 dcanvas.coords("label61",dwidth/1.212,dheight/1.28)
+                dcanvas.coords("label62",dwidth/2.4,dheight/1.105)
+                dcanvas.coords("label63",dwidth/2.4,dheight/0.979)
 
                 dcanvas.coords("entry13",dwidth/2.72,dheight/1.68)
                 dcanvas.coords("entry14",dwidth/11,dheight/1.39)
@@ -667,6 +669,8 @@ def main_sign_in():
 
                 dcanvas.coords("entry35",dwidth/1.81,dheight/1.24)
                 dcanvas.coords("entry36",dwidth/1.33,dheight/1.24)
+                dcanvas.coords("entry37",dwidth/2.91,dheight/1.08)
+                dcanvas.coords("entry38",dwidth/2.91,dheight/0.96)
 
                 dcanvas.coords("combo3",dwidth/11,dheight/1.68)
                 try:
@@ -693,6 +697,7 @@ def main_sign_in():
 
                 dcanvas.coords("button9",dwidth/1.09,dheight/2.04)
                 dcanvas.coords("button10",dwidth/1.09,dheight/1.66)
+                dcanvas.coords("button11",dwidth/1.57,dheight/0.79)
                 
                 dcanvas.coords("line17",dwidth/31.6,dheight/0.7,dwidth/1.039,dheight/0.7)
                 dcanvas.coords("line18",dwidth/31.6,dheight/0.66,dwidth/1.039,dheight/0.66)
@@ -746,6 +751,7 @@ def main_sign_in():
                 dcanvas.coords("date1",dwidth/1.73,dheight/1.392)
                 dcanvas.coords("date2",dwidth/11,dheight/1.392)
                 dcanvas.coords("date3",dwidth/2.91,dheight/2.154)
+                dcanvas.coords("date4",dwidth/11,dheight/1.39)
             except:
                 pass
 
@@ -778,7 +784,7 @@ def main_sign_in():
             rp_label2 = Label(sr_Canvas_1,width=10,height=1,text="Customer",font=('arial 12'),background='#1b3857',fg="white",anchor='w')
             sr_Canvas_1.create_window(0,0,window=rp_label2,tags=("label3"))
 
-            rp_custCombo = ttk.Combobox(sr_Canvas_1,width=28)
+            rp_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_custCombo,tags=("combo1"))
 
             global sr_addCustomer
@@ -943,67 +949,67 @@ def main_sign_in():
                 cust_label3 = Label(sr_Canvas_2,width=20,height=1,text="Title",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label3,tags=('label3'))
 
-                cust_title = ttk.Combobox(sr_Canvas_2,width=33)
+                cust_title = ttk.Combobox(sr_Canvas_2,width=19,font=('arial 15'))
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_title,tags=("combo1"))
 
                 cust_label4 = Label(sr_Canvas_2,width=20,height=1,text="First name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label4,tags=('label4'))
 
-                cust_fname = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_fname = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_fname,tags=("entry2"))
 
                 cust_label5 = Label(sr_Canvas_2,width=20,height=1,text="Last name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label5,tags=('label5'))
 
-                cust_lname = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_lname = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_lname,tags=("entry3"))
 
                 cust_label6 = Label(sr_Canvas_2,width=20,height=1,text="Company",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label6,tags=('label6'))
 
-                cust_company = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_company = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_company,tags=("entry4"))
 
                 cust_label7 = Label(sr_Canvas_2,width=20,height=1,text="Location",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label7,tags=('label7'))
 
-                cust_location = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_location = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_location,tags=("entry5"))
 
                 cust_label8 = Label(sr_Canvas_2,width=20,height=1,text="GST type",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label8,tags=('label8'))
 
-                cust_gtype = ttk.Combobox(sr_Canvas_2,width=33)
+                cust_gtype = ttk.Combobox(sr_Canvas_2,width=19,font=('arial 15'))
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_gtype,tags=("combo2"))
 
                 cust_label9 = Label(sr_Canvas_2,width=20,height=1,text="GSTIN",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label9,tags=('label9'))
 
-                cust_gin = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_gin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_gin,tags=("entry6"))
 
                 cust_label10 = Label(sr_Canvas_2,width=20,height=1,text="PAN NO",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label10,tags=('label10'))
 
-                cust_pan = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_pan = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_pan,tags=("entry7"))
 
                 cust_label11 = Label(sr_Canvas_2,width=20,height=1,text="Email",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label11,tags=('label11'))
 
-                cust_email = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_email = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_email,tags=("entry8"))
 
                 cust_label12 = Label(sr_Canvas_2,width=20,height=1,text="Website",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label12,tags=('label12'))
 
-                cust_web = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_web = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_web,tags=("entry9"))
 
                 cust_label13 = Label(sr_Canvas_2,width=20,height=1,text="Mobile",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label13,tags=('label13'))
 
-                cust_mob = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_mob = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_mob,tags=("entry10"))
 
                 cust_label14 = Label(sr_Canvas_2,width=20,height=1,text="Billing Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -1012,7 +1018,7 @@ def main_sign_in():
                 cust_label15 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label15,tags=('label15'))
 
-                cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=65,height=4,background='#2f516f',foreground='white')
+                cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st1,tags=("entry11"))
 
                 cust_label17 = Label(sr_Canvas_2,width=20,height=1,text="Shipping Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -1021,55 +1027,55 @@ def main_sign_in():
                 cust_label16 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label16,tags=('label16'))
 
-                cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=65,height=4,background='#2f516f',foreground='white')
+                cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st2,tags=("entry12"))
 
                 cust_label18 = Label(sr_Canvas_2,width=20,height=1,text="City",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label18,tags=('label18'))
 
-                cust_city = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_city = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_city,tags=("entry13"))
 
                 cust_label19 = Label(sr_Canvas_2,width=20,height=1,text="State",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label19,tags=('label19'))
 
-                cust_state = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_state = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_state,tags=("entry14"))
 
                 cust_label20 = Label(sr_Canvas_2,width=20,height=1,text="City",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label20,tags=('label20'))
 
-                cust_city1 = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_city1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_city1,tags=("entry15"))
 
                 cust_label21 = Label(sr_Canvas_2,width=20,height=1,text="State",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label21,tags=('label21'))
 
-                cust_state1 = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_state1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_state1,tags=("entry16"))
                 #--
                 cust_label22 = Label(sr_Canvas_2,width=20,height=1,text="Pin code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label22,tags=('label22'))
 
-                cust_pin = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_pin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_pin,tags=("entry17"))
 
                 cust_label23 = Label(sr_Canvas_2,width=20,height=1,text="Country",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label23,tags=('label23'))
 
-                cust_country = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_country = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_country,tags=("entry18"))
 
                 cust_label24 = Label(sr_Canvas_2,width=20,height=1,text="Pin code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label24,tags=('label24'))
 
-                cust_pin1 = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_pin1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_pin1,tags=("entry19"))
 
                 cust_label25 = Label(sr_Canvas_2,width=20,height=1,text="Country",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label25,tags=('label25'))
 
-                cust_country1 = Entry(sr_Canvas_2,width=35,background='#2f516f',foreground='white')
+                cust_country1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_country1,tags=("entry20"))
 
                 cust_sameb = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
@@ -1084,29 +1090,29 @@ def main_sign_in():
                 cust_label27 = Label(sr_Canvas_2,width=25,height=1,text="Agree to terms and conditions",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label27,tags=('label27'))
                 
-                cust_save = Button(sr_Canvas_2,text="Save",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
                 sr_Canvas_2.create_window(0,0,window=cust_save,tags=("button1"))
 
-                def rp_goBack1():
+                def dc_goBack1():
                     sr_Frame_2.grid_forget()
                     sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                back_btn = Button(sr_Canvas_2,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:rp_goBack1())
+                back_btn = Button(sr_Canvas_2,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:dc_goBack1())
                 sr_Canvas_2.create_window(0,0,window=back_btn,tags=("button2"))
 
-            rp_plus = Button(sr_Canvas_1,text='',bd=0,image=plus,activebackground='#1b3857',background='#1b3857',command=lambda:sr_addCustomer())
+            rp_plus = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:sr_addCustomer())
             sr_Canvas_1.create_window(0,0,window=rp_plus,tags=("button1"))
 
             rp_label3 = Label(sr_Canvas_1,width=10,height=1,text="Email",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
             sr_Canvas_1.create_window(0,0,window=rp_label3,tags=('label4'))
 
-            rp_email = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            rp_email = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_email,tags=("entry1"))
 
             rp_label4 = Label(sr_Canvas_1,width=20,height=1,text="Find by invoice number",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=rp_label4,tags=("label5"))
 
-            rp_invnum = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            rp_invnum = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_invnum,tags=("entry2"))
 
             rp_label6 = Label(sr_Canvas_1,width=20,height=1,text="Payment method",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -1114,21 +1120,23 @@ def main_sign_in():
 
             def addnew_pmethod(event):
                 if rp_pmethod.get() == "Add new":
-                    rp_newmeth = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
-                    sr_Canvas_1.create_window(115,476,anchor='nw',window=rp_newmeth,tags=("entry7"))
+                    sr_Canvas_1.itemconfig("entry7",state='normal')
                 else:
-                    pass
+                    sr_Canvas_1.itemconfig("entry7",state='hidden')
 
-            rp_pmethod = ttk.Combobox(sr_Canvas_1,width=33,background='#2f516f')
-            rp_pmethod['values'] = ['Add new',]
+            rp_pmethod = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=19,background='#2f516f')
+            rp_pmethod['values'] = ['Add new','']
             rp_pmethod.current(0)
             rp_pmethod.bind("<<ComboboxSelected>>",addnew_pmethod)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_pmethod,tags=("entry3"))
 
+            rp_newmeth = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',state=HIDDEN,window=rp_newmeth,tags=("entry7"))
+
             rp_label7 = Label(sr_Canvas_1,width=20,height=1,text="Deposit to",font=('arial 12'),background='#1b3857',fg="white",anchor="nw")
             sr_Canvas_1.create_window(0,0,window=rp_label7,tags=("label8"))
 
-            rp_depositto = ttk.Combobox(sr_Canvas_1,width=28)
+            rp_depositto = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=15)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_depositto,tags=("combo2"))
 
             def add_depositTo():
@@ -1178,7 +1186,7 @@ def main_sign_in():
                     x11 = dwidth/63
                     x21 = dwidth/1.021
                     y11 = dheight/2.8
-                    y21 = dheight/0.95
+                    y21 = dheight/0.9
 
 
                     dcanvas.coords("poly2",x11 + r2,y11,
@@ -1207,24 +1215,24 @@ def main_sign_in():
                     )
 
                     dcanvas.coords("label1",dwidth/2,dheight/8.24)
-                    dcanvas.coords("label2",dwidth/4.58,dheight/2.44)
-                    dcanvas.coords("label3",dwidth/1.59,dheight/2.44)
-                    dcanvas.coords("label4",dwidth/4.58,dheight/1.99)
-                    dcanvas.coords("label5",dwidth/1.59,dheight/1.99)
-                    dcanvas.coords("label6",dwidth/1.55,dheight/1.67)
-                    dcanvas.coords("label7",dwidth/1.59,dheight/1.43)
+                    dcanvas.coords("label2",dwidth/8.2,dheight/2.44)
+                    dcanvas.coords("label3",dwidth/1.655,dheight/2.44)
+                    dcanvas.coords("label4",dwidth/8.2,dheight/1.89)
+                    dcanvas.coords("label5",dwidth/1.655,dheight/1.89)
+                    dcanvas.coords("label6",dwidth/1.605,dheight/1.522)
+                    dcanvas.coords("label7",dwidth/1.655,dheight/1.27)
 
-                    dcanvas.coords("entry1",dwidth/6.9,dheight/2.32)
-                    dcanvas.coords("entry2",dwidth/1.8,dheight/2.32)
-                    dcanvas.coords("entry3",dwidth/6.9,dheight/1.91)
-                    dcanvas.coords("entry4",dwidth/1.8,dheight/1.91)
-                    dcanvas.coords("entry5",dwidth/6.9,dheight/1.7)
-                    dcanvas.coords("entry6",dwidth/1.8,dheight/1.6)
-                    dcanvas.coords("entry7",dwidth/1.8,dheight/1.385)
+                    dcanvas.coords("entry1",dwidth/20,dheight/2.32)
+                    dcanvas.coords("entry2",dwidth/1.88,dheight/2.32)
+                    dcanvas.coords("entry3",dwidth/20,dheight/1.8)
+                    dcanvas.coords("entry4",dwidth/1.88,dheight/1.805)
+                    dcanvas.coords("entry5",dwidth/20,dheight/1.605)
+                    dcanvas.coords("entry6",dwidth/1.88,dheight/1.46)
+                    dcanvas.coords("entry7",dwidth/1.88,dheight/1.23)
 
-                    dcanvas.coords("check1",dwidth/1.81,dheight/1.73)
+                    dcanvas.coords("check1",dwidth/1.89,dheight/1.57)
 
-                    dcanvas.coords("button1",dwidth/2,dheight/1.07)
+                    dcanvas.coords("button1",dwidth/2,dheight/0.97)
                     dcanvas.coords("button2",dwidth/27,dheight/3)
 
                 sr_Canvas_3 = Canvas(sr_Frame_3,bg='#2f516f',scrollregion=(0,0,700,1200))
@@ -1249,28 +1257,28 @@ def main_sign_in():
                 dep_label2 = Label(sr_Canvas_3,width=20,height=1,text="Account type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label2,tags=("label2"))
 
-                dep_acctype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                dep_acctype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_acctype,tags=("entry1"))
 
                 dep_label3 = Label(sr_Canvas_3,width=20,height=1,text="*Name",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label3,tags=("label3"))
 
-                dep_name = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_name = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_name,tags=("entry2"))
 
                 dep_label4 = Label(sr_Canvas_3,width=20,height=1,text="*Detail Type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label4,tags=("label4"))
 
-                dep_dtype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                dep_dtype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtype,tags=("entry3"))
 
                 dep_label5 = Label(sr_Canvas_3,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label5,tags=("label5"))
 
-                dep_desp = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_desp = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_desp,tags=("entry4"))
 
-                dep_term = Text(sr_Canvas_3,width=45,height=8,background='#2f516f',foreground='white')
+                dep_term = Text(sr_Canvas_3,width=47,font=('arial 15'),height=7,background='#2f516f',foreground='white')
                 term_txt = "Use Cash and Cash Equivalents to track cash or assets that can be converted into cash immediately. For example, marketable securities and Treasury bills."
                 dep_term.insert('1.0',term_txt)
                 dep_term.config(state=DISABLED)
@@ -1289,13 +1297,13 @@ def main_sign_in():
                 dep_label6 = Label(sr_Canvas_3,width=20,height=1,text="Is sub-account",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label6,tags=("label6"))
 
-                dep_subacc = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white',state=DISABLED)
+                dep_subacc = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white',state=DISABLED)
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_subacc,tags=("entry6"))
 
                 dep_label7 = Label(sr_Canvas_3,width=20,height=1,text="Default Tax Code",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label7,tags=("label7"))
 
-                dep_dtaxcode = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_dtaxcode = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtaxcode,tags=("entry7"))
 
                 dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
@@ -1308,13 +1316,13 @@ def main_sign_in():
                 back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack2())
                 sr_Canvas_3.create_window(0,0,window=back_btn,tags=("button2"))
 
-            rp_plus1 = Button(sr_Canvas_1,text='',bd=0,image=plus,activebackground='#1b3857',background='#1b3857',command=lambda:add_depositTo())
+            rp_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:add_depositTo())
             sr_Canvas_1.create_window(0,0,window=rp_plus1,tags=("button2"))
 
             rp_label8 = Label(sr_Canvas_1,width=20,height=1,text="Amount recieved",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=rp_label8,tags=("label9"))
 
-            rp_amntre = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            rp_amntre = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_amntre,tags=("entry4"))
 
             rp_label9 = Label(sr_Canvas_1,width=20,height=1,text="AMOUNT RECIEVED",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -1362,13 +1370,13 @@ def main_sign_in():
             rpt_label7 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Apply", font=('arial 10 bold'),background='#1b3857',fg="white") 
             sr_Canvas_1.create_window(910, 825, anchor="c", window=rpt_label7,tags=("label18"))  
 
-            rp_amnttoapply = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            rp_amnttoapply = Entry(sr_Canvas_1,font=('arial 15'),width=24,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(1130,825,anchor='c',window=rp_amnttoapply,tags=("entry5"))   
 
             rpt_label8 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Credit", font=('arial 10 bold'),background='#1b3857',fg="white") 
             sr_Canvas_1.create_window(910, 875, anchor="c", window=rpt_label8,tags=("label19"))  
 
-            rp_amnttocredit = Entry(sr_Canvas_1,width=35,background='#2f516f',foreground='white')
+            rp_amnttocredit = Entry(sr_Canvas_1,font=('arial 15'),width=24,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(1130,875,anchor='c',window=rp_amnttocredit,tags=("entry6"))   
 
             def sr_goBack():
@@ -1384,26 +1392,36 @@ def main_sign_in():
             rpt_label9 = Label(sr_Canvas_1,width=5,height=1,text="1",font=('arial 12'),background='#1b3857',fg="white",anchor="c")
             sr_Canvas_1.create_window(0,0,window=rpt_label9,tags=("label20"))
 
-            rpt_descp = Entry(sr_Canvas_1,width=30,background='#2f516f',foreground='white')
+            rpt_descp = Entry(sr_Canvas_1,font=('arial 15'),width=16,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_descp,tags=("entry8")) 
 
-            rpt_due = Entry(sr_Canvas_1,width=19,background='#2f516f',foreground='white')
+            rpt_due = Entry(sr_Canvas_1,font=('arial 15'),width=10,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_due,tags=("entry9")) 
 
-            rpt_original = Entry(sr_Canvas_1,width=48,background='#2f516f',foreground='white')
+            rpt_original = Entry(sr_Canvas_1,font=('arial 15'),width=26,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_original,tags=("entry10")) 
 
-            rpt_obal = Entry(sr_Canvas_1,width=37,background='#2f516f',foreground='white')
+            rpt_obal = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_obal,tags=("entry11"))
 
-            rpt_payment = Entry(sr_Canvas_1,width=30,background='#2f516f',foreground='white')
+            rpt_payment = Entry(sr_Canvas_1,font=('arial 15'),width=17,background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_payment,tags=("entry12")) 
 
             rp_label5 = Label(sr_Canvas_1,width=20,height=1,text="Payment date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=rp_label5,tags=("label6"))
 
-            rp_pdate = DateEntry(sr_Canvas_1,width=33,background='#2f516f',foreground='white')
-            sr_Canvas_1.create_window(115,398,anchor='nw',window=rp_pdate)
+            rp_pdate = DateEntry(sr_Canvas_1,font=('arial 15'),width=19,background='#2f516f',foreground='white')
+
+            cwidth = root.winfo_screenwidth()
+
+            if cwidth > 1280:
+                sr_Canvas_1.create_window(122.27272727272727,442.44604316546764,anchor='nw',window=rp_pdate,tags=('date4'))
+            elif cwidth <= 1024:
+                sr_Canvas_1.create_window(91.54545454545455,456.1151079136691,anchor='nw',window=rp_pdate,tags=('date4'))
+            else:
+                sr_Canvas_1.create_window(114.81818181818181,407.9136690647482,anchor='nw',window=rp_pdate,tags=('date4'))
+
+            
         elif sr_transCombo.get() == 'Sales Receipt':
             sr_Canvas_1.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
             cm_label1 = Label(sr_Canvas_1,width=18,height=1,text="CASH MEMO",font=('arial 25'),background='#1b3857',fg="white")
@@ -1759,19 +1777,18 @@ def main_sign_in():
 
             def addnew_pmethod_1(event):
                 if cm_pmethod.get() == "Add new":
-                    cm_newmeth = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-                    sr_Canvas_1.create_window(115,755,anchor='nw',window=cm_newmeth,tags=("entry26"))
+                    sr_Canvas_1.itemconfig("entry26",state='normal')
                 else:
-                    try:
-                        sr_Canvas_1.itemconfig("entry26",state='hidden')
-                    except:
-                        pass
+                    sr_Canvas_1.itemconfig("entry26",state='hidden')
 
             cm_pmethod = ttk.Combobox(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f')
-            cm_pmethod['values'] = ['Add new',]
+            cm_pmethod['values'] = ['Add new','',]
             cm_pmethod.current(0)
             cm_pmethod.bind("<<ComboboxSelected>>",addnew_pmethod_1)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=cm_pmethod,tags=("entry16"))
+
+            cm_newmeth = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(115,755,anchor='nw',state=HIDDEN,window=cm_newmeth,tags=("entry26"))
 
             cm_label9 = Label(sr_Canvas_1,width=20,height=1,text="Reference No:",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
             sr_Canvas_1.create_window(0,0,window=cm_label9,tags=('label27'))
@@ -1789,7 +1806,7 @@ def main_sign_in():
                 sr_Frame_1.grid_forget()
                 sr_Frame_3 = Frame(tab3_1,)
                 sr_Frame_3.grid(row=0,column=0,sticky='nsew')
-    
+
                 def responsive_widgets3(event):
                     dwidth = event.width
                     dheight = event.height
@@ -1832,7 +1849,7 @@ def main_sign_in():
                     x11 = dwidth/63
                     x21 = dwidth/1.021
                     y11 = dheight/2.8
-                    y21 = dheight/0.95
+                    y21 = dheight/0.9
 
 
                     dcanvas.coords("poly2",x11 + r2,y11,
@@ -1861,24 +1878,24 @@ def main_sign_in():
                     )
 
                     dcanvas.coords("label1",dwidth/2,dheight/8.24)
-                    dcanvas.coords("label2",dwidth/4.58,dheight/2.44)
-                    dcanvas.coords("label3",dwidth/1.59,dheight/2.44)
-                    dcanvas.coords("label4",dwidth/4.58,dheight/1.99)
-                    dcanvas.coords("label5",dwidth/1.59,dheight/1.99)
-                    dcanvas.coords("label6",dwidth/1.55,dheight/1.67)
-                    dcanvas.coords("label7",dwidth/1.59,dheight/1.43)
+                    dcanvas.coords("label2",dwidth/8.2,dheight/2.44)
+                    dcanvas.coords("label3",dwidth/1.655,dheight/2.44)
+                    dcanvas.coords("label4",dwidth/8.2,dheight/1.89)
+                    dcanvas.coords("label5",dwidth/1.655,dheight/1.89)
+                    dcanvas.coords("label6",dwidth/1.605,dheight/1.522)
+                    dcanvas.coords("label7",dwidth/1.655,dheight/1.27)
 
-                    dcanvas.coords("entry1",dwidth/6.9,dheight/2.32)
-                    dcanvas.coords("entry2",dwidth/1.8,dheight/2.32)
-                    dcanvas.coords("entry3",dwidth/6.9,dheight/1.91)
-                    dcanvas.coords("entry4",dwidth/1.8,dheight/1.91)
-                    dcanvas.coords("entry5",dwidth/6.9,dheight/1.7)
-                    dcanvas.coords("entry6",dwidth/1.8,dheight/1.6)
-                    dcanvas.coords("entry7",dwidth/1.8,dheight/1.385)
+                    dcanvas.coords("entry1",dwidth/20,dheight/2.32)
+                    dcanvas.coords("entry2",dwidth/1.88,dheight/2.32)
+                    dcanvas.coords("entry3",dwidth/20,dheight/1.8)
+                    dcanvas.coords("entry4",dwidth/1.88,dheight/1.805)
+                    dcanvas.coords("entry5",dwidth/20,dheight/1.605)
+                    dcanvas.coords("entry6",dwidth/1.88,dheight/1.46)
+                    dcanvas.coords("entry7",dwidth/1.88,dheight/1.23)
 
-                    dcanvas.coords("check1",dwidth/1.81,dheight/1.73)
+                    dcanvas.coords("check1",dwidth/1.89,dheight/1.57)
 
-                    dcanvas.coords("button1",dwidth/2,dheight/1.07)
+                    dcanvas.coords("button1",dwidth/2,dheight/0.97)
                     dcanvas.coords("button2",dwidth/27,dheight/3)
 
                 sr_Canvas_3 = Canvas(sr_Frame_3,bg='#2f516f',scrollregion=(0,0,700,1200))
@@ -1903,28 +1920,28 @@ def main_sign_in():
                 dep_label2 = Label(sr_Canvas_3,width=20,height=1,text="Account type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label2,tags=("label2"))
 
-                dep_acctype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                dep_acctype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_acctype,tags=("entry1"))
 
                 dep_label3 = Label(sr_Canvas_3,width=20,height=1,text="*Name",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label3,tags=("label3"))
 
-                dep_name = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_name = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_name,tags=("entry2"))
 
                 dep_label4 = Label(sr_Canvas_3,width=20,height=1,text="*Detail Type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label4,tags=("label4"))
 
-                dep_dtype = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white')
+                dep_dtype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtype,tags=("entry3"))
 
                 dep_label5 = Label(sr_Canvas_3,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label5,tags=("label5"))
 
-                dep_desp = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_desp = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_desp,tags=("entry4"))
 
-                dep_term = Text(sr_Canvas_3,width=45,height=8,background='#2f516f',foreground='white')
+                dep_term = Text(sr_Canvas_3,width=47,font=('arial 15'),height=7,background='#2f516f',foreground='white')
                 term_txt = "Use Cash and Cash Equivalents to track cash or assets that can be converted into cash immediately. For example, marketable securities and Treasury bills."
                 dep_term.insert('1.0',term_txt)
                 dep_term.config(state=DISABLED)
@@ -1943,23 +1960,23 @@ def main_sign_in():
                 dep_label6 = Label(sr_Canvas_3,width=20,height=1,text="Is sub-account",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label6,tags=("label6"))
 
-                dep_subacc = ttk.Combobox(sr_Canvas_3,width=58,background='#2f516f',foreground='white',state=DISABLED)
+                dep_subacc = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white',state=DISABLED)
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_subacc,tags=("entry6"))
 
                 dep_label7 = Label(sr_Canvas_3,width=20,height=1,text="Default Tax Code",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                 sr_Canvas_3.create_window(0,0,window=dep_label7,tags=("label7"))
 
-                dep_dtaxcode = Entry(sr_Canvas_3,width=60,background='#2f516f',foreground='white')
+                dep_dtaxcode = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtaxcode,tags=("entry7"))
 
                 dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
                 sr_Canvas_3.create_window(0,0,window=dep_save,tags=("button1"))
 
-                def cm_goBack2():
+                def goBack2():
                     sr_Frame_3.grid_forget()
                     sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:cm_goBack2())
+                back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack2())
                 sr_Canvas_3.create_window(0,0,window=back_btn,tags=("button2"))
 
             cm_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:add_depositTo_1())
@@ -3501,7 +3518,387 @@ def main_sign_in():
             ta_supplier = ttk.Combobox(sr_Canvas_1,width=26,font=('arial 15'),background='#2f516f',foreground='white')
             sr_Canvas_1.create_window(0,0,anchor='c',window=ta_supplier,tags=("combo9"))
 
-            ta_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:sr_addCustomer_1())
+            def sr_addSupplier():
+                sr_Frame_1.grid_forget()
+                sr_Frame_2 = Frame(tab3_1,background="#2f516f")
+                sr_Frame_2.grid(row=0,column=0,sticky='nsew')
+
+                def responsive_widgets3(event):
+                    dwidth = event.width
+                    dheight = event.height
+                    dcanvas = event.widget
+                    
+                    r1 = 25
+                    x1 = dwidth/63
+                    x2 = dwidth/1.021
+                    y1 = dheight/14 
+                    y2 = dheight/3.505
+
+                    dcanvas.coords("poly1",x1 + r1,y1,
+                    x1 + r1,y1,
+                    x2 - r1,y1,
+                    x2 - r1,y1,     
+                    x2,y1,     
+                    #--------------------
+                    x2,y1 + r1,     
+                    x2,y1 + r1,     
+                    x2,y2 - r1,     
+                    x2,y2 - r1,     
+                    x2,y2,
+                    #--------------------
+                    x2 - r1,y2,     
+                    x2 - r1,y2,     
+                    x1 + r1,y2,
+                    x1 + r1,y2,
+                    x1,y2,
+                    #--------------------
+                    x1,y2 - r1,
+                    x1,y2 - r1,
+                    x1,y1 + r1,
+                    x1,y1 + r1,
+                    x1,y1,
+                    )
+
+                    dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
+                    dcanvas.coords("hline1",dwidth/21,dheight/0.85,dwidth/1.055,dheight/0.85)
+                    dcanvas.coords("hline2",dwidth/21,dheight/0.555,dwidth/1.055,dheight/0.555)
+                    
+                    r2 = 25
+                    x11 = dwidth/63
+                    x21 = dwidth/1.021
+                    y11 = dheight/2.8
+                    y21 = dheight/0.44
+
+
+                    dcanvas.coords("poly2",x11 + r2,y11,
+                    x11 + r2,y11,
+                    x21 - r2,y11,
+                    x21 - r2,y11,     
+                    x21,y11,     
+                    #--------------------
+                    x21,y11 + r2,     
+                    x21,y11 + r2,     
+                    x21,y21 - r2,     
+                    x21,y21 - r2,     
+                    x21,y21,
+                    #--------------------
+                    x21 - r2,y21,     
+                    x21 - r2,y21,     
+                    x11 + r2,y21,
+                    x11 + r2,y21,
+                    x11,y21,
+                    #--------------------
+                    x11,y21 - r2,
+                    x11,y21 - r2,
+                    x11,y11 + r2,
+                    x11,y11 + r2,
+                    x11,y11,
+                    )
+
+                    dcanvas.coords("label1",dwidth/2,dheight/8.24)
+                    dcanvas.coords("label2",dwidth/6,dheight/2.4)
+                    dcanvas.coords("label3",dwidth/8.2,dheight/2)
+                    dcanvas.coords("label4",dwidth/2.32,dheight/2)
+                    dcanvas.coords("label5",dwidth/1.355,dheight/2)
+                    dcanvas.coords("label6",dwidth/8.2,dheight/1.61)
+                    dcanvas.coords("label7",dwidth/2.845,dheight/1.61)
+                    dcanvas.coords("label8",dwidth/1.725,dheight/1.61)
+                    dcanvas.coords("label9",dwidth/1.24,dheight/1.61)
+                    dcanvas.coords("label10",dwidth/8.2,dheight/1.358)
+                    dcanvas.coords("label11",dwidth/2.845,dheight/1.358)
+                    dcanvas.coords("label12",dwidth/1.725,dheight/1.358)
+                    dcanvas.coords("label13",dwidth/1.24,dheight/1.358)
+                    dcanvas.coords("label14",dwidth/8.12,dheight/1.163)
+                    dcanvas.coords("label15",dwidth/2.33,dheight/1.163)
+                    dcanvas.coords("label16",dwidth/1.356,dheight/1.163)
+                    dcanvas.coords("label17",dwidth/1.29,dheight/1.041)
+                    dcanvas.coords("label18",dwidth/8.2,dheight/0.97)
+                    dcanvas.coords("label19",dwidth/2.845,dheight/0.97)
+                    dcanvas.coords("label20",dwidth/1.725,dheight/0.97)
+                    dcanvas.coords("label21",dwidth/1.24,dheight/0.97)
+                    dcanvas.coords("label22",dwidth/6,dheight/0.8)
+                    dcanvas.coords("label23",dwidth/8.2,dheight/0.76)
+                    dcanvas.coords("label24",dwidth/8.2,dheight/0.656)
+                    dcanvas.coords("label25",dwidth/1.715,dheight/0.656)
+                    dcanvas.coords("label26",dwidth/8.2,dheight/0.605)
+                    dcanvas.coords("label27",dwidth/1.715,dheight/0.605)
+                    dcanvas.coords("label28",dwidth/8.2,dheight/0.538)
+                    dcanvas.coords("label29",dwidth/6.3,dheight/0.485)
+
+                    dcanvas.coords("line1",dwidth/21,dheight/2.2,dwidth/1.055,dheight/2.2)
+
+                    dcanvas.coords("combo1",dwidth/20,dheight/1.9)
+                    dcanvas.coords("combo2",dwidth/3.6,dheight/1.31)
+                    dcanvas.coords("combo3",dwidth/2.8,dheight/1.13)
+                    dcanvas.coords("combo4",dwidth/1.975,dheight/0.945)
+                    dcanvas.coords("combo5",dwidth/1.364,dheight/0.945)
+
+                    dcanvas.coords("entry1",dwidth/2.8,dheight/1.9)
+                    dcanvas.coords("entry2",dwidth/1.505,dheight/1.9)
+                    dcanvas.coords("entry3",dwidth/20,dheight/1.55)
+                    dcanvas.coords("entry4",dwidth/3.6,dheight/1.55)
+                    dcanvas.coords("entry5",dwidth/1.975,dheight/1.55)
+                    dcanvas.coords("entry6",dwidth/1.364,dheight/1.55)
+                    dcanvas.coords("entry7",dwidth/20,dheight/1.31)
+                    dcanvas.coords("entry8",dwidth/1.975,dheight/1.31)
+                    dcanvas.coords("entry9",dwidth/1.364,dheight/1.31)
+                    dcanvas.coords("entry10",dwidth/20,dheight/1.13)
+                    dcanvas.coords("entry11",dwidth/1.505,dheight/1.13)
+                    dcanvas.coords("entry12",dwidth/20,dheight/0.945)
+                    dcanvas.coords("entry13",dwidth/20,dheight/0.745)
+                    dcanvas.coords("entry14",dwidth/20,dheight/0.644)
+                    dcanvas.coords("entry15",dwidth/1.96,dheight/0.644)
+                    dcanvas.coords("entry16",dwidth/20,dheight/0.595)
+                    dcanvas.coords("entry17",dwidth/1.96,dheight/0.595)
+                    dcanvas.coords("entry18",dwidth/20,dheight/0.53)
+                    
+                    dcanvas.coords("date",dwidth/3.6,dheight/0.945)
+
+                    dcanvas.coords("button1",dwidth/27,dheight/3)
+                    dcanvas.coords("button2",dwidth/2,dheight/0.46)
+
+                    dcanvas.coords("check1",dwidth/17,dheight/0.485)
+
+                sr_Canvas_2 = Canvas(sr_Frame_2,bg='#2f516f',scrollregion=(0,0,700,1300))
+
+                sr_Frame_2.grid_columnconfigure(0,weight=1)
+                sr_Frame_2.grid_rowconfigure(0,weight=1)
+
+                sr_Scroll_2 = Scrollbar(sr_Frame_2,orient=VERTICAL)
+                sr_Scroll_2.grid(row=0,column=1,sticky='ns')
+                sr_Scroll_2.config(command=sr_Canvas_2.yview)
+                sr_Canvas_2.bind("<Configure>", responsive_widgets3)
+                sr_Canvas_2.config(yscrollcommand=sr_Scroll_2.set)
+                sr_Canvas_2.grid(row=0,column=0,sticky='nsew')
+
+                sr_Canvas_2.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
+                sup_label1 = Label(sr_Canvas_2,width=18,height=1,text="ADD SUPPLIER",font=('arial 25'),background='#1b3857',fg="white")
+                sr_Canvas_2.create_window(0,0,anchor="c",window=sup_label1,tags=("label1"))
+                sr_Canvas_2.create_line(0,0,0,0,fill='gray',width=1,tags=("hline"))
+
+                sr_Canvas_2.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly2"))
+
+                sup_label2 = Label(sr_Canvas_2,width=20,height=1,text="Supplier Information",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label2,tags=('label2'))
+
+                sr_Canvas_2.create_line(0,0,0,0,fill='gray',width=1,tags=("line1"))
+
+                sup_label3 = Label(sr_Canvas_2,width=20,height=1,text="Title",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label3,tags=('label3'))
+
+                sup_title = ttk.Combobox(sr_Canvas_2,width=31,font=('arial 15'))
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_title,tags=("combo1"))
+
+                sup_label4 = Label(sr_Canvas_2,width=20,height=1,text="First name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label4,tags=('label4'))
+
+                sup_fname = Entry(sr_Canvas_2,width=32,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_fname,tags=("entry1"))
+
+                sup_label5 = Label(sr_Canvas_2,width=20,height=1,text="Last name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label5,tags=('label5'))
+
+                sup_lname = Entry(sr_Canvas_2,width=32,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_lname,tags=("entry2"))
+
+                sup_label6 = Label(sr_Canvas_2,width=20,height=1,text="Company",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label6,tags=('label6'))
+
+                sup_company = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_company,tags=("entry3"))
+
+                sup_label7 = Label(sr_Canvas_2,width=20,height=1,text="Email",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label7,tags=('label7'))
+
+                sup_email = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_email,tags=("entry4"))
+
+                sup_label8 = Label(sr_Canvas_2,width=20,height=1,text="Mobile",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label8,tags=('label8'))
+
+                sup_mobile = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_mobile,tags=("entry5"))
+
+                sup_label9 = Label(sr_Canvas_2,width=20,height=1,text="Website",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label9,tags=('label9'))
+
+                sup_web = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_web,tags=("entry6"))
+
+                sup_label10 = Label(sr_Canvas_2,width=20,height=1,text="Billing Rate",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label10,tags=('label10'))
+
+                sup_brate = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_brate,tags=("entry7"))
+
+                sup_label11 = Label(sr_Canvas_2,width=20,height=1,text="Terms",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label11,tags=('label11'))
+
+                def add_newTerms(evet):
+                    if sup_terms.get() == 'ADD NEW TERMS':
+                        sr_Canvas_2.itemconfig("label12",state='normal')
+                        sr_Canvas_2.itemconfig("entry8",state='normal')
+                    else:
+                        sr_Canvas_2.itemconfig("label12",state='hidden')
+                        sr_Canvas_2.itemconfig("entry8",state='hidden')
+
+
+                sup_terms = ttk.Combobox(sr_Canvas_2,width=23,font=('arial 15'),background='#2f516f',foreground='black')
+                sup_terms['values'] = ['ADD NEW TERMS','Due on Receipt','NET15','NET30','NET60',]
+                sup_terms.current(0)
+                sup_terms.bind("<<ComboboxSelected>>",add_newTerms)
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_terms,tags=("combo2"))
+
+                sup_label12 = Label(sr_Canvas_2,width=20,height=1,text="ADD NEW TERMS",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label12,tags=('label12'))
+
+                sup_addterms = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_addterms,tags=("entry8"))
+
+                sup_label13 = Label(sr_Canvas_2,width=20,height=1,text="Opening Balance",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label13,tags=('label13'))
+
+                sup_obal = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_obal,tags=("entry9"))
+
+                sup_label14 = Label(sr_Canvas_2,width=20,height=1,text="Account No",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label14,tags=('label14'))
+
+                sup_accno = Entry(sr_Canvas_2,width=32,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_accno,tags=("entry10"))
+
+                sup_label15 = Label(sr_Canvas_2,width=20,height=1,text="GST Type",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label15,tags=('label15'))
+
+                def selectGSTtype(evet):
+                    if sup_gtype.get() == "GST Unregistered":
+                        sr_Canvas_2.itemconfig("label16",state='hidden')
+                        sr_Canvas_2.itemconfig("entry11",state='hidden')
+                        sr_Canvas_2.itemconfig("label17",state='hidden')
+                    else:
+                        sr_Canvas_2.itemconfig("label16",state='normal')
+                        sr_Canvas_2.itemconfig("entry11",state='normal')
+                        sr_Canvas_2.itemconfig("label17",state='normal')
+
+                sup_gtype = ttk.Combobox(sr_Canvas_2,width=31,font=('arial 15'))
+                sup_gtype['values'] = ['Choose...','GST Registered - Regular','GST Registered - Composition','GST Unregistered']
+                sup_gtype.current(0)
+                sup_gtype.bind("<<ComboboxSelected>>",selectGSTtype)
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_gtype,tags=("combo3"))
+
+                sup_label16 = Label(sr_Canvas_2,width=20,height=1,text="GSTIN",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label16,tags=('label16'))
+
+                sup_gstin = Entry(sr_Canvas_2,width=32,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_gstin,tags=("entry11"))
+
+                sup_label17 = Label(sr_Canvas_2,width=30,height=1,text="What is a GST registration type?",font=('arial 11'),background='#1b3857',anchor="w",fg="#3dd5f3")
+                sr_Canvas_2.create_window(0,0,window=sup_label17,tags=('label17'))
+
+                sup_label18 = Label(sr_Canvas_2,width=20,height=1,text="Tax Registration No",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label18,tags=('label18'))
+
+                sup_taxregno = Entry(sr_Canvas_2,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_taxregno,tags=("entry12"))
+
+                sup_label20 = Label(sr_Canvas_2,width=20,height=1,text="Default Expense Account",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label20,tags=('label20'))
+
+                sup_dexpenseaccnt = ttk.Combobox(sr_Canvas_2,width=23,font=('arial 15'),background='#2f516f',foreground='black')
+                sup_dexpenseaccnt['values'] = ['Choose Account','Advertising /Promotional','Bank Charges','Business Licenses and Permits','Charitable Contributions','Computer and Internet Expense','Continuing Education','Depreciation Expense','Dues and Subscriptions','Housekeeping Charges',
+                'Insurance Expense','Insurance Expense-General Liability Insurance','Insurance Expense-Health Insurance','Insurance Expense-Life and disability Insurance','Insurance Expense-Professional Liability','Internet Expense','Meals and Entertainment','Office Supplies',
+                'Postage and delivery','Printing and Reproduction','Professional Fees','Purchases','Rent Expense','Repair and Maintenance','Small Tools and Equipment','Swachh Bharat Cess Expense','Taxes-Property','Telephone Expense','Travel Expense','Uncategorised Expense','Utilities',
+                'Ask My Accountant','CGST write-off','GST write-off','IGST write-off','Miscellaneous Expense','Political Contributions','Reconciliation Discrepancies','SGST write-off','Tax Write-off','Vehicle Expenses','Cost of sales','Equipment Rental for Jobs','Freight and shipping Costs',
+                'Merchant Account Fees','Purchases - Hardware For Resale','Purchases - Software For Resale','SubContracted Services','Tools and Craft Supplies',]
+                sup_dexpenseaccnt.current(0)
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_dexpenseaccnt,tags=("combo4"))
+
+                sup_label21 = Label(sr_Canvas_2,width=20,height=1,text="Apply TDS for Supplier",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label21,tags=('label21'))
+
+                sup_tds = ttk.Combobox(sr_Canvas_2,width=23,font=('arial 15'))
+                sup_tds['values'] = ['Choose...','Yes','No']
+                sup_tds.current(0)
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_tds,tags=("combo5"))
+
+                sr_Canvas_2.create_line(0,0,0,0,fill='gray',width=1,tags=("hline1"))
+
+                sup_label22 = Label(sr_Canvas_2,width=20,height=1,text="Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label22,tags=('label22'))
+
+                sup_label23 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label23,tags=('label23'))
+
+                sup_street = Text(sr_Canvas_2,width=103,height=3,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_street,tags=("entry13"))
+
+                sup_label24 = Label(sr_Canvas_2,width=20,height=1,text="City",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label24,tags=('label24'))
+
+                sup_city = Entry(sr_Canvas_2,width=50,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_city,tags=("entry14"))
+
+                sup_label25 = Label(sr_Canvas_2,width=20,height=1,text="State",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label25,tags=('label25'))
+
+                sup_state = Entry(sr_Canvas_2,width=50,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_state,tags=("entry15"))
+
+                sup_label26 = Label(sr_Canvas_2,width=20,height=1,text="Pin Code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label26,tags=('label26'))
+
+                sup_pin = Entry(sr_Canvas_2,width=50,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_pin,tags=("entry16"))
+
+                sup_label27 = Label(sr_Canvas_2,width=20,height=1,text="Country",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label27,tags=('label27'))
+
+                sup_country = ttk.Combobox(sr_Canvas_2,width=49,font=('arial 15'))
+                sup_country['values'] = ['Choose...',]
+                sup_country.current(0)
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_country,tags=("entry17"))
+
+                sr_Canvas_2.create_line(0,0,0,0,fill='gray',width=1,tags=("hline2"))
+
+                sup_label28 = Label(sr_Canvas_2,width=20,height=1,text="Notes",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label28,tags=('label28'))
+
+                sup_notes = Text(sr_Canvas_2,width=103,height=3,font=('arial 15'),background='#2f516f',foreground='white')
+                sr_Canvas_2.create_window(0,0,anchor='nw',window=sup_notes,tags=("entry18"))
+
+                sup_label29 = Label(sr_Canvas_2,width=25,height=1,text="Agree to terms and conditions",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label29,tags=('label29'))
+
+                agreetoVar = BooleanVar()
+
+                sup_agree = Checkbutton(sr_Canvas_2,background='#1b3857',activebackground='#1b3857',onvalue=1,offvalue=0,variable=agreetoVar)
+                sr_Canvas_2.create_window(0,0,window=sup_agree,tags=("check1"))
+
+                save_btn = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=113,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                sr_Canvas_2.create_window(0,0,window=save_btn,tags=("button2"))
+
+                def ta_goBack():
+                    sr_Frame_2.grid_forget()
+                    sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+
+                back_btn = Button(sr_Canvas_2,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:ta_goBack())
+                sr_Canvas_2.create_window(0,0,window=back_btn,tags=("button1"))
+
+                sup_label19 = Label(sr_Canvas_2,width=20,height=1,text="Effective Date",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                sr_Canvas_2.create_window(0,0,window=sup_label19,tags=('label19'))
+
+                sup_effdate = DateEntry(sr_Canvas_2,width=23,font=('arial 15'),background='#2f516f',foreground='white')
+
+                cwidth = root.winfo_screenwidth()
+
+                if cwidth > 1280:
+                    sr_Canvas_2.create_window(373.6111111111111,650.7936507936508,anchor='nw',window=sup_effdate,tags=("date"))
+                elif cwidth <= 1024:
+                    sr_Canvas_2.create_window(279.72222222222223,670.8994708994709,anchor='nw',window=sup_effdate,tags=("date"))
+                else:
+                    sr_Canvas_2.create_window(350.8333333333333,600,anchor='nw',window=sup_effdate,tags=("date"))
+
+            ta_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:sr_addSupplier())
             sr_Canvas_1.create_window(0,0,window=ta_plus1,tags=("button9"))
 
             ta_label4 = Label(sr_Canvas_1,width=20,height=1,text="Customer",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -3830,8 +4227,7 @@ def main_sign_in():
 
             def ta_billable(event):
                 if ta_billCombo.get() == 'Yes':
-                    ta_unknown = Entry(sr_Canvas_1,width=31,font=('arial 15'),background='#2f516f',foreground='white')
-                    sr_Canvas_1.create_window(830,390,anchor='nw',window=ta_unknown,tags=("entry34"))
+                    sr_Canvas_1.itemconfig("entry34",state='normal')
                 else:
                     try:
                         sr_Canvas_1.itemconfig("entry34",state='hidden')
@@ -3844,23 +4240,18 @@ def main_sign_in():
             ta_billCombo.bind("<<ComboboxSelected>>",ta_billable)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_billCombo,tags=("combo11"))
 
+            ta_unknown = Entry(sr_Canvas_1,width=31,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_unknown,state=HIDDEN,tags=("entry34"))
+
             ta_label6 = Label(sr_Canvas_1,width=20,height=1,text="Enter start and end time",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
             sr_Canvas_1.create_window(0,0,window=ta_label6,tags=("label59"))
 
             def ta_startend(event):
                 if ta_startendCombo.get() == 'Yes':
-                    global ta_label7
-                    ta_label7 = Label(sr_Canvas_1,width=20,height=1,text="Start date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
-                    sr_Canvas_1.create_window(790.3629536921151,442.96875,window=ta_label7,tags=("label60"))
-
-                    ta_start = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-                    sr_Canvas_1.create_window(697.7900552486187,457.258064516129,anchor='nw',window=ta_start,tags=("entry35"))
-
-                    ta_label8 = Label(sr_Canvas_1,width=20,height=1,text="End date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
-                    sr_Canvas_1.create_window(1042.0792079207922,442.96875,window=ta_label8,tags=("label61"))
-
-                    ta_end = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-                    sr_Canvas_1.create_window(949.6240601503758,457.258064516129,anchor='nw',window=ta_end,tags=("entry36"))
+                    sr_Canvas_1.itemconfig("label60",state='normal')
+                    sr_Canvas_1.itemconfig("label61",state='normal')
+                    sr_Canvas_1.itemconfig("entry35",state='normal')
+                    sr_Canvas_1.itemconfig("entry36",state='normal')
                 else:
                     try:
                         sr_Canvas_1.itemconfig("label60",state='hidden')
@@ -3876,98 +4267,39 @@ def main_sign_in():
             ta_startendCombo.bind("<<ComboboxSelected>>",ta_startend)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_startendCombo,tags=("combo12"))
 
+            ta_label7 = Label(sr_Canvas_1,width=20,height=1,text="Start date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+            sr_Canvas_1.create_window(0,0,window=ta_label7,state=HIDDEN,tags=("label60"))
 
-            # dc_label11 = Label(sr_Canvas_1,width=20,height=1,text="AMOUNT",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label11,tags=('label29'))
+            ta_start = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_start,state=HIDDEN,tags=("entry35"))
 
-            # dc_label12 = Label(sr_Canvas_1,width=20,height=1,text="0.00",font=('arial 14'),background='#1b3857',anchor="w",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label12,tags=('label30'))
+            ta_label8 = Label(sr_Canvas_1,width=20,height=1,text="End date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+            sr_Canvas_1.create_window(0,0,window=ta_label8,state=HIDDEN,tags=("label61"))
 
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line39"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line40"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line41"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line42"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line43"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line44"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line45"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line46"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line47"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line48"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line49"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line50"))
+            ta_end = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_end,state=HIDDEN,tags=("entry36"))
 
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line51"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line52"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line53"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line54"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line55"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line56"))
-            # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line57"))
+            ta_label9 = Label(sr_Canvas_1,width=20,height=1,text="Time",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+            sr_Canvas_1.create_window(0,0,window=ta_label9,tags=("label62"))
 
-            # dc_label13 = Label(sr_Canvas_1,width=3,height=1,text="#",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label13,tags=('label44'))
+            ta_time = Entry(sr_Canvas_1,width=67,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_time,tags=("entry37"))
 
-            # dc_label14 = Label(sr_Canvas_1,width=3,height=1,text="1",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label14,tags=('label45'))
+            ta_label10 = Label(sr_Canvas_1,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
+            sr_Canvas_1.create_window(0,0,window=ta_label10,tags=("label63"))
 
-            # dc_label18 = Label(sr_Canvas_1,width=15,height=1,text="Product / Service",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label18,tags=('label46'))
+            ta_desc = Text(sr_Canvas_1,width=67,height=3,font=('arial 15'),background='#2f516f',foreground='white')
+            sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_desc,tags=("entry38"))
 
-            # dc_label20 = Label(sr_Canvas_1,width=18,height=1,text="Description",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label20,tags=('label47'))
+            save_btn = Button(sr_Canvas_1,text="Submit Form",font=('arial 12 bold'),width=20,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+            sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button11"))
 
-            # dc_label21 = Label(sr_Canvas_1,width=10,height=1,text="Qty",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label21,tags=('label48'))
+            def sr_goBack():
+                sr_Frame_1.grid_forget()
+                sr_Frame.grid(row=0,column=0,sticky='nsew')
 
-            # dc_label22 = Label(sr_Canvas_1,width=10,height=1,text="Rate",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label22,tags=('label49'))
-
-            # dc_label23 = Label(sr_Canvas_1,width=10,height=1,text="Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label23,tags=('label50'))
-
-
-            # dct_entry3 = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry3,tags=("entry27"))
-
-            # dct_entry4 = Entry(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry4,tags=("entry28"))
-
-            # dct_entry5 = Entry(sr_Canvas_1,width=16,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry5,tags=("entry29"))
-
-            # dct_entry6 = Entry(sr_Canvas_1,width=16,font=('arial 15'),background='#2f516f',foreground='white',state=DISABLED)
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry6,tags=("entry30"))
-
-            # dct_entry7 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='c',window=dct_entry7,tags=("combo8"))
-
-            # dc_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label25,tags=('label52'))
-
-            # dc_label26 = Label(sr_Canvas_1,width=10,height=1,text="Tax Amount",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label26,tags=('label53'))
-
-            # dc_label27 = Label(sr_Canvas_1,width=10,height=1,text="Grand Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-            # sr_Canvas_1.create_window(0,0,window=dc_label27,tags=('label54'))
-
-            # dct_entry8 = Entry(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry8,tags=("entry31"))
-
-            # dct_entry9 = Entry(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry9,tags=("entry32"))
-
-            # dct_entry10 = Entry(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f',foreground='white')
-            # sr_Canvas_1.create_window(0,0,anchor='nw',window=dct_entry10,tags=("entry33"))
-
-            # save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
-            # sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button8")) 
-
-            # def sr_goBack():
-            #     sr_Frame_1.grid_forget()
-            #     sr_Frame.grid(row=0,column=0,sticky='nsew')
-
-            # back_btn = Button(sr_Canvas_1,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:sr_goBack())
-            # sr_Canvas_1.create_window(0,0,window=back_btn,tags=("button3"))
+            back_btn = Button(sr_Canvas_1,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:sr_goBack())
+            sr_Canvas_1.create_window(0,0,window=back_btn,tags=("button3"))
 
             ta_label2 = Label(sr_Canvas_1,width=20,height=1,text="Date",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
             sr_Canvas_1.create_window(0,0,window=ta_label2,tags=('label55'))
