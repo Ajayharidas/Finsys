@@ -396,3 +396,140 @@ btn2 = Button(main_frame_signin, text = 'Sign Up', command = func_sign_up, bg="w
 btn2.place(x=275,y=130)
 
 root.mainloop()
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# #--------------------------------------------------------------------------------------------------------------Content head
+    # cmpny_name_frm=Frame(frame,bg="#213b52",width=1300,height=60)
+    # cmpny_name_frm.pack(pady=20)
+
+    # cmp_name=Label(frame, text="Clown",bg="#213b52", fg="White",width=69, anchor="center",font=('Calibri 24 bold'))
+    # cmp_name.place(x=60,y=27)
+    # #-------------------------------------------------------------------------------------------------------Content bottam
+    # das_btm_frm=Frame(frame,bg="#2f516f")
+    # das_btm_frm.pack(pady=10)
+    # #----------------------------------------------------------------------------------------------------Profit And Loss
+    # das_btm1=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm1.grid(row=1,column=1,padx=10,pady=10)
+
+    # cmp_name=Label(das_btm1, text="PROFIT AND LOSS",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # cmp_name.grid(row=1,column=1)
+    # # cmp_name=Label(das_btm1, text="__________________________________________________",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # # cmp_name.place(x=10,y=30)
+
+    # figlast = plt.figure(figsize=(8, 4), dpi=50)
+
+    # x="Income"
+    # y=10 
+    # plt.barh(x,y, label="Undefined", color="blue") 
+    # plt.legend()
+  
+    # plt.ylabel("")
+    # axes=plt.gca()
+    # axes.xaxis.grid()
+
+    # x="Expense"
+    # y=100
+    # plt.barh(x,y, color="red") 
+    # plt.legend()
+ 
+    # plt.ylabel("")
+    # axes=plt.gca()
+    # axes.xaxis.grid()
+              
+
+    # canvasbar = FigureCanvasTkAgg(figlast, master=das_btm1)
+    # canvasbar
+    # canvasbar.draw()
+    # canvasbar.get_tk_widget().grid(row=2,column=1,padx=5,pady=135)
+  
+
+    # #--------------------------------------------------------------------------------------------------------card2
+
+    # das_btm2=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm2.grid(row=1,column=2,padx=10,pady=10)
+
+    # cmp_name=Label(das_btm2, text="Expenses:2000",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # cmp_name.grid(row=1,column=1)
+
+    # stockListExp = ['AMZN' , 'AAPL', 'JETS', 'CCL', 'NCLH']
+    # stockSplitExp = [15,25,40,10,10]
+
+    # fig = Figure(figsize=(4.3, 4.65)) # create a figure object
+    # ax = fig.add_subplot(111) # add an Axes to the figure
+
+    # ax.pie(stockSplitExp, radius=1, labels=stockListExp,autopct='%0.2f%%', shadow=True,)
+
+    # chart1 = FigureCanvasTkAgg(fig,das_btm2)
+    # chart1.get_tk_widget().grid(row=2,column=1)
+  
+    # #----------------------------------------------------------------------------------------------------Card 3
+    # das_btm3=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm3.grid(row=1,column=3,padx=10,pady=10)
+    # # cmp_name=Label(das_btm3, text="Banknbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb Accounts",bg="#213b52", fg="White",font=('Calibri 16 bold'))
+    # # cmp_name.grid(row=1,column=1)
+
+    # das_btm4=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm4.grid(row=2,column=1,padx=10,pady=10)
+
+    # #--------------------------------------------------------------------------------------------------card5
+    # das_btm5=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm5.grid(row=2,column=2,padx=10,pady=10)
+
+    # cmp_name=Label(das_btm5, text="PROFIT AND LOSS",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # cmp_name.grid(row=1,column=1)
+    # # cmp_name=Label(das_btm5, text="__________________________________________________",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # # cmp_name.place(x=10,y=30)
+
+    # figlast = plt.figure(figsize=(8, 4), dpi=50)
+
+    # x="Unpaid"
+    # y=10 
+    # plt.barh(x,y, label="Undefined", color="blue") 
+    # plt.legend()
+  
+    # plt.ylabel("")
+    # axes=plt.gca()
+    # axes.xaxis.grid()
+
+    # x="Paid"
+    # y=100
+    # plt.barh(x,y, color="red") 
+    # plt.legend()
+ 
+    # plt.ylabel("")
+    # axes=plt.gca()
+    # axes.xaxis.grid()
+              
+
+    # canvasbar = FigureCanvasTkAgg(figlast, master=das_btm5)
+    # canvasbar
+    # canvasbar.draw()
+    # canvasbar.get_tk_widget().grid(row=2,column=1,padx=5,pady=135)
+
+    # #------------------------------------------------------------------------------------------------------------------Card6
+
+    # das_btm6=Frame(das_btm_frm,bg="#213b52",height=500,width=420)
+    # das_btm6.grid(row=2,column=3,padx=10,pady=10)
+
+    # cmp_name=Label(das_btm6, text="PROFIT AND LOSS",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # cmp_name.grid(row=1,column=1)
+    # # cmp_name=Label(das_btm6, text="__________________________________________________",bg="#213b52", fg="White", anchor="nw",font=('Calibri 16 bold'))
+    # # cmp_name.place(x=10,y=30)
+
+    # figlast = plt.figure(figsize=(8, 4), dpi=50)
+
+    # x="Income"
+    # y=10 
+    # plt.barh(x,y, label="Undefined", color="blue") 
+    # plt.legend()
+  
+    # plt.ylabel("")
+    # axes=plt.gca()
+    # axes.xaxis.grid()
+
+    # canvasbar = FigureCanvasTkAgg(figlast, master=das_btm6)
+    # canvasbar
+    # canvasbar.draw()
+    # canvasbar.get_tk_widget().grid(row=2,column=1,padx=5,pady=135)
+    
