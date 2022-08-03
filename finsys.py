@@ -1,3 +1,4 @@
+import re
 import matplotlib.pyplot as plt
 from calendar import c
 from cgitb import enable, reset, text
@@ -47,10 +48,10 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import numpy as np
 
-# fbilldb = mysql.connector.connect(
-#     host="localhost", user="root", password="", database="fbilling", port="3306"
-# )
-# fbcursor = fbilldb.cursor()
+finsysdb = mysql.connector.connect(
+    host="localhost", user="root", password="", database="finsysinfox", port="3306"
+)
+finsyscursor = finsysdb.cursor(buffered=True)
 
 root=Tk()
 root.geometry("1366x768+0+0")
@@ -1815,10 +1816,23 @@ def main_sign_in():
             rp_label2 = Label(sr_Canvas_1,width=10,height=1,text="Customer",font=('arial 12'),background='#1b3857',fg="white",anchor='w')
             sr_Canvas_1.create_window(0,0,window=rp_label2,tags=("label3"))
 
+            cust_sql = "SELECT firstname,lastname FROM app1_customer"
+            finsyscursor.execute(cust_sql,)
+            cust_data = finsyscursor.fetchall()
+
+            cust_list = []
+            if not cust_data:
+                pass
+            else:
+                for c in cust_data:
+                    cust_list.append(c[0] + " " + c[1])
+                cust_list.insert(0,'Select Customer')
+
             rp_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
+            rp_custCombo['values'] = cust_list
+            rp_custCombo.current(0)
             sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_custCombo,tags=("combo1"))
 
-            global sr_addCustomer
             def sr_addCustomer():
                 sr_Frame_1.grid_forget()
                 sr_Frame_2 = Frame(tab3_1,)
@@ -1981,6 +1995,8 @@ def main_sign_in():
                 sr_Canvas_2.create_window(0,0,window=cust_label3,tags=('label3'))
 
                 cust_title = ttk.Combobox(sr_Canvas_2,width=19,font=('arial 15'))
+                cust_title['values'] = ['Mr','Mrs','Miss','Ms',]
+                cust_title.current(0)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_title,tags=("combo1"))
 
                 cust_label4 = Label(sr_Canvas_2,width=20,height=1,text="First name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -2027,31 +2043,150 @@ def main_sign_in():
                 cust_label9 = Label(sr_Canvas_2,width=20,height=1,text="GSTIN",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label9,tags=('label9'))
 
-                cust_gin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                gstinVar = StringVar()
+                cust_gin = Entry(sr_Canvas_2,textvariable=gstinVar,width=20,font=('arial 15'),background='#2f516f',foreground='grey')
+                cust_gin.insert(0,'29APPCK7465F1Z1')
+
+                def del_placeholder(event):
+                    if cust_gin.get() == '29APPCK7465F1Z1':
+                        cust_gin.delete(0,END)
+                    else:
+                        pass
+
+                cust_gin.bind("<FocusIn>",del_placeholder)
+
+                def ret_placeholder(event):
+                    if cust_gin.get() == '':
+                        cust_gin.insert(0,'29APPCK7465F1Z1')
+                        cust_gin.config(fg="grey")
+                    else:
+                        pass
+                cust_gin.bind("<FocusOut>",ret_placeholder)
+                
+                def validate_gstin(value):
+                    pattern = r'[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[a-zA-Z]{1}[0-9a-zA-Z]{1}'
+                    if re.fullmatch(pattern,value) is None:
+                        return False
+                    else:
+                        cust_gin.config(fg="white")
+                        return True
+
+                def invalid_gstin():
+                    messagebox.showinfo("Fin sYs","Please provide a valid GST number")
+                    cust_gin.config(fg="red")
+
+                valid_cmndGSTIN = (sr_Canvas_2.register(validate_gstin),'%P')
+                invalid_cmndGSTIN = (sr_Canvas_2.register(invalid_gstin),)
+                cust_gin.config(validate='focusout',validatecommand=valid_cmndGSTIN,invalidcommand=invalid_cmndGSTIN)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_gin,tags=("entry6"))
 
                 cust_label10 = Label(sr_Canvas_2,width=20,height=1,text="PAN NO",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label10,tags=('label10'))
 
-                cust_pan = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                panVar = StringVar()
+                cust_pan = Entry(sr_Canvas_2,width=20,textvariable=panVar,font=('arial 15'),background='#2f516f',foreground='grey')
+                cust_pan.insert(0,'APPCK7465F')
+
+                def del_placeholder(event):
+                    if cust_pan.get() == 'APPCK7465F':
+                        cust_pan.delete(0,END)
+                    else:
+                        pass
+
+                cust_pan.bind("<FocusIn>",del_placeholder)
+
+                def ret_placeholder(event):
+                    if cust_pan.get() == '':
+                        cust_pan.insert(0,'APPCK7465F')
+                        cust_pan.config(fg="grey")
+                    else:
+                        pass
+                cust_pan.bind("<FocusOut>",ret_placeholder)
+
+                def validate_pan(value):
+                    pattern = r'[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}'
+                    if re.fullmatch(pattern,value) is None:
+                        return False
+                    else:
+                        cust_pan.config(fg="white")
+                        return True
+
+                def invalid_pan():
+                    messagebox.showinfo("Fin sYs","Please provide a valid PAN number") 
+                    cust_pan.config(fg="red")
+
+                valid_cmndPAN = (sr_Canvas_2.register(validate_pan),'%P')
+                invalid_cmndPAN = (sr_Canvas_2.register(invalid_pan),)
+                cust_pan.config(validate='focusout',validatecommand=valid_cmndPAN,invalidcommand=invalid_cmndPAN)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_pan,tags=("entry7"))
 
                 cust_label11 = Label(sr_Canvas_2,width=20,height=1,text="Email",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label11,tags=('label11'))
 
-                cust_email = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                emailVar = StringVar()
+                cust_email = Entry(sr_Canvas_2,textvariable=emailVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                def validate_email(value):
+                    pattern = r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'
+                    if re.fullmatch(pattern,value) is None:
+                        return False
+                    else:
+                        cust_email.config(fg="white")
+                        return True
+
+                def invalid_email():
+                    messagebox.showinfo("Fin sYs","Please provide a valid Email address")
+                    cust_email.config(fg="red")
+
+                valid_cmndEMAIL = (sr_Canvas_2.register(validate_email),'%P')
+                invalid_cmndEMAIL = (sr_Canvas_2.register(invalid_email),)
+                cust_email.config(validate='focusout',validatecommand=valid_cmndEMAIL,invalidcommand=invalid_cmndEMAIL)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_email,tags=("entry8"))
 
                 cust_label12 = Label(sr_Canvas_2,width=20,height=1,text="Website",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label12,tags=('label12'))
 
-                cust_web = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                webVar = StringVar()
+                cust_web = Entry(sr_Canvas_2,textvariable=webVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                def validate_web(value):
+                    pattern = r'www.+[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
+                    if re.fullmatch(pattern,value) is None:
+                        return False
+                    else:
+                        cust_web.config(fg="white")
+                        return True
+
+                def invalid_web():
+                    messagebox.showinfo("Fin sYs","Please provide a valid Website address")
+                    cust_web.config(fg="red")
+
+                valid_cmndWEB = (sr_Canvas_2.register(validate_web),'%P')
+                invalid_cmndWEB = (sr_Canvas_2.register(invalid_web),)
+                cust_web.config(validate='focusout',validatecommand=valid_cmndWEB,invalidcommand=invalid_cmndWEB)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_web,tags=("entry9"))
 
                 cust_label13 = Label(sr_Canvas_2,width=20,height=1,text="Mobile",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label13,tags=('label13'))
 
-                cust_mob = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                mobVar = StringVar()
+                cust_mob = Entry(sr_Canvas_2,textvariable=mobVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                def validate_mobile(value):
+                    pattern = r'[7-9][0-9]{9}'
+                    if re.fullmatch(pattern,value) is None:
+                        return False
+                    else:
+                        cust_mob.config(fg="white")
+                        return True
+
+                def invalid_mobile():
+                    messagebox.showinfo("Fin sYs","Please provide a valid Phone number")
+                    cust_mob.config(fg="red")
+
+                valid_cmndMOB = (sr_Canvas_2.register(validate_mobile),'%P')
+                invalid_cmndMOB = (sr_Canvas_2.register(invalid_mobile),)
+                cust_mob.config(validate='focusout',validatecommand=valid_cmndMOB,invalidcommand=invalid_cmndMOB)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_mob,tags=("entry10"))
 
                 cust_label14 = Label(sr_Canvas_2,width=20,height=1,text="Billing Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -2060,7 +2195,7 @@ def main_sign_in():
                 cust_label15 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label15,tags=('label15'))
 
-                cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
+                cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=48,height=3,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st1,tags=("entry11"))
 
                 cust_label17 = Label(sr_Canvas_2,width=20,height=1,text="Shipping Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -2069,7 +2204,7 @@ def main_sign_in():
                 cust_label16 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label16,tags=('label16'))
 
-                cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
+                cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=48,height=3,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st2,tags=("entry12"))
 
                 cust_label18 = Label(sr_Canvas_2,width=20,height=1,text="City",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -2096,7 +2231,7 @@ def main_sign_in():
                 cust_state1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_state1,tags=("entry16"))
                 #--
-                cust_label22 = Label(sr_Canvas_2,width=20,height=1,text="Pin code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                cust_label22 = Label(sr_Canvas_2,width=20,height=1,text="Pin Code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label22,tags=('label22'))
 
                 cust_pin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
@@ -2120,19 +2255,136 @@ def main_sign_in():
                 cust_country1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_country1,tags=("entry20"))
 
-                cust_sameb = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
+                def sameas_billaddress():
+                    if sameasVar.get() == True:
+                        bill_address = cust_st1.get("1.0","end-1c")
+                        bill_city = cust_city.get()
+                        bill_state = cust_state.get()
+                        bill_pin = cust_pin.get()
+                        bill_country = cust_country.get()
+
+                        cust_st2.delete("1.0","end-1c")
+                        cust_st2.insert("1.0",bill_address)
+                        cust_city1.delete(0,END)
+                        cust_city1.insert(0,bill_city)
+                        cust_state1.delete(0,END)
+                        cust_state1.insert(0,bill_state)
+                        cust_pin1.delete(0,END)
+                        cust_pin1.insert(0,bill_pin)
+                        cust_country1.delete(0,END)
+                        cust_country1.insert(0,bill_country)
+                    else:
+                        pass
+
+                sameasVar = BooleanVar()
+                cust_sameb = Checkbutton(sr_Canvas_2,variable=sameasVar,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857",command=sameas_billaddress)
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_sameb,tags=("check1"))
 
                 cust_label26 = Label(sr_Canvas_2,width=20,height=1,text="Same as billing address",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label26,tags=('label26'))
 
-                cust_term = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
+                termVar = BooleanVar()
+                cust_term = Checkbutton(sr_Canvas_2,variable=termVar,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
                 sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_term,tags=("check2"))
 
                 cust_label27 = Label(sr_Canvas_2,width=25,height=1,text="Agree to terms and conditions",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                 sr_Canvas_2.create_window(0,0,window=cust_label27,tags=('label27'))
+
+                def sr_create_newCustomer():
+                    title = cust_title.get()
+                    firstname = cust_fname.get()
+                    lastname = cust_lname.get()
+                    company = cust_company.get()
+                    location = cust_location.get()
+                    gsttype = cust_gtype.get()
+                    gstin = gstinVar.get()
+                    panno = panVar.get()
+                    email = emailVar.get()
+                    website = webVar.get()
+                    mobile = mobVar.get()
+                    street = cust_st1.get("1.0","end-1c")
+                    city = cust_city.get()
+                    state = cust_state.get()
+                    pincode = cust_pin.get()
+                    country = cust_country.get()
+                    shipstreet = cust_st2.get("1.0","end-1c")
+                    shipcity = cust_city1.get()
+                    shipstate = cust_state1.get()
+                    shippincode = cust_pin1.get()
+                    shipcountry = cust_country1.get()
+                    cid  = 1
+
+                    
+                    
+                    if gsttype == "GST unregistered" or gsttype == "Consumer" or gsttype == "Overseas":
+                        gstin = ''
+                        if validate_pan(panno) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid PAN number") 
+                        elif validate_email(email) is False: 
+                            messagebox.showinfo("Fin sYs","Please provide a valid Email address")
+                        elif validate_web(website) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid Website address") 
+                        elif validate_mobile(mobile) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid Phone number")
+                        else:
+                            if termVar.get() == False:
+                                messagebox.showinfo("Fin sYs","You must agree before submitting")
+                            else:
+                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                finsyscursor.execute(ins_cust_sql,ins_cust_val)
+                                finsysdb.commit()
+                                sr_Frame_2.destroy()
+                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                finsyscursor.execute(cust_sql,)
+                                cust_data = finsyscursor.fetchall()
+
+                                cust_list = []
+                                if not cust_data:
+                                    pass
+                                else:
+                                    for c in cust_data:
+                                        cust_list.append(c[0] + " " + c[1])
+                                    cust_list.insert(0,'Select Customer')
+                                    rp_custCombo["values"] = cust_list
+                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+                    elif gstin == '29APPCK7465F1Z1' or panno == 'APPCK7465F':
+                        messagebox.showinfo("Fin sYs","Please provide valid inputs")
+                    else:
+                        if validate_gstin(gstin) is False: 
+                            messagebox.showinfo("Fin sYs","Please provide a valid GST number")
+                        elif validate_pan(panno) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid PAN number") 
+                        elif validate_email(email) is False: 
+                            messagebox.showinfo("Fin sYs","Please provide a valid Email address")
+                        elif validate_web(website) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid Website address") 
+                        elif validate_mobile(mobile) is False:
+                            messagebox.showinfo("Fin sYs","Please provide a valid Phone number")
+                        else:
+                            if termVar.get() == False:
+                                messagebox.showinfo("Fin sYs","You must agree before submitting")
+                            else:
+                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                finsyscursor.execute(ins_cust_sql,ins_cust_val)
+                                finsysdb.commit()
+                                sr_Frame_2.destroy()
+                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                finsyscursor.execute(cust_sql,)
+                                cust_data = finsyscursor.fetchall()
+
+                                cust_list = []
+                                if not cust_data:
+                                    pass
+                                else:
+                                    for c in cust_data:
+                                        cust_list.append(c[0] + " " + c[1])
+                                    cust_list.insert(0,'Select Customer')
+                                    rp_custCombo["values"] = cust_list
+                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
                 
-                cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:sr_create_newCustomer())
                 sr_Canvas_2.create_window(0,0,window=cust_save,tags=("button1"))
 
                 def dc_goBack1():
