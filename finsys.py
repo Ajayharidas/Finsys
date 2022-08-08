@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 from calendar import c
 from cgitb import enable, reset, text
@@ -1968,13 +1969,23 @@ def main_sign_in():
                             cust_fname = cust_name.split(" ")[0]
                             cust_lname = cust_name.split(" ")[1]
 
-                            cust_sql = "SELECT email FROM app1_customer WHERE firstname=%s and lastname=%s"
-                            cust_val = (cust_fname,cust_lname)
+                            user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                            user_val = (nm_ent.get(),)
+                            fbcursor.execute(user_sql,user_val)
+                            user_data = fbcursor.fetchone()
+
+                            comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                            comp_val = (user_data[0],)
+                            fbcursor.execute(comp_sql,comp_val)
+                            comp_data = fbcursor.fetchone()
+
+                            cust_sql = "SELECT email FROM app1_customer WHERE firstname=%s and lastname=%s and cid_id=%s"
+                            cust_val = (cust_fname,cust_lname,comp_data[0])
                             fbcursor.execute(cust_sql,cust_val)
                             cust_data = fbcursor.fetchone()
 
-                            inv_sql = "SELECT * FROM app1_invoice WHERE customername=%s"
-                            inv_val = (cust_name,)
+                            inv_sql = "SELECT * FROM app1_invoice WHERE customername=%s and cid_id=%s"
+                            inv_val = (cust_name,comp_data[0])
                             fbcursor.execute(inv_sql,inv_val)
                             inv_data = fbcursor.fetchall()
 
@@ -2590,29 +2601,57 @@ def main_sign_in():
                         rp_label6 = Label(sr_Canvas_1,width=20,height=1,text="Payment method",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=rp_label6,tags=("label7"))
 
-                        def addnew_pmethod(event):
+                        def show_pmethod(event):
                             if rp_pmethod.get() == "Add new":
+                                rp_newmeth.delete(0,END)
                                 sr_Canvas_1.itemconfig("entry7",state='normal')
                             else:
                                 sr_Canvas_1.itemconfig("entry7",state='hidden')
 
                         rp_pmethod = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=19,background='#2f516f')
-                        rp_pmethod['values'] = ['Add new','']
+                        pmethod_list = ['Add new',]
+                        rp_pmethod['values'] = pmethod_list
                         rp_pmethod.current(0)
-                        rp_pmethod.bind("<<ComboboxSelected>>",addnew_pmethod)
+                        rp_pmethod.bind("<<ComboboxSelected>>",show_pmethod)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_pmethod,tags=("entry3"))
 
+                        def addnew_pmethod(event):
+                            pmethod_list.insert(0,rp_newmeth.get())
+
+                            rp_pmethod["values"] = pmethod_list
+
                         rp_newmeth = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
+                        rp_newmeth.bind("<FocusOut>",addnew_pmethod)
                         sr_Canvas_1.create_window(0,0,anchor='nw',state=HIDDEN,window=rp_newmeth,tags=("entry7"))
 
                         rp_label7 = Label(sr_Canvas_1,width=20,height=1,text="Deposit to",font=('arial 12'),background='#1b3857',fg="white",anchor="nw")
                         sr_Canvas_1.create_window(0,0,window=rp_label7,tags=("label8"))
 
                         rp_depositto = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=15)
-                        rp_depositto['values'] = ['Deferred CGST','Deferred GST Input Credit','Deferred IGST',
+                        dep_list = ['Deferred CGST','Deferred GST Input Credit','Deferred IGST',
                         'Deferred Krishi Kalyan Cess Input Credit','Deferred SGST','Deferred Service Tax Input Credit',
                         'Deferred VAT Input Credit','GST Refund','Inventory Asset','Krishi Kalyan Cess Refund'
                         ,'Prepaid Insurance','Service Tax Refund','TDS Receivable','Uncategorised Asset','Undeposited Fund',]
+
+                        user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                        user_val = (nm_ent.get(),)
+                        fbcursor.execute(user_sql,user_val)
+                        user_data = fbcursor.fetchone()
+
+                        comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                        comp_val = (user_data[0],)
+                        fbcursor.execute(comp_sql,comp_val)
+                        comp_data = fbcursor.fetchone()
+
+                        dep_sql = "SELECT name FROM app1_accounts WHERE cid_id=%s"
+                        dep_val = (comp_data[0],)
+                        fbcursor.execute(dep_sql,dep_val)
+                        dep_data = fbcursor.fetchall()
+
+                        for d in dep_data:
+                            dep_list.insert(0,d)
+                        rp_depositto['values'] = dep_list
+                        rp_depositto.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_depositto,tags=("combo2"))
 
                         def add_depositTo():
@@ -2920,8 +2959,22 @@ def main_sign_in():
                                     upd_accts1_val = (bal,cid,'Opening Balance Equity',)
                                     fbcursor.execute(upd_accts1_sql,upd_accts1_val)
                                     finsysdb.commit()
+
+                                    sr_Frame_3.destroy()
+                                    sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+
+                                    deposit_sql = "SELECT name FROM app1_accounts WHERE cid_id=%s ORDER BY accountsid DESC LIMIT 1;"
+                                    deposit_val = (comp_data[0],)
+                                    fbcursor.execute(deposit_sql,deposit_val)
+                                    deposit_data = fbcursor.fetchall()
+
+                                    dep_list.insert(0,deposit_data)
+                                    rp_depositto.config(values=dep_list)
+                                    rp_depositto.current(0)
                                 else:
                                     messagebox.showwarning("Fin sYs",f"Account with name {name} already exists. Please provide another name.")
+
+
 
 
                             dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:payment_createAccType())
@@ -2940,7 +2993,57 @@ def main_sign_in():
                         rp_label8 = Label(sr_Canvas_1,width=20,height=1,text="Amount recieved",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=rp_label8,tags=("label9"))
 
+                        def amount_receiving(event):
+                            # try:
+                            ramount = rp_amntre.get()
+                            if ramount.isdigit():
+                                if rp_tree.get_children() == '':
+                                    pass
+                                else:
+                                    tree_list = []
+                                    cash = float(ramount)
+                                    for child in rp_tree.get_children():
+                                        row = rp_tree.item(child,'values')
+                                        if cash < float(row[3]):
+                                            tree_list.append((row[0],row[1],row[2],row[3],cash))
+                                            print(cash,float(row[3]))
+                                            cash = float(row[3]) - cash
+                                            print(cash)
+                                        elif cash >= float(row[3]):
+                                            tree_list.append((row[0],row[1],row[2],row[3],row[3]))
+                                            cash -= (cash - float(row[3]))
+                                        else:
+                                            pass
+                                    print(cash)
+
+                                        # rp_tree.focus(child_id)
+                                        # rp_tree.selection_set(child_id)
+                                        # selected_row = rp_tree.selection()[0]
+                                        # pay_indices = rp_tree.item(selected_row,'values')
+                                        # rp_tree.item(selected_row,values=pay_indices)
+
+
+                                        # payment = float(ramount) - float(pay_indices[])
+                                        # if float(ramount) < float(child[3]):
+                                        #     rp_tree.set(selected_row,"#5",ramount)
+                                        # elif float(ramount) >= float(pay_indices[3]):
+                                        #     rp_tree.set(selected_row,"#5",pay_indices[3])
+                                        #     index = [rp_tree.index(id) for id in rp_tree.selection()]
+                                        #     index[0] += 1
+                                        # else:
+                                        #     pass
+                                        # rp_label10.config(text=str(ramount))
+                            else:
+                                rp_amntre.delete(0,END)
+                                if ramount == '':
+                                    rp_label10.config(text='0.00')
+                                else:
+                                    pass
+                            # except:
+                            #     pass
+
                         rp_amntre = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
+                        rp_amntre.bind("<FocusOut>",amount_receiving)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_amntre,tags=("entry4"))
 
                         rp_label9 = Label(sr_Canvas_1,width=20,height=1,text="AMOUNT RECIEVED",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -3041,66 +3144,49 @@ def main_sign_in():
                         rpt_payment = Entry(sr_Canvas_1,font=('arial 15'),width=17,background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=rpt_payment,tags=("entry12")) 
 
-                        editVar = StringVar()
-                        def show_editEntry(event):
-                            if rpt_edit.get() == "Edit":
-                                selected_item = rp_tree.selection()[0]
-                                rpt_row = list(rp_tree.item(selected_item,'values'))
-                                if len(rpt_row) == '':
-                                    pass
-                                else:
-                                    sr_Canvas_1.itemconfig('label13',state='normal')
-                                    sr_Canvas_1.itemconfig('label14',state='normal')
-                                    sr_Canvas_1.itemconfig('label15',state='normal')
-                                    sr_Canvas_1.itemconfig('label16',state='normal')
-                                    sr_Canvas_1.itemconfig('label17',state='normal')
-
-                                    sr_Canvas_1.itemconfig('entry8',state='normal')
-                                    sr_Canvas_1.itemconfig('entry9',state='normal')
-                                    sr_Canvas_1.itemconfig('entry10',state='normal')
-                                    sr_Canvas_1.itemconfig('entry11',state='normal')
-                                    sr_Canvas_1.itemconfig('entry12',state='normal')
-
-                                    rpt_descp.delete(0,END)
-                                    rpt_descp.insert(0,rpt_row[0])
-                                    rpt_due.delete(0,END)
-                                    rpt_due.insert(0,rpt_row[1])
-                                    rpt_original.delete(0,END)
-                                    rpt_original.insert(0,rpt_row[2])
-                                    rpt_obal.delete(0,END)
-                                    rpt_obal.insert(0,rpt_row[3])
-                                    rpt_payment.delete(0,END)
-                                    rpt_payment.insert(0,rpt_row[4])
-
-                                    try:
-                                        def assign_newvalue(event):
-                                            rp_tree.item(selected_item,values=(rpt_descp.get(),rpt_due.get(),rpt_original.get(),rpt_obal.get(),rpt_payment.get()))
-
-                                        rpt_descp.bind("<KeyRelease>",assign_newvalue)
-                                        rpt_due.bind("<KeyRelease>",assign_newvalue)
-                                        rpt_original.bind("<KeyRelease>",assign_newvalue)
-                                        rpt_obal.bind("<KeyRelease>",assign_newvalue)
-                                        rpt_payment.bind("<KeyRelease>",assign_newvalue)
-                                    except:
-                                        pass
-                                    
+                        def show_editEntry():
+                            selected_item = rp_tree.selection()[0]
+                            rpt_row = list(rp_tree.item(selected_item,'values'))
+                            if len(rpt_row) == '':
+                                pass
                             else:
-                                sr_Canvas_1.itemconfig('label13',state='hidden')
-                                sr_Canvas_1.itemconfig('label14',state='hidden')
-                                sr_Canvas_1.itemconfig('label15',state='hidden')
-                                sr_Canvas_1.itemconfig('label16',state='hidden')
-                                sr_Canvas_1.itemconfig('label17',state='hidden')
+                                sr_Canvas_1.itemconfig('label13',state='normal')
+                                sr_Canvas_1.itemconfig('label14',state='normal')
+                                sr_Canvas_1.itemconfig('label15',state='normal')
+                                sr_Canvas_1.itemconfig('label16',state='normal')
+                                sr_Canvas_1.itemconfig('label17',state='normal')
 
-                                sr_Canvas_1.itemconfig('entry8',state='hidden')
-                                sr_Canvas_1.itemconfig('entry9',state='hidden')
-                                sr_Canvas_1.itemconfig('entry10',state='hidden')
-                                sr_Canvas_1.itemconfig('entry11',state='hidden')
-                                sr_Canvas_1.itemconfig('entry12',state='hidden')
+                                sr_Canvas_1.itemconfig('entry8',state='normal')
+                                sr_Canvas_1.itemconfig('entry9',state='normal')
+                                sr_Canvas_1.itemconfig('entry10',state='normal')
+                                sr_Canvas_1.itemconfig('entry11',state='normal')
+                                sr_Canvas_1.itemconfig('entry12',state='normal')
+
+                                rpt_descp.delete(0,END)
+                                rpt_descp.insert(0,rpt_row[0])
+                                rpt_due.delete(0,END)
+                                rpt_due.insert(0,rpt_row[1])
+                                rpt_original.delete(0,END)
+                                rpt_original.insert(0,rpt_row[2])
+                                rpt_obal.delete(0,END)
+                                rpt_obal.insert(0,rpt_row[3])
+                                rpt_payment.delete(0,END)
+                                rpt_payment.insert(0,rpt_row[4])
+
+                                try:
+                                    def assign_newvalue(event):
+                                        rp_tree.item(selected_item,values=(rpt_descp.get(),rpt_due.get(),rpt_original.get(),rpt_obal.get(),rpt_payment.get()))
+
+                                    rpt_descp.bind("<KeyRelease>",assign_newvalue)
+                                    rpt_due.bind("<KeyRelease>",assign_newvalue)
+                                    rpt_original.bind("<KeyRelease>",assign_newvalue)
+                                    rpt_obal.bind("<KeyRelease>",assign_newvalue)
+                                    rpt_payment.bind("<KeyRelease>",assign_newvalue)
+                                except:
+                                    pass
 
 
-                        rpt_edit = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=8,background='#2f516f',foreground='black')
-                        rpt_edit["values"] = ['Edit',]
-                        rpt_edit.bind("<<ComboboxSelected>>",show_editEntry)
+                        rpt_edit = Button(sr_Canvas_1,font=('arial 12'),text='edit',width=11,background='#1b3857',foreground='white',activebackground='#1b3857',activeforeground='white',command=lambda:show_editEntry())
                         sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_edit,tags=("combo13")) 
 
                         rp_label5 = Label(sr_Canvas_1,width=20,height=1,text="Payment date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
