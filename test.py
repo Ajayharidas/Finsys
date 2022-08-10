@@ -103,3 +103,39 @@ import PIL.Image
 # root.mainloop()
 
 
+if bal <= 0.0:
+                                        print("yes")
+                                    else:
+                                        print("no")
+                                        rp_tree.selection_remove(child)
+                                        child1  = rp_tree.get_children()[-1]
+                                        rp_tree.focus(child1)
+                                        rp_tree.selection_set(child1)
+                                        selected_row = rp_tree.selection()[0]
+                                        pay_indices1 = rp_tree.item(selected_row,'values')
+                                        rp_tree.item(selected_row,values=pay_indices1)
+
+                                        if float(pay_indices1[3]) >= bal:
+                                            rp_tree.set(selected_row,"#5",bal)
+                                            bal1 = float(bal)
+                                        elif float(pay_indices1[3]) == 0.0 or float(pay_indices1[3]) <= bal:
+                                            rp_tree.set(selected_row,"#5",float(pay_indices1[3]))
+                                            bal1 = float(bal) - float(pay_indices[3])
+                                        else:
+                                            pass
+
+                                        child2  = rp_tree.get_children()[-2]
+                                        rp_tree.focus(child2)
+                                        rp_tree.selection_set(child2)
+                                        selected_row = rp_tree.selection()[0]
+                                        pay_indices2 = rp_tree.item(selected_row,'values')
+                                        rp_tree.item(selected_row,values=pay_indices2)
+
+                                        if float(pay_indices2[3]) >= bal1:
+                                            rp_tree.set(selected_row,"#5",bal1)
+                                            bal2 = float(bal1)
+                                        elif float(pay_indices2[3]) == 0.0 or float(pay_indices2[3]) <= bal1:
+                                            rp_tree.set(selected_row,"#5",float(pay_indices2[3]))
+                                            bal2 = float(bal1) - float(pay_indices2[3])
+                                        else:
+                                            pass

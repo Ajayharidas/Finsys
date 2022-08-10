@@ -1,4 +1,6 @@
 
+from sys import flags
+from turtle import width
 import matplotlib.pyplot as plt
 from calendar import c
 from cgitb import enable, reset, text
@@ -1564,7 +1566,7 @@ def main_sign_in():
                         x11 = dwidth/63
                         x21 = dwidth/1.021
                         y11 = dheight/2.8
-                        y21 = dheight/0.6
+                        y21 = dheight/0.45
 
 
                         dcanvas.coords("poly2",x11 + r2,y11,
@@ -1709,16 +1711,16 @@ def main_sign_in():
                             dcanvas.coords("label15",dwidth/2.12,dheight/0.94)
                             dcanvas.coords("label16",dwidth/1.56,dheight/0.94)
                             dcanvas.coords("label17",dwidth/1.245,dheight/0.94)
-                            dcanvas.coords("label18",dwidth/1.49,dheight/0.819)
-                            dcanvas.coords("label19",dwidth/1.49,dheight/0.759)
+                            dcanvas.coords("label18",dwidth/1.53,dheight/0.583)
+                            dcanvas.coords("label19",dwidth/1.53,dheight/0.55)
                             dcanvas.coords("label20",dwidth/16.2,dheight/0.91)
 
                             dcanvas.coords("entry1",dwidth/2.5,dheight/1.68)
                             dcanvas.coords("entry2",dwidth/1.35,dheight/1.68)
                             dcanvas.coords("entry3",dwidth/11,dheight/1.195)
                             dcanvas.coords("entry4",dwidth/1.35,dheight/1.195)
-                            dcanvas.coords("entry5",dwidth/1.18,dheight/0.819)
-                            dcanvas.coords("entry6",dwidth/1.18,dheight/0.759)
+                            dcanvas.coords("entry5",dwidth/1.214,dheight/0.583)
+                            dcanvas.coords("entry6",dwidth/1.214,dheight/0.55)
                             try:
                                 dcanvas.coords("entry7",dwidth/11,dheight/1.1)
                             except:
@@ -1735,7 +1737,7 @@ def main_sign_in():
                             dcanvas.coords("button1",dwidth/3.89,dheight/1.6115)
                             dcanvas.coords("button2",dwidth/1.103,dheight/1.3415)
                             dcanvas.coords("button3",dwidth/27,dheight/3)
-                            dcanvas.coords("button4",dwidth/1.114,dheight/0.70)
+                            dcanvas.coords("button4",dwidth/1.16,dheight/0.51)
 
                             dcanvas.coords("line1",dwidth/31.6,dheight/1.002,dwidth/1.039,dheight/1.002)
                             dcanvas.coords("line2",dwidth/31.6,dheight/0.94,dwidth/1.039,dheight/0.94)
@@ -1746,12 +1748,12 @@ def main_sign_in():
                             dcanvas.coords("line7",dwidth/2.8,dheight/1.002,dwidth/2.8,dheight/0.878)
                             dcanvas.coords("line8",dwidth/1.65,dheight/1.002,dwidth/1.65,dheight/0.878)
                             dcanvas.coords("line9",dwidth/1.25,dheight/1.002,dwidth/1.25,dheight/0.878)
-                            dcanvas.coords("line10",dwidth/1.65,dheight/0.85,dwidth/1.65,dheight/0.73)
-                            dcanvas.coords("line11",dwidth/1.039,dheight/0.85,dwidth/1.039,dheight/0.73)
-                            dcanvas.coords("line12",dwidth/1.65,dheight/0.85,dwidth/1.039,dheight/0.85)
-                            dcanvas.coords("line13",dwidth/1.65,dheight/0.73,dwidth/1.039,dheight/0.73)
-                            dcanvas.coords("line14",dwidth/1.65,dheight/0.785,dwidth/1.039,dheight/0.785)
-                            dcanvas.coords("line15",dwidth/1.36,dheight/0.85,dwidth/1.36,dheight/0.73)
+                            dcanvas.coords("line10",dwidth/1.7,dheight/0.6,dwidth/1.7,dheight/0.535)
+                            dcanvas.coords("line11",dwidth/1.078,dheight/0.6,dwidth/1.078,dheight/0.535)
+                            dcanvas.coords("line12",dwidth/1.7,dheight/0.6,dwidth/1.078,dheight/0.6)
+                            dcanvas.coords("line13",dwidth/1.7,dheight/0.566,dwidth/1.078,dheight/0.566)
+                            dcanvas.coords("line14",dwidth/1.7,dheight/0.535,dwidth/1.078,dheight/0.535)
+                            dcanvas.coords("line15",dwidth/1.39,dheight/0.6,dwidth/1.39,dheight/0.535)
                             dcanvas.coords("line16",dwidth/31.6,dheight/0.878,dwidth/1.039,dheight/0.878)
                         except:
                             pass
@@ -1924,6 +1926,8 @@ def main_sign_in():
 
                         dcanvas.coords("tree1",dwidth/15,dheight/0.79)
                         dcanvas.coords("combo13",dwidth/1.13,dheight/0.82)
+                        dcanvas.coords("scroll",dwidth/1.087,dheight/0.695)
+                        
 
                     sr_Canvas_1 = Canvas(sr_Frame_1,bg='#2f516f',scrollregion=(0,0,700,1400))
 
@@ -2000,7 +2004,7 @@ def main_sign_in():
                             else:
                                 count = 1
                                 for i in inv_data:
-                                    rp_tree.insert(parent='',index='end',iid=i,text=count,values=(str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
+                                    rp_tree.insert(parent='',index='end',iid=i,text='',values=(count,str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
                                     count += 1
 
                         rp_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
@@ -2609,9 +2613,8 @@ def main_sign_in():
                                 sr_Canvas_1.itemconfig("entry7",state='hidden')
 
                         rp_pmethod = ttk.Combobox(sr_Canvas_1,font=('arial 15'),width=19,background='#2f516f')
-                        pmethod_list = ['Add new',]
+                        pmethod_list = ['Cash','Cheque','Credit Card','Add new']
                         rp_pmethod['values'] = pmethod_list
-                        rp_pmethod.current(0)
                         rp_pmethod.bind("<<ComboboxSelected>>",show_pmethod)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_pmethod,tags=("entry3"))
 
@@ -2994,56 +2997,289 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,window=rp_label8,tags=("label9"))
 
                         def amount_receiving(event):
-                            # try:
-                            ramount = rp_amntre.get()
-                            if ramount.isdigit():
-                                if rp_tree.get_children() == '':
-                                    pass
-                                else:
-                                    tree_list = []
-                                    cash = float(ramount)
-                                    for child in rp_tree.get_children():
-                                        row = rp_tree.item(child,'values')
-                                        if cash < float(row[3]):
-                                            tree_list.append((row[0],row[1],row[2],row[3],cash))
-                                            print(cash,float(row[3]))
-                                            cash = float(row[3]) - cash
-                                            print(cash)
-                                        elif cash >= float(row[3]):
-                                            tree_list.append((row[0],row[1],row[2],row[3],row[3]))
-                                            cash -= (cash - float(row[3]))
-                                        else:
+                            try:
+                                ramount = rp_amntre.get()
+                                if ramount.isdigit():
+                                    if rp_tree.get_children() == '':
+                                        pass
+                                    else:
+                                        try:
+                                            child  = rp_tree.get_children()
+                                            rp_tree.focus(child[0])
+                                            rp_tree.selection_set(child[0])
+                                            selected_row = rp_tree.selection()[0]
+                                            pay_indices = rp_tree.item(selected_row,'values')
+                                            rp_tree.item(selected_row,values=pay_indices)
+
+                                            if float(pay_indices[4]) >= float(ramount):
+                                                rp_tree.set(selected_row,"#6",ramount)
+                                            elif float(pay_indices[4]) == 0.0 or float(pay_indices[4]) <= float(ramount):
+                                                rp_tree.set(selected_row,"#6",float(pay_indices[4]))
+                                                
+                                            else:
+                                                pass
+
+                                            bal = float(ramount) - float(pay_indices[4])
+
+                                            rp_tree.focus(child[1])
+                                            rp_tree.selection_set(child[1])
+                                            selected_row = rp_tree.selection()[0]
+                                            pay_indices1 = rp_tree.item(selected_row,'values')
+                                            rp_tree.item(selected_row,values=pay_indices1)
+                                            
+                                            if bal <= 0.0:
+                                                for i in  range(1,len(child)):
+                                                    rp_tree.focus(child[i])
+                                                    rp_tree.selection_set(child[i])
+                                                    selected_row = rp_tree.selection()[0]
+                                                    pay_indices = rp_tree.item(selected_row,'values')
+                                                    rp_tree.item(selected_row,values=pay_indices)
+
+                                                    rp_tree.set(selected_row,"#6",0)
+                                            else:
+                                                if float(pay_indices1[4]) >= bal:
+                                                    rp_tree.set(selected_row,"#6",bal)
+                                                elif float(pay_indices1[4]) == 0.0 or float(pay_indices1[4]) <= bal:
+                                                    rp_tree.set(selected_row,"#6",float(pay_indices1[4]))
+                                                else:
+                                                    pass
+
+                                                bal1 = float(bal) - float(pay_indices1[4])
+
+                                                rp_tree.focus(child[2])
+                                                rp_tree.selection_set(child[2])
+                                                selected_row = rp_tree.selection()[0]
+                                                pay_indices2 = rp_tree.item(selected_row,'values')
+                                                rp_tree.item(selected_row,values=pay_indices2)
+
+                                                if bal1 <= 0.0:
+                                                    for i in  range(2,len(child)):
+                                                        rp_tree.focus(child[i])
+                                                        rp_tree.selection_set(child[i])
+                                                        selected_row = rp_tree.selection()[0]
+                                                        pay_indices = rp_tree.item(selected_row,'values')
+                                                        rp_tree.item(selected_row,values=pay_indices)
+
+                                                        rp_tree.set(selected_row,"#6",0)
+                                                else:
+                                                    if float(pay_indices2[4]) >= bal1:
+                                                        rp_tree.set(selected_row,"#6",bal1)
+                                                    elif float(pay_indices2[4]) == 0.0 or float(pay_indices2[4]) <= bal1:
+                                                        rp_tree.set(selected_row,"#6",float(pay_indices2[4]))
+                                                    else:
+                                                        pass
+
+                                                    bal2 = float(bal1) - float(pay_indices2[4])
+
+                                                    rp_tree.focus(child[3])
+                                                    rp_tree.selection_set(child[3])
+                                                    selected_row = rp_tree.selection()[0]
+                                                    pay_indices3 = rp_tree.item(selected_row,'values')
+                                                    rp_tree.item(selected_row,values=pay_indices3)
+
+                                                    if bal2 <= 0.0:
+                                                        for i in  range(3,len(child)):
+                                                            rp_tree.focus(child[i])
+                                                            rp_tree.selection_set(child[i])
+                                                            selected_row = rp_tree.selection()[0]
+                                                            pay_indices = rp_tree.item(selected_row,'values')
+                                                            rp_tree.item(selected_row,values=pay_indices)
+
+                                                            rp_tree.set(selected_row,"#6",0)
+                                                    else:
+                                                        if float(pay_indices3[4]) >= bal2:
+                                                            rp_tree.set(selected_row,"#6",bal2)
+                                                        elif float(pay_indices3[4]) == 0.0 or float(pay_indices3[4]) <= bal2:
+                                                            rp_tree.set(selected_row,"#6",float(pay_indices3[4]))
+                                                        else:
+                                                            pass
+
+                                                        bal3 = float(bal2) - float(pay_indices3[4])
+
+                                                        rp_tree.focus(child[4])
+                                                        rp_tree.selection_set(child[4])
+                                                        selected_row = rp_tree.selection()[0]
+                                                        pay_indices4 = rp_tree.item(selected_row,'values')
+                                                        rp_tree.item(selected_row,values=pay_indices4)
+
+                                                        if bal3 <= 0.0:
+                                                            for i in  range(4,len(child)):
+                                                                rp_tree.focus(child[i])
+                                                                rp_tree.selection_set(child[i])
+                                                                selected_row = rp_tree.selection()[0]
+                                                                pay_indices = rp_tree.item(selected_row,'values')
+                                                                rp_tree.item(selected_row,values=pay_indices)
+
+                                                                rp_tree.set(selected_row,"#6",0)
+                                                        else:
+                                                            if float(pay_indices4[4]) >= bal3:
+                                                                rp_tree.set(selected_row,"#6",bal3)
+                                                            elif float(pay_indices4[4]) == 0.0 or float(pay_indices4[4]) <= bal3:
+                                                                rp_tree.set(selected_row,"#6",float(pay_indices4[4]))
+                                                            else:
+                                                                pass
+
+                                                            bal4 = float(bal3) - float(pay_indices4[4])
+
+                                                            rp_tree.focus(child[5])
+                                                            rp_tree.selection_set(child[5])
+                                                            selected_row = rp_tree.selection()[0]
+                                                            pay_indices5 = rp_tree.item(selected_row,'values')
+                                                            rp_tree.item(selected_row,values=pay_indices5)
+
+                                                            if bal4 <= 0.0:
+                                                                for i in  range(5,len(child)):
+                                                                    rp_tree.focus(child[i])
+                                                                    rp_tree.selection_set(child[i])
+                                                                    selected_row = rp_tree.selection()[0]
+                                                                    pay_indices = rp_tree.item(selected_row,'values')
+                                                                    rp_tree.item(selected_row,values=pay_indices)
+
+                                                                    rp_tree.set(selected_row,"#6",0)
+                                                            else:
+                                                                if float(pay_indices5[4]) >= bal4:
+                                                                    rp_tree.set(selected_row,"#6",bal4)
+                                                                elif float(pay_indices5[4]) == 0.0 or float(pay_indices5[4]) <= bal4:
+                                                                    rp_tree.set(selected_row,"#6",float(pay_indices5[4]))
+                                                                else:
+                                                                    pass
+
+                                                                bal5 = float(bal4) - float(pay_indices5[4])
+
+                                                                rp_tree.focus(child[6])
+                                                                rp_tree.selection_set(child[6])
+                                                                selected_row = rp_tree.selection()[0]
+                                                                pay_indices6 = rp_tree.item(selected_row,'values')
+                                                                rp_tree.item(selected_row,values=pay_indices6)
+
+                                                                if bal5 <= 0.0:
+                                                                    for i in  range(6,len(child)):
+                                                                        rp_tree.focus(child[i])
+                                                                        rp_tree.selection_set(child[i])
+                                                                        selected_row = rp_tree.selection()[0]
+                                                                        pay_indices = rp_tree.item(selected_row,'values')
+                                                                        rp_tree.item(selected_row,values=pay_indices)
+
+                                                                        rp_tree.set(selected_row,"#6",0)
+                                                                else:
+                                                                    if float(pay_indices6[4]) >= bal5:
+                                                                        rp_tree.set(selected_row,"#6",bal5)
+                                                                    elif float(pay_indices6[4]) == 0.0 or float(pay_indices6[4]) <= bal5:
+                                                                        rp_tree.set(selected_row,"#6",float(pay_indices6[4]))
+                                                                    else:
+                                                                        pass
+
+                                                                    bal6 = float(bal5) - float(pay_indices6[4])
+
+                                                                    rp_tree.focus(child[7])
+                                                                    rp_tree.selection_set(child[7])
+                                                                    selected_row = rp_tree.selection()[0]
+                                                                    pay_indices7 = rp_tree.item(selected_row,'values')
+                                                                    rp_tree.item(selected_row,values=pay_indices7)
+
+                                                                    if bal6 <= 0.0:
+                                                                        for i in  range(7,len(child)):
+                                                                            rp_tree.focus(child[i])
+                                                                            rp_tree.selection_set(child[i])
+                                                                            selected_row = rp_tree.selection()[0]
+                                                                            pay_indices = rp_tree.item(selected_row,'values')
+                                                                            rp_tree.item(selected_row,values=pay_indices)
+
+                                                                            rp_tree.set(selected_row,"#6",0)
+                                                                    else:
+                                                                        if float(pay_indices7[4]) >= bal6:
+                                                                            rp_tree.set(selected_row,"#6",bal6)
+                                                                        elif float(pay_indices7[4]) == 0.0 or float(pay_indices7[4]) <= bal6:
+                                                                            rp_tree.set(selected_row,"#6",float(pay_indices7[4]))
+                                                                        else:
+                                                                            pass
+
+                                                                        bal7 = float(bal6) - float(pay_indices7[4])
+
+                                                                        rp_tree.focus(child[8])
+                                                                        rp_tree.selection_set(child[8])
+                                                                        selected_row = rp_tree.selection()[0]
+                                                                        pay_indices8 = rp_tree.item(selected_row,'values')
+                                                                        rp_tree.item(selected_row,values=pay_indices8)
+
+                                                                        if bal7 <= 0.0:
+                                                                            for i in  range(8,len(child)):
+                                                                                rp_tree.focus(child[i])
+                                                                                rp_tree.selection_set(child[i])
+                                                                                selected_row = rp_tree.selection()[0]
+                                                                                pay_indices = rp_tree.item(selected_row,'values')
+                                                                                rp_tree.item(selected_row,values=pay_indices)
+
+                                                                                rp_tree.set(selected_row,"#6",0)
+                                                                        else:
+                                                                            if float(pay_indices8[4]) >= bal7:
+                                                                                rp_tree.set(selected_row,"#6",bal7)
+                                                                            elif float(pay_indices8[4]) == 0.0 or float(pay_indices8[4]) <= bal7:
+                                                                                rp_tree.set(selected_row,"#6",float(pay_indices8[4]))
+                                                                            else:
+                                                                                pass
+
+                                                                            bal8 = float(bal7) - float(pay_indices8[4])
+
+                                                                            rp_tree.focus(child[9])
+                                                                            rp_tree.selection_set(child[9])
+                                                                            selected_row = rp_tree.selection()[0]
+                                                                            pay_indices9 = rp_tree.item(selected_row,'values')
+                                                                            rp_tree.item(selected_row,values=pay_indices9)
+
+                                                                            if bal8 <= 0.0:
+                                                                                for i in  range(8,len(child)):
+                                                                                    rp_tree.focus(child[i])
+                                                                                    rp_tree.selection_set(child[i])
+                                                                                    selected_row = rp_tree.selection()[0]
+                                                                                    pay_indices = rp_tree.item(selected_row,'values')
+                                                                                    rp_tree.item(selected_row,values=pay_indices)
+
+                                                                                    rp_tree.set(selected_row,"#6",0)
+                                                                            else:
+                                                                                if float(pay_indices9[4]) >= bal8:
+                                                                                    rp_tree.set(selected_row,"#6",bal8)
+                                                                                elif float(pay_indices9[4]) == 0.0 or float(pay_indices9[4]) <= bal8:
+                                                                                    rp_tree.set(selected_row,"#6",float(pay_indices9[4]))
+                                                                                else:
+                                                                                    pass
+                                        except:
                                             pass
-                                    print(cash)
 
-                                        # rp_tree.focus(child_id)
-                                        # rp_tree.selection_set(child_id)
-                                        # selected_row = rp_tree.selection()[0]
-                                        # pay_indices = rp_tree.item(selected_row,'values')
-                                        # rp_tree.item(selected_row,values=pay_indices)
+                                        
+                                        rp_label10.config(text=str(ramount))
+                                        
+                                        ata = 0.0
+                                        for c in child:
+                                            payment = rp_tree.item(c,'values')[5]
+                                            ata += float(payment)
+                                        
+                                        atc = float(ramount) - float(ata)
 
-
-                                        # payment = float(ramount) - float(pay_indices[])
-                                        # if float(ramount) < float(child[3]):
-                                        #     rp_tree.set(selected_row,"#5",ramount)
-                                        # elif float(ramount) >= float(pay_indices[3]):
-                                        #     rp_tree.set(selected_row,"#5",pay_indices[3])
-                                        #     index = [rp_tree.index(id) for id in rp_tree.selection()]
-                                        #     index[0] += 1
-                                        # else:
-                                        #     pass
-                                        # rp_label10.config(text=str(ramount))
-                            else:
-                                rp_amntre.delete(0,END)
-                                if ramount == '':
-                                    rp_label10.config(text='0.00')
+                                        rp_amnttoapply.delete(0,END)
+                                        rp_amnttoapply.insert(0,ata)
+                                        rp_amnttocredit.delete(0,END)
+                                        rp_amnttocredit.insert(0,atc)
                                 else:
-                                    pass
-                            # except:
-                            #     pass
+                                    rp_amntre.delete(0,END)
+                                    if ramount == '':
+                                        child  = rp_tree.get_children()
+                                        for i in  range(0,len(child)):
+                                            rp_tree.focus(child[i])
+                                            rp_tree.selection_set(child[i])
+                                            selected_row = rp_tree.selection()[0]
+                                            pay_indices = rp_tree.item(selected_row,'values')
+                                            rp_tree.item(selected_row,values=pay_indices)
+
+                                            rp_tree.set(selected_row,"#6",0)
+                                        rp_label10.config(text='0.00')
+                                    else:
+                                        pass
+                            except:
+                                pass
 
                         rp_amntre = Entry(sr_Canvas_1,font=('arial 15'),width=20,background='#2f516f',foreground='white')
-                        rp_amntre.bind("<FocusOut>",amount_receiving)
+                        rp_amntre.bind("<KeyRelease>",amount_receiving)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_amntre,tags=("entry4"))
 
                         rp_label9 = Label(sr_Canvas_1,width=20,height=1,text="AMOUNT RECIEVED",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -3081,15 +3317,17 @@ def main_sign_in():
                         rpt_label6 = Label(sr_Canvas_1,width=15,height=1,text="PAYMENT", font=('arial 10 bold'),background='#1b3857',fg="white") 
                         sr_Canvas_1.create_window(0, 0, anchor="c",state=HIDDEN, window=rpt_label6,tags=("label17"))
 
-                        rp_tree = ttk.Treeview(sr_Canvas_1,height=8)
-                        rp_tree["columns"] = ["1","2","3","4","5"]
-                        rp_tree.column("#0",width=35)
-                        rp_tree.column("1",width=210,anchor=CENTER)
-                        rp_tree.column("2",width=210,anchor=CENTER)
-                        rp_tree.column("3",width=210,anchor=CENTER)
-                        rp_tree.column("4",width=210,anchor=CENTER)
-                        rp_tree.column("5",width=210,anchor=CENTER)
-                        rp_tree.heading("#0",text="#")
+                        rp_tree_style = ttk.Style()
+                        rp_tree_style.configure("Treeview.Heading",background="#1b3857",activeforeground="black",foreground="white")
+
+                        rp_tree = ttk.Treeview(sr_Canvas_1,columns=("0","1","2","3","4","5"),show="headings",height=8)
+                        rp_tree.column("0",width=35,anchor=CENTER)
+                        rp_tree.column("1",width=206,anchor=CENTER)
+                        rp_tree.column("2",width=206,anchor=CENTER)
+                        rp_tree.column("3",width=206,anchor=CENTER)
+                        rp_tree.column("4",width=206,anchor=CENTER)
+                        rp_tree.column("5",width=216,anchor=CENTER)
+                        rp_tree.heading("0",text="#")
                         rp_tree.heading("1",text="DESCRIPTION")
                         rp_tree.heading("2",text="DUE DATE")
                         rp_tree.heading("3",text="ORIGINAL AMOUNT")
@@ -3097,24 +3335,34 @@ def main_sign_in():
                         rp_tree.heading("5",text="PAYMENT")
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_tree,tags=("tree1"))
 
-                        # sr_Canvas_1.create_line(820,800,1260,800,fill='gray',width=1,tags=("line10"))
-                        # sr_Canvas_1.create_line(820,850,1260,850,fill='gray',width=1,tags=("line11"))
-                        # sr_Canvas_1.create_line(820,900,1260,900,fill='gray',width=1,tags=("line12"))
-                        # sr_Canvas_1.create_line(820,800,820,900,fill='gray',width=1,tags=("line13"))
-                        # sr_Canvas_1.create_line(1000,800,1000,900,fill='gray',width=1,tags=("line14"))
-                        # sr_Canvas_1.create_line(1260,800,1260,900,fill='gray',width=1,tags=("line15"))
+                        rp_tree_scroll = Scrollbar(sr_Canvas_1,orient=VERTICAL)
+                        rp_tree_scroll.lift(rp_tree)
+                        sr_Canvas_1.create_window(0,0,window=rp_tree_scroll,height=179,tags=("scroll"))
+                        rp_tree_scroll.config(command=rp_tree.yview)
+                        rp_tree.config(yscrollcommand=rp_tree_scroll.set)
 
-                        # rpt_label7 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Apply", font=('arial 10 bold'),background='#1b3857',fg="white") 
-                        # sr_Canvas_1.create_window(910, 825, anchor="c", window=rpt_label7,tags=("label18"))  
+                        sr_Canvas_1.create_line(820,800,1260,800,fill='gray',width=1,tags=("line10"))
+                        sr_Canvas_1.create_line(820,850,1260,850,fill='gray',width=1,tags=("line11"))
+                        sr_Canvas_1.create_line(820,900,1260,900,fill='gray',width=1,tags=("line12"))
+                        sr_Canvas_1.create_line(820,800,820,900,fill='gray',width=1,tags=("line13"))
+                        sr_Canvas_1.create_line(1000,800,1000,900,fill='gray',width=1,tags=("line14"))
+                        sr_Canvas_1.create_line(1260,800,1260,900,fill='gray',width=1,tags=("line15"))
 
-                        # rp_amnttoapply = Entry(sr_Canvas_1,font=('arial 15'),width=24,background='#2f516f',foreground='white')
-                        # sr_Canvas_1.create_window(1130,825,anchor='c',window=rp_amnttoapply,tags=("entry5"))   
+                        rpt_label7 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Apply", font=('arial 10 bold'),background='#1b3857',fg="white") 
+                        sr_Canvas_1.create_window(910, 825, anchor="c", window=rpt_label7,tags=("label18"))  
 
-                        # rpt_label8 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Credit", font=('arial 10 bold'),background='#1b3857',fg="white") 
-                        # sr_Canvas_1.create_window(910, 875, anchor="c", window=rpt_label8,tags=("label19"))  
+                        rp_amnttoapply = Entry(sr_Canvas_1,font=('arial 15'),width=21,background='#2f516f',foreground='white')
+                        rp_amnttoapply.delete(0,END)
+                        rp_amnttoapply.insert(0,"0.00")
+                        sr_Canvas_1.create_window(1130,825,anchor='c',window=rp_amnttoapply,tags=("entry5"))   
 
-                        # rp_amnttocredit = Entry(sr_Canvas_1,font=('arial 15'),width=24,background='#2f516f',foreground='white')
-                        # sr_Canvas_1.create_window(1130,875,anchor='c',window=rp_amnttocredit,tags=("entry6"))   
+                        rpt_label8 = Label(sr_Canvas_1,width=15,height=1,text="Amount to Credit", font=('arial 10 bold'),background='#1b3857',fg="white") 
+                        sr_Canvas_1.create_window(910, 875, anchor="c", window=rpt_label8,tags=("label19"))  
+
+                        rp_amnttocredit = Entry(sr_Canvas_1,font=('arial 15'),width=21,background='#2f516f',foreground='white')
+                        rp_amnttocredit.delete(0,END)
+                        rp_amnttocredit.insert(0,"0.00")
+                        sr_Canvas_1.create_window(1130,875,anchor='c',window=rp_amnttocredit,tags=("entry6"))   
 
                         def sr_goBack():
                             sr_Frame_1.grid_forget()
@@ -3123,8 +3371,126 @@ def main_sign_in():
                         back_btn = Button(sr_Canvas_1,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:sr_goBack())
                         sr_Canvas_1.create_window(0,0,window=back_btn,tags=("button3")) 
 
-                        # save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
-                        # sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button4")) 
+                        def rp_savePayment():
+                            customer = rp_custCombo.get()
+                            email = rp_email.get()
+                            findinvoice = rp_invnum.get()
+                            pmethod = rp_pmethod.get()
+                            depto = rp_depositto.get()
+                            amtreceived = rp_amntre.get()
+                            amtapply = rp_amnttoapply.get()
+                            amtcredit = rp_amnttocredit.get()
+                            paymdate = rp_pdate.get()
+                            
+                            descp_list = []
+                            due_list = []
+                            original_list = []
+                            open_list = []
+                            payment_list = []
+                            for records in rp_tree.get_children():
+                                descp_list.append(rp_tree.item(records,'values')[1])
+                                due_list.append(rp_tree.item(records,'values')[2])
+                                original_list.append(rp_tree.item(records,'values')[3])
+                                open_list.append(rp_tree.item(records,'values')[4])
+                                payment_list.append(rp_tree.item(records,'values')[5])
+
+                            user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                            user_val = (nm_ent.get(),)
+                            fbcursor.execute(user_sql,user_val)
+                            user_data = fbcursor.fetchone()
+
+                            comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                            comp_val = (user_data[0],)
+                            fbcursor.execute(comp_sql,comp_val)
+                            comp_data = fbcursor.fetchone()
+
+                            get_payment_sql = "SELECT * FROM app1_payment ORDER BY paymentid DESC LIMIT 1"
+                            fbcursor.execute(get_payment_sql)
+                            get_payment_data = fbcursor.fetchone()
+
+                            if not get_payment_data:
+                                refno = '1001'
+                            else:
+                                refno = str(int(get_payment_data[6]) + 1)
+
+                            if customer == '':
+                                pass
+                            elif pmethod == 'Add new':
+                                pass
+                            elif len(descp_list) == 1:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,descrip2,duedate2,orgamt2,descrip3,duedate3,orgamt3,descrip4,duedate4,orgamt4,descrip5,duedate5,orgamt5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 2:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,descrip3,duedate3,orgamt3,descrip4,duedate4,orgamt4,descrip5,duedate5,orgamt5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 3:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,descrip4,duedate4,orgamt4,descrip5,duedate5,orgamt5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 4:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,descrip5,duedate5,orgamt5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 5:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 6:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,openbal5,payment5,descrip6,duedate6,orgamt6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],descp_list[5],due_list[5],original_list[5],open_list[5],payment_list[5],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 7:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,openbal5,payment5,descrip6,duedate6,orgamt6,openbal6,payment6,descrip7,duedate7,orgamt7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],descp_list[5],due_list[5],original_list[5],open_list[5],payment_list[5],descp_list[6],due_list[6],original_list[6],open_list[6],payment_list[6],undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 8:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,openbal5,payment5,descrip6,duedate6,orgamt6,openbal6,payment6,descrip7,duedate7,orgamt7,openbal7,payment7,descrip8,duedate8,orgamt8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],descp_list[5],due_list[5],original_list[5],open_list[5],payment_list[5],descp_list[6],due_list[6],original_list[6],open_list[6],payment_list[6],descp_list[7],due_list[7],original_list[7],open_list[7],payment_list[7],undefined,undefined,undefined,undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 9:
+                                undefined = 'undefined'
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,openbal5,payment5,descrip6,duedate6,orgamt6,openbal6,payment6,descrip7,duedate7,orgamt7,openbal7,payment7,descrip8,duedate8,orgamt8,openbal8,payment8,descrip9,duedate9,orgamt9,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],descp_list[5],due_list[5],original_list[5],open_list[5],payment_list[5],descp_list[6],due_list[6],original_list[6],open_list[6],payment_list[6],descp_list[7],due_list[7],original_list[7],open_list[7],payment_list[7],descp_list[8],due_list[8],original_list[8],open_list[8],payment_list[8],undefined,undefined,undefined,comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            elif len(descp_list) == 10:
+                                ins_payment_sql = "INSERT INTO app1_payment(customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descrip,duedate,orgamt,openbal,payment,descrip1,duedate1,orgamt1,openbal1,payment1,descrip2,duedate2,orgamt2,openbal2,payment2,descrip3,duedate3,orgamt3,openbal3,payment3,descrip4,duedate4,orgamt4,openbal4,payment4,descrip5,duedate5,orgamt5,openbal5,payment5,descrip6,duedate6,orgamt6,openbal6,payment6,descrip7,duedate7,orgamt7,openbal7,payment7,descrip8,duedate8,orgamt8,openbal8,payment8,descrip9,duedate9,orgamt9,openbal9,payment9) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_payment_val = (customer,email,findinvoice,paymdate,pmethod,refno,depto,amtreceived,amtapply,amtcredit,descp_list[0],due_list[0],original_list[0],open_list[0],payment_list[0],descp_list[1],due_list[1],original_list[1],open_list[1],payment_list[1],descp_list[2],due_list[2],original_list[2],open_list[2],payment_list[2],descp_list[3],due_list[3],original_list[3],open_list[3],payment_list[3],descp_list[4],due_list[4],original_list[4],open_list[4],payment_list[4],descp_list[5],due_list[5],original_list[5],open_list[5],payment_list[5],descp_list[6],due_list[6],original_list[6],open_list[6],payment_list[6],descp_list[7],due_list[7],original_list[7],open_list[7],payment_list[7],descp_list[8],due_list[8],original_list[8],open_list[8],payment_list[8],descp_list[9],due_list[9],original_list[9],open_list[9],payment_list[9],comp_data[0])
+                                fbcursor.execute(ins_payment_sql,ins_payment_val)
+                                finsysdb.commit()
+                            else:
+                                pass
+
+                            get_accts1_sql = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                            get_accts1_val = ('Account Receivable(Debtors)',comp_data[0])
+                            fbcursor.execute(get_accts1_sql,get_accts1_val)
+                            get_accts1_data = fbcursor.fetchone()
+                            
+                            accts1_bal = float(get_accts1_data[0]) - float(amtreceived) 
+                            upd_accts1_sql = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                            upd_accts1_val = (accts1_bal,'Account Receivable(Debtors)',comp_data[0])
+                            fbcursor.execute(upd_accts1_sql,upd_accts1_val)
+                            finsysdb.commit()
+                        save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#1476c5",foreground="white",activeforeground="white",bd=0,command=lambda:rp_savePayment())
+                        sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button4")) 
 
                         # rpt_label9 = Label(sr_Canvas_1,width=5,height=1,text="1",font=('arial 12'),background='#1b3857',fg="white",anchor="c")
                         # sr_Canvas_1.create_window(0,0,window=rpt_label9,tags=("label20"))
@@ -3163,19 +3529,19 @@ def main_sign_in():
                                 sr_Canvas_1.itemconfig('entry12',state='normal')
 
                                 rpt_descp.delete(0,END)
-                                rpt_descp.insert(0,rpt_row[0])
+                                rpt_descp.insert(0,rpt_row[1])
                                 rpt_due.delete(0,END)
-                                rpt_due.insert(0,rpt_row[1])
+                                rpt_due.insert(0,rpt_row[2])
                                 rpt_original.delete(0,END)
-                                rpt_original.insert(0,rpt_row[2])
+                                rpt_original.insert(0,rpt_row[3])
                                 rpt_obal.delete(0,END)
-                                rpt_obal.insert(0,rpt_row[3])
+                                rpt_obal.insert(0,rpt_row[4])
                                 rpt_payment.delete(0,END)
-                                rpt_payment.insert(0,rpt_row[4])
+                                rpt_payment.insert(0,rpt_row[5])
 
                                 try:
                                     def assign_newvalue(event):
-                                        rp_tree.item(selected_item,values=(rpt_descp.get(),rpt_due.get(),rpt_original.get(),rpt_obal.get(),rpt_payment.get()))
+                                        rp_tree.item(selected_item,values=(rpt_row[0],rpt_descp.get(),rpt_due.get(),rpt_original.get(),rpt_obal.get(),rpt_payment.get()))
 
                                     rpt_descp.bind("<KeyRelease>",assign_newvalue)
                                     rpt_due.bind("<KeyRelease>",assign_newvalue)
@@ -3186,7 +3552,7 @@ def main_sign_in():
                                     pass
 
 
-                        rpt_edit = Button(sr_Canvas_1,font=('arial 12'),text='edit',width=11,background='#1b3857',foreground='white',activebackground='#1b3857',activeforeground='white',command=lambda:show_editEntry())
+                        rpt_edit = Button(sr_Canvas_1,font=('arial 12'),text='Edit',width=11,background='#1b3857',foreground='white',activebackground='#1b3857',activeforeground='white',command=lambda:show_editEntry())
                         sr_Canvas_1.create_window(0,0,anchor='c',window=rpt_edit,tags=("combo13")) 
 
                         rp_label5 = Label(sr_Canvas_1,width=20,height=1,text="Payment date",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
