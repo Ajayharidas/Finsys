@@ -23,6 +23,7 @@ import pandas as pd
 from tkinter.messagebox import showinfo
 import tkinter.scrolledtext as scrolledtext
 from tkinter.filedialog import askopenfilename
+from tkinter.font import nametofont
 import os
 import webbrowser
 from pip import main
@@ -1443,7 +1444,7 @@ def main_sign_in():
                     x11 = dwidth/63
                     x21 = dwidth/1.021
                     y11 = dheight/2.8
-                    y21 = dheight/1.168
+                    y21 = dheight/0.9
 
 
                     dcanvas.coords("poly2",x11 + r2,y11,
@@ -1494,8 +1495,10 @@ def main_sign_in():
                     dcanvas.coords("label20",dwidth/1.088,dheight/1.894)
 
 
-                    dcanvas.coords("combo1",dwidth/1.088,dheight/1.71)
-                    dcanvas.coords("combo2",dwidth/1.12,dheight/2.261)
+                    dcanvas.coords("combo1",dwidth/1.079,dheight/1.9)
+                    dcanvas.coords("combo2",dwidth/1.115,dheight/2.261)
+
+                    dcanvas.coords("tree_main",dwidth/2.01,dheight/1.28)
 
                 sr_Canvas = Canvas(sr_Frame,bg='#2f516f',scrollregion=(0,0,700,1200))
 
@@ -1968,7 +1971,7 @@ def main_sign_in():
                                 cust_list.append(c[0] + " " + c[1])
                             cust_list.insert(0,'Select Customer')
 
-                        def fetch_custDetails(event):
+                        def rp_fetch_custDetails(event):
                             cust_name = rp_custCombo.get()
                             cust_fname = cust_name.split(" ")[0]
                             cust_lname = cust_name.split(" ")[1]
@@ -2010,7 +2013,7 @@ def main_sign_in():
                         rp_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
                         rp_custCombo['values'] = cust_list
                         rp_custCombo.current(0)
-                        rp_custCombo.bind("<<ComboboxSelected>>",fetch_custDetails)
+                        rp_custCombo.bind("<<ComboboxSelected>>",rp_fetch_custDetails)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_custCombo,tags=("combo1"))
 
                         def sr_addCustomer():
@@ -2114,7 +2117,7 @@ def main_sign_in():
                                 dcanvas.coords("label24",dwidth/1.7,dheight/0.76)
                                 dcanvas.coords("label25",dwidth/1.185,dheight/0.76)
                                 dcanvas.coords("label26",dwidth/1.28,dheight/1.087)
-                                dcanvas.coords("label27",dwidth/6.3,dheight/0.709)
+                                dcanvas.coords("label27",dwidth/6.3,dheight/0.699)
 
                                 dcanvas.coords("line1",dwidth/21,dheight/2.2,dwidth/1.055,dheight/2.2)
 
@@ -2142,7 +2145,7 @@ def main_sign_in():
                                 dcanvas.coords("entry20",dwidth/1.296,dheight/0.749)
 
                                 dcanvas.coords("check1",dwidth/1.45,dheight/1.11)
-                                dcanvas.coords("check2",dwidth/20,dheight/0.72)
+                                dcanvas.coords("check2",dwidth/20,dheight/0.71)
 
                                 dcanvas.coords("button1",dwidth/2,dheight/0.655)
                                 dcanvas.coords("button2",dwidth/27,dheight/3)
@@ -2253,7 +2256,6 @@ def main_sign_in():
                                     return True
 
                             def invalid_gstin():
-                                messagebox.showinfo("Fin sYs","Please provide a valid GST number")
                                 cust_gin.config(fg="red")
 
                             valid_cmndGSTIN = (sr_Canvas_2.register(validate_gstin),'%P')
@@ -2294,7 +2296,6 @@ def main_sign_in():
                                     return True
 
                             def invalid_pan():
-                                messagebox.showinfo("Fin sYs","Please provide a valid PAN number") 
                                 cust_pan.config(fg="red")
 
                             valid_cmndPAN = (sr_Canvas_2.register(validate_pan),'%P')
@@ -2317,7 +2318,6 @@ def main_sign_in():
                                     return True
 
                             def invalid_email():
-                                messagebox.showinfo("Fin sYs","Please provide a valid Email address")
                                 cust_email.config(fg="red")
 
                             valid_cmndEMAIL = (sr_Canvas_2.register(validate_email),'%P')
@@ -2340,7 +2340,6 @@ def main_sign_in():
                                     return True
 
                             def invalid_web():
-                                messagebox.showinfo("Fin sYs","Please provide a valid Website address")
                                 cust_web.config(fg="red")
 
                             valid_cmndWEB = (sr_Canvas_2.register(validate_web),'%P')
@@ -2363,7 +2362,6 @@ def main_sign_in():
                                     return True
 
                             def invalid_mobile():
-                                messagebox.showinfo("Fin sYs","Please provide a valid Phone number")
                                 cust_mob.config(fg="red")
 
                             valid_cmndMOB = (sr_Canvas_2.register(validate_mobile),'%P')
@@ -2521,28 +2519,31 @@ def main_sign_in():
                                         pass
                                     else:
                                         if termVar.get() == False:
-                                            messagebox.showinfo("Fin sYs","You must agree before submitting")
+                                            pass
                                         else:
-                                            ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
-                                            ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
-                                            fbcursor.execute(ins_cust_sql,ins_cust_val)
-                                            finsysdb.commit()
-                                            sr_Frame_2.destroy()
-                                            cust_sql = "SELECT firstname,lastname FROM app1_customer"
-                                            fbcursor.execute(cust_sql,)
-                                            cust_data = fbcursor.fetchall()
-
-                                            cust_list = []
-                                            if not cust_data:
-                                                cust_list.append('Select Customer')
+                                            if gsttype == "Choose...":
+                                                pass
                                             else:
-                                                for c in cust_data:
-                                                    cust_list.append(c[0] + " " + c[1])
-                                                cust_list.insert(0,'Select Customer')
-                                                rp_custCombo["values"] = cust_list
-                                            sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+                                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                                fbcursor.execute(ins_cust_sql,ins_cust_val)
+                                                finsysdb.commit()
+                                                sr_Frame_2.destroy()
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                                fbcursor.execute(cust_sql,)
+                                                cust_data = fbcursor.fetchall()
+
+                                                cust_list = []
+                                                if not cust_data:
+                                                    cust_list.append('Select Customer')
+                                                else:
+                                                    for c in cust_data:
+                                                        cust_list.append(c[0] + " " + c[1])
+                                                    cust_list.insert(0,'Select Customer')
+                                                    rp_custCombo["values"] = cust_list
+                                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
                                 elif gstin == '29APPCK7465F1Z1' or panno == 'APPCK7465F':
-                                    messagebox.showinfo("Fin sYs","Please provide valid inputs")
+                                    pass
                                 else:
                                     if validate_gstin(gstin) is False: 
                                         pass
@@ -2556,27 +2557,30 @@ def main_sign_in():
                                         pass
                                     else:
                                         if termVar.get() == False:
-                                            messagebox.showinfo("Fin sYs","You must agree before submitting")
+                                            pass
                                         else:
-                                            ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
-                                            ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
-                                            fbcursor.execute(ins_cust_sql,ins_cust_val)
-                                            finsysdb.commit()
-                                            sr_Frame_2.destroy()
-                                            cust_sql = "SELECT firstname,lastname FROM app1_customer"
-                                            fbcursor.execute(cust_sql,)
-                                            cust_data = fbcursor.fetchall()
-
-                                            cust_list = []
-                                            if not cust_data:
-                                                cust_list.append('Select Customer')
+                                            if gsttype == "Choose...":
+                                                pass
                                             else:
-                                                for c in cust_data:
-                                                    cust_list.append(c[0] + " " + c[1])
-                                                cust_list.insert(0,'Select Customer')
-                                                rp_custCombo["values"] = cust_list
-                                            sr_Frame_1.grid(row=0,column=0,sticky='nsew')
-                            
+                                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                                fbcursor.execute(ins_cust_sql,ins_cust_val)
+                                                finsysdb.commit()
+                                                sr_Frame_2.destroy()
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                                fbcursor.execute(cust_sql,)
+                                                cust_data = fbcursor.fetchall()
+
+                                                cust_list = []
+                                                if not cust_data:
+                                                    cust_list.append('Select Customer')
+                                                else:
+                                                    for c in cust_data:
+                                                        cust_list.append(c[0] + " " + c[1])
+                                                    cust_list.insert(0,'Select Customer')
+                                                    rp_custCombo["values"] = cust_list
+                                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+                                
                             cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:sr_create_newCustomer())
                             sr_Canvas_2.create_window(0,0,window=cust_save,tags=("button1"))
 
@@ -2983,11 +2987,11 @@ def main_sign_in():
                             dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:payment_createAccType())
                             sr_Canvas_3.create_window(0,0,window=dep_save,tags=("button1"))
 
-                            def goBack2():
+                            def dep_goBack():
                                 sr_Frame_3.grid_forget()
                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                            back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack2())
+                            back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:dep_goBack())
                             sr_Canvas_3.create_window(0,0,window=back_btn,tags=("button2"))
 
                         rp_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:add_depositTo())
@@ -3318,15 +3322,17 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0, 0, anchor="c",state=HIDDEN, window=rpt_label6,tags=("label17"))
 
                         rp_tree_style = ttk.Style()
-                        rp_tree_style.configure("Treeview.Heading",background="#1b3857",activeforeground="black",foreground="white")
+                        rp_tree_style.theme_use("default")
+                        rp_tree_style.configure("Treeview",background="#2f516f",foreground="white",rowheight=25,font=(None,11),fieldbackground="#2f516f")
+                        rp_tree_style.configure("Treeview.Heading",background="#1b3857",activeforeground="black",foreground="white",font=(None,11))
 
-                        rp_tree = ttk.Treeview(sr_Canvas_1,columns=("0","1","2","3","4","5"),show="headings",height=8)
-                        rp_tree.column("0",width=35,anchor=CENTER)
-                        rp_tree.column("1",width=206,anchor=CENTER)
-                        rp_tree.column("2",width=206,anchor=CENTER)
-                        rp_tree.column("3",width=206,anchor=CENTER)
-                        rp_tree.column("4",width=206,anchor=CENTER)
-                        rp_tree.column("5",width=216,anchor=CENTER)
+                        rp_tree = ttk.Treeview(sr_Canvas_1,columns=("0","1","2","3","4","5"),show="headings",height=7)
+                        rp_tree.column("0",width=36,anchor=CENTER)
+                        rp_tree.column("1",width=210,anchor=CENTER)
+                        rp_tree.column("2",width=210,anchor=CENTER)
+                        rp_tree.column("3",width=210,anchor=CENTER)
+                        rp_tree.column("4",width=210,anchor=CENTER)
+                        rp_tree.column("5",width=210,anchor=CENTER)
                         rp_tree.heading("0",text="#")
                         rp_tree.heading("1",text="DESCRIPTION")
                         rp_tree.heading("2",text="DUE DATE")
@@ -3335,11 +3341,11 @@ def main_sign_in():
                         rp_tree.heading("5",text="PAYMENT")
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=rp_tree,tags=("tree1"))
 
-                        rp_tree_scroll = Scrollbar(sr_Canvas_1,orient=VERTICAL)
-                        rp_tree_scroll.lift(rp_tree)
-                        sr_Canvas_1.create_window(0,0,window=rp_tree_scroll,height=179,tags=("scroll"))
-                        rp_tree_scroll.config(command=rp_tree.yview)
-                        rp_tree.config(yscrollcommand=rp_tree_scroll.set)
+                        # rp_tree_scroll = Scrollbar(sr_Canvas_1,orient=VERTICAL)
+                        # rp_tree_scroll.lift(rp_tree)
+                        # sr_Canvas_1.create_window(0,0,window=rp_tree_scroll,height=179,tags=("scroll"))
+                        # rp_tree_scroll.config(command=rp_tree.yview)
+                        # rp_tree.config(yscrollcommand=rp_tree_scroll.set)
 
                         sr_Canvas_1.create_line(820,800,1260,800,fill='gray',width=1,tags=("line10"))
                         sr_Canvas_1.create_line(820,850,1260,850,fill='gray',width=1,tags=("line11"))
@@ -3382,17 +3388,27 @@ def main_sign_in():
                             amtcredit = rp_amnttocredit.get()
                             paymdate = rp_pdate.get()
                             
-                            descp_list = []
-                            due_list = []
-                            original_list = []
-                            open_list = []
-                            payment_list = []
-                            for records in rp_tree.get_children():
-                                descp_list.append(rp_tree.item(records,'values')[1])
-                                due_list.append(rp_tree.item(records,'values')[2])
-                                original_list.append(rp_tree.item(records,'values')[3])
-                                open_list.append(rp_tree.item(records,'values')[4])
-                                payment_list.append(rp_tree.item(records,'values')[5])
+                            try:
+                                descp_list = []
+                                due_list = []
+                                original_list = []
+                                open_list = []
+                                payment_list = []
+                                for records in rp_tree.get_children():
+                                    descp_list.append(rp_tree.item(records,'values')[1])
+                                    due_list.append(rp_tree.item(records,'values')[2])
+                                    original_list.append(rp_tree.item(records,'values')[3])
+                                    open_list.append(rp_tree.item(records,'values')[4])
+                                    payment_list.append(rp_tree.item(records,'values')[5])
+                            except:
+                                pass
+
+                            try:
+                                inv_list = []
+                                for i in descp_list:
+                                    inv_list.append(i.split(" ")[0])
+                            except:
+                                pass
 
                             user_sql = "SELECT id FROM auth_user WHERE username=%s"
                             user_val = (nm_ent.get(),)
@@ -3489,6 +3505,224 @@ def main_sign_in():
                             upd_accts1_val = (accts1_bal,'Account Receivable(Debtors)',comp_data[0])
                             fbcursor.execute(upd_accts1_sql,upd_accts1_val)
                             finsysdb.commit()
+
+                            try:
+                                get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                get_accts1_val1 = (depto,comp_data[0])
+                                fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                get_accts1_data1 = fbcursor.fetchone()
+
+                                if not get_accts1_data1:
+                                    pass
+                                else:
+                                    accts1_bal1 = float(get_accts1_data1[0]) - float(amtreceived)
+                                    upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                    upd_accts1_val1 = (accts1_bal1,depto,comp_data[0])
+                                    fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                    finsysdb.commit()
+                            except:
+                                pass
+
+                            try:
+                                get_accts_sql = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                get_accts_val = (depto,comp_data[0])
+                                fbcursor.execute(get_accts_sql,get_accts_val)
+                                get_accts_data = fbcursor.fetchone()
+
+                                if not get_accts_data:
+                                    pass
+                                else:
+                                    accts_bal = float(get_accts_data[0]) - float(amtreceived)
+                                    upd_accts_sql = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                    upd_accts_val = (accts_bal,depto,comp_data[0])
+                                    fbcursor.execute(upd_accts_sql,upd_accts_val)
+                                    finsysdb.commit()
+                            except:
+                                pass
+
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[0],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[0] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[0])
+                                    baldue = float(open_list[0]) - float(payment_list[0])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[0],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[1],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[1] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[1])
+                                    baldue = float(open_list[1]) - float(payment_list[1])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[1],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[2],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[2] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[2])
+                                    baldue = float(open_list[2]) - float(payment_list[2])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[2],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[3],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[3] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[3])
+                                    baldue = float(open_list[3]) - float(payment_list[3])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[3],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[4],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[4] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[4])
+                                    baldue = float(open_list[4]) - float(payment_list[4])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[4],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[5],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[5] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[5])
+                                    baldue = float(open_list[5]) - float(payment_list[5])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[5],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[6],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[6] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[6])
+                                    baldue = float(open_list[6]) - float(payment_list[6])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[6],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[7],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[7] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[7])
+                                    baldue = float(open_list[7]) - float(payment_list[7])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[7],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[8],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[8] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[8])
+                                    baldue = float(open_list[8]) - float(payment_list[8])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[8],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+                            try:
+                                get_inv1_sql = "SELECT * FROM app1_invoice WHERE invoiceno=%s AND cid_id=%s"
+                                get_inv1_val = (inv_list[9],comp_data[0])
+                                fbcursor.execute(get_inv1_sql,get_inv1_val)
+                                get_inv1_data = fbcursor.fetchone()
+
+                                if get_inv1_data and inv_list[9] != 'undefined':
+                                    amtrecvd = int(get_inv1_data[39]) + int(payment_list[9])
+                                    baldue = float(open_list[9]) - float(payment_list[9])
+
+                                    upd_inv_sql = "UPDATE app1_invoice SET amtrecvd=%s,baldue=%s WHERE invoiceno=%s AND cid_id=%s"
+                                    upd_inv_val = (amtrecvd,baldue,inv_list[9],comp_data[0])
+                                    fbcursor.execute(upd_inv_sql,upd_inv_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            except:
+                                pass
+
+
+
                         save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#1476c5",foreground="white",activeforeground="white",bd=0,command=lambda:rp_savePayment())
                         sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button4")) 
 
@@ -3584,7 +3818,63 @@ def main_sign_in():
                         cm_label3 = Label(sr_Canvas_1,width=10,height=1,text="Customer",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=cm_label3,tags=("label21"))
 
+                        cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                        fbcursor.execute(cust_sql,)
+                        cust_data = fbcursor.fetchall()
+
+                        cust_list = []
+                        if not cust_data:
+                            cust_list.append('Select Customer')
+                        else:
+                            for c in cust_data:
+                                cust_list.append(c[0] + " " + c[1])
+                            cust_list.insert(0,'Select Customer')
+
+                        def cm_fetch_custDetails(event):
+                            cust_name = cm_custCombo.get()
+                            cust_fname = cust_name.split(" ")[0]
+                            cust_lname = cust_name.split(" ")[1]
+
+                            user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                            user_val = (nm_ent.get(),)
+                            fbcursor.execute(user_sql,user_val)
+                            user_data = fbcursor.fetchone()
+
+                            comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                            comp_val = (user_data[0],)
+                            fbcursor.execute(comp_sql,comp_val)
+                            comp_data = fbcursor.fetchone()
+
+                            cust_sql = "SELECT * FROM app1_customer WHERE firstname=%s and lastname=%s and cid_id=%s"
+                            cust_val = (cust_fname,cust_lname,comp_data[0])
+                            fbcursor.execute(cust_sql,cust_val)
+                            cust_data = fbcursor.fetchone()
+
+                            inv_sql = "SELECT * FROM app1_invoice WHERE customername=%s and cid_id=%s"
+                            inv_val = (cust_name,comp_data[0])
+                            fbcursor.execute(inv_sql,inv_val)
+                            inv_data = fbcursor.fetchall()
+
+                            if not cust_data:
+                                pass
+                            else:
+                                cm_email.delete(0,END)
+                                cm_email.insert(0,cust_data[9])
+                                cm_baddress.delete("1.0","end-1c")
+                                cm_baddress.insert("1.0",cust_data[2] + " " + cust_data[3] + "\n" + cust_data[4] + "\n" + cust_data[12] + "\n" + cust_data[13] + "\n" + cust_data[14] + "\n" + cust_data[15] + "\n" + cust_data[16])
+
+                            # if not inv_data:
+                            #     pass
+                            # else:
+                            #     count = 1
+                            #     for i in inv_data:
+                            #         rp_tree.insert(parent='',index='end',iid=i,text='',values=(count,str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
+
+
                         cm_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
+                        cm_custCombo["values"] = cust_list
+                        cm_custCombo.current(0)
+                        cm_custCombo.bind("<<ComboboxSelected>>",cm_fetch_custDetails)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cm_custCombo,tags=("combo3"))
 
                         def sr_addCustomer_1():
@@ -3688,7 +3978,7 @@ def main_sign_in():
                                 dcanvas.coords("label24",dwidth/1.7,dheight/0.76)
                                 dcanvas.coords("label25",dwidth/1.185,dheight/0.76)
                                 dcanvas.coords("label26",dwidth/1.28,dheight/1.087)
-                                dcanvas.coords("label27",dwidth/6.3,dheight/0.709)
+                                dcanvas.coords("label27",dwidth/6.3,dheight/0.699)
 
                                 dcanvas.coords("line1",dwidth/21,dheight/2.2,dwidth/1.055,dheight/2.2)
 
@@ -3716,7 +4006,7 @@ def main_sign_in():
                                 dcanvas.coords("entry20",dwidth/1.296,dheight/0.749)
 
                                 dcanvas.coords("check1",dwidth/1.45,dheight/1.11)
-                                dcanvas.coords("check2",dwidth/20,dheight/0.72)
+                                dcanvas.coords("check2",dwidth/20,dheight/0.71)
 
                                 dcanvas.coords("button1",dwidth/2,dheight/0.655)
                                 dcanvas.coords("button2",dwidth/27,dheight/3)
@@ -3749,6 +4039,8 @@ def main_sign_in():
                             sr_Canvas_2.create_window(0,0,window=cust_label3,tags=('label3'))
 
                             cust_title = ttk.Combobox(sr_Canvas_2,width=19,font=('arial 15'))
+                            cust_title['values'] = ['Mr','Mrs','Miss','Ms',]
+                            cust_title.current(0)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_title,tags=("combo1"))
 
                             cust_label4 = Label(sr_Canvas_2,width=20,height=1,text="First name",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -3795,31 +4087,147 @@ def main_sign_in():
                             cust_label9 = Label(sr_Canvas_2,width=20,height=1,text="GSTIN",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label9,tags=('label9'))
 
-                            cust_gin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                            gstinVar = StringVar()
+                            cust_gin = Entry(sr_Canvas_2,textvariable=gstinVar,width=20,font=('arial 15'),background='#2f516f',foreground='grey')
+                            cust_gin.insert(0,'29APPCK7465F1Z1')
+
+                            def del_placeholder(event):
+                                if cust_gin.get() == '29APPCK7465F1Z1':
+                                    cust_gin.delete(0,END)
+                                    cust_gin.config(fg="white")
+                                else:
+                                    pass
+
+                            cust_gin.bind("<FocusIn>",del_placeholder)
+
+                            def ret_placeholder(event):
+                                if cust_gin.get() == '':
+                                    cust_gin.insert(0,'29APPCK7465F1Z1')
+                                    cust_gin.config(fg="grey")
+                                else:
+                                    pass
+                            cust_gin.bind("<FocusOut>",ret_placeholder)
+                            
+                            def validate_gstin(value):
+                                pattern = r'[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[a-zA-Z]{1}[0-9a-zA-Z]{1}'
+                                if re.fullmatch(pattern,value) is None:
+                                    return False
+                                else:
+                                    cust_gin.config(fg="white")
+                                    return True
+
+                            def invalid_gstin():
+                                cust_gin.config(fg="red")
+
+                            valid_cmndGSTIN = (sr_Canvas_2.register(validate_gstin),'%P')
+                            invalid_cmndGSTIN = (sr_Canvas_2.register(invalid_gstin),)
+                            cust_gin.config(validate='focusout',validatecommand=valid_cmndGSTIN,invalidcommand=invalid_cmndGSTIN)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_gin,tags=("entry6"))
 
                             cust_label10 = Label(sr_Canvas_2,width=20,height=1,text="PAN NO",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label10,tags=('label10'))
 
-                            cust_pan = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                            panVar = StringVar()
+                            cust_pan = Entry(sr_Canvas_2,width=20,textvariable=panVar,font=('arial 15'),background='#2f516f',foreground='grey')
+                            cust_pan.insert(0,'APPCK7465F')
+
+                            def del_placeholder(event):
+                                if cust_pan.get() == 'APPCK7465F':
+                                    cust_pan.delete(0,END)
+                                    cust_pan.config(fg="white")
+                                else:
+                                    pass
+
+                            cust_pan.bind("<FocusIn>",del_placeholder)
+
+                            def ret_placeholder(event):
+                                if cust_pan.get() == '':
+                                    cust_pan.insert(0,'APPCK7465F')
+                                    cust_pan.config(fg="grey")
+                                else:
+                                    pass
+                            cust_pan.bind("<FocusOut>",ret_placeholder)
+
+                            def validate_pan(value):
+                                pattern = r'[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}'
+                                if re.fullmatch(pattern,value) is None:
+                                    return False
+                                else:
+                                    cust_pan.config(fg="white")
+                                    return True
+
+                            def invalid_pan():
+                                cust_pan.config(fg="red")
+
+                            valid_cmndPAN = (sr_Canvas_2.register(validate_pan),'%P')
+                            invalid_cmndPAN = (sr_Canvas_2.register(invalid_pan),)
+                            cust_pan.config(validate='focusout',validatecommand=valid_cmndPAN,invalidcommand=invalid_cmndPAN)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_pan,tags=("entry7"))
 
                             cust_label11 = Label(sr_Canvas_2,width=20,height=1,text="Email",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label11,tags=('label11'))
 
-                            cust_email = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                            emailVar = StringVar()
+                            cust_email = Entry(sr_Canvas_2,textvariable=emailVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                            def validate_email(value):
+                                pattern = r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'
+                                if re.fullmatch(pattern,value) is None:
+                                    return False
+                                else:
+                                    cust_email.config(fg="white")
+                                    return True
+
+                            def invalid_email():
+                                cust_email.config(fg="red")
+
+                            valid_cmndEMAIL = (sr_Canvas_2.register(validate_email),'%P')
+                            invalid_cmndEMAIL = (sr_Canvas_2.register(invalid_email),)
+                            cust_email.config(validate='focusout',validatecommand=valid_cmndEMAIL,invalidcommand=invalid_cmndEMAIL)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_email,tags=("entry8"))
 
                             cust_label12 = Label(sr_Canvas_2,width=20,height=1,text="Website",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label12,tags=('label12'))
 
-                            cust_web = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                            webVar = StringVar()
+                            cust_web = Entry(sr_Canvas_2,textvariable=webVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                            def validate_web(value):
+                                pattern = r'www.+[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
+                                if re.fullmatch(pattern,value) is None:
+                                    return False
+                                else:
+                                    cust_web.config(fg="white")
+                                    return True
+
+                            def invalid_web():
+                                cust_web.config(fg="red")
+
+                            valid_cmndWEB = (sr_Canvas_2.register(validate_web),'%P')
+                            invalid_cmndWEB = (sr_Canvas_2.register(invalid_web),)
+                            cust_web.config(validate='focusout',validatecommand=valid_cmndWEB,invalidcommand=invalid_cmndWEB)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_web,tags=("entry9"))
 
                             cust_label13 = Label(sr_Canvas_2,width=20,height=1,text="Mobile",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label13,tags=('label13'))
 
-                            cust_mob = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+                            mobVar = StringVar()
+                            cust_mob = Entry(sr_Canvas_2,textvariable=mobVar,width=20,font=('arial 15'),background='#2f516f',foreground='white')
+
+                            def validate_mobile(value):
+                                pattern = r'[7-9][0-9]{9}'
+                                if re.fullmatch(pattern,value) is None:
+                                    return False
+                                else:
+                                    cust_mob.config(fg="white")
+                                    return True
+
+                            def invalid_mobile():
+                                cust_mob.config(fg="red")
+
+                            valid_cmndMOB = (sr_Canvas_2.register(validate_mobile),'%P')
+                            invalid_cmndMOB = (sr_Canvas_2.register(invalid_mobile),)
+                            cust_mob.config(validate='focusout',validatecommand=valid_cmndMOB,invalidcommand=invalid_cmndMOB)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_mob,tags=("entry10"))
 
                             cust_label14 = Label(sr_Canvas_2,width=20,height=1,text="Billing Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -3828,7 +4236,7 @@ def main_sign_in():
                             cust_label15 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label15,tags=('label15'))
 
-                            cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
+                            cust_st1 = scrolledtext.ScrolledText(sr_Canvas_2,width=48,height=3,font=('arial 15'),background='#2f516f',foreground='white')
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st1,tags=("entry11"))
 
                             cust_label17 = Label(sr_Canvas_2,width=20,height=1,text="Shipping Address",font=('arial 18 bold'),background='#1b3857',anchor="w",fg="white")
@@ -3837,7 +4245,7 @@ def main_sign_in():
                             cust_label16 = Label(sr_Canvas_2,width=20,height=1,text="Street",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label16,tags=('label16'))
 
-                            cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=66,height=4,background='#2f516f',foreground='white')
+                            cust_st2 = scrolledtext.ScrolledText(sr_Canvas_2,width=48,height=3,font=('arial 15'),background='#2f516f',foreground='white')
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_st2,tags=("entry12"))
 
                             cust_label18 = Label(sr_Canvas_2,width=20,height=1,text="City",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -3864,7 +4272,7 @@ def main_sign_in():
                             cust_state1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_state1,tags=("entry16"))
                             #--
-                            cust_label22 = Label(sr_Canvas_2,width=20,height=1,text="Pin code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
+                            cust_label22 = Label(sr_Canvas_2,width=20,height=1,text="Pin Code",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label22,tags=('label22'))
 
                             cust_pin = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
@@ -3888,26 +4296,160 @@ def main_sign_in():
                             cust_country1 = Entry(sr_Canvas_2,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_country1,tags=("entry20"))
 
-                            cust_sameb = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
+                            def sameas_billaddress():
+                                if sameasVar.get() == True:
+                                    bill_address = cust_st1.get("1.0","end-1c")
+                                    bill_city = cust_city.get()
+                                    bill_state = cust_state.get()
+                                    bill_pin = cust_pin.get()
+                                    bill_country = cust_country.get()
+
+                                    cust_st2.delete("1.0","end-1c")
+                                    cust_st2.insert("1.0",bill_address)
+                                    cust_city1.delete(0,END)
+                                    cust_city1.insert(0,bill_city)
+                                    cust_state1.delete(0,END)
+                                    cust_state1.insert(0,bill_state)
+                                    cust_pin1.delete(0,END)
+                                    cust_pin1.insert(0,bill_pin)
+                                    cust_country1.delete(0,END)
+                                    cust_country1.insert(0,bill_country)
+                                else:
+                                    pass
+
+                            sameasVar = BooleanVar()
+                            cust_sameb = Checkbutton(sr_Canvas_2,variable=sameasVar,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857",command=sameas_billaddress)
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_sameb,tags=("check1"))
 
                             cust_label26 = Label(sr_Canvas_2,width=20,height=1,text="Same as billing address",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label26,tags=('label26'))
 
-                            cust_term = Checkbutton(sr_Canvas_2,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
+                            termVar = BooleanVar()
+                            cust_term = Checkbutton(sr_Canvas_2,variable=termVar,onvalue=1,offvalue=0,background='#1b3857',activebackground="#1b3857")
                             sr_Canvas_2.create_window(0,0,anchor='nw',window=cust_term,tags=("check2"))
 
                             cust_label27 = Label(sr_Canvas_2,width=25,height=1,text="Agree to terms and conditions",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                             sr_Canvas_2.create_window(0,0,window=cust_label27,tags=('label27'))
+
+                            def sr_create_newCustomer():
+                                title = cust_title.get()
+                                firstname = cust_fname.get()
+                                lastname = cust_lname.get()
+                                company = cust_company.get()
+                                location = cust_location.get()
+                                gsttype = cust_gtype.get()
+                                gstin = gstinVar.get()
+                                panno = panVar.get()
+                                email = emailVar.get()
+                                website = webVar.get()
+                                mobile = mobVar.get()
+                                street = cust_st1.get("1.0","end-1c")
+                                city = cust_city.get()
+                                state = cust_state.get()
+                                pincode = cust_pin.get()
+                                country = cust_country.get()
+                                shipstreet = cust_st2.get("1.0","end-1c")
+                                shipcity = cust_city1.get()
+                                shipstate = cust_state1.get()
+                                shippincode = cust_pin1.get()
+                                shipcountry = cust_country1.get()
+
+                                
+                                user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                                user_val = (nm_ent.get(),)
+                                fbcursor.execute(user_sql,user_val)
+                                user_data = fbcursor.fetchone()
+
+                                comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                                comp_val = (user_data[0],)
+                                fbcursor.execute(comp_sql,comp_val)
+                                comp_data = fbcursor.fetchone()
+                                cid  = comp_data[0]
+
+                                
+                                
+                                if gsttype == "GST unregistered" or gsttype == "Consumer" or gsttype == "Overseas":
+                                    gstin = ''
+                                    if validate_pan(panno) is False:
+                                        pass 
+                                    elif validate_email(email) is False: 
+                                        pass
+                                    elif validate_web(website) is False:
+                                        pass 
+                                    elif validate_mobile(mobile) is False:
+                                        pass
+                                    else:
+                                        if termVar.get() == False:
+                                            pass
+                                        else:
+                                            if gsttype == "Choose...":
+                                                pass
+                                            else:
+                                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                                fbcursor.execute(ins_cust_sql,ins_cust_val)
+                                                finsysdb.commit()
+                                                sr_Frame_2.destroy()
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                                fbcursor.execute(cust_sql,)
+                                                cust_data = fbcursor.fetchall()
+
+                                                cust_list = []
+                                                if not cust_data:
+                                                    cust_list.append('Select Customer')
+                                                else:
+                                                    for c in cust_data:
+                                                        cust_list.append(c[0] + " " + c[1])
+                                                    cust_list.insert(0,'Select Customer')
+                                                    cm_custCombo["values"] = cust_list
+                                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+                                elif gstin == '29APPCK7465F1Z1' or panno == 'APPCK7465F':
+                                    pass
+                                else:
+                                    if validate_gstin(gstin) is False: 
+                                        pass
+                                    elif validate_pan(panno) is False:
+                                        pass 
+                                    elif validate_email(email) is False: 
+                                        pass
+                                    elif validate_web(website) is False:
+                                        pass
+                                    elif validate_mobile(mobile) is False:
+                                        pass
+                                    else:
+                                        if termVar.get() == False:
+                                            pass
+                                        else:
+                                            if gsttype == "Choose...":
+                                                pass
+                                            else:
+                                                ins_cust_sql = "INSERT INTO app1_customer(title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+                                                ins_cust_val = (title,firstname,lastname,company,location,gsttype,gstin,panno,email,website,mobile,street,city,state,pincode,country,shipstreet,shipcity,shipstate,shippincode,shipcountry,cid,)
+                                                fbcursor.execute(ins_cust_sql,ins_cust_val)
+                                                finsysdb.commit()
+                                                sr_Frame_2.destroy()
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
+                                                fbcursor.execute(cust_sql,)
+                                                cust_data = fbcursor.fetchall()
+
+                                                cust_list = []
+                                                if not cust_data:
+                                                    cust_list.append('Select Customer')
+                                                else:
+                                                    for c in cust_data:
+                                                        cust_list.append(c[0] + " " + c[1])
+                                                    cust_list.insert(0,'Select Customer')
+                                                    cm_custCombo["values"] = cust_list
+                                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
                             
-                            cust_save = Button(sr_Canvas_2,text="Save",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                            cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:sr_create_newCustomer())
                             sr_Canvas_2.create_window(0,0,window=cust_save,tags=("button1"))
 
-                            def cm_goBack1():
+                            def cm_goBack():
                                 sr_Frame_2.grid_forget()
                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                            back_btn = Button(sr_Canvas_2,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:cm_goBack1())
+                            back_btn = Button(sr_Canvas_2,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:cm_goBack())
                             sr_Canvas_2.create_window(0,0,window=back_btn,tags=("button2"))
 
                         cm_plus = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:sr_addCustomer_1())
@@ -3929,6 +4471,14 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,window=cm_label7,tags=('label25'))
 
                         cm_pofsupply = ttk.Combobox(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f')
+                        pofsupply_list = ['Kerala','Andaman and Nicobar Islads','Andhra Predhesh','Arunachal Predesh',
+                        'Assam','Bihar','Chandigarh','Chhattisgarh','Dadra and Nagar Haveli','Damn anad Diu','Delhi',
+                        'Goa','Gujarat','Haryana','Himachal Predesh','Jammu and Kashmir','Jharkhand','Karnataka','Ladakh',
+                        'Lakshadweep','Madhya Predesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha',
+                        'Puducherry','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Predesh','Uttarakhand',
+                        'West Bengal','Other Territory',]
+                        cm_pofsupply["values"] = pofsupply_list
+                        cm_pofsupply.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cm_pofsupply,tags=("entry15"))
 
                         cm_label8 = Label(sr_Canvas_1,width=20,height=1,text="Payment Method",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -3959,6 +4509,31 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,window=cm_label10,tags=('label28'))
 
                         cm_depto = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f')
+
+                        dep_list = ['Deferred CGST','Deferred GST Input Credit','Deferred IGST',
+                        'Deferred Krishi Kalyan Cess Input Credit','Deferred SGST','Deferred Service Tax Input Credit',
+                        'Deferred VAT Input Credit','GST Refund','Inventory Asset','Krishi Kalyan Cess Refund'
+                        ,'Prepaid Insurance','Service Tax Refund','TDS Receivable','Uncategorised Asset','Undeposited Fund',]
+
+                        user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                        user_val = (nm_ent.get(),)
+                        fbcursor.execute(user_sql,user_val)
+                        user_data = fbcursor.fetchone()
+
+                        comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                        comp_val = (user_data[0],)
+                        fbcursor.execute(comp_sql,comp_val)
+                        comp_data = fbcursor.fetchone()
+
+                        dep_sql = "SELECT name FROM app1_accounts WHERE cid_id=%s"
+                        dep_val = (comp_data[0],)
+                        fbcursor.execute(dep_sql,dep_val)
+                        dep_data = fbcursor.fetchall()
+
+                        for d in dep_data:
+                            dep_list.insert(0,d)
+                        cm_depto['values'] = dep_list
+                        cm_depto.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cm_depto,tags=("combo4"))
 
                         def add_depositTo_1():
@@ -4079,7 +4654,41 @@ def main_sign_in():
                             dep_label2 = Label(sr_Canvas_3,width=20,height=1,text="Account type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                             sr_Canvas_3.create_window(0,0,window=dep_label2,tags=("label2"))
 
-                            dep_acctype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
+                            def fetch_detailType(event):
+                                if dep_acctype.get() == "Cost of Goods Sold":
+                                    item_sql = "SELECT * FROM itemstable WHERE Pid=%s"
+                                    item_val = (13,)
+                                    fbcursor.execute(item_sql,item_val)
+                                    item_data = fbcursor.fetchall()
+
+                                    item_list = []
+                                    for i in item_data:
+                                        item_list.append(i[1])
+                                    dep_dtype.configure(values=item_list)
+                                elif dep_acctype.get() == "Expenses":
+                                    item_sql = "SELECT * FROM itemstable WHERE Pid=%s"
+                                    item_val = (14,)
+                                    fbcursor.execute(item_sql,item_val)
+                                    item_data = fbcursor.fetchall()
+
+                                    item_list = []
+                                    for i in item_data:
+                                        item_list.append(i[1])
+                                    dep_dtype.configure(values=item_list)
+                                else:
+                                    item_sql = "SELECT * FROM itemstable WHERE Pid=%s"
+                                    item_val = (15,)
+                                    fbcursor.execute(item_sql,item_val)
+                                    item_data = fbcursor.fetchall()
+
+                                    item_list = []
+                                    for i in item_data:
+                                        item_list.append(i[1])
+                                    dep_dtype.configure(values=item_list)
+
+                            dep_acctype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='black')
+                            dep_acctype['values'] = ['Cost of Goods Sold','Expenses','Other Expense']
+                            dep_acctype.bind("<<ComboboxSelected>>",fetch_detailType)
                             sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_acctype,tags=("entry1"))
 
                             dep_label3 = Label(sr_Canvas_3,width=20,height=1,text="*Name",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -4091,7 +4700,7 @@ def main_sign_in():
                             dep_label4 = Label(sr_Canvas_3,width=20,height=1,text="*Detail Type",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                             sr_Canvas_3.create_window(0,0,window=dep_label4,tags=("label4"))
 
-                            dep_dtype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white')
+                            dep_dtype = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='black')
                             sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtype,tags=("entry3"))
 
                             dep_label5 = Label(sr_Canvas_3,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
@@ -4119,23 +4728,171 @@ def main_sign_in():
                             dep_label6 = Label(sr_Canvas_3,width=20,height=1,text="Is sub-account",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                             sr_Canvas_3.create_window(0,0,window=dep_label6,tags=("label6"))
 
-                            dep_subacc = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='white',state=DISABLED)
+                            dep_subacc = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='black',state=DISABLED)
+                            dep_subacc['values'] = ['Deferred CGST','Deferred GST Input Credit','Deferred IGST',
+                            'Deferred Krishi Kalyan Cess Input Credit','Deferred Service Tax Input Credit',
+                            'Deferred SGST','Deferred VAT Input Credit','GST Refund','Inventory Asset','Paid Insurance',
+                            'Service Tax Refund','TDS Receivable','Uncategorised Asset','Accumulated Depreciation',
+                            'Buildings and Improvements','Furniture and Equipment','Land','Leasehold Improvements',
+                            'CGST Payable','CST Payable','CST Suspense','GST Payable','GST Suspense','IGST Payable',
+                            'Input CGST','Input CGST Tax RCM','Input IGST','Input IGST Tax RCM','Input Krishi Kalyan Cess',
+                            'Input Krishi Kalyan Cess RCM','Input Service Tax','Input Service Tax RCM','Input SGST',
+                            'Input SGST Tax RCM','Input VAT 14%','Input VAT 4%','Input VAT 5%','Krishi Kalyan Cess Payable',
+                            'Krishi Kalyan Cess Suspense','Output CGST','Output CGST Tax RCM','Output CST 2%','Output IGST',
+                            'Output IGST Tax RCM','Output Krishi Kalyan Cess','Output Krishi Kalyan Cess RCM','Output Service Tax',
+                            'Output Service Tax RCM','Output SGST','Output SGST Tax RCM','Output VAT 14%','Output VAT 4%',
+                            'Output VAT 5%','Service Tax Payable','Service Tax Suspense','SGST Payable','SGST Suspense',
+                            'Swachh Bharat Cess Payable','Swachh Bharat Cess Suspense','TDS Payable','VAT Payable',
+                            'VAT Suspense','Opening Balance','Equity',]
                             sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_subacc,tags=("entry6"))
 
                             dep_label7 = Label(sr_Canvas_3,width=20,height=1,text="Default Tax Code",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                             sr_Canvas_3.create_window(0,0,window=dep_label7,tags=("label7"))
 
-                            dep_dtaxcode = Entry(sr_Canvas_3,width=47,font=('arial 15'),background='#2f516f',foreground='white')
+                            dep_dtaxcode = ttk.Combobox(sr_Canvas_3,width=46,font=('arial 15'),background='#2f516f',foreground='black')
+                            dep_dtaxcode['values'] = ['18.0% IGST','14.00% ST','0% IGST','Out of Scope','0% GST','14.5% ST',
+                            '14.0% VAT','6.0% IGST','28.0% IGST','15.0% ST','28.0% GST','12.0% GST','18.0% GST','3.0% GST',
+                            '0.2% IGST','5.0% GST','6.0% GST','0.2% GST','Exempt IGST','3.0% IGS','4.0% VAT','5.0% IGST',
+                            '12.36% ST','5.0% VAT','Exempt GST','12.0% IGST','2.0% CST',]
                             sr_Canvas_3.create_window(0,0,anchor='nw',window=dep_dtaxcode,tags=("entry7"))
 
-                            dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                            def payment_createAccType():
+                                acctype = dep_acctype.get()
+                                detype = dep_dtype.get()
+                                name = dep_name.get()
+                                description = dep_desp.get()
+                                gst = dep_subacc.get()
+                                deftaxcode = dep_dtaxcode.get()
+                                balance = 0
+                                today = datetime.today()
+                                asof = today.strftime("%Y-%m-%d")
+                                balfordisp = 0
+                               # ----company id
+                                user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                                user_val = (nm_ent.get(),)
+                                fbcursor.execute(user_sql,user_val)
+                                user_data = fbcursor.fetchone()
+
+                                comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                                comp_val = (user_data[0],)
+                                fbcursor.execute(comp_sql,comp_val)
+                                comp_data = fbcursor.fetchone()
+                                cid  = comp_data[0]
+                                #----------------
+
+                                #product id --------------
+                                if acctype == "Cost of Goods Sold":
+                                    pro_sql = "SELECT * FROM producttable WHERE Pid=%s"
+                                    pro_val = (13,)
+                                    fbcursor.execute(pro_sql,pro_val)
+                                    product_data = fbcursor.fetchone()
+                                elif acctype == "Expenses":
+                                    pro_sql = "SELECT * FROM producttable WHERE Pid=%s"
+                                    pro_val = (14,)
+                                    fbcursor.execute(pro_sql,pro_val)
+                                    product_data = fbcursor.fetchone()
+                                else:
+                                    product_sql = "SELECT * FROM producttable WHERE Pid=%s"
+                                    product_val = (15,)
+                                    fbcursor.execute(product_sql,product_val)
+                                    product_data = fbcursor.fetchone()
+                                
+                                productid = product_data[0]
+                                #-----------------
+
+                                acctype_sql = "SELECT accountname FROM app1_accountype WHERE accountname=%s"
+                                acctype_val = (dep_dtype.get(),)
+                                fbcursor.execute(acctype_sql,acctype_val)
+                                acctype_data = fbcursor.fetchone()
+
+                                acct_sql = "SELECT name,cid_id FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                acct_val = (dep_name.get(),comp_data[0])
+                                fbcursor.execute(acct_sql,acct_val)
+                                acct_data = fbcursor.fetchone()
+
+                                acct1_sql = "SELECT name,cid_id FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                acct1_val = (dep_name.get(),comp_data[0])
+                                fbcursor.execute(acct1_sql,acct1_val)
+                                acct1_data = fbcursor.fetchone()
+                                
+
+                                if not acctype_data and not acct_data or not acct1_data:
+                                    ins_acctype_sql = "INSERT INTO app1_accountype(cid_id,accountname,accountbal) VALUES(%s,%s,%s)"
+                                    ins_acctype_val= (comp_data[0],detype,balance)
+                                    fbcursor.execute(ins_acctype_sql,ins_acctype_val)
+                                    finsysdb.commit()
+                                    
+                                    if acctype == "Cost of Goods Sold":
+                                        #pro id ------------
+                                        pro_sql = "SELECT * FROM app1_accountype WHERE accountypeid=%s"
+                                        pro_val = (13,)
+                                        fbcursor.execute(pro_sql,pro_val)
+                                        pro_data = fbcursor.fetchone()
+                                        #--------------------
+                                        ins_accts_sql = "INSERT INTO app1_accounts(acctype,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid_id,proid_id,productid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                        ins_accts_val = (3,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid,pro_data[0],productid)
+                                        fbcursor.execute(ins_accts_sql,ins_accts_val)
+                                        finsysdb.commit()
+                                    elif acctype == "Expenses":
+                                        #pro id ------------
+                                        pro_sql = "SELECT * FROM app1_accountype WHERE accountypeid=%s"
+                                        pro_val = (14,)
+                                        fbcursor.execute(pro_sql,pro_val)
+                                        pro_data = fbcursor.fetchone()
+                                        #--------------------
+                                        ins_accts_sql = "INSERT INTO app1_accounts(acctype,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid_id,proid_id,productid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                        ins_accts_val = (3,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid,pro_data[0],productid)
+                                        fbcursor.execute(ins_accts_sql,ins_accts_val)
+                                        finsysdb.commit()
+                                    else:
+                                        #pro id ------------
+                                        pro_sql = "SELECT * FROM app1_accountype WHERE accountypeid=%s"
+                                        pro_val = (15,)
+                                        fbcursor.execute(pro_sql,pro_val)
+                                        pro_data = fbcursor.fetchone()
+                                        #--------------------
+
+                                        ins_accts_sql = "INSERT INTO app1_accounts(acctype,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid_id,proid_id,productid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                        ins_accts_val = (2,detype,name,description,gst,balfordisp,deftaxcode,balance,asof,cid,pro_data[0],productid)
+                                        fbcursor.execute(ins_accts_sql,ins_accts_val)
+                                        finsysdb.commit()
+
+                                    sel_accts1_sql = "SELECT * FROM app1_accounts1 WHERE cid_id=%s and name=%s"
+                                    sel_accts1_val = (cid,'Opening Balance Equity',)
+                                    fbcursor.execute(sel_accts1_sql,sel_accts1_val)
+                                    sel_accts1_data = fbcursor.fetchone()
+
+                                    bal = sel_accts1_data[7] + float(balance)
+                                    upd_accts1_sql = "UPDATE app1_accounts1 SET balance=%s WHERE cid_id=%s and name=%s"
+                                    upd_accts1_val = (bal,cid,'Opening Balance Equity',)
+                                    fbcursor.execute(upd_accts1_sql,upd_accts1_val)
+                                    finsysdb.commit()
+
+                                    sr_Frame_3.destroy()
+                                    sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+
+                                    deposit_sql = "SELECT name FROM app1_accounts WHERE cid_id=%s ORDER BY accountsid DESC LIMIT 1;"
+                                    deposit_val = (comp_data[0],)
+                                    fbcursor.execute(deposit_sql,deposit_val)
+                                    deposit_data = fbcursor.fetchall()
+
+                                    dep_list.insert(0,deposit_data)
+                                    rp_depositto.config(values=dep_list)
+                                    rp_depositto.current(0)
+                                else:
+                                    messagebox.showwarning("Fin sYs",f"Account with name {name} already exists. Please provide another name.")
+
+
+
+
+                            dep_save = Button(sr_Canvas_3,text="Create",font=('arial 12 bold'),width=35,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:payment_createAccType())
                             sr_Canvas_3.create_window(0,0,window=dep_save,tags=("button1"))
 
-                            def goBack2():
+                            def dep_goBack():
                                 sr_Frame_3.grid_forget()
                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                            back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:goBack2())
+                            back_btn = Button(sr_Canvas_3,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:dep_goBack())
                             sr_Canvas_3.create_window(0,0,window=back_btn,tags=("button2"))
 
                         cm_plus1 = Button(sr_Canvas_1,text='+',font=('arial 10 bold'),foreground='white',activebackground='#1b3857',background='#1b3857',padx=7,command=lambda:add_depositTo_1())
@@ -6529,50 +7286,50 @@ def main_sign_in():
                 sr_transCombo_win = sr_Canvas.create_window(0,0,window=sr_transCombo,tags=("combo2"))
 
 
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line1"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line17"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line4"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line5"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line6"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line7"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line8"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line9"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line10"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line11"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line12"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line13"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line14"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line15"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line16"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line3"))
-                sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line2"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line1"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line17"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line4"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line5"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line6"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line7"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line8"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line9"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line10"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line11"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line12"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line13"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line14"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line15"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line16"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line3"))
+                # sr_Canvas.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line2"))
 
-                srt_dateLabel = Label(sr_Canvas,width=10,height=1,text="23-07-2022", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_dateLabel,tags=("label2"))
+                # srt_dateLabel = Label(sr_Canvas,width=10,height=1,text="23-07-2022", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_dateLabel,tags=("label2"))
 
-                srt_typeLabel = Label(sr_Canvas,width=12,height=1,text="Payment", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_typeLabel,tags=("label3"))
+                # srt_typeLabel = Label(sr_Canvas,width=12,height=1,text="Payment", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_typeLabel,tags=("label3"))
 
-                srt_noLabel = Label(sr_Canvas,width=8,height=1,text="1010", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_noLabel,tags=("label4"))
+                # srt_noLabel = Label(sr_Canvas,width=8,height=1,text="1010", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_noLabel,tags=("label4"))
 
-                srt_custLabel = Label(sr_Canvas,width=15,height=1,text="Nithin", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_custLabel,tags=("label5"))
+                # srt_custLabel = Label(sr_Canvas,width=15,height=1,text="Nithin", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_custLabel,tags=("label5"))
 
-                srt_dueLabel = Label(sr_Canvas,width=10,height=1,text="30-07-2022", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_dueLabel,tags=("label6"))
+                # srt_dueLabel = Label(sr_Canvas,width=10,height=1,text="30-07-2022", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_dueLabel,tags=("label6"))
 
-                srt_balLabel = Label(sr_Canvas,width=12,height=1,text="1000", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_balLabel,tags=("label7"))
+                # srt_balLabel = Label(sr_Canvas,width=12,height=1,text="1000", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_balLabel,tags=("label7"))
 
-                srt_totbLabel = Label(sr_Canvas,width=12,height=1,text="1500", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_totbLabel,tags=("label8"))
+                # srt_totbLabel = Label(sr_Canvas,width=12,height=1,text="1500", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_totbLabel,tags=("label8"))
 
-                srt_taxLabel = Label(sr_Canvas,width=7,height=1,text="100", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_taxLabel,tags=("label9"))
+                # srt_taxLabel = Label(sr_Canvas,width=7,height=1,text="100", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_taxLabel,tags=("label9"))
 
-                srt_totLabel = Label(sr_Canvas,width=12,height=1,text="1000", font=('arial 10'),background="#1b3857",fg="white") 
-                sr_Canvas.create_window(0, 0, anchor="c", window=srt_totLabel,tags=("label10"))
+                # srt_totLabel = Label(sr_Canvas,width=12,height=1,text="1000", font=('arial 10'),background="#1b3857",fg="white") 
+                # sr_Canvas.create_window(0, 0, anchor="c", window=srt_totLabel,tags=("label10"))
                 def sr_Actions(event):
                     sr_Frame.grid_forget()
                     sr_Frame_1 = Frame(tab3_1,)
@@ -7223,26 +7980,72 @@ def main_sign_in():
                 srt_actionCombo.bind("<<ComboboxSelected>>",sr_Actions)
                 sr_Canvas.create_window(0,0,window=srt_actionCombo,tags=("combo1"))
 
-                srt_label1 = Label(sr_Canvas,width=10,height=1,text="DATE", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel1 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label1,tags=("label11"))
-                srt_label2 = Label(sr_Canvas,width=11,height=1,text="TYPE", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel2 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label2,tags=("label12"))
-                srt_label3 = Label(sr_Canvas,width=8,height=1,text="NO.", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel3 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label3,tags=("label13"))
-                srt_label4 = Label(sr_Canvas,width=11,height=1,text="CUSTOMER", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel4 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label4,tags=("label14"))
-                srt_label5 = Label(sr_Canvas,width=11,height=1,text="DUE DATE", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel5 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label5,tags=("label15"))
-                srt_label6 = Label(sr_Canvas,width=11,height=1,text="BALANCE", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel6 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label6,tags=("label16"))
-                srt_label7 = Label(sr_Canvas,width=12,height=1,text="TOTAL BEFORE", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel7 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label7,tags=("label17"))
-                srt_label8 = Label(sr_Canvas,width=7,height=1,text="TAX", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel8 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label8,tags=("label18"))
-                srt_label9 = Label(sr_Canvas,width=11,height=1,text="TOTAL", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel9 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label9,tags=("label19"))
-                srt_label10 = Label(sr_Canvas,width=10,height=1,text="ACTION", font=('arial 10 bold'),background="#1b3857",fg="white") 
-                srt_winlabel10 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label10,tags=("label20"))
+                sr_tree_style = ttk.Style()
+                sr_tree_style.theme_use("default")
+                sr_tree_style.configure("Treeview",background="#2f516f",foreground="white",rowheight=25,font=(None,11),fieldbackground="#2f516f")
+                sr_tree_style.configure("Treeview.Heading",background="#1b3857",activeforeground="black",foreground="white",font=(None,11))
+
+                sr_tree = ttk.Treeview(sr_Canvas,height=8,columns=("0","1","2","3","4","5","6","7","8"),show="headings")
+                sr_tree.column("0",width=110,anchor=CENTER)
+                sr_tree.column("1",width=140,anchor=CENTER)
+                sr_tree.column("2",width=110,anchor=CENTER)
+                sr_tree.column("3",width=150,anchor=CENTER)
+                sr_tree.column("4",width=110,anchor=CENTER)
+                sr_tree.column("5",width=150,anchor=CENTER)
+                sr_tree.column("6",width=150,anchor=CENTER)
+                sr_tree.column("7",width=110,anchor=CENTER)
+                sr_tree.column("8",width=150,anchor=CENTER)
+                sr_tree.heading("0",text="DATE")
+                sr_tree.heading("1",text="TYPE")
+                sr_tree.heading("2",text="NO.")
+                sr_tree.heading("3",text="CUSTOMER")
+                sr_tree.heading("4",text="DUE DATE")
+                sr_tree.heading("5",text="BALANCE")
+                sr_tree.heading("6",text="TOTAL BEFORE")
+                sr_tree.heading("7",text="TAX")
+                sr_tree.heading("8",text="TOTAL")
+                sr_Canvas.create_window(0,0,window=sr_tree,tags=("tree_main"))
+
+                user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                user_val = (nm_ent.get(),)
+                fbcursor.execute(user_sql,user_val)
+                user_data = fbcursor.fetchone()
+
+                comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                comp_val = (user_data[0],)
+                fbcursor.execute(comp_sql,comp_val)
+                comp_data = fbcursor.fetchone()
+
+                get_payment_sql = "SELECT * FROM app1_payment WHERE cid_id=%s"
+                get_payment_val = (comp_data[0],)
+                fbcursor.execute(get_payment_sql,get_payment_val)
+                get_payment_data = fbcursor.fetchall()
+
+                countp = 0
+                for p in get_payment_data:
+                    sr_tree.insert(parent='',index='end',iid=countp,values=(p[4],'Payment',p[6],p[1],p[4],p[12],p[11],'0',p[11]))
+                    countp += 1
+
+                # srt_label1 = Label(sr_Canvas,width=10,height=1,text="DATE", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel1 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label1,tags=("label11"))
+                # srt_label2 = Label(sr_Canvas,width=11,height=1,text="TYPE", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel2 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label2,tags=("label12"))
+                # srt_label3 = Label(sr_Canvas,width=8,height=1,text="NO.", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel3 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label3,tags=("label13"))
+                # srt_label4 = Label(sr_Canvas,width=11,height=1,text="CUSTOMER", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel4 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label4,tags=("label14"))
+                # srt_label5 = Label(sr_Canvas,width=11,height=1,text="DUE DATE", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel5 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label5,tags=("label15"))
+                # srt_label6 = Label(sr_Canvas,width=11,height=1,text="BALANCE", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel6 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label6,tags=("label16"))
+                # srt_label7 = Label(sr_Canvas,width=12,height=1,text="TOTAL BEFORE", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel7 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label7,tags=("label17"))
+                # srt_label8 = Label(sr_Canvas,width=7,height=1,text="TAX", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel8 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label8,tags=("label18"))
+                # srt_label9 = Label(sr_Canvas,width=11,height=1,text="TOTAL", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel9 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label9,tags=("label19"))
+                # srt_label10 = Label(sr_Canvas,width=10,height=1,text="ACTION", font=('arial 10 bold'),background="#1b3857",fg="white") 
+                # srt_winlabel10 = sr_Canvas.create_window(0, 0, anchor="c", window=srt_label10,tags=("label20"))
 
                 #3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333{Expenses Tab}
                 tab_exp = ttk.Notebook(tab4)
