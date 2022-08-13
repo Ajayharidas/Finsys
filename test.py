@@ -1,6 +1,4 @@
 from tkinter import *
-import finsys
-from finsys import *
 
 from calendar import c
 from cgitb import enable, reset, text
@@ -102,40 +100,30 @@ import PIL.Image
 # App(root).pack()
 # root.mainloop()
 
+root=Tk()
 
-if bal <= 0.0:
-                                        print("yes")
-                                    else:
-                                        print("no")
-                                        rp_tree.selection_remove(child)
-                                        child1  = rp_tree.get_children()[-1]
-                                        rp_tree.focus(child1)
-                                        rp_tree.selection_set(child1)
-                                        selected_row = rp_tree.selection()[0]
-                                        pay_indices1 = rp_tree.item(selected_row,'values')
-                                        rp_tree.item(selected_row,values=pay_indices1)
+root.geometry("1920x1080+0+0")
 
-                                        if float(pay_indices1[3]) >= bal:
-                                            rp_tree.set(selected_row,"#5",bal)
-                                            bal1 = float(bal)
-                                        elif float(pay_indices1[3]) == 0.0 or float(pay_indices1[3]) <= bal:
-                                            rp_tree.set(selected_row,"#5",float(pay_indices1[3]))
-                                            bal1 = float(bal) - float(pay_indices[3])
-                                        else:
-                                            pass
+finsysdb = mysql.connector.connect(
+    host="localhost", user="root", password="", database="newfinsys", port="3306"
+)
+fbcursor = finsysdb.cursor(buffered=True)
 
-                                        child2  = rp_tree.get_children()[-2]
-                                        rp_tree.focus(child2)
-                                        rp_tree.selection_set(child2)
-                                        selected_row = rp_tree.selection()[0]
-                                        pay_indices2 = rp_tree.item(selected_row,'values')
-                                        rp_tree.item(selected_row,values=pay_indices2)
+t1_style = ttk.Style()
+t1_style.theme_use('default')
+t1_style.configure('Treeview.Heading',background='yellow')
 
-                                        if float(pay_indices2[3]) >= bal1:
-                                            rp_tree.set(selected_row,"#5",bal1)
-                                            bal2 = float(bal1)
-                                        elif float(pay_indices2[3]) == 0.0 or float(pay_indices2[3]) <= bal1:
-                                            rp_tree.set(selected_row,"#5",float(pay_indices2[3]))
-                                            bal2 = float(bal1) - float(pay_indices2[3])
-                                        else:
-                                            pass
+
+t1 = ttk.Treeview(root,height=10,columns=('0','1','2'),show='headings')
+t1.column('0',width=50)
+t1.column('1',width=250)
+t1.column('2',width=250)
+t1.heading('0',text='#')
+t1.heading('1',text='name')
+t1.heading('2',text='tax')
+t1.pack()
+
+
+root.mainloop()
+
+
