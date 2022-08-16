@@ -1781,17 +1781,17 @@ def main_sign_in():
                             dcanvas.coords("label64",dwidth/20,dheight/0.565)
                             dcanvas.coords("label65",dwidth/20,dheight/0.519)
                             dcanvas.coords("label66",dwidth/20,dheight/0.481)
-                            dcanvas.coords("label67",dwidth/1.879,dheight/0.6)
-                            dcanvas.coords("label68",dwidth/1.879,dheight/0.549)
-                            dcanvas.coords("label69",dwidth/1.879,dheight/0.506)
-                            dcanvas.coords("label70",dwidth/1.879,dheight/0.47)
+                            dcanvas.coords("label67",dwidth/2.06,dheight/0.6)
+                            dcanvas.coords("label68",dwidth/2.06,dheight/0.549)
+                            dcanvas.coords("label69",dwidth/2.06,dheight/0.506)
+                            dcanvas.coords("label70",dwidth/2.06,dheight/0.47)
                             dcanvas.coords("label33",dwidth/7.91,dheight/0.675)
-                            dcanvas.coords("label34",dwidth/4.09,dheight/0.675)
-                            dcanvas.coords("label35",dwidth/2.57,dheight/0.675)
-                            dcanvas.coords("label36",dwidth/1.88,dheight/0.675)
-                            dcanvas.coords("label37",dwidth/1.51,dheight/0.675)
-                            dcanvas.coords("label38",dwidth/1.25,dheight/0.675)
-                            dcanvas.coords("label39",dwidth/1.09,dheight/0.675)
+                            dcanvas.coords("label34",dwidth/4.2,dheight/0.675)
+                            dcanvas.coords("label35",dwidth/2.74,dheight/0.675)
+                            dcanvas.coords("label36",dwidth/2.07,dheight/0.675)
+                            dcanvas.coords("label37",dwidth/1.68,dheight/0.675)
+                            dcanvas.coords("label38",dwidth/1.39,dheight/0.675)
+                            dcanvas.coords("label39",dwidth/1.205,dheight/0.675)
                             dcanvas.coords("label40",dwidth/1.52,dheight/0.507)
                             dcanvas.coords("label41",dwidth/1.52,dheight/0.483)
                             dcanvas.coords("label42",dwidth/1.52,dheight/0.462)
@@ -1825,25 +1825,25 @@ def main_sign_in():
                             dcanvas.coords("entry16",dwidth/11,dheight/0.79)
                             dcanvas.coords("entry17",dwidth/2.72,dheight/0.79)
                             dcanvas.coords("entry18",dwidth/5.13,dheight/0.63)
-                            dcanvas.coords("entry19",dwidth/3.19,dheight/0.63)
-                            dcanvas.coords("entry20",dwidth/2.06,dheight/0.63)
-                            dcanvas.coords("entry21",dwidth/1.676,dheight/0.63)
-                            dcanvas.coords("entry22",dwidth/1.346,dheight/0.63)
+                            dcanvas.coords("entry19",dwidth/3.39,dheight/0.63)
+                            dcanvas.coords("entry20",dwidth/2.24,dheight/0.63)
+                            dcanvas.coords("entry21",dwidth/1.85,dheight/0.63)
+                            dcanvas.coords("entry22",dwidth/1.5,dheight/0.63)
                             dcanvas.coords("entry39",dwidth/5.13,dheight/0.5745)
-                            dcanvas.coords("entry40",dwidth/3.19,dheight/0.5745)
-                            dcanvas.coords("entry41",dwidth/2.06,dheight/0.5745)
-                            dcanvas.coords("entry42",dwidth/1.676,dheight/0.5745)
-                            dcanvas.coords("entry43",dwidth/1.346,dheight/0.5745)
+                            dcanvas.coords("entry40",dwidth/3.39,dheight/0.5745)
+                            dcanvas.coords("entry41",dwidth/2.24,dheight/0.5745)
+                            dcanvas.coords("entry42",dwidth/1.85,dheight/0.5745)
+                            dcanvas.coords("entry43",dwidth/1.5,dheight/0.5745)
                             dcanvas.coords("entry44",dwidth/5.13,dheight/0.527)
-                            dcanvas.coords("entry45",dwidth/3.19,dheight/0.527)
-                            dcanvas.coords("entry46",dwidth/2.06,dheight/0.527)
-                            dcanvas.coords("entry47",dwidth/1.676,dheight/0.527)
-                            dcanvas.coords("entry48",dwidth/1.346,dheight/0.527)
+                            dcanvas.coords("entry45",dwidth/3.39,dheight/0.527)
+                            dcanvas.coords("entry46",dwidth/2.24,dheight/0.527)
+                            dcanvas.coords("entry47",dwidth/1.85,dheight/0.527)
+                            dcanvas.coords("entry48",dwidth/1.5,dheight/0.527)
                             dcanvas.coords("entry49",dwidth/5.13,dheight/0.487)
-                            dcanvas.coords("entry50",dwidth/3.19,dheight/0.487)
-                            dcanvas.coords("entry51",dwidth/2.06,dheight/0.487)
-                            dcanvas.coords("entry52",dwidth/1.676,dheight/0.487)
-                            dcanvas.coords("entry53",dwidth/1.346,dheight/0.487)
+                            dcanvas.coords("entry50",dwidth/3.39,dheight/0.487)
+                            dcanvas.coords("entry51",dwidth/2.24,dheight/0.487)
+                            dcanvas.coords("entry52",dwidth/1.85,dheight/0.487)
+                            dcanvas.coords("entry53",dwidth/1.5,dheight/0.487)
 
                             dcanvas.coords("entry23",dwidth/1.35,dheight/0.513)
                             dcanvas.coords("entry24",dwidth/1.35,dheight/0.489)
@@ -1861,8 +1861,11 @@ def main_sign_in():
                             dcanvas.coords("entry34",dwidth/1.525,dheight/1.45)
 
                             dcanvas.coords("entry35",dwidth/1.81,dheight/1.24)
+                            dcanvas.coords("entry54",dwidth/1.55,dheight/1.24)
                             dcanvas.coords("entry36",dwidth/1.33,dheight/1.24)
+                            dcanvas.coords("entry55",dwidth/1.185,dheight/1.24)
                             dcanvas.coords("entry37",dwidth/2.91,dheight/1.08)
+                            dcanvas.coords("entry56",dwidth/1.55,dheight/1.08)
                             dcanvas.coords("entry38",dwidth/2.91,dheight/0.96)
 
                             dcanvas.coords("combo3",dwidth/11,dheight/1.68)
@@ -1871,13 +1874,13 @@ def main_sign_in():
                             except:
                                 pass
                             dcanvas.coords("combo5",dwidth/7.909,dheight/0.62)
-                            dcanvas.coords("combo6",dwidth/1.091,dheight/0.62)
+                            dcanvas.coords("combo6",dwidth/1.206,dheight/0.62)
                             dcanvas.coords("combo14",dwidth/7.909,dheight/0.5655)
-                            dcanvas.coords("combo15",dwidth/1.091,dheight/0.5655)
+                            dcanvas.coords("combo15",dwidth/1.206,dheight/0.5655)
                             dcanvas.coords("combo16",dwidth/7.909,dheight/0.519)
-                            dcanvas.coords("combo17",dwidth/1.091,dheight/0.519)
+                            dcanvas.coords("combo17",dwidth/1.206,dheight/0.519)
                             dcanvas.coords("combo18",dwidth/7.909,dheight/0.481)
-                            dcanvas.coords("combo19",dwidth/1.091,dheight/0.481)
+                            dcanvas.coords("combo19",dwidth/1.206,dheight/0.481)
 
                             dcanvas.coords("combo7",dwidth/7.4,dheight/1.035)
                             dcanvas.coords("combo8",dwidth/1.111,dheight/1.035)
@@ -1898,6 +1901,11 @@ def main_sign_in():
                             dcanvas.coords("button9",dwidth/1.09,dheight/2.04)
                             dcanvas.coords("button10",dwidth/1.09,dheight/1.66)
                             dcanvas.coords("button11",dwidth/1.57,dheight/0.79)
+
+                            dcanvas.coords("button12",dwidth/1.09,dheight/0.619)
+                            dcanvas.coords("button13",dwidth/1.09,dheight/0.565)
+                            dcanvas.coords("button14",dwidth/1.09,dheight/0.518)
+                            dcanvas.coords("button15",dwidth/1.09,dheight/0.48)
                             
                             dcanvas.coords("line17",dwidth/31.6,dheight/0.7,dwidth/1.039,dheight/0.7)
                             dcanvas.coords("line18",dwidth/31.6,dheight/0.65,dwidth/1.039,dheight/0.65)
@@ -1908,12 +1916,13 @@ def main_sign_in():
                             dcanvas.coords("line23",dwidth/31.6,dheight/0.7,dwidth/31.6,dheight/0.464)
                             dcanvas.coords("line24",dwidth/1.039,dheight/0.7,dwidth/1.039,dheight/0.464)
                             dcanvas.coords("line25",dwidth/15,dheight/0.7,dwidth/15,dheight/0.464)
-                            dcanvas.coords("line26",dwidth/5.3,dheight/0.7,dwidth/5.3,dheight/0.464)
-                            dcanvas.coords("line27",dwidth/3.3,dheight/0.7,dwidth/3.3,dheight/0.464)
-                            dcanvas.coords("line28",dwidth/2.1,dheight/0.7,dwidth/2.1,dheight/0.464)
-                            dcanvas.coords("line29",dwidth/1.7,dheight/0.7,dwidth/1.7,dheight/0.464)
-                            dcanvas.coords("line30",dwidth/1.365,dheight/0.7,dwidth/1.365,dheight/0.464)
-                            dcanvas.coords("line31",dwidth/1.15,dheight/0.7,dwidth/1.15,dheight/0.464)
+                            dcanvas.coords("line26",dwidth/5.35,dheight/0.7,dwidth/5.35,dheight/0.464)
+                            dcanvas.coords("line27",dwidth/3.5,dheight/0.7,dwidth/3.5,dheight/0.464)
+                            dcanvas.coords("line28",dwidth/2.28,dheight/0.7,dwidth/2.28,dheight/0.464)
+                            dcanvas.coords("line29",dwidth/1.88,dheight/0.7,dwidth/1.88,dheight/0.464)
+                            dcanvas.coords("line30",dwidth/1.52,dheight/0.7,dwidth/1.52,dheight/0.464)
+                            dcanvas.coords("line31",dwidth/1.277,dheight/0.7,dwidth/1.277,dheight/0.464)
+                            dcanvas.coords("line58",dwidth/1.144,dheight/0.7,dwidth/1.144,dheight/0.464)
 
                             dcanvas.coords("line32",dwidth/1.7,dheight/0.52,dwidth/1.039,dheight/0.52)
                             dcanvas.coords("line33",dwidth/1.7,dheight/0.495,dwidth/1.039,dheight/0.495)
@@ -4422,8 +4431,9 @@ def main_sign_in():
                                                 fbcursor.execute(ins_cust_sql,ins_cust_val)
                                                 finsysdb.commit()
                                                 sr_Frame_2.destroy()
-                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
-                                                fbcursor.execute(cust_sql,)
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer WHERE cid_id=%s"
+                                                cust_val = (comp_data[0],)
+                                                fbcursor.execute(cust_sql,cust_val)
                                                 cust_data = fbcursor.fetchall()
 
                                                 cust_list = []
@@ -4958,6 +4968,7 @@ def main_sign_in():
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line29"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line30"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line31"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line58"))
 
                         # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line32"))
                         # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line33"))
@@ -4976,13 +4987,13 @@ def main_sign_in():
                         cm_label18 = Label(sr_Canvas_1,width=15,height=1,text="Product / Service",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label18,tags=('label33'))
 
-                        cm_label19 = Label(sr_Canvas_1,width=14,height=1,text="HSN",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        cm_label19 = Label(sr_Canvas_1,width=10,height=1,text="HSN",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label19,tags=('label34'))
 
                         cm_label20 = Label(sr_Canvas_1,width=18,height=1,text="Description",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label20,tags=('label35'))
 
-                        cm_label21 = Label(sr_Canvas_1,width=10,height=1,text="Qty",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        cm_label21 = Label(sr_Canvas_1,width=6,height=1,text="Qty",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label21,tags=('label36'))
 
                         cm_label22 = Label(sr_Canvas_1,width=10,height=1,text="Price",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -4991,7 +5002,7 @@ def main_sign_in():
                         cm_label23 = Label(sr_Canvas_1,width=10,height=1,text="Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label23,tags=('label38'))
 
-                        cm_label24 = Label(sr_Canvas_1,width=10,height=1,text="Tax (%)",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        cm_label24 = Label(sr_Canvas_1,width=8,height=1,text="Tax (%)",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label24,tags=('label39')) 
 
                         user_sql = "SELECT id FROM auth_user WHERE username=%s"
@@ -5052,158 +5063,750 @@ def main_sign_in():
                         
                         product_list.insert(0,"Select Product")
 
+                        def cm_fetch_proDetails1(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (cmt_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (cmt_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                get_pro_val2 = (cmt_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                get_pro_data2 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (cmt_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry21",state='normal')
+                                    sr_Canvas_1.itemconfig("entry22",state='normal')
+                                    sr_Canvas_1.itemconfig("combo6",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                try:
+                                    sr_Canvas_1.itemconfig("label67",state='normal')
+                                    cm_label31.config(text="Available Qty : " + get_pro_data[7])
+                                    cmt_entry2.delete(0,END)
+                                    cmt_entry2.insert(0,get_pro_data[4])
+                                    cmt_entry3.delete(0,END)
+                                    cmt_entry3.insert(0,get_pro_data[11])
+                                    cmt_entry5.delete(0,END)
+                                    cmt_entry5.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry21",state='normal')
+                                    sr_Canvas_1.itemconfig("entry22",state='normal')
+                                    sr_Canvas_1.itemconfig("combo6",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                sr_Canvas_1.itemconfig("label67",state='normal')
+                                cm_label31.config(text="Available Qty : " + get_pro_data[17])
+                                cmt_entry2.delete(0,END)
+                                cmt_entry2.insert(0,get_pro_data1[4])
+                                cmt_entry3.delete(0,END)
+                                cmt_entry3.insert(0,get_pro_data1[7])
+                                cmt_entry5.delete(0,END)
+                                cmt_entry5.insert(0,get_pro_data1[8])
+                            elif get_pro_data2 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry21",state='normal')
+                                    sr_Canvas_1.itemconfig("entry22",state='normal')
+                                    sr_Canvas_1.itemconfig("combo6",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                    sr_Canvas_1.itemconfig("label67",state='hidden')
+                                except:
+                                    pass
+                                cmt_entry2.delete(0,END)
+                                cmt_entry2.insert(0,get_pro_data2[4])
+                                cmt_entry3.delete(0,END)
+                                cmt_entry3.insert(0,get_pro_data2[7])
+                                cmt_entry5.delete(0,END)
+                                cmt_entry5.insert(0,get_pro_data2[8])
+                            else:
+                                cmt_entry2.delete(0,END)
+                                cmt_entry2.insert(0,get_pro_data3[3])
+                                cmt_entry3.delete(0,END)
+                                cmt_entry3.insert(0,get_pro_data3[4])
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry21",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry22",state='hidden')
+                                    sr_Canvas_1.itemconfig("combo6",state='hidden')
+                                    sr_Canvas_1.itemconfig("button12",state='normal')
+                                    sr_Canvas_1.itemconfig("label67",state='hidden')
+                                except:
+                                    pass
+
                             
-                        cmt_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry1["values"] = product_list
                         cmt_entry1.current(0)
+                        cmt_entry1.bind("<<ComboboxSelected>>",cm_fetch_proDetails1)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry1,tags=("combo5"))
 
-                        cmt_entry2 = Entry(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry2 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry2,tags=("entry18"))
 
-                        cmt_entry3 = Entry(sr_Canvas_1,width=17,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry3 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry3,tags=("entry19"))
 
-                        def cmt_show_availableqty1(event):
+                        def cmt_calculateTotal1(event):
                             try:
                                 if cmt_entry4.get() != 0:
-                                    sr_Canvas_1.itemconfig("label67",state='normal')
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (cmt_entry1.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
+
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (cmt_entry1.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                        get_pro_val2 = (cmt_entry1.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                        get_pro_data2 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (cmt_entry1.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+                                    
+                                    if get_pro_data is not None:
+                                        tot = int(get_pro_data[12]) * int(cmt_entry4.get())
+                                        cmt_entry6.delete(0,END)
+                                        cmt_entry6.insert(0,tot)
+                                    elif get_pro_data1 is not None:
+                                        tot = int(get_pro_data[8]) * int(cmt_entry4.get())
+                                        cmt_entry6.delete(0,END)
+                                        cmt_entry6.insert(0,tot)
+                                    elif get_pro_data2 is not None:
+                                        pass
+                                    else:
+                                        bal_qty = int(get_pro_data3[17]) - int(cmt_entry4.get())
+                                        bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry4.get())
+                                        bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry4.get())
+                                        bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry4.get())
+                                        print(bal_qty)
+                                        print(bal_qty1)
+                                        print(bal_qty2)
+                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
                                 pass
 
-                        cmt_entry4 = Spinbox(sr_Canvas_1,width=9,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
-                        cmt_entry4.bind("<Button-1>",cmt_show_availableqty1)
+                        cmt_entry4 = Spinbox(sr_Canvas_1,width=7,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        cmt_entry4.bind("<Button-1>",cmt_calculateTotal1)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry4,tags=("entry20"))
 
-                        cmt_entry5 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry5 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry5,tags=("entry21"))
 
-                        cmt_entry6 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry6 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry6,tags=("entry22"))
 
-                        cmt_entry7 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry7 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
+                        cmt_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry7.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry7,tags=("combo6"))
+
+                        cmt_button1 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button1,tags=("button12"))
 
                         cm_label28 = Label(sr_Canvas_1,width=3,height=1,text="2",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label28,tags=('label64'))
 
-                        cmt_entry11 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                        def cm_fetch_proDetails2(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (cmt_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (cmt_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                get_pro_val2 = (cmt_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                get_pro_data2 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (cmt_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #----------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry42",state='normal')
+                                    sr_Canvas_1.itemconfig("entry43",state='normal')
+                                    sr_Canvas_1.itemconfig("combo15",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+                                try:
+                                    sr_Canvas_1.itemconfig("label68",state='normal')
+                                    cm_label32.config(text="Available Qty : " + get_pro_data[7])
+                                    cmt_entry12.delete(0,END)
+                                    cmt_entry12.insert(0,get_pro_data[4])
+                                    cmt_entry13.delete(0,END)
+                                    cmt_entry13.insert(0,get_pro_data[11])
+                                    cmt_entry15.delete(0,END)
+                                    cmt_entry15.insert(0,get_pro_data[8])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry42",state='normal')
+                                    sr_Canvas_1.itemconfig("entry43",state='normal')
+                                    sr_Canvas_1.itemconfig("combo15",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+                                
+                                sr_Canvas_1.itemconfig("label68",state='normal')
+                                cm_label32.config(text="Available Qty : " + get_pro_data[17])
+                                cmt_entry12.delete(0,END)
+                                cmt_entry12.insert(0,get_pro_data1[4])
+                                cmt_entry13.delete(0,END)
+                                cmt_entry13.insert(0,get_pro_data1[7])
+                                cmt_entry15.delete(0,END)
+                                cmt_entry15.insert(0,get_pro_data1[7])
+                            elif get_pro_data2 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry42",state='normal')
+                                    sr_Canvas_1.itemconfig("entry43",state='normal')
+                                    sr_Canvas_1.itemconfig("combo15",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                    sr_Canvas_1.itemconfig("label68",state='hidden')
+                                except:
+                                    pass
+                                cmt_entry12.delete(0,END)
+                                cmt_entry12.insert(0,get_pro_data2[4])
+                                cmt_entry13.delete(0,END)
+                                cmt_entry13.insert(0,get_pro_data2[7])
+                                cmt_entry15.delete(0,END)
+                                cmt_entry15.insert(0,get_pro_data2[8])
+                            else:
+                                cmt_entry12.delete(0,END)
+                                cmt_entry12.insert(0,get_pro_data3[3])
+                                cmt_entry13.delete(0,END)
+                                cmt_entry13.insert(0,get_pro_data3[4])
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry42",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry43",state='hidden')
+                                    sr_Canvas_1.itemconfig("combo15",state='hidden')
+                                    sr_Canvas_1.itemconfig("button13",state='normal')
+                                    sr_Canvas_1.itemconfig("label68",state='hidden')
+                                except:
+                                    pass
+
+                        cmt_entry11 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry11["values"] = product_list
                         cmt_entry11.current(0)
+                        cmt_entry11.bind("<<ComboboxSelected>>",cm_fetch_proDetails2)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry11,tags=("combo14"))
 
-                        cmt_entry12 = Entry(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry12 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry12,tags=("entry39"))
 
-                        cmt_entry13 = Entry(sr_Canvas_1,width=17,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry13 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry13,tags=("entry40"))
 
-                        def cmt_show_availableqty2(event):
+                        def cmt_calculateTotal2(event):
                             try:
                                 if cmt_entry14.get() != 0:
-                                    sr_Canvas_1.itemconfig("label68",state='normal')
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (cmt_entry11.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
+
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (cmt_entry11.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                        get_pro_val2 = (cmt_entry11.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                        get_pro_data2 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (cmt_entry11.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+
+                                    if get_pro_data is not None:
+                                        tot = int(get_pro_data[12]) * int(cmt_entry14.get())
+                                        cmt_entry16.delete(0,END)
+                                        cmt_entry16.insert(0,tot)
+                                    elif get_pro_data1 is not None:
+                                        tot = int(get_pro_data[8]) * int(cmt_entry14.get())
+                                        cmt_entry16.delete(0,END)
+                                        cmt_entry16.insert(0,tot)
+                                    elif get_pro_data2 is not None:
+                                        pass
+                                    else:
+                                        bal_qty = int(get_pro_data3[17]) - int(cmt_entry14.get())
+                                        bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry14.get())
+                                        bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry14.get())
+                                        bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry14.get())
+                                        print(bal_qty)
+                                        print(bal_qty1)
+                                        print(bal_qty2)
+                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
                                 pass
 
-                        cmt_entry14 = Spinbox(sr_Canvas_1,width=9,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
-                        cmt_entry14.bind("<Button-1>",cmt_show_availableqty2)
+                        cmt_entry14 = Spinbox(sr_Canvas_1,width=7,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        cmt_entry14.bind("<Button-1>",cmt_calculateTotal2)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry14,tags=("entry41"))
 
-                        cmt_entry15 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry15 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry15,tags=("entry42"))
 
-                        cmt_entry16 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry16 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry16,tags=("entry43"))
 
-                        cmt_entry17 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry17 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
+                        cmt_entry17["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry17.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry17,tags=("combo15"))
+
+                        cmt_button2 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button2,tags=("button13"))
 
                         cm_label29 = Label(sr_Canvas_1,width=3,height=1,text="3",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label29,tags=('label65'))
 
-                        cmt_entry18 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                        def cm_fetch_proDetails3(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (cmt_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (cmt_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                get_pro_val2 = (cmt_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                get_pro_data2 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (cmt_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry47",state='normal')
+                                    sr_Canvas_1.itemconfig("entry48",state='normal')
+                                    sr_Canvas_1.itemconfig("combo17",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                try:
+                                    sr_Canvas_1.itemconfig("label69",state='normal')
+                                    cm_label33.config(text="Available Qty : " + get_pro_data[7])
+                                    cmt_entry19.delete(0,END)
+                                    cmt_entry19.insert(0,get_pro_data[4])
+                                    cmt_entry20.delete(0,END)
+                                    cmt_entry20.insert(0,get_pro_data[11])
+                                    cmt_entry22.delete(0,END)
+                                    cmt_entry22.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry47",state='normal')
+                                    sr_Canvas_1.itemconfig("entry48",state='normal')
+                                    sr_Canvas_1.itemconfig("combo17",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                
+                                sr_Canvas_1.itemconfig("label69",state='normal')
+                                cm_label33.config(text="Available Qty : " + get_pro_data[17])
+                                cmt_entry19.delete(0,END)
+                                cmt_entry19.insert(0,get_pro_data1[4])
+                                cmt_entry20.delete(0,END)
+                                cmt_entry20.insert(0,get_pro_data1[7])
+                                cmt_entry22.delete(0,END)
+                                cmt_entry22.insert(0,get_pro_data1[8])
+                            elif get_pro_data2 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry47",state='normal')
+                                    sr_Canvas_1.itemconfig("entry48",state='normal')
+                                    sr_Canvas_1.itemconfig("combo17",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                    sr_Canvas_1.itemconfig("label69",state='hidden')
+                                except:
+                                    pass
+                                cmt_entry19.delete(0,END)
+                                cmt_entry19.insert(0,get_pro_data2[4])
+                                cmt_entry20.delete(0,END)
+                                cmt_entry20.insert(0,get_pro_data2[7])
+                                cmt_entry22.delete(0,END)
+                                cmt_entry22.insert(0,get_pro_data2[8])
+                            else:
+                                cmt_entry19.delete(0,END)
+                                cmt_entry19.insert(0,get_pro_data3[3])
+                                cmt_entry20.delete(0,END)
+                                cmt_entry20.insert(0,get_pro_data3[4])
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry47",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry48",state='hidden')
+                                    sr_Canvas_1.itemconfig("combo17",state='hidden')
+                                    sr_Canvas_1.itemconfig("button14",state='normal')
+                                    sr_Canvas_1.itemconfig("label69",state='hidden')
+                                except:
+                                    pass
+
+                        cmt_entry18 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry18["values"] = product_list
                         cmt_entry18.current(0)
+                        cmt_entry18.bind("<<ComboboxSelected>>",cm_fetch_proDetails3)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry18,tags=("combo16"))
 
-                        cmt_entry19 = Entry(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry19 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry19,tags=("entry44"))
 
-                        cmt_entry20 = Entry(sr_Canvas_1,width=17,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry20 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry20,tags=("entry45"))
 
-                        def cmt_show_availableqty3(event):
+                        def cmt_calculateTotal3(event):
                             try:
-                                if cmt_entry21.get() != 0:
-                                    sr_Canvas_1.itemconfig("label69",state='normal')
+                                if cmt_entry14.get() != 0:
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (cmt_entry18.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
+
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (cmt_entry18.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                        get_pro_val2 = (cmt_entry18.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                        get_pro_data2 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (cmt_entry18.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+
+                                    if get_pro_data is not None:
+                                        tot = int(get_pro_data[12]) * int(cmt_entry21.get())
+                                        cmt_entry23.delete(0,END)
+                                        cmt_entry23.insert(0,tot)
+                                    elif get_pro_data1 is not None:
+                                        tot = int(get_pro_data[8]) * int(cmt_entry21.get())
+                                        cmt_entry23.delete(0,END)
+                                        cmt_entry23.insert(0,tot)
+                                    elif get_pro_data2 is not None:
+                                        pass
+                                    else:
+                                        bal_qty = int(get_pro_data3[17]) - int(cmt_entry21.get())
+                                        bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry21.get())
+                                        bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry21.get())
+                                        bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry21.get())
+                                        print(bal_qty)
+                                        print(bal_qty1)
+                                        print(bal_qty2)
+                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
                                 pass
 
-                        cmt_entry21 = Spinbox(sr_Canvas_1,width=9,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
-                        cmt_entry21.bind("<Button-1>",cmt_show_availableqty3)
+                        cmt_entry21 = Spinbox(sr_Canvas_1,width=7,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        cmt_entry21.bind("<Button-1>",cmt_calculateTotal3)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry21,tags=("entry46"))
 
-                        cmt_entry22 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry22 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry22,tags=("entry47"))
 
-                        cmt_entry23 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry23 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry23,tags=("entry48"))
 
-                        cmt_entry24 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry24 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
+                        cmt_entry24["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry24.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry24,tags=("combo17"))
+
+                        cmt_button3 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button3,tags=("button14"))
 
                         cm_label30 = Label(sr_Canvas_1,width=3,height=1,text="4",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label30,tags=('label66'))
 
-                        cmt_entry25 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                        def cm_fetch_proDetails4(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (cmt_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (cmt_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                get_pro_val2 = (cmt_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                get_pro_data2 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (cmt_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry52",state='normal')
+                                    sr_Canvas_1.itemconfig("entry53",state='normal')
+                                    sr_Canvas_1.itemconfig("combo19",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                try:
+                                    sr_Canvas_1.itemconfig("label70",state='normal')
+                                    cm_label34.config(text="Available Qty : " + get_pro_data[7])
+                                    cmt_entry26.delete(0,END)
+                                    cmt_entry26.insert(0,get_pro_data[4])
+                                    cmt_entry27.delete(0,END)
+                                    cmt_entry27.insert(0,get_pro_data[11])
+                                    cmt_entry29.delete(0,END)
+                                    cmt_entry29.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry52",state='normal')
+                                    sr_Canvas_1.itemconfig("entry53",state='normal')
+                                    sr_Canvas_1.itemconfig("combo19",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                sr_Canvas_1.itemconfig("label70",state='normal')
+                                cm_label34.config(text="Available Qty : " + get_pro_data[17])
+                                cmt_entry26.delete(0,END)
+                                cmt_entry26.insert(0,get_pro_data1[4])
+                                cmt_entry27.delete(0,END)
+                                cmt_entry27.insert(0,get_pro_data1[7])
+                                cmt_entry29.delete(0,END)
+                                cmt_entry29.insert(0,get_pro_data1[8])
+                            elif get_pro_data2 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry52",state='normal')
+                                    sr_Canvas_1.itemconfig("entry53",state='normal')
+                                    sr_Canvas_1.itemconfig("combo19",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                    sr_Canvas_1.itemconfig("label70",state='hidden')
+                                except:
+                                    pass
+                                cmt_entry26.delete(0,END)
+                                cmt_entry26.insert(0,get_pro_data2[4])
+                                cmt_entry27.delete(0,END)
+                                cmt_entry27.insert(0,get_pro_data2[7])
+                                cmt_entry29.delete(0,END)
+                                cmt_entry29.insert(0,get_pro_data2[8])
+                            else:
+                                cmt_entry26.delete(0,END)
+                                cmt_entry26.insert(0,get_pro_data3[3])
+                                cmt_entry27.delete(0,END)
+                                cmt_entry27.insert(0,get_pro_data3[4])
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry52",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry53",state='hidden')
+                                    sr_Canvas_1.itemconfig("combo19",state='hidden')
+                                    sr_Canvas_1.itemconfig("button15",state='normal')
+                                    sr_Canvas_1.itemconfig("label70",state='hidden')
+                                except:
+                                    pass
+
+                        cmt_entry25 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry25["values"] = product_list
                         cmt_entry25.current(0)
+                        cmt_entry25.bind("<<ComboboxSelected>>",cm_fetch_proDetails4)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry25,tags=("combo18"))
 
-                        cmt_entry26 = Entry(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry26 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry26,tags=("entry49"))
 
-                        cmt_entry27 = Entry(sr_Canvas_1,width=17,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry27 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry27,tags=("entry50"))
 
-                        def cmt_show_availableqty4(event):
+                        def cmt_calculateTotal4(event):
                             try:
-                                if cmt_entry28.get() != 0:
-                                    sr_Canvas_1.itemconfig("label70",state='normal')
+                                if cmt_entry14.get() != 0:
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (cmt_entry25.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
+
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (cmt_entry25.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                        get_pro_val2 = (cmt_entry25.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                        get_pro_data2 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (cmt_entry25.get(),comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+
+                                    if get_pro_data is not None:
+                                        tot = int(get_pro_data[12]) * int(cmt_entry28.get())
+                                        cmt_entry30.delete(0,END)
+                                        cmt_entry30.insert(0,tot)
+                                    elif get_pro_data1 is not None:
+                                        tot = int(get_pro_data[8]) * int(cmt_entry28.get())
+                                        cmt_entry30.delete(0,END)
+                                        cmt_entry30.insert(0,tot)
+                                    elif get_pro_data2 is not None:
+                                        pass
+                                    else:
+                                        bal_qty = int(get_pro_data3[17]) - int(cmt_entry28.get())
+                                        bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry28.get())
+                                        bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry28.get())
+                                        bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry28.get())
+                                        print(bal_qty)
+                                        print(bal_qty1)
+                                        print(bal_qty2)
+                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
                                 pass
 
-                        cmt_entry28 = Spinbox(sr_Canvas_1,width=9,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
-                        cmt_entry28.bind("<Button-1>",cmt_show_availableqty4)
+                        cmt_entry28 = Spinbox(sr_Canvas_1,width=7,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        cmt_entry28.bind("<Button-1>",cmt_calculateTotal4)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry28,tags=("entry51"))
 
-                        cmt_entry29 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry29 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry29,tags=("entry52"))
 
-                        cmt_entry30 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry30 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry30,tags=("entry53"))
 
-                        cmt_entry31 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry31 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
+                        cmt_entry31["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry31.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry31,tags=("combo19"))
 
-                        cm_label31 = Label(sr_Canvas_1,width=17,height=1,text="Available Quantity : ",font=('arial 9'),background='#1b3857',anchor="c",fg="white")
+                        cmt_button4 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button4,tags=("button15"))
+
+                        cm_label31 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label31,state=HIDDEN,tags=('label67'))
 
-                        cm_label32 = Label(sr_Canvas_1,width=17,height=1,text="Available Quantity : ",font=('arial 9'),background='#1b3857',anchor="c",fg="white")
+                        cm_label32 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label32,state=HIDDEN,tags=('label68'))
 
-                        cm_label33 = Label(sr_Canvas_1,width=17,height=1,text="Available Quantity : ",font=('arial 9'),background='#1b3857',anchor="c",fg="white")
+                        cm_label33 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label33,state=HIDDEN,tags=('label69'))
 
-                        cm_label34 = Label(sr_Canvas_1,width=17,height=1,text="Available Quantity : ",font=('arial 9'),background='#1b3857',anchor="c",fg="white")
+                        cm_label34 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label34,state=HIDDEN,tags=('label70'))
 
                         # cm_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -8723,7 +9326,7 @@ def main_sign_in():
                                                     for c in cust_data:
                                                         cust_list.append(c[0] + " " + c[1])
                                                     cust_list.insert(0,'Select Customer')
-                                                    es_custCombo["values"] = cust_list
+                                                    ta_custCombo["values"] = cust_list
                                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
                                 elif gstin == '29APPCK7465F1Z1' or panno == 'APPCK7465F':
                                     pass
@@ -8761,7 +9364,7 @@ def main_sign_in():
                                                     for c in cust_data:
                                                         cust_list.append(c[0] + " " + c[1])
                                                     cust_list.insert(0,'Select Customer')
-                                                    es_custCombo["values"] = cust_list
+                                                    ta_custCombo["values"] = cust_list
                                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
                             
                             cust_save = Button(sr_Canvas_2,text="Submit Form",font=('arial 12 bold'),width=40,height=2,background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:sr_create_newCustomer())
@@ -8807,12 +9410,16 @@ def main_sign_in():
                                 sr_Canvas_1.itemconfig("label61",state='normal')
                                 sr_Canvas_1.itemconfig("entry35",state='normal')
                                 sr_Canvas_1.itemconfig("entry36",state='normal')
+                                sr_Canvas_1.itemconfig("entry39",state='normal')
+                                sr_Canvas_1.itemconfig("entry40",state='normal')
                             else:
                                 try:
                                     sr_Canvas_1.itemconfig("label60",state='hidden')
                                     sr_Canvas_1.itemconfig("label61",state='hidden')
                                     sr_Canvas_1.itemconfig("entry35",state='hidden')
                                     sr_Canvas_1.itemconfig("entry36",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry39",state='hidden')
+                                    sr_Canvas_1.itemconfig("entry40",state='hidden')
                                 except:
                                     pass
 
@@ -8825,20 +9432,56 @@ def main_sign_in():
                         ta_label7 = Label(sr_Canvas_1,width=20,height=1,text="Start time",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=ta_label7,tags=("label60"))
 
-                        ta_start = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_start,tags=("entry35"))
+                        ta_start1 = ttk.Combobox(sr_Canvas_1,width=8,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_start1["values"] = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13"
+                        ,"14","15","16","17","18","19","20","21","22","23"]
+                        ta_start1.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_start1,tags=("entry35"))
+
+                        ta_start2 = ttk.Combobox(sr_Canvas_1,width=8,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_start2["values"] = ['00','01','02','03','04','05','06','07','08','09','10',
+                        '11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26',
+                        '27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42',
+                        '43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58',
+                        '59']
+                        ta_start2.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_start2,tags=("entry54"))
 
                         ta_label8 = Label(sr_Canvas_1,width=20,height=1,text="End time",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=ta_label8,tags=("label61"))
 
-                        ta_end = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_end,tags=("entry36"))
+                        ta_end1 = ttk.Combobox(sr_Canvas_1,width=8,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_end1["values"] = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13"
+                        ,"14","15","16","17","18","19","20","21","22","23"]
+                        ta_end1.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_end1,tags=("entry36"))
+
+                        ta_end2 = ttk.Combobox(sr_Canvas_1,width=8,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_end2["values"] = ['00','01','02','03','04','05','06','07','08','09','10',
+                        '11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26',
+                        '27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42',
+                        '43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58',
+                        '59']
+                        ta_end2.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_end2,tags=("entry55"))
 
                         ta_label9 = Label(sr_Canvas_1,width=20,height=1,text="Time",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=ta_label9,tags=("label62"))
 
-                        ta_time = Entry(sr_Canvas_1,width=67,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_time,tags=("entry37"))
+                        ta_time1 = ttk.Combobox(sr_Canvas_1,width=31,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_time1["values"] = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13"
+                        ,"14","15","16","17","18","19","20","21","22","23"]
+                        ta_time1.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_time1,tags=("entry37"))
+
+                        ta_time2 = ttk.Combobox(sr_Canvas_1,width=31,font=('arial 15'),background='#2f516f',foreground='black')
+                        ta_time2["values"] = ['00','01','02','03','04','05','06','07','08','09','10',
+                        '11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26',
+                        '27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42',
+                        '43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58',
+                        '59']
+                        ta_time2.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=ta_time2,tags=("entry56"))
 
                         ta_label10 = Label(sr_Canvas_1,width=20,height=1,text="Description",font=('arial 12'),background='#1b3857',fg="white",anchor="w")
                         sr_Canvas_1.create_window(0,0,window=ta_label10,tags=("label63"))
@@ -8861,9 +9504,9 @@ def main_sign_in():
                                 timestartsale = ''
                                 timeendsale = ''
                             else:
-                                timestartsale = ta_start.get()
-                                timeendsale = ta_end.get()
-                            tymesale = ta_time.get()
+                                timestartsale = ta_start1.get() + ":" + ta_start2.get()
+                                timeendsale = ta_end1.get() + ":" + ta_end1.get()
+                            tymesale = ta_time1.get() + ":" + ta_time2.get()
                             timedessale = ta_desc.get("1.0","end-1c")
 
                             if timenamesale == "Select Supplier" or timecustsale == "Select Customer" or tymesale == '' or timedessale == '':
