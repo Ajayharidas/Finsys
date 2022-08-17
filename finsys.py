@@ -4470,8 +4470,8 @@ def main_sign_in():
                                                 fbcursor.execute(ins_cust_sql,ins_cust_val)
                                                 finsysdb.commit()
                                                 sr_Frame_2.destroy()
-                                                cust_sql = "SELECT firstname,lastname FROM app1_customer"
-                                                fbcursor.execute(cust_sql,)
+                                                cust_sql = "SELECT firstname,lastname FROM app1_customer WHERE cid_id=%S"
+                                                fbcursor.execute(cust_sql,comp_data[0])
                                                 cust_data = fbcursor.fetchall()
 
                                                 cust_list = []
@@ -5063,7 +5063,722 @@ def main_sign_in():
                         
                         product_list.insert(0,"Select Product")
 
+                        def view_bundleitems(b):
+                            sr_Frame_1.grid_forget()
+                            sr_Frame_4 = Frame(tab3_1,)
+                            sr_Frame_4.grid(row=0,column=0,sticky='nsew')
+
+                            def responsive_widgets3(event):
+                                dwidth = event.width
+                                dheight = event.height
+                                dcanvas = event.widget
+
+                                r1 = 25
+                                x1 = dwidth/63
+                                x2 = dwidth/1.021
+                                y1 = dheight/14 
+                                y2 = dheight/3.505
+
+                                dcanvas.coords("poly1",x1 + r1,y1,
+                                x1 + r1,y1,
+                                x2 - r1,y1,
+                                x2 - r1,y1,     
+                                x2,y1,     
+                                #--------------------
+                                x2,y1 + r1,     
+                                x2,y1 + r1,     
+                                x2,y2 - r1,     
+                                x2,y2 - r1,     
+                                x2,y2,
+                                #--------------------
+                                x2 - r1,y2,     
+                                x2 - r1,y2,     
+                                x1 + r1,y2,
+                                x1 + r1,y2,
+                                x1,y2,
+                                #--------------------
+                                x1,y2 - r1,
+                                x1,y2 - r1,
+                                x1,y1 + r1,
+                                x1,y1 + r1,
+                                x1,y1,
+                                )
+
+                                dcanvas.coords("hline",dwidth/21,dheight/4.67,dwidth/1.055,dheight/4.67)
+                                
+                                r2 = 25
+                                x11 = dwidth/63
+                                x21 = dwidth/1.021
+                                y11 = dheight/2.8
+                                y21 = dheight/0.9
+
+
+                                dcanvas.coords("poly2",x11 + r2,y11,
+                                x11 + r2,y11,
+                                x21 - r2,y11,
+                                x21 - r2,y11,     
+                                x21,y11,     
+                                #--------------------
+                                x21,y11 + r2,     
+                                x21,y11 + r2,     
+                                x21,y21 - r2,     
+                                x21,y21 - r2,     
+                                x21,y21,
+                                #--------------------
+                                x21 - r2,y21,     
+                                x21 - r2,y21,     
+                                x11 + r2,y21,
+                                x11 + r2,y21,
+                                x11,y21,
+                                #--------------------
+                                x11,y21 - r2,
+                                x11,y21 - r2,
+                                x11,y11 + r2,
+                                x11,y11 + r2,
+                                x11,y11,
+                                )
+
+                                dcanvas.coords("label1",dwidth/2,dheight/8.24)
+
+                                dcanvas.coords("line1",dwidth/13,dheight/2.2,dwidth/1.09,dheight/2.2)
+                                dcanvas.coords("line2",dwidth/13,dheight/1.65,dwidth/1.09,dheight/1.65)
+                                dcanvas.coords("line3",dwidth/13,dheight/1.32,dwidth/1.09,dheight/1.32)
+                                dcanvas.coords("line4",dwidth/13,dheight/1.1,dwidth/1.09,dheight/1.1)
+                                dcanvas.coords("line5",dwidth/13,dheight/0.945,dwidth/1.09,dheight/0.945)
+                                dcanvas.coords("line6",dwidth/13,dheight/2.2,dwidth/13,dheight/0.945)
+                                dcanvas.coords("line7",dwidth/1.09,dheight/2.2,dwidth/1.09,dheight/0.945)
+                                dcanvas.coords("line8",dwidth/5.35,dheight/2.2,dwidth/5.35,dheight/0.945)
+                                dcanvas.coords("line9",dwidth/3.5,dheight/2.2,dwidth/3.5,dheight/0.945)
+                                dcanvas.coords("line10",dwidth/2.28,dheight/2.2,dwidth/2.28,dheight/0.945)
+                                dcanvas.coords("line11",dwidth/1.84,dheight/2.2,dwidth/1.84,dheight/0.945)
+                                dcanvas.coords("line12",dwidth/1.49,dheight/2.2,dwidth/1.49,dheight/0.945)
+                                dcanvas.coords("line13",dwidth/1.25,dheight/2.2,dwidth/1.25,dheight/0.945)
+
+                                dcanvas.coords("entry1",dwidth/11.5,dheight/1.99)
+                                dcanvas.coords("entry2",dwidth/5.1,dheight/1.99)
+                                dcanvas.coords("entry3",dwidth/3.38,dheight/1.99)
+                                dcanvas.coords("entry4",dwidth/2.249,dheight/1.99)
+                                dcanvas.coords("entry5",dwidth/1.81,dheight/1.99)
+                                dcanvas.coords("entry6",dwidth/1.465,dheight/1.99)
+
+                                dcanvas.coords("entry7",dwidth/11.5,dheight/1.525)
+                                dcanvas.coords("entry8",dwidth/5.1,dheight/1.525)
+                                dcanvas.coords("entry9",dwidth/3.38,dheight/1.525)
+                                dcanvas.coords("entry10",dwidth/2.249,dheight/1.525)
+                                dcanvas.coords("entry11",dwidth/1.81,dheight/1.525)
+                                dcanvas.coords("entry12",dwidth/1.465,dheight/1.525)
+
+                                dcanvas.coords("entry13",dwidth/11.5,dheight/1.24)
+                                dcanvas.coords("entry14",dwidth/5.1,dheight/1.24)
+                                dcanvas.coords("entry15",dwidth/3.38,dheight/1.24)
+                                dcanvas.coords("entry16",dwidth/2.249,dheight/1.24)
+                                dcanvas.coords("entry17",dwidth/1.81,dheight/1.24)
+                                dcanvas.coords("entry18",dwidth/1.465,dheight/1.24)
+
+                                dcanvas.coords("entry19",dwidth/11.5,dheight/1.045)
+                                dcanvas.coords("entry20",dwidth/5.1,dheight/1.045)
+                                dcanvas.coords("entry21",dwidth/3.38,dheight/1.045)
+                                dcanvas.coords("entry22",dwidth/2.249,dheight/1.045)
+                                dcanvas.coords("entry23",dwidth/1.81,dheight/1.045)
+                                dcanvas.coords("entry24",dwidth/1.465,dheight/1.045)
+
+                                dcanvas.coords("combo1",dwidth/1.165,dheight/1.88)
+                                dcanvas.coords("combo2",dwidth/1.165,dheight/1.46)
+                                dcanvas.coords("combo3",dwidth/1.165,dheight/1.2)
+                                dcanvas.coords("combo4",dwidth/1.165,dheight/1.019)
+                            
+                            sr_Canvas_4 = Canvas(sr_Frame_4,bg='#2f516f',scrollregion=(0,0,700,1200))
+
+                            sr_Frame_4.grid_columnconfigure(0,weight=1)
+                            sr_Frame_4.grid_rowconfigure(0,weight=1)
+
+                            sr_Scroll_3 = Scrollbar(sr_Frame_4,orient=VERTICAL)
+                            sr_Scroll_3.grid(row=0,column=1,sticky='ns')
+                            sr_Scroll_3.config(command=sr_Canvas_4.yview)
+                            sr_Canvas_4.bind("<Configure>", responsive_widgets3)
+                            sr_Canvas_4.config(yscrollcommand=sr_Scroll_3.set)
+                            sr_Canvas_4.grid(row=0,column=0,sticky='nsew')
+
+                            sr_Canvas_4.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
+                            sr_Canvas_4.create_line(0,0,0,0,fill='gray',width=1,tags=("hline"))
+
+                            sr_Canvas_4.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly2"))
+
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line1"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line2"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line3"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line4"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line5"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line6"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line7"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line8"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line9"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line10"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line11"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line12"))
+                            sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line13"))
+
+                            def vb_goBack():
+                                sr_Frame_4.grid_forget()
+                                sr_Frame_1.grid(row=0,column=0,sticky='nsew')
+
+                            back_btn = Button(sr_Canvas_4,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:vb_goBack())
+                            sr_Canvas_4.create_window(0,0,window=back_btn,tags=("button2"))
+
+                            if b == 1:
+                                vb_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry1.get(),font=('arial 25'),background='#1b3857',fg="white")
+                                sr_Canvas_4.create_window(0,0,anchor="c",window=vb_label1,tags=("label1"))
+
+                                bt1_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry1,tags=("entry1"))
+
+                                bt1_entry2 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry2,tags=("entry2"))
+
+                                bt1_entry3 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry3,tags=("entry3"))
+
+                                bt1_entry4 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry4,tags=("entry4"))
+
+                                bt1_entry5 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry5,tags=("entry5"))
+
+                                bt1_entry6 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry6,tags=("entry6"))
+
+                                bt1_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt1_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry7,tags=("combo1"))
+
+                                bt1_entry8 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry8,tags=("entry7"))
+
+                                bt1_entry9 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry9,tags=("entry8"))
+
+                                bt1_entry10 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry10,tags=("entry9"))
+
+                                bt1_entry11 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry11,tags=("entry10"))
+
+                                bt1_entry12 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry12,tags=("entry11"))
+
+                                bt1_entry13 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry13,tags=("entry12"))
+
+                                bt1_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt1_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt1_entry14.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry14,tags=("combo2"))
+
+                                bt1_entry15 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry15,tags=("entry13"))
+
+                                bt1_entry16 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry16,tags=("entry14"))
+
+                                bt1_entry17 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry17,tags=("entry15"))
+
+                                bt1_entry18 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry18,tags=("entry16"))
+
+                                bt1_entry19 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry19,tags=("entry17"))
+
+                                bt1_entry20 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry20,tags=("entry18"))
+
+                                bt1_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt1_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt1_entry21.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry21,tags=("combo3"))
+
+                                bt1_entry22 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry22,tags=("entry19"))
+
+                                bt1_entry23 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry23,tags=("entry20"))
+
+                                bt1_entry24 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry24,tags=("entry21"))
+
+                                bt1_entry25 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry25,tags=("entry22"))
+
+                                bt1_entry26 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry26,tags=("entry23"))
+
+                                bt1_entry27 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry27,tags=("entry24"))
+
+                                bt1_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt1_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt1_entry28.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry28,tags=("combo4"))
+
+                                try:
+                                    get_bundle_sql1 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val1 = (cmt_entry1.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql1,get_bundle_val1)
+                                    get_bundle_data1 = fbcursor.fetchone()
+                                except:
+                                    pass 
+                                try:
+                                    bt1_entry1.delete(0,END)
+                                    bt1_entry1.insert(0,get_bundle_data1[5])
+                                    bt1_entry2.delete(0,END)
+                                    bt1_entry2.insert(0,get_bundle_data1[9])
+                                    bt1_entry3.delete(0,END)
+                                    bt1_entry3.insert(0,get_bundle_data1[13])
+                                    bt1_entry4.delete(0,END)
+                                    bt1_entry4.insert(0,get_bundle_data1[17])
+                                    bt1_entry5.delete(0,END)
+                                    bt1_entry5.insert(0,get_bundle_data1[21])
+                                    bt1_entry6.delete(0,END)
+                                    bt1_entry6.insert(0,get_bundle_data1[25])
+                                    bt1_entry7.delete(0,END)
+                                    bt1_entry7.insert(0,get_bundle_data1[29])
+                                    bt1_entry8.delete(0,END)
+                                    bt1_entry8.insert(0,get_bundle_data1[6])
+                                    bt1_entry9.delete(0,END)
+                                    bt1_entry9.insert(0,get_bundle_data1[10])
+                                    bt1_entry10.delete(0,END)
+                                    bt1_entry10.insert(0,get_bundle_data1[14])
+                                    bt1_entry11.delete(0,END)
+                                    bt1_entry11.insert(0,get_bundle_data1[18])
+                                    bt1_entry12.delete(0,END)
+                                    bt1_entry12.insert(0,get_bundle_data1[22])
+                                    bt1_entry13.delete(0,END)
+                                    bt1_entry13.insert(0,get_bundle_data1[26])
+                                    bt1_entry14.delete(0,END)
+                                    bt1_entry14.insert(0,get_bundle_data1[30])
+                                    bt1_entry15.delete(0,END)
+                                    bt1_entry15.insert(0,get_bundle_data1[7])
+                                    bt1_entry16.delete(0,END)
+                                    bt1_entry16.insert(0,get_bundle_data1[11])
+                                    bt1_entry17.delete(0,END)
+                                    bt1_entry17.insert(0,get_bundle_data1[15])
+                                    bt1_entry18.delete(0,END)
+                                    bt1_entry18.insert(0,get_bundle_data1[19])
+                                    bt1_entry19.delete(0,END)
+                                    bt1_entry19.insert(0,get_bundle_data1[23])
+                                    bt1_entry20.delete(0,END)
+                                    bt1_entry20.insert(0,get_bundle_data1[27])
+                                    bt1_entry21.delete(0,END)
+                                    bt1_entry21.insert(0,get_bundle_data1[31])
+                                    bt1_entry22.delete(0,END)
+                                    bt1_entry22.insert(0,get_bundle_data1[8])
+                                    bt1_entry23.delete(0,END)
+                                    bt1_entry23.insert(0,get_bundle_data1[12])
+                                    bt1_entry24.delete(0,END)
+                                    bt1_entry24.insert(0,get_bundle_data1[16])
+                                    bt1_entry25.delete(0,END)
+                                    bt1_entry25.insert(0,get_bundle_data1[20])
+                                    bt1_entry26.delete(0,END)
+                                    bt1_entry26.insert(0,get_bundle_data1[24])
+                                    bt1_entry27.delete(0,END)
+                                    bt1_entry27.insert(0,get_bundle_data1[28])
+                                    bt1_entry28.delete(0,END)
+                                    bt1_entry28.insert(0,get_bundle_data1[32])
+                                except:
+                                    pass
+
+                                qty1 = int(get_bundle_data1[17]) * int(cmt_entry4.get())
+                                qty2 = int(get_bundle_data1[18]) * int(cmt_entry4.get())
+                                qty3 = int(get_bundle_data1[19]) * int(cmt_entry4.get())
+                                qty4 = int(get_bundle_data1[20]) * int(cmt_entry4.get())
+                                if cmt_entry4.get() == "0":
+                                    pass
+                                else:
+                                    bt1_entry4.delete(0,END)
+                                    bt1_entry4.insert(0,qty1)
+                                    bt1_entry11.delete(0,END)
+                                    bt1_entry11.insert(0,qty2)
+                                    bt1_entry18.delete(0,END)
+                                    bt1_entry18.insert(0,qty3)
+                                    bt1_entry25.delete(0,END)
+                                    bt1_entry25.insert(0,qty4)
+
+                                tot1 = int(bt1_entry4.get()) * int(float(bt1_entry6.get()))
+                                tot2 = int(bt1_entry4.get()) * int(float(bt1_entry13.get()))
+                                tot3 = int(bt1_entry4.get()) * int(float(bt1_entry20.get()))
+                                tot4 = int(bt1_entry4.get()) * int(float(bt1_entry27.get()))
+
+                                bt1_entry6.delete(0,END)
+                                bt1_entry6.insert(0,tot1)
+                                bt1_entry13.delete(0,END)
+                                bt1_entry13.insert(0,tot2)
+                                bt1_entry20.delete(0,END)
+                                bt1_entry20.insert(0,tot3)
+                                bt1_entry27.delete(0,END)
+                                bt1_entry27.insert(0,tot4)
+                            elif b == 2:
+                                bt2_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry1,tags=("entry1"))
+
+                                bt2_entry2 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry2,tags=("entry2"))
+
+                                bt2_entry3 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry3,tags=("entry3"))
+
+                                bt2_entry4 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry4,tags=("entry4"))
+
+                                bt2_entry5 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry5,tags=("entry5"))
+
+                                bt2_entry6 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry6,tags=("entry6"))
+
+                                bt2_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt2_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt2_entry7.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry7,tags=("combo1"))
+
+                                bt2_entry8 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry8,tags=("entry7"))
+
+                                bt2_entry9 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry9,tags=("entry8"))
+
+                                bt2_entry10 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry10,tags=("entry9"))
+
+                                bt2_entry11 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry11,tags=("entry10"))
+
+                                bt2_entry12 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry12,tags=("entry11"))
+
+                                bt2_entry13 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry13,tags=("entry12"))
+
+                                bt2_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt2_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt2_entry14.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry14,tags=("combo2"))
+
+                                bt2_entry15 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry15,tags=("entry13"))
+
+                                bt2_entry16 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry16,tags=("entry14"))
+
+                                bt2_entry17 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry17,tags=("entry15"))
+
+                                bt2_entry18 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry18,tags=("entry16"))
+
+                                bt2_entry19 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry19,tags=("entry17"))
+
+                                bt2_entry20 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry20,tags=("entry18"))
+
+                                bt2_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt2_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt2_entry21.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry21,tags=("combo3"))
+
+                                bt2_entry22 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry22,tags=("entry19"))
+
+                                bt2_entry23 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry23,tags=("entry20"))
+
+                                bt2_entry24 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry24,tags=("entry21"))
+
+                                bt2_entry25 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry25,tags=("entry22"))
+
+                                bt2_entry26 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry26,tags=("entry23"))
+
+                                bt2_entry27 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry27,tags=("entry24"))
+
+                                bt2_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt2_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt2_entry28.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry28,tags=("combo4"))
+
+                                try:
+                                    get_bundle_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val2 = (cmt_entry11.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql2,get_bundle_val2)
+                                    get_bundle_data2 = fbcursor.fetchone()
+                                except:
+                                    pass
+
+                                try:
+                                    bt2_entry1.delete(0,END)
+                                    bt2_entry1.insert(0,get_bundle_data2[5])
+                                    bt2_entry2.delete(0,END)
+                                    bt2_entry2.insert(0,get_bundle_data2[9])
+                                    bt2_entry3.delete(0,END)
+                                    bt2_entry3.insert(0,get_bundle_data2[13])
+                                    bt2_entry4.delete(0,END)
+                                    bt2_entry4.insert(0,get_bundle_data2[17])
+                                    bt2_entry5.delete(0,END)
+                                    bt2_entry5.insert(0,get_bundle_data2[21])
+                                    bt2_entry6.delete(0,END)
+                                    bt2_entry6.insert(0,get_bundle_data2[25])
+                                    bt2_entry7.delete(0,END)
+                                    bt2_entry7.insert(0,get_bundle_data2[29])
+                                    bt2_entry8.delete(0,END)
+                                    bt2_entry8.insert(0,get_bundle_data2[6])
+                                    bt2_entry9.delete(0,END)
+                                    bt2_entry9.insert(0,get_bundle_data2[10])
+                                    bt2_entry10.delete(0,END)
+                                    bt2_entry10.insert(0,get_bundle_data2[14])
+                                    bt2_entry11.delete(0,END)
+                                    bt2_entry11.insert(0,get_bundle_data2[18])
+                                    bt2_entry12.delete(0,END)
+                                    bt2_entry12.insert(0,get_bundle_data2[22])
+                                    bt2_entry13.delete(0,END)
+                                    bt2_entry13.insert(0,get_bundle_data2[26])
+                                    bt2_entry14.delete(0,END)
+                                    bt2_entry14.insert(0,get_bundle_data2[30])
+                                    bt2_entry15.delete(0,END)
+                                    bt2_entry15.insert(0,get_bundle_data2[7])
+                                    bt2_entry16.delete(0,END)
+                                    bt2_entry16.insert(0,get_bundle_data2[11])
+                                    bt2_entry17.delete(0,END)
+                                    bt2_entry17.insert(0,get_bundle_data2[15])
+                                    bt2_entry18.delete(0,END)
+                                    bt2_entry18.insert(0,get_bundle_data2[19])
+                                    bt2_entry19.delete(0,END)
+                                    bt2_entry19.insert(0,get_bundle_data2[23])
+                                    bt2_entry20.delete(0,END)
+                                    bt2_entry20.insert(0,get_bundle_data2[27])
+                                    bt2_entry21.delete(0,END)
+                                    bt2_entry21.insert(0,get_bundle_data2[31])
+                                    bt2_entry22.delete(0,END)
+                                    bt2_entry22.insert(0,get_bundle_data2[8])
+                                    bt2_entry23.delete(0,END)
+                                    bt2_entry23.insert(0,get_bundle_data2[12])
+                                    bt2_entry24.delete(0,END)
+                                    bt2_entry24.insert(0,get_bundle_data2[16])
+                                    bt2_entry25.delete(0,END)
+                                    bt2_entry25.insert(0,get_bundle_data2[20])
+                                    bt2_entry26.delete(0,END)
+                                    bt2_entry26.insert(0,get_bundle_data2[24])
+                                    bt2_entry27.delete(0,END)
+                                    bt2_entry27.insert(0,get_bundle_data2[28])
+                                    bt2_entry28.delete(0,END)
+                                    bt2_entry28.insert(0,get_bundle_data2[32])
+                                except:
+                                    pass
+                            elif b == 3:
+                                bt3_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry1,tags=("entry1"))
+
+                                bt3_entry2 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry2,tags=("entry2"))
+
+                                bt3_entry3 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry3,tags=("entry3"))
+
+                                bt3_entry4 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry4,tags=("entry4"))
+
+                                bt3_entry5 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry5,tags=("entry5"))
+
+                                bt3_entry6 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry6,tags=("entry6"))
+
+                                bt3_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt3_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt3_entry7.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry7,tags=("combo1"))
+
+                                bt3_entry8 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry8,tags=("entry7"))
+
+                                bt3_entry9 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry9,tags=("entry8"))
+
+                                bt3_entry10 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry10,tags=("entry9"))
+
+                                bt3_entry11 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry11,tags=("entry10"))
+
+                                bt3_entry12 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry12,tags=("entry11"))
+
+                                bt3_entry13 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry13,tags=("entry12"))
+
+                                bt3_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt3_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt3_entry14.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry14,tags=("combo2"))
+
+                                bt3_entry15 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry15,tags=("entry13"))
+
+                                bt3_entry16 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry16,tags=("entry14"))
+
+                                bt3_entry17 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry17,tags=("entry15"))
+
+                                bt3_entry18 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry18,tags=("entry16"))
+
+                                bt3_entry19 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry19,tags=("entry17"))
+
+                                bt3_entry20 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry20,tags=("entry18"))
+
+                                bt3_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt3_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt3_entry21.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry21,tags=("combo3"))
+
+                                bt3_entry22 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry22,tags=("entry19"))
+
+                                bt3_entry23 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry23,tags=("entry20"))
+
+                                bt3_entry24 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry24,tags=("entry21"))
+
+                                bt3_entry25 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry25,tags=("entry22"))
+
+                                bt3_entry26 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry26,tags=("entry23"))
+
+                                bt3_entry27 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry27,tags=("entry24"))
+
+                                bt3_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt3_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt3_entry28.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry28,tags=("combo4"))
+                            else:
+                                bt4_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry1,tags=("entry1"))
+
+                                bt4_entry2 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry2,tags=("entry2"))
+
+                                bt4_entry3 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry3,tags=("entry3"))
+
+                                bt4_entry4 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry4,tags=("entry4"))
+
+                                bt4_entry5 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry5,tags=("entry5"))
+
+                                bt4_entry6 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry6,tags=("entry6"))
+
+                                bt4_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt4_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt4_entry7.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry7,tags=("combo1"))
+
+                                bt4_entry8 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry8,tags=("entry7"))
+
+                                bt4_entry9 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry9,tags=("entry8"))
+
+                                bt4_entry10 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry10,tags=("entry9"))
+
+                                bt4_entry11 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry11,tags=("entry10"))
+
+                                bt4_entry12 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry12,tags=("entry11"))
+
+                                bt4_entry13 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry13,tags=("entry12"))
+
+                                bt4_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt4_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt4_entry14.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry14,tags=("combo2"))
+
+                                bt4_entry15 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry15,tags=("entry13"))
+
+                                bt4_entry16 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry16,tags=("entry14"))
+
+                                bt4_entry17 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry17,tags=("entry15"))
+
+                                bt4_entry18 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry18,tags=("entry16"))
+
+                                bt4_entry19 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry19,tags=("entry17"))
+
+                                bt4_entry20 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry20,tags=("entry18"))
+
+                                bt4_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt4_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt4_entry21.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry21,tags=("combo3"))
+
+                                bt4_entry22 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry22,tags=("entry19"))
+
+                                bt4_entry23 = Entry(sr_Canvas_4,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry23,tags=("entry20"))
+
+                                bt4_entry24 = Entry(sr_Canvas_4,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry24,tags=("entry21"))
+
+                                bt4_entry25 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry25,tags=("entry22"))
+
+                                bt4_entry26 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry26,tags=("entry23"))
+
+                                bt4_entry27 = Entry(sr_Canvas_4,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                                sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry27,tags=("entry24"))
+
+                                bt4_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                                bt4_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                bt4_entry28.current(0)
+                                sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry28,tags=("combo4"))
+                        
                         def cm_fetch_proDetails1(event):
+                            global get_pro_data3
                             try:
                                 get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
                                 get_pro_val = (cmt_entry1.get(),comp_data[0])
@@ -5213,14 +5928,7 @@ def main_sign_in():
                                     elif get_pro_data2 is not None:
                                         pass
                                     else:
-                                        bal_qty = int(get_pro_data3[17]) - int(cmt_entry4.get())
-                                        bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry4.get())
-                                        bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry4.get())
-                                        bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry4.get())
-                                        print(bal_qty)
-                                        print(bal_qty1)
-                                        print(bal_qty2)
-                                        print(bal_qty3)
+                                        pass
                                 else:
                                     pass
                             except:
@@ -5240,9 +5948,9 @@ def main_sign_in():
                         cmt_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
                         '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
                         cmt_entry7.current(0)
-                        sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry7,tags=("combo6"))
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry7,tags=("combo6"))                      
 
-                        cmt_button1 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        cmt_button1 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b1 = 1:view_bundleitems(b1))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button1,tags=("button12"))
 
                         cm_label28 = Label(sr_Canvas_1,width=3,height=1,text="2",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -5426,7 +6134,7 @@ def main_sign_in():
                         cmt_entry17.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry17,tags=("combo15"))
 
-                        cmt_button2 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        cmt_button2 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b2 = 2:view_bundleitems(b2))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button2,tags=("button13"))
 
                         cm_label29 = Label(sr_Canvas_1,width=3,height=1,text="3",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -5610,7 +6318,7 @@ def main_sign_in():
                         cmt_entry24.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry24,tags=("combo17"))
 
-                        cmt_button3 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        cmt_button3 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b3 = 3:view_bundleitems(b3))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button3,tags=("button14"))
 
                         cm_label30 = Label(sr_Canvas_1,width=3,height=1,text="4",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -5794,7 +6502,7 @@ def main_sign_in():
                         cmt_entry31.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry31,tags=("combo19"))
 
-                        cmt_button4 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white')
+                        cmt_button4 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b4 = 4:view_bundleitems(b4))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cmt_button4,tags=("button15"))
 
                         cm_label31 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
