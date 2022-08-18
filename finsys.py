@@ -1,4 +1,5 @@
 
+from ast import Delete
 from sys import flags
 from turtle import width
 import matplotlib.pyplot as plt
@@ -1601,7 +1602,7 @@ def main_sign_in():
                         x11 = dwidth/63
                         x21 = dwidth/1.021
                         y11 = dheight/2.8
-                        y21 = dheight/0.37
+                        y21 = dheight/0.35
 
 
                         dcanvas.coords("poly3",x11 + r2,y11,
@@ -1792,9 +1793,9 @@ def main_sign_in():
                             dcanvas.coords("label37",dwidth/1.68,dheight/0.675)
                             dcanvas.coords("label38",dwidth/1.39,dheight/0.675)
                             dcanvas.coords("label39",dwidth/1.205,dheight/0.675)
-                            dcanvas.coords("label40",dwidth/1.52,dheight/0.507)
-                            dcanvas.coords("label41",dwidth/1.52,dheight/0.483)
-                            dcanvas.coords("label42",dwidth/1.52,dheight/0.462)
+                            dcanvas.coords("label40",dwidth/1.52,dheight/0.436)
+                            dcanvas.coords("label41",dwidth/1.52,dheight/0.412)
+                            dcanvas.coords("label42",dwidth/1.52,dheight/0.3905)
                             dcanvas.coords("label43",dwidth/1.54,dheight/1.45)
 
                             dcanvas.coords("label44",dwidth/20,dheight/1.135)
@@ -1845,9 +1846,9 @@ def main_sign_in():
                             dcanvas.coords("entry52",dwidth/1.85,dheight/0.487)
                             dcanvas.coords("entry53",dwidth/1.5,dheight/0.487)
 
-                            dcanvas.coords("entry23",dwidth/1.35,dheight/0.513)
-                            dcanvas.coords("entry24",dwidth/1.35,dheight/0.489)
-                            dcanvas.coords("entry25",dwidth/1.35,dheight/0.467)
+                            dcanvas.coords("entry23",dwidth/1.35,dheight/0.443)
+                            dcanvas.coords("entry24",dwidth/1.35,dheight/0.4175)
+                            dcanvas.coords("entry25",dwidth/1.35,dheight/0.394)
                             dcanvas.coords("entry26",dwidth/11,dheight/0.751)
 
                             dcanvas.coords("entry27",dwidth/4.7,dheight/1.057)
@@ -1895,7 +1896,7 @@ def main_sign_in():
                                 dcanvas.coords("button6",dwidth/1.23,dheight/0.775)
                             except:
                                 pass
-                            dcanvas.coords("button7",dwidth/1.114,dheight/0.431)
+                            dcanvas.coords("button7",dwidth/1.114,dheight/0.365)
                             dcanvas.coords("button8",dwidth/1.114,dheight/0.65)
 
                             dcanvas.coords("button9",dwidth/1.09,dheight/2.04)
@@ -1924,13 +1925,13 @@ def main_sign_in():
                             dcanvas.coords("line31",dwidth/1.277,dheight/0.7,dwidth/1.277,dheight/0.464)
                             dcanvas.coords("line58",dwidth/1.144,dheight/0.7,dwidth/1.144,dheight/0.464)
 
-                            dcanvas.coords("line32",dwidth/1.7,dheight/0.52,dwidth/1.039,dheight/0.52)
-                            dcanvas.coords("line33",dwidth/1.7,dheight/0.495,dwidth/1.039,dheight/0.495)
-                            dcanvas.coords("line34",dwidth/1.7,dheight/0.472,dwidth/1.039,dheight/0.472)
-                            dcanvas.coords("line35",dwidth/1.7,dheight/0.451,dwidth/1.039,dheight/0.451)
-                            dcanvas.coords("line36",dwidth/1.7,dheight/0.52,dwidth/1.7,dheight/0.451)
-                            dcanvas.coords("line37",dwidth/1.365,dheight/0.52,dwidth/1.365,dheight/0.451)
-                            dcanvas.coords("line38",dwidth/1.039,dheight/0.52,dwidth/1.039,dheight/0.451)
+                            dcanvas.coords("line32",dwidth/1.7,dheight/0.451,dwidth/1.039,dheight/0.451)
+                            dcanvas.coords("line33",dwidth/1.7,dheight/0.425,dwidth/1.039,dheight/0.425)
+                            dcanvas.coords("line34",dwidth/1.7,dheight/0.401,dwidth/1.039,dheight/0.401)
+                            dcanvas.coords("line35",dwidth/1.7,dheight/0.38,dwidth/1.039,dheight/0.38)
+                            dcanvas.coords("line36",dwidth/1.7,dheight/0.451,dwidth/1.7,dheight/0.38)
+                            dcanvas.coords("line37",dwidth/1.365,dheight/0.451,dwidth/1.365,dheight/0.38)
+                            dcanvas.coords("line38",dwidth/1.039,dheight/0.451,dwidth/1.039,dheight/0.38)
 
                             dcanvas.coords("line39",dwidth/31.6,dheight/1.2,dwidth/1.039,dheight/1.2)
                             dcanvas.coords("line40",dwidth/31.6,dheight/1.085,dwidth/1.039,dheight/1.085)
@@ -1971,7 +1972,7 @@ def main_sign_in():
                         dcanvas.coords("scroll",dwidth/1.087,dheight/0.695)
                         
 
-                    sr_Canvas_1 = Canvas(sr_Frame_1,bg='#2f516f',scrollregion=(0,0,700,1400))
+                    sr_Canvas_1 = Canvas(sr_Frame_1,bg='#2f516f',scrollregion=(0,0,700,1500))
 
                     sr_Frame_1.grid_columnconfigure(0,weight=1)
                     sr_Frame_1.grid_rowconfigure(0,weight=1)
@@ -1983,7 +1984,7 @@ def main_sign_in():
                     sr_Canvas_1.config(yscrollcommand=sr_Scroll_1.set)
                     sr_Canvas_1.grid(row=0,column=0,sticky='nsew')
 
-                    global sr_addCustomer
+                    
                     if sr_transCombo.get() == 'Payment':
                         sr_Canvas_1.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
                         rp_label = Label(sr_Canvas_1,width=18,height=1,text="RECIEVE PAYMENT",font=('arial 25'),background='#1b3857',fg="white")
@@ -3863,7 +3864,7 @@ def main_sign_in():
                         fbcursor.execute(user_sql,user_val)
                         user_data = fbcursor.fetchone()
 
-                        comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                        comp_sql = 'SELECT * FROM app1_company WHERE id_id=%s'
                         comp_val = (user_data[0],)
                         fbcursor.execute(comp_sql,comp_val)
                         comp_data = fbcursor.fetchone()
@@ -3896,20 +3897,31 @@ def main_sign_in():
                             fbcursor.execute(inv_sql,inv_val)
                             inv_data = fbcursor.fetchall()
 
-                            if not cust_data:
+                            try:
+                                if not cust_data:
+                                    pass
+                                else:
+                                    cm_email.delete(0,END)
+                                    cm_email.insert(0,cust_data[9])
+                                    cm_baddress.delete("1.0","end-1c")
+                                    cm_baddress.insert("1.0",cust_data[2] + " " + cust_data[3] + "\n" + cust_data[4] + "\n" + cust_data[12] + "\n" + cust_data[13] + "\n" + cust_data[14] + "\n" + cust_data[15] + "\n" + cust_data[16])
+                                    if comp_data[4] in cm_pofsupply['values']:
+                                        cm_pofsupply.delete(0,END)
+                                        cm_pofsupply.insert(0,comp_data[4])
+                                    else:
+                                        pass
+                            except:
                                 pass
-                            else:
-                                cm_email.delete(0,END)
-                                cm_email.insert(0,cust_data[9])
-                                cm_baddress.delete("1.0","end-1c")
-                                cm_baddress.insert("1.0",cust_data[2] + " " + cust_data[3] + "\n" + cust_data[4] + "\n" + cust_data[12] + "\n" + cust_data[13] + "\n" + cust_data[14] + "\n" + cust_data[15] + "\n" + cust_data[16])
 
-                            # if not inv_data:
-                            #     pass
-                            # else:
-                            #     count = 1
-                            #     for i in inv_data:
-                            #         rp_tree.insert(parent='',index='end',iid=i,text='',values=(count,str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
+                                    # if not inv_data:
+                                    #     pass
+                                    # else:
+                                    #     count = 1
+                                    #     for i in inv_data:
+                                    #         rp_tree.insert(parent='',index='end',iid=i,text='',values=(count,str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
+
+                            
+                                    
 
 
                         cm_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
@@ -4512,6 +4524,25 @@ def main_sign_in():
                         cm_label7 = Label(sr_Canvas_1,width=20,height=1,text="Place of Supply",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label7,tags=('label25'))
 
+                        def gst_selection(event):
+                            cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+
+                            ncplace_gstlist = ['Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                            '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
+                            if not comp_data:
+                                pass
+                            elif comp_data[4] == cm_pofsupply.get():
+                                cmt_entry7["values"] = cplace_gstlist
+                                cmt_entry17["values"] = cplace_gstlist
+                                cmt_entry24["values"] = cplace_gstlist
+                                cmt_entry31["values"] = cplace_gstlist
+                            else:
+                                cmt_entry7["values"] = ncplace_gstlist
+                                cmt_entry17["values"] = ncplace_gstlist
+                                cmt_entry24["values"] = ncplace_gstlist
+                                cmt_entry31["values"] = ncplace_gstlist
+
                         cm_pofsupply = ttk.Combobox(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f')
                         pofsupply_list = ['Kerala','Andaman and Nicobar Islads','Andhra Predhesh','Arunachal Predesh',
                         'Assam','Bihar','Chandigarh','Chhattisgarh','Dadra and Nagar Haveli','Damn anad Diu','Delhi',
@@ -4520,7 +4551,7 @@ def main_sign_in():
                         'Puducherry','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Predesh','Uttarakhand',
                         'West Bengal','Other Territory',]
                         cm_pofsupply["values"] = pofsupply_list
-                        cm_pofsupply.current(0)
+                        cm_pofsupply.bind("<<ComboboxSelected>>",gst_selection)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cm_pofsupply,tags=("entry15"))
 
                         cm_label8 = Label(sr_Canvas_1,width=20,height=1,text="Payment Method",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -4970,13 +5001,13 @@ def main_sign_in():
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line31"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line58"))
 
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line32"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line33"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line34"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line35"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line36"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line37"))
-                        # sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line38"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line32"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line33"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line34"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line35"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line36"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line37"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line38"))
 
                         cm_label13 = Label(sr_Canvas_1,width=3,height=1,text="#",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label13,tags=('label31'))
@@ -5010,7 +5041,7 @@ def main_sign_in():
                         fbcursor.execute(user_sql,user_val)
                         user_data = fbcursor.fetchone()
 
-                        comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                        comp_sql = 'SELECT * FROM app1_company WHERE id_id=%s'
                         comp_val = (user_data[0],)
                         fbcursor.execute(comp_sql,comp_val)
                         comp_data = fbcursor.fetchone()
@@ -5186,6 +5217,8 @@ def main_sign_in():
                                 dcanvas.coords("combo2",dwidth/1.165,dheight/1.46)
                                 dcanvas.coords("combo3",dwidth/1.165,dheight/1.2)
                                 dcanvas.coords("combo4",dwidth/1.165,dheight/1.019)
+
+                                dcanvas.coords("button2",dwidth/27,dheight/3)
                             
                             sr_Canvas_4 = Canvas(sr_Frame_4,bg='#2f516f',scrollregion=(0,0,700,1200))
 
@@ -5218,16 +5251,16 @@ def main_sign_in():
                             sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line12"))
                             sr_Canvas_4.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line13"))
 
-                            def vb_goBack():
+                            def bt_goBack():
                                 sr_Frame_4.grid_forget()
                                 sr_Frame_1.grid(row=0,column=0,sticky='nsew')
 
-                            back_btn = Button(sr_Canvas_4,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:vb_goBack())
+                            back_btn = Button(sr_Canvas_4,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:bt_goBack())
                             sr_Canvas_4.create_window(0,0,window=back_btn,tags=("button2"))
 
                             if b == 1:
-                                vb_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry1.get(),font=('arial 25'),background='#1b3857',fg="white")
-                                sr_Canvas_4.create_window(0,0,anchor="c",window=vb_label1,tags=("label1"))
+                                bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry1.get(),font=('arial 25'),background='#1b3857',fg="white")
+                                sr_Canvas_4.create_window(0,0,anchor="c",window=bt_label1,tags=("label1"))
 
                                 bt1_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
                                 sr_Canvas_4.create_window(0,0,anchor='nw',window=bt1_entry1,tags=("entry1"))
@@ -5249,7 +5282,8 @@ def main_sign_in():
 
                                 bt1_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt1_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry7,tags=("combo1"))
 
                                 bt1_entry8 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
@@ -5272,7 +5306,8 @@ def main_sign_in():
 
                                 bt1_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt1_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt1_entry14.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry14,tags=("combo2"))
 
@@ -5296,7 +5331,8 @@ def main_sign_in():
 
                                 bt1_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt1_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt1_entry21.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry21,tags=("combo3"))
 
@@ -5320,7 +5356,8 @@ def main_sign_in():
 
                                 bt1_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt1_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt1_entry28.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt1_entry28,tags=("combo4"))
 
@@ -5408,9 +5445,9 @@ def main_sign_in():
                                     bt1_entry25.insert(0,qty4)
 
                                 tot1 = int(bt1_entry4.get()) * int(float(bt1_entry6.get()))
-                                tot2 = int(bt1_entry4.get()) * int(float(bt1_entry13.get()))
-                                tot3 = int(bt1_entry4.get()) * int(float(bt1_entry20.get()))
-                                tot4 = int(bt1_entry4.get()) * int(float(bt1_entry27.get()))
+                                tot2 = int(bt1_entry11.get()) * int(float(bt1_entry13.get()))
+                                tot3 = int(bt1_entry18.get()) * int(float(bt1_entry20.get()))
+                                tot4 = int(bt1_entry25.get()) * int(float(bt1_entry27.get()))
 
                                 bt1_entry6.delete(0,END)
                                 bt1_entry6.insert(0,tot1)
@@ -5421,6 +5458,9 @@ def main_sign_in():
                                 bt1_entry27.delete(0,END)
                                 bt1_entry27.insert(0,tot4)
                             elif b == 2:
+                                bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry11.get(),font=('arial 25'),background='#1b3857',fg="white")
+                                sr_Canvas_4.create_window(0,0,anchor="c",window=bt_label1,tags=("label1"))
+
                                 bt2_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
                                 sr_Canvas_4.create_window(0,0,anchor='nw',window=bt2_entry1,tags=("entry1"))
 
@@ -5441,7 +5481,8 @@ def main_sign_in():
 
                                 bt2_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt2_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt2_entry7.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry7,tags=("combo1"))
 
@@ -5465,7 +5506,8 @@ def main_sign_in():
 
                                 bt2_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt2_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt2_entry14.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry14,tags=("combo2"))
 
@@ -5489,7 +5531,8 @@ def main_sign_in():
 
                                 bt2_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt2_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt2_entry21.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry21,tags=("combo3"))
 
@@ -5513,7 +5556,8 @@ def main_sign_in():
 
                                 bt2_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt2_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt2_entry28.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt2_entry28,tags=("combo4"))
 
@@ -5584,7 +5628,40 @@ def main_sign_in():
                                     bt2_entry28.insert(0,get_bundle_data2[32])
                                 except:
                                     pass
+
+                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry14.get())
+                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry14.get())
+                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry14.get())
+                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry14.get())
+                                if cmt_entry14.get() == "0":
+                                    pass
+                                else:
+                                    bt2_entry4.delete(0,END)
+                                    bt2_entry4.insert(0,qty1)
+                                    bt2_entry11.delete(0,END)
+                                    bt2_entry11.insert(0,qty2)
+                                    bt2_entry18.delete(0,END)
+                                    bt2_entry18.insert(0,qty3)
+                                    bt2_entry25.delete(0,END)
+                                    bt2_entry25.insert(0,qty4)
+
+                                tot1 = int(bt2_entry4.get()) * int(float(bt2_entry6.get()))
+                                tot2 = int(bt2_entry11.get()) * int(float(bt2_entry13.get()))
+                                tot3 = int(bt2_entry18.get()) * int(float(bt2_entry20.get()))
+                                tot4 = int(bt2_entry25.get()) * int(float(bt2_entry27.get()))
+
+                                bt2_entry6.delete(0,END)
+                                bt2_entry6.insert(0,tot1)
+                                bt2_entry13.delete(0,END)
+                                bt2_entry13.insert(0,tot2)
+                                bt2_entry20.delete(0,END)
+                                bt2_entry20.insert(0,tot3)
+                                bt2_entry27.delete(0,END)
+                                bt2_entry27.insert(0,tot4)
                             elif b == 3:
+                                bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry18.get(),font=('arial 25'),background='#1b3857',fg="white")
+                                sr_Canvas_4.create_window(0,0,anchor="c",window=bt_label1,tags=("label1"))
+
                                 bt3_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
                                 sr_Canvas_4.create_window(0,0,anchor='nw',window=bt3_entry1,tags=("entry1"))
 
@@ -5605,7 +5682,8 @@ def main_sign_in():
 
                                 bt3_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt3_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt3_entry7.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry7,tags=("combo1"))
 
@@ -5629,7 +5707,8 @@ def main_sign_in():
 
                                 bt3_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt3_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt3_entry14.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry14,tags=("combo2"))
 
@@ -5653,7 +5732,8 @@ def main_sign_in():
 
                                 bt3_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt3_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt3_entry21.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry21,tags=("combo3"))
 
@@ -5677,10 +5757,112 @@ def main_sign_in():
 
                                 bt3_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt3_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt3_entry28.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry28,tags=("combo4"))
+
+                                try:
+                                    get_bundle_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val2 = (cmt_entry18.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql2,get_bundle_val2)
+                                    get_bundle_data2 = fbcursor.fetchone()
+                                except:
+                                    pass
+
+                                try:
+                                    bt3_entry1.delete(0,END)
+                                    bt3_entry1.insert(0,get_bundle_data2[5])
+                                    bt3_entry2.delete(0,END)
+                                    bt3_entry2.insert(0,get_bundle_data2[9])
+                                    bt3_entry3.delete(0,END)
+                                    bt3_entry3.insert(0,get_bundle_data2[13])
+                                    bt3_entry4.delete(0,END)
+                                    bt3_entry4.insert(0,get_bundle_data2[17])
+                                    bt3_entry5.delete(0,END)
+                                    bt3_entry5.insert(0,get_bundle_data2[21])
+                                    bt3_entry6.delete(0,END)
+                                    bt3_entry6.insert(0,get_bundle_data2[25])
+                                    bt3_entry7.delete(0,END)
+                                    bt3_entry7.insert(0,get_bundle_data2[29])
+                                    bt3_entry8.delete(0,END)
+                                    bt3_entry8.insert(0,get_bundle_data2[6])
+                                    bt3_entry9.delete(0,END)
+                                    bt3_entry9.insert(0,get_bundle_data2[10])
+                                    bt3_entry10.delete(0,END)
+                                    bt3_entry10.insert(0,get_bundle_data2[14])
+                                    bt3_entry11.delete(0,END)
+                                    bt3_entry11.insert(0,get_bundle_data2[18])
+                                    bt3_entry12.delete(0,END)
+                                    bt3_entry12.insert(0,get_bundle_data2[22])
+                                    bt3_entry13.delete(0,END)
+                                    bt3_entry13.insert(0,get_bundle_data2[26])
+                                    bt3_entry14.delete(0,END)
+                                    bt3_entry14.insert(0,get_bundle_data2[30])
+                                    bt3_entry15.delete(0,END)
+                                    bt3_entry15.insert(0,get_bundle_data2[7])
+                                    bt3_entry16.delete(0,END)
+                                    bt3_entry16.insert(0,get_bundle_data2[11])
+                                    bt3_entry17.delete(0,END)
+                                    bt3_entry17.insert(0,get_bundle_data2[15])
+                                    bt3_entry18.delete(0,END)
+                                    bt3_entry18.insert(0,get_bundle_data2[19])
+                                    bt3_entry19.delete(0,END)
+                                    bt3_entry19.insert(0,get_bundle_data2[23])
+                                    bt3_entry20.delete(0,END)
+                                    bt3_entry20.insert(0,get_bundle_data2[27])
+                                    bt3_entry21.delete(0,END)
+                                    bt3_entry21.insert(0,get_bundle_data2[31])
+                                    bt3_entry22.delete(0,END)
+                                    bt3_entry22.insert(0,get_bundle_data2[8])
+                                    bt3_entry23.delete(0,END)
+                                    bt3_entry23.insert(0,get_bundle_data2[12])
+                                    bt3_entry24.delete(0,END)
+                                    bt3_entry24.insert(0,get_bundle_data2[16])
+                                    bt3_entry25.delete(0,END)
+                                    bt3_entry25.insert(0,get_bundle_data2[20])
+                                    bt3_entry26.delete(0,END)
+                                    bt3_entry26.insert(0,get_bundle_data2[24])
+                                    bt3_entry27.delete(0,END)
+                                    bt3_entry27.insert(0,get_bundle_data2[28])
+                                    bt3_entry28.delete(0,END)
+                                    bt3_entry28.insert(0,get_bundle_data2[32])
+                                except:
+                                    pass
+
+                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry21.get())
+                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry21.get())
+                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry21.get())
+                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry21.get())
+                                if cmt_entry21.get() == "0":
+                                    pass
+                                else:
+                                    bt3_entry4.delete(0,END)
+                                    bt3_entry4.insert(0,qty1)
+                                    bt3_entry11.delete(0,END)
+                                    bt3_entry11.insert(0,qty2)
+                                    bt3_entry18.delete(0,END)
+                                    bt3_entry18.insert(0,qty3)
+                                    bt3_entry25.delete(0,END)
+                                    bt3_entry25.insert(0,qty4)
+
+                                tot1 = int(bt3_entry4.get()) * int(float(bt3_entry6.get()))
+                                tot2 = int(bt3_entry11.get()) * int(float(bt3_entry13.get()))
+                                tot3 = int(bt3_entry18.get()) * int(float(bt3_entry20.get()))
+                                tot4 = int(bt3_entry25.get()) * int(float(bt3_entry27.get()))
+
+                                bt3_entry6.delete(0,END)
+                                bt3_entry6.insert(0,tot1)
+                                bt3_entry13.delete(0,END)
+                                bt3_entry13.insert(0,tot2)
+                                bt3_entry20.delete(0,END)
+                                bt3_entry20.insert(0,tot3)
+                                bt3_entry27.delete(0,END)
+                                bt3_entry27.insert(0,tot4)
                             else:
+                                bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry25.get(),font=('arial 25'),background='#1b3857',fg="white")
+                                sr_Canvas_4.create_window(0,0,anchor="c",window=bt_label1,tags=("label1"))
+
                                 bt4_entry1 = Entry(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='white')
                                 sr_Canvas_4.create_window(0,0,anchor='nw',window=bt4_entry1,tags=("entry1"))
 
@@ -5701,7 +5883,8 @@ def main_sign_in():
 
                                 bt4_entry7 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt4_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt4_entry7.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry7,tags=("combo1"))
 
@@ -5725,7 +5908,8 @@ def main_sign_in():
 
                                 bt4_entry14 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt4_entry14["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt4_entry14.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry14,tags=("combo2"))
 
@@ -5749,7 +5933,8 @@ def main_sign_in():
 
                                 bt4_entry21 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt4_entry21["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt4_entry21.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry21,tags=("combo3"))
 
@@ -5773,9 +5958,108 @@ def main_sign_in():
 
                                 bt4_entry28 = ttk.Combobox(sr_Canvas_4,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                                 bt4_entry28["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                                '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)','Choose','28.0% IGST(28%)','18.0% IGST(18%)','12.0% IGST(12%)','06.0% IGST(06%)',
+                                '05.0% IGST(05%)','03.0% IGST(03%)','0.25% IGST(0.25%)','0.0% IGST(0%)','Exempt IGST(0%)','Out of Scope(0%)']
                                 bt4_entry28.current(0)
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry28,tags=("combo4"))
+
+                                try:
+                                    get_bundle_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val2 = (cmt_entry25.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql2,get_bundle_val2)
+                                    get_bundle_data2 = fbcursor.fetchone()
+                                except:
+                                    pass
+
+                                try:
+                                    bt4_entry1.delete(0,END)
+                                    bt4_entry1.insert(0,get_bundle_data2[5])
+                                    bt4_entry2.delete(0,END)
+                                    bt4_entry2.insert(0,get_bundle_data2[9])
+                                    bt4_entry3.delete(0,END)
+                                    bt4_entry3.insert(0,get_bundle_data2[13])
+                                    bt4_entry4.delete(0,END)
+                                    bt4_entry4.insert(0,get_bundle_data2[17])
+                                    bt4_entry5.delete(0,END)
+                                    bt4_entry5.insert(0,get_bundle_data2[21])
+                                    bt4_entry6.delete(0,END)
+                                    bt4_entry6.insert(0,get_bundle_data2[25])
+                                    bt4_entry7.delete(0,END)
+                                    bt4_entry7.insert(0,get_bundle_data2[29])
+                                    bt4_entry8.delete(0,END)
+                                    bt4_entry8.insert(0,get_bundle_data2[6])
+                                    bt4_entry9.delete(0,END)
+                                    bt4_entry9.insert(0,get_bundle_data2[10])
+                                    bt4_entry10.delete(0,END)
+                                    bt4_entry10.insert(0,get_bundle_data2[14])
+                                    bt4_entry11.delete(0,END)
+                                    bt4_entry11.insert(0,get_bundle_data2[18])
+                                    bt4_entry12.delete(0,END)
+                                    bt4_entry12.insert(0,get_bundle_data2[22])
+                                    bt4_entry13.delete(0,END)
+                                    bt4_entry13.insert(0,get_bundle_data2[26])
+                                    bt4_entry14.delete(0,END)
+                                    bt4_entry14.insert(0,get_bundle_data2[30])
+                                    bt4_entry15.delete(0,END)
+                                    bt4_entry15.insert(0,get_bundle_data2[7])
+                                    bt4_entry16.delete(0,END)
+                                    bt4_entry16.insert(0,get_bundle_data2[11])
+                                    bt4_entry17.delete(0,END)
+                                    bt4_entry17.insert(0,get_bundle_data2[15])
+                                    bt4_entry18.delete(0,END)
+                                    bt4_entry18.insert(0,get_bundle_data2[19])
+                                    bt4_entry19.delete(0,END)
+                                    bt4_entry19.insert(0,get_bundle_data2[23])
+                                    bt4_entry20.delete(0,END)
+                                    bt4_entry20.insert(0,get_bundle_data2[27])
+                                    bt4_entry21.delete(0,END)
+                                    bt4_entry21.insert(0,get_bundle_data2[31])
+                                    bt4_entry22.delete(0,END)
+                                    bt4_entry22.insert(0,get_bundle_data2[8])
+                                    bt4_entry23.delete(0,END)
+                                    bt4_entry23.insert(0,get_bundle_data2[12])
+                                    bt4_entry24.delete(0,END)
+                                    bt4_entry24.insert(0,get_bundle_data2[16])
+                                    bt4_entry25.delete(0,END)
+                                    bt4_entry25.insert(0,get_bundle_data2[20])
+                                    bt4_entry26.delete(0,END)
+                                    bt4_entry26.insert(0,get_bundle_data2[24])
+                                    bt4_entry27.delete(0,END)
+                                    bt4_entry27.insert(0,get_bundle_data2[28])
+                                    bt4_entry28.delete(0,END)
+                                    bt4_entry28.insert(0,get_bundle_data2[32])
+                                except:
+                                    pass
+
+                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry28.get())
+                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry28.get())
+                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry28.get())
+                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry28.get())
+                                if cmt_entry28.get() == "0":
+                                    pass
+                                else:
+                                    bt4_entry4.delete(0,END)
+                                    bt4_entry4.insert(0,qty1)
+                                    bt4_entry11.delete(0,END)
+                                    bt4_entry11.insert(0,qty2)
+                                    bt4_entry18.delete(0,END)
+                                    bt4_entry18.insert(0,qty3)
+                                    bt4_entry25.delete(0,END)
+                                    bt4_entry25.insert(0,qty4)
+
+                                tot1 = int(bt4_entry4.get()) * int(float(bt4_entry6.get()))
+                                tot2 = int(bt4_entry11.get()) * int(float(bt4_entry13.get()))
+                                tot3 = int(bt4_entry18.get()) * int(float(bt4_entry20.get()))
+                                tot4 = int(bt4_entry25.get()) * int(float(bt4_entry27.get()))
+
+                                bt4_entry6.delete(0,END)
+                                bt4_entry6.insert(0,tot1)
+                                bt4_entry13.delete(0,END)
+                                bt4_entry13.insert(0,tot2)
+                                bt4_entry20.delete(0,END)
+                                bt4_entry20.insert(0,tot3)
+                                bt4_entry27.delete(0,END)
+                                bt4_entry27.insert(0,tot4)
                         
                         def cm_fetch_proDetails1(event):
                             global get_pro_data3
@@ -5829,6 +6113,14 @@ def main_sign_in():
                                     cmt_entry3.insert(0,get_pro_data[11])
                                     cmt_entry5.delete(0,END)
                                     cmt_entry5.insert(0,get_pro_data[12])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
                             elif get_pro_data1 is not None:
@@ -5839,15 +6131,25 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("button12",state='hidden')
                                 except:
                                     pass
-                                
-                                sr_Canvas_1.itemconfig("label67",state='normal')
-                                cm_label31.config(text="Available Qty : " + get_pro_data[17])
-                                cmt_entry2.delete(0,END)
-                                cmt_entry2.insert(0,get_pro_data1[4])
-                                cmt_entry3.delete(0,END)
-                                cmt_entry3.insert(0,get_pro_data1[7])
-                                cmt_entry5.delete(0,END)
-                                cmt_entry5.insert(0,get_pro_data1[8])
+                                try:
+                                    sr_Canvas_1.itemconfig("label67",state='normal')
+                                    cm_label31.config(text="Available Qty : " + get_pro_data1[17])
+                                    cmt_entry2.delete(0,END)
+                                    cmt_entry2.insert(0,get_pro_data1[4])
+                                    cmt_entry3.delete(0,END)
+                                    cmt_entry3.insert(0,get_pro_data1[7])
+                                    cmt_entry5.delete(0,END)
+                                    cmt_entry5.insert(0,get_pro_data1[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             elif get_pro_data2 is not None:
                                 try:
                                     sr_Canvas_1.itemconfig("entry21",state='normal')
@@ -5857,17 +6159,32 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label67",state='hidden')
                                 except:
                                     pass
-                                cmt_entry2.delete(0,END)
-                                cmt_entry2.insert(0,get_pro_data2[4])
-                                cmt_entry3.delete(0,END)
-                                cmt_entry3.insert(0,get_pro_data2[7])
-                                cmt_entry5.delete(0,END)
-                                cmt_entry5.insert(0,get_pro_data2[8])
+
+                                try:
+                                    cmt_entry2.delete(0,END)
+                                    cmt_entry2.insert(0,get_pro_data2[4])
+                                    cmt_entry3.delete(0,END)
+                                    cmt_entry3.insert(0,get_pro_data2[7])
+                                    cmt_entry5.delete(0,END)
+                                    cmt_entry5.insert(0,get_pro_data2[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry7.delete(0,END)
+                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             else:
-                                cmt_entry2.delete(0,END)
-                                cmt_entry2.insert(0,get_pro_data3[3])
-                                cmt_entry3.delete(0,END)
-                                cmt_entry3.insert(0,get_pro_data3[4])
+                                try:
+                                    cmt_entry2.delete(0,END)
+                                    cmt_entry2.insert(0,get_pro_data3[3])
+                                    cmt_entry3.delete(0,END)
+                                    cmt_entry3.insert(0,get_pro_data3[4])
+                                except:
+                                    pass
 
                                 try:
                                     sr_Canvas_1.itemconfig("entry21",state='hidden')
@@ -5877,7 +6194,6 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label67",state='hidden')
                                 except:
                                     pass
-
                             
                         cmt_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry1["values"] = product_list
@@ -5892,7 +6208,7 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry3,tags=("entry19"))
 
                         def cmt_calculateTotal1(event):
-                            try:
+                            # try:
                                 if cmt_entry4.get() != 0:
                                     try:
                                         get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
@@ -5929,10 +6245,50 @@ def main_sign_in():
                                         pass
                                     else:
                                         pass
+
+                                    cmt_entry8.delete(0,END)
+                                    cmt_entry8.insert(0,float(cmt_entry6.get()) + float(cmt_entry16.get()) + float(cmt_entry23.get()) + float(cmt_entry30.get()))
+                                    cmt_entry9.delete(0,END)
+                                    cmt_entry10.delete(0,END)
+
+                                    def split_gst(string):
+                                        pattern1 = r'\(+'
+                                        pattern2 = r'\%+'
+                                        split1 = re.split(pattern1,string)
+                                        split2 = re.split(pattern2,split1[1])
+                                        return split2
+
+                                    if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry30.get() == "Choose":
+                                        pass
+                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                        gst_value1 = split_gst(cmt_entry7.get())
+                                        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            tax_tot1 = 0
+                                        else:
+                                            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                        cmt_entry9.insert(0,tax_tot1)
+                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                        gst_value1 = split_gst(cmt_entry7.get())
+                                        gst_value2 = split_gst(cmt_entry17.get())
+                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2)
+                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((cmt_entry7.get()).split("%")[0])))/100
+                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((cmt_entry17.get()).split("%")[0])))/100
+                                        tax_tot3 = (float(cmt_entry23.get()) * float(float((cmt_entry24.get()).split("%")[0])))/100
+                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3)
+                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((cmt_entry7.get()).split("%")[0])))/100
+                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((cmt_entry17.get()).split("%")[0])))/100
+                                        tax_tot3 = (float(cmt_entry23.get()) * float(float((cmt_entry24.get()).split("%")[0])))/100
+                                        tax_tot4 = (float(cmt_entry30.get()) * float(float((cmt_entry31.get()).split("%")[0])))/100
+                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4)
+                                    cmt_entry10.insert(0,float(cmt_entry8.get()) + float(float(cmt_entry9.get())))
                                 else:
                                     pass
-                            except:
-                                pass
+                            # except:
+                            #     pass
 
                         cmt_entry4 = Spinbox(sr_Canvas_1,width=7,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
                         cmt_entry4.bind("<Button-1>",cmt_calculateTotal1)
@@ -5942,11 +6298,13 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry5,tags=("entry21"))
 
                         cmt_entry6 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry6.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry6,tags=("entry22"))
 
                         cmt_entry7 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cmt_entry7["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry7["values"] = cplace_gstlist
                         cmt_entry7.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry7,tags=("combo6"))                      
 
@@ -6006,7 +6364,15 @@ def main_sign_in():
                                     cmt_entry13.delete(0,END)
                                     cmt_entry13.insert(0,get_pro_data[11])
                                     cmt_entry15.delete(0,END)
-                                    cmt_entry15.insert(0,get_pro_data[8])
+                                    cmt_entry15.insert(0,get_pro_data[12])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
                             elif get_pro_data1 is not None:
@@ -6017,15 +6383,25 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("button13",state='hidden')
                                 except:
                                     pass
-                                
-                                sr_Canvas_1.itemconfig("label68",state='normal')
-                                cm_label32.config(text="Available Qty : " + get_pro_data[17])
-                                cmt_entry12.delete(0,END)
-                                cmt_entry12.insert(0,get_pro_data1[4])
-                                cmt_entry13.delete(0,END)
-                                cmt_entry13.insert(0,get_pro_data1[7])
-                                cmt_entry15.delete(0,END)
-                                cmt_entry15.insert(0,get_pro_data1[7])
+                                try:
+                                    sr_Canvas_1.itemconfig("label68",state='normal')
+                                    cm_label32.config(text="Available Qty : " + get_pro_data1[17])
+                                    cmt_entry12.delete(0,END)
+                                    cmt_entry12.insert(0,get_pro_data1[4])
+                                    cmt_entry13.delete(0,END)
+                                    cmt_entry13.insert(0,get_pro_data1[7])
+                                    cmt_entry15.delete(0,END)
+                                    cmt_entry15.insert(0,get_pro_data1[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             elif get_pro_data2 is not None:
                                 try:
                                     sr_Canvas_1.itemconfig("entry42",state='normal')
@@ -6035,17 +6411,31 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label68",state='hidden')
                                 except:
                                     pass
-                                cmt_entry12.delete(0,END)
-                                cmt_entry12.insert(0,get_pro_data2[4])
-                                cmt_entry13.delete(0,END)
-                                cmt_entry13.insert(0,get_pro_data2[7])
-                                cmt_entry15.delete(0,END)
-                                cmt_entry15.insert(0,get_pro_data2[8])
+                                try:
+                                    cmt_entry12.delete(0,END)
+                                    cmt_entry12.insert(0,get_pro_data2[4])
+                                    cmt_entry13.delete(0,END)
+                                    cmt_entry13.insert(0,get_pro_data2[7])
+                                    cmt_entry15.delete(0,END)
+                                    cmt_entry15.insert(0,get_pro_data2[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry17.delete(0,END)
+                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             else:
-                                cmt_entry12.delete(0,END)
-                                cmt_entry12.insert(0,get_pro_data3[3])
-                                cmt_entry13.delete(0,END)
-                                cmt_entry13.insert(0,get_pro_data3[4])
+                                try:
+                                    cmt_entry12.delete(0,END)
+                                    cmt_entry12.insert(0,get_pro_data3[3])
+                                    cmt_entry13.delete(0,END)
+                                    cmt_entry13.insert(0,get_pro_data3[4])
+                                except:
+                                    pass
 
                                 try:
                                     sr_Canvas_1.itemconfig("entry42",state='hidden')
@@ -6109,10 +6499,6 @@ def main_sign_in():
                                         bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry14.get())
                                         bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry14.get())
                                         bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry14.get())
-                                        print(bal_qty)
-                                        print(bal_qty1)
-                                        print(bal_qty2)
-                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
@@ -6126,11 +6512,11 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry15,tags=("entry42"))
 
                         cmt_entry16 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry16.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry16,tags=("entry43"))
 
                         cmt_entry17 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cmt_entry17["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry17["values"] = cplace_gstlist
                         cmt_entry17.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry17,tags=("combo15"))
 
@@ -6191,6 +6577,14 @@ def main_sign_in():
                                     cmt_entry20.insert(0,get_pro_data[11])
                                     cmt_entry22.delete(0,END)
                                     cmt_entry22.insert(0,get_pro_data[12])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
                             elif get_pro_data1 is not None:
@@ -6202,14 +6596,25 @@ def main_sign_in():
                                 except:
                                     pass
                                 
-                                sr_Canvas_1.itemconfig("label69",state='normal')
-                                cm_label33.config(text="Available Qty : " + get_pro_data[17])
-                                cmt_entry19.delete(0,END)
-                                cmt_entry19.insert(0,get_pro_data1[4])
-                                cmt_entry20.delete(0,END)
-                                cmt_entry20.insert(0,get_pro_data1[7])
-                                cmt_entry22.delete(0,END)
-                                cmt_entry22.insert(0,get_pro_data1[8])
+                                try:
+                                    sr_Canvas_1.itemconfig("label69",state='normal')
+                                    cm_label33.config(text="Available Qty : " + get_pro_data1[17])
+                                    cmt_entry19.delete(0,END)
+                                    cmt_entry19.insert(0,get_pro_data1[4])
+                                    cmt_entry20.delete(0,END)
+                                    cmt_entry20.insert(0,get_pro_data1[7])
+                                    cmt_entry22.delete(0,END)
+                                    cmt_entry22.insert(0,get_pro_data1[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             elif get_pro_data2 is not None:
                                 try:
                                     sr_Canvas_1.itemconfig("entry47",state='normal')
@@ -6219,17 +6624,32 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label69",state='hidden')
                                 except:
                                     pass
-                                cmt_entry19.delete(0,END)
-                                cmt_entry19.insert(0,get_pro_data2[4])
-                                cmt_entry20.delete(0,END)
-                                cmt_entry20.insert(0,get_pro_data2[7])
-                                cmt_entry22.delete(0,END)
-                                cmt_entry22.insert(0,get_pro_data2[8])
+
+                                try:
+                                    cmt_entry19.delete(0,END)
+                                    cmt_entry19.insert(0,get_pro_data2[4])
+                                    cmt_entry20.delete(0,END)
+                                    cmt_entry20.insert(0,get_pro_data2[7])
+                                    cmt_entry22.delete(0,END)
+                                    cmt_entry22.insert(0,get_pro_data2[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry24.delete(0,END)
+                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             else:
-                                cmt_entry19.delete(0,END)
-                                cmt_entry19.insert(0,get_pro_data3[3])
-                                cmt_entry20.delete(0,END)
-                                cmt_entry20.insert(0,get_pro_data3[4])
+                                try:
+                                    cmt_entry19.delete(0,END)
+                                    cmt_entry19.insert(0,get_pro_data3[3])
+                                    cmt_entry20.delete(0,END)
+                                    cmt_entry20.insert(0,get_pro_data3[4])
+                                except:
+                                    pass
 
                                 try:
                                     sr_Canvas_1.itemconfig("entry47",state='hidden')
@@ -6293,10 +6713,6 @@ def main_sign_in():
                                         bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry21.get())
                                         bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry21.get())
                                         bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry21.get())
-                                        print(bal_qty)
-                                        print(bal_qty1)
-                                        print(bal_qty2)
-                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
@@ -6310,11 +6726,11 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry22,tags=("entry47"))
 
                         cmt_entry23 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry23.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry23,tags=("entry48"))
 
                         cmt_entry24 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cmt_entry24["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry24['values'] = cplace_gstlist
                         cmt_entry24.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry24,tags=("combo17"))
 
@@ -6375,6 +6791,14 @@ def main_sign_in():
                                     cmt_entry27.insert(0,get_pro_data[11])
                                     cmt_entry29.delete(0,END)
                                     cmt_entry29.insert(0,get_pro_data[12])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
                             elif get_pro_data1 is not None:
@@ -6386,14 +6810,25 @@ def main_sign_in():
                                 except:
                                     pass
                                 
-                                sr_Canvas_1.itemconfig("label70",state='normal')
-                                cm_label34.config(text="Available Qty : " + get_pro_data[17])
-                                cmt_entry26.delete(0,END)
-                                cmt_entry26.insert(0,get_pro_data1[4])
-                                cmt_entry27.delete(0,END)
-                                cmt_entry27.insert(0,get_pro_data1[7])
-                                cmt_entry29.delete(0,END)
-                                cmt_entry29.insert(0,get_pro_data1[8])
+                                try:
+                                    sr_Canvas_1.itemconfig("label70",state='normal')
+                                    cm_label34.config(text="Available Qty : " + get_pro_data1[17])
+                                    cmt_entry26.delete(0,END)
+                                    cmt_entry26.insert(0,get_pro_data1[4])
+                                    cmt_entry27.delete(0,END)
+                                    cmt_entry27.insert(0,get_pro_data1[7])
+                                    cmt_entry29.delete(0,END)
+                                    cmt_entry29.insert(0,get_pro_data1[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             elif get_pro_data2 is not None:
                                 try:
                                     sr_Canvas_1.itemconfig("entry52",state='normal')
@@ -6403,17 +6838,32 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label70",state='hidden')
                                 except:
                                     pass
-                                cmt_entry26.delete(0,END)
-                                cmt_entry26.insert(0,get_pro_data2[4])
-                                cmt_entry27.delete(0,END)
-                                cmt_entry27.insert(0,get_pro_data2[7])
-                                cmt_entry29.delete(0,END)
-                                cmt_entry29.insert(0,get_pro_data2[8])
+
+                                try:
+                                    cmt_entry26.delete(0,END)
+                                    cmt_entry26.insert(0,get_pro_data2[4])
+                                    cmt_entry27.delete(0,END)
+                                    cmt_entry27.insert(0,get_pro_data2[7])
+                                    cmt_entry29.delete(0,END)
+                                    cmt_entry29.insert(0,get_pro_data2[8])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        cmt_entry31.delete(0,END)
+                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
                             else:
-                                cmt_entry26.delete(0,END)
-                                cmt_entry26.insert(0,get_pro_data3[3])
-                                cmt_entry27.delete(0,END)
-                                cmt_entry27.insert(0,get_pro_data3[4])
+                                try:
+                                    cmt_entry26.delete(0,END)
+                                    cmt_entry26.insert(0,get_pro_data3[3])
+                                    cmt_entry27.delete(0,END)
+                                    cmt_entry27.insert(0,get_pro_data3[4])
+                                except:
+                                    pass
 
                                 try:
                                     sr_Canvas_1.itemconfig("entry52",state='hidden')
@@ -6477,10 +6927,6 @@ def main_sign_in():
                                         bal_qty1 = int(get_pro_data3[18]) - int(cmt_entry28.get())
                                         bal_qty2 = int(get_pro_data3[19]) - int(cmt_entry28.get())
                                         bal_qty3 = int(get_pro_data3[20]) - int(cmt_entry28.get())
-                                        print(bal_qty)
-                                        print(bal_qty1)
-                                        print(bal_qty2)
-                                        print(bal_qty3)
                                 else:
                                     pass
                             except:
@@ -6494,11 +6940,11 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry29,tags=("entry52"))
 
                         cmt_entry30 = Entry(sr_Canvas_1,width=12,font=('arial 15'),background='#2f516f',foreground='white')
+                        cmt_entry30.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry30,tags=("entry53"))
 
                         cmt_entry31 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cmt_entry31["values"] = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                        '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        cmt_entry31['values'] = cplace_gstlist
                         cmt_entry31.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cmt_entry31,tags=("combo19"))
 
@@ -6517,23 +6963,23 @@ def main_sign_in():
                         cm_label34 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cm_label34,state=HIDDEN,tags=('label70'))
 
-                        # cm_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        # sr_Canvas_1.create_window(0,0,window=cm_label25,tags=('label40'))
+                        cm_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=cm_label25,tags=('label40'))
 
-                        # cm_label26 = Label(sr_Canvas_1,width=10,height=1,text="Tax Amount",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        # sr_Canvas_1.create_window(0,0,window=cm_label26,tags=('label41'))
+                        cm_label26 = Label(sr_Canvas_1,width=10,height=1,text="Tax Amount",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=cm_label26,tags=('label41'))
 
-                        # cm_label27 = Label(sr_Canvas_1,width=10,height=1,text="Grand Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        # sr_Canvas_1.create_window(0,0,window=cm_label27,tags=('label42'))
+                        cm_label27 = Label(sr_Canvas_1,width=10,height=1,text="Grand Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=cm_label27,tags=('label42'))
 
-                        # cmt_entry8 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
-                        # sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry8,tags=("entry23"))
+                        cmt_entry8 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry8,tags=("entry23"))
 
-                        # cmt_entry9 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
-                        # sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry9,tags=("entry24"))
+                        cmt_entry9 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry9,tags=("entry24"))
 
-                        # cmt_entry10 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
-                        # sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry10,tags=("entry25"))
+                        cmt_entry10 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=cmt_entry10,tags=("entry25"))
 
                         save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
                         sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button7")) 
