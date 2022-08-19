@@ -5258,6 +5258,11 @@ def main_sign_in():
                             back_btn = Button(sr_Canvas_4,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:bt_goBack())
                             sr_Canvas_4.create_window(0,0,window=back_btn,tags=("button2"))
 
+                            global bt1_entry6,bt1_entry7,bt1_entry13,bt1_entry14,bt1_entry20,bt1_entry21,bt1_entry27,bt1_entry28
+                            global bt2_entry6,bt2_entry7,bt2_entry13,bt2_entry14,bt2_entry20,bt2_entry21,bt2_entry27,bt2_entry28
+                            global bt3_entry6,bt3_entry7,bt3_entry13,bt3_entry14,bt3_entry20,bt3_entry21,bt3_entry27,bt3_entry28
+                            global bt4_entry6,bt4_entry7,bt4_entry13,bt4_entry14,bt4_entry20,bt4_entry21,bt4_entry27,bt4_entry28
+
                             if b == 1:
                                 bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry1.get(),font=('arial 25'),background='#1b3857',fg="white")
                                 sr_Canvas_4.create_window(0,0,anchor="c",window=bt_label1,tags=("label1"))
@@ -5382,7 +5387,6 @@ def main_sign_in():
                                     bt1_entry6.delete(0,END)
                                     bt1_entry6.insert(0,get_bundle_data1[25])
                                     bt1_entry7.delete(0,END)
-                                    bt1_entry7.insert(0,get_bundle_data1[29])
                                     bt1_entry8.delete(0,END)
                                     bt1_entry8.insert(0,get_bundle_data1[6])
                                     bt1_entry9.delete(0,END)
@@ -5396,7 +5400,6 @@ def main_sign_in():
                                     bt1_entry13.delete(0,END)
                                     bt1_entry13.insert(0,get_bundle_data1[26])
                                     bt1_entry14.delete(0,END)
-                                    bt1_entry14.insert(0,get_bundle_data1[30])
                                     bt1_entry15.delete(0,END)
                                     bt1_entry15.insert(0,get_bundle_data1[7])
                                     bt1_entry16.delete(0,END)
@@ -5410,7 +5413,6 @@ def main_sign_in():
                                     bt1_entry20.delete(0,END)
                                     bt1_entry20.insert(0,get_bundle_data1[27])
                                     bt1_entry21.delete(0,END)
-                                    bt1_entry21.insert(0,get_bundle_data1[31])
                                     bt1_entry22.delete(0,END)
                                     bt1_entry22.insert(0,get_bundle_data1[8])
                                     bt1_entry23.delete(0,END)
@@ -5424,7 +5426,18 @@ def main_sign_in():
                                     bt1_entry27.delete(0,END)
                                     bt1_entry27.insert(0,get_bundle_data1[28])
                                     bt1_entry28.delete(0,END)
-                                    bt1_entry28.insert(0,get_bundle_data1[32])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% GST({get_bundle_data1[29]}%)')
+                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% GST({get_bundle_data1[30]}%)')
+                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% GST({get_bundle_data1[31]}%)')
+                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% GST({get_bundle_data1[32]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% IGST({get_bundle_data1[29]}%)')
+                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% IGST({get_bundle_data1[30]}%)')
+                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% IGST({get_bundle_data1[31]}%)')
+                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% IGST({get_bundle_data1[32]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
 
@@ -5583,7 +5596,6 @@ def main_sign_in():
                                     bt2_entry6.delete(0,END)
                                     bt2_entry6.insert(0,get_bundle_data2[25])
                                     bt2_entry7.delete(0,END)
-                                    bt2_entry7.insert(0,get_bundle_data2[29])
                                     bt2_entry8.delete(0,END)
                                     bt2_entry8.insert(0,get_bundle_data2[6])
                                     bt2_entry9.delete(0,END)
@@ -5597,7 +5609,6 @@ def main_sign_in():
                                     bt2_entry13.delete(0,END)
                                     bt2_entry13.insert(0,get_bundle_data2[26])
                                     bt2_entry14.delete(0,END)
-                                    bt2_entry14.insert(0,get_bundle_data2[30])
                                     bt2_entry15.delete(0,END)
                                     bt2_entry15.insert(0,get_bundle_data2[7])
                                     bt2_entry16.delete(0,END)
@@ -5611,7 +5622,6 @@ def main_sign_in():
                                     bt2_entry20.delete(0,END)
                                     bt2_entry20.insert(0,get_bundle_data2[27])
                                     bt2_entry21.delete(0,END)
-                                    bt2_entry21.insert(0,get_bundle_data2[31])
                                     bt2_entry22.delete(0,END)
                                     bt2_entry22.insert(0,get_bundle_data2[8])
                                     bt2_entry23.delete(0,END)
@@ -5625,7 +5635,18 @@ def main_sign_in():
                                     bt2_entry27.delete(0,END)
                                     bt2_entry27.insert(0,get_bundle_data2[28])
                                     bt2_entry28.delete(0,END)
-                                    bt2_entry28.insert(0,get_bundle_data2[32])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% GST({get_bundle_data2[29]}%)')
+                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% GST({get_bundle_data2[30]}%)')
+                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% GST({get_bundle_data2[31]}%)')
+                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% GST({get_bundle_data2[32]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% IGST({get_bundle_data2[29]}%)')
+                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% IGST({get_bundle_data2[30]}%)')
+                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% IGST({get_bundle_data2[31]}%)')
+                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% IGST({get_bundle_data2[32]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
 
@@ -5763,77 +5784,85 @@ def main_sign_in():
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt3_entry28,tags=("combo4"))
 
                                 try:
-                                    get_bundle_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                    get_bundle_val2 = (cmt_entry18.get(),comp_data[0])
-                                    fbcursor.execute(get_bundle_sql2,get_bundle_val2)
-                                    get_bundle_data2 = fbcursor.fetchone()
+                                    get_bundle_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val3 = (cmt_entry18.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql3,get_bundle_val3)
+                                    get_bundle_data3 = fbcursor.fetchone()
                                 except:
                                     pass
 
                                 try:
                                     bt3_entry1.delete(0,END)
-                                    bt3_entry1.insert(0,get_bundle_data2[5])
+                                    bt3_entry1.insert(0,get_bundle_data3[5])
                                     bt3_entry2.delete(0,END)
-                                    bt3_entry2.insert(0,get_bundle_data2[9])
+                                    bt3_entry2.insert(0,get_bundle_data3[9])
                                     bt3_entry3.delete(0,END)
-                                    bt3_entry3.insert(0,get_bundle_data2[13])
+                                    bt3_entry3.insert(0,get_bundle_data3[13])
                                     bt3_entry4.delete(0,END)
-                                    bt3_entry4.insert(0,get_bundle_data2[17])
+                                    bt3_entry4.insert(0,get_bundle_data3[17])
                                     bt3_entry5.delete(0,END)
-                                    bt3_entry5.insert(0,get_bundle_data2[21])
+                                    bt3_entry5.insert(0,get_bundle_data3[21])
                                     bt3_entry6.delete(0,END)
-                                    bt3_entry6.insert(0,get_bundle_data2[25])
+                                    bt3_entry6.insert(0,get_bundle_data3[25])
                                     bt3_entry7.delete(0,END)
-                                    bt3_entry7.insert(0,get_bundle_data2[29])
                                     bt3_entry8.delete(0,END)
-                                    bt3_entry8.insert(0,get_bundle_data2[6])
+                                    bt3_entry8.insert(0,get_bundle_data3[6])
                                     bt3_entry9.delete(0,END)
-                                    bt3_entry9.insert(0,get_bundle_data2[10])
+                                    bt3_entry9.insert(0,get_bundle_data3[10])
                                     bt3_entry10.delete(0,END)
-                                    bt3_entry10.insert(0,get_bundle_data2[14])
+                                    bt3_entry10.insert(0,get_bundle_data3[14])
                                     bt3_entry11.delete(0,END)
-                                    bt3_entry11.insert(0,get_bundle_data2[18])
+                                    bt3_entry11.insert(0,get_bundle_data3[18])
                                     bt3_entry12.delete(0,END)
-                                    bt3_entry12.insert(0,get_bundle_data2[22])
+                                    bt3_entry12.insert(0,get_bundle_data3[22])
                                     bt3_entry13.delete(0,END)
-                                    bt3_entry13.insert(0,get_bundle_data2[26])
+                                    bt3_entry13.insert(0,get_bundle_data3[26])
                                     bt3_entry14.delete(0,END)
-                                    bt3_entry14.insert(0,get_bundle_data2[30])
                                     bt3_entry15.delete(0,END)
-                                    bt3_entry15.insert(0,get_bundle_data2[7])
+                                    bt3_entry15.insert(0,get_bundle_data3[7])
                                     bt3_entry16.delete(0,END)
-                                    bt3_entry16.insert(0,get_bundle_data2[11])
+                                    bt3_entry16.insert(0,get_bundle_data3[11])
                                     bt3_entry17.delete(0,END)
-                                    bt3_entry17.insert(0,get_bundle_data2[15])
+                                    bt3_entry17.insert(0,get_bundle_data3[15])
                                     bt3_entry18.delete(0,END)
-                                    bt3_entry18.insert(0,get_bundle_data2[19])
+                                    bt3_entry18.insert(0,get_bundle_data3[19])
                                     bt3_entry19.delete(0,END)
-                                    bt3_entry19.insert(0,get_bundle_data2[23])
+                                    bt3_entry19.insert(0,get_bundle_data3[23])
                                     bt3_entry20.delete(0,END)
-                                    bt3_entry20.insert(0,get_bundle_data2[27])
+                                    bt3_entry20.insert(0,get_bundle_data3[27])
                                     bt3_entry21.delete(0,END)
-                                    bt3_entry21.insert(0,get_bundle_data2[31])
                                     bt3_entry22.delete(0,END)
-                                    bt3_entry22.insert(0,get_bundle_data2[8])
+                                    bt3_entry22.insert(0,get_bundle_data3[8])
                                     bt3_entry23.delete(0,END)
-                                    bt3_entry23.insert(0,get_bundle_data2[12])
+                                    bt3_entry23.insert(0,get_bundle_data3[12])
                                     bt3_entry24.delete(0,END)
-                                    bt3_entry24.insert(0,get_bundle_data2[16])
+                                    bt3_entry24.insert(0,get_bundle_data3[16])
                                     bt3_entry25.delete(0,END)
-                                    bt3_entry25.insert(0,get_bundle_data2[20])
+                                    bt3_entry25.insert(0,get_bundle_data3[20])
                                     bt3_entry26.delete(0,END)
-                                    bt3_entry26.insert(0,get_bundle_data2[24])
+                                    bt3_entry26.insert(0,get_bundle_data3[24])
                                     bt3_entry27.delete(0,END)
-                                    bt3_entry27.insert(0,get_bundle_data2[28])
+                                    bt3_entry27.insert(0,get_bundle_data3[28])
                                     bt3_entry28.delete(0,END)
-                                    bt3_entry28.insert(0,get_bundle_data2[32])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% GST({get_bundle_data3[29]}%)')
+                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% GST({get_bundle_data3[30]}%)')
+                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% GST({get_bundle_data3[31]}%)')
+                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% GST({get_bundle_data3[32]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% IGST({get_bundle_data3[29]}%)')
+                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% IGST({get_bundle_data3[30]}%)')
+                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% IGST({get_bundle_data3[31]}%)')
+                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% IGST({get_bundle_data3[32]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry21.get())
-                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry21.get())
-                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry21.get())
-                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry21.get())
+                                qty1 = int(get_bundle_data3[17]) * int(cmt_entry21.get())
+                                qty2 = int(get_bundle_data3[18]) * int(cmt_entry21.get())
+                                qty3 = int(get_bundle_data3[19]) * int(cmt_entry21.get())
+                                qty4 = int(get_bundle_data3[20]) * int(cmt_entry21.get())
                                 if cmt_entry21.get() == "0":
                                     pass
                                 else:
@@ -5964,77 +5993,85 @@ def main_sign_in():
                                 sr_Canvas_4.create_window(0,0,anchor='c',window=bt4_entry28,tags=("combo4"))
 
                                 try:
-                                    get_bundle_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                    get_bundle_val2 = (cmt_entry25.get(),comp_data[0])
-                                    fbcursor.execute(get_bundle_sql2,get_bundle_val2)
-                                    get_bundle_data2 = fbcursor.fetchone()
+                                    get_bundle_sql4 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bundle_val4 = (cmt_entry25.get(),comp_data[0])
+                                    fbcursor.execute(get_bundle_sql4,get_bundle_val4)
+                                    get_bundle_data4 = fbcursor.fetchone()
                                 except:
                                     pass
 
                                 try:
                                     bt4_entry1.delete(0,END)
-                                    bt4_entry1.insert(0,get_bundle_data2[5])
+                                    bt4_entry1.insert(0,get_bundle_data4[5])
                                     bt4_entry2.delete(0,END)
-                                    bt4_entry2.insert(0,get_bundle_data2[9])
+                                    bt4_entry2.insert(0,get_bundle_data4[9])
                                     bt4_entry3.delete(0,END)
-                                    bt4_entry3.insert(0,get_bundle_data2[13])
+                                    bt4_entry3.insert(0,get_bundle_data4[13])
                                     bt4_entry4.delete(0,END)
-                                    bt4_entry4.insert(0,get_bundle_data2[17])
+                                    bt4_entry4.insert(0,get_bundle_data4[17])
                                     bt4_entry5.delete(0,END)
-                                    bt4_entry5.insert(0,get_bundle_data2[21])
+                                    bt4_entry5.insert(0,get_bundle_data4[21])
                                     bt4_entry6.delete(0,END)
-                                    bt4_entry6.insert(0,get_bundle_data2[25])
+                                    bt4_entry6.insert(0,get_bundle_data4[25])
                                     bt4_entry7.delete(0,END)
-                                    bt4_entry7.insert(0,get_bundle_data2[29])
                                     bt4_entry8.delete(0,END)
-                                    bt4_entry8.insert(0,get_bundle_data2[6])
+                                    bt4_entry8.insert(0,get_bundle_data4[6])
                                     bt4_entry9.delete(0,END)
-                                    bt4_entry9.insert(0,get_bundle_data2[10])
+                                    bt4_entry9.insert(0,get_bundle_data4[10])
                                     bt4_entry10.delete(0,END)
-                                    bt4_entry10.insert(0,get_bundle_data2[14])
+                                    bt4_entry10.insert(0,get_bundle_data4[14])
                                     bt4_entry11.delete(0,END)
-                                    bt4_entry11.insert(0,get_bundle_data2[18])
+                                    bt4_entry11.insert(0,get_bundle_data4[18])
                                     bt4_entry12.delete(0,END)
-                                    bt4_entry12.insert(0,get_bundle_data2[22])
+                                    bt4_entry12.insert(0,get_bundle_data4[22])
                                     bt4_entry13.delete(0,END)
-                                    bt4_entry13.insert(0,get_bundle_data2[26])
+                                    bt4_entry13.insert(0,get_bundle_data4[26])
                                     bt4_entry14.delete(0,END)
-                                    bt4_entry14.insert(0,get_bundle_data2[30])
                                     bt4_entry15.delete(0,END)
-                                    bt4_entry15.insert(0,get_bundle_data2[7])
+                                    bt4_entry15.insert(0,get_bundle_data4[7])
                                     bt4_entry16.delete(0,END)
-                                    bt4_entry16.insert(0,get_bundle_data2[11])
+                                    bt4_entry16.insert(0,get_bundle_data4[11])
                                     bt4_entry17.delete(0,END)
-                                    bt4_entry17.insert(0,get_bundle_data2[15])
+                                    bt4_entry17.insert(0,get_bundle_data4[15])
                                     bt4_entry18.delete(0,END)
-                                    bt4_entry18.insert(0,get_bundle_data2[19])
+                                    bt4_entry18.insert(0,get_bundle_data4[19])
                                     bt4_entry19.delete(0,END)
-                                    bt4_entry19.insert(0,get_bundle_data2[23])
+                                    bt4_entry19.insert(0,get_bundle_data4[23])
                                     bt4_entry20.delete(0,END)
-                                    bt4_entry20.insert(0,get_bundle_data2[27])
+                                    bt4_entry20.insert(0,get_bundle_data4[27])
                                     bt4_entry21.delete(0,END)
-                                    bt4_entry21.insert(0,get_bundle_data2[31])
                                     bt4_entry22.delete(0,END)
-                                    bt4_entry22.insert(0,get_bundle_data2[8])
+                                    bt4_entry22.insert(0,get_bundle_data4[8])
                                     bt4_entry23.delete(0,END)
-                                    bt4_entry23.insert(0,get_bundle_data2[12])
+                                    bt4_entry23.insert(0,get_bundle_data4[12])
                                     bt4_entry24.delete(0,END)
-                                    bt4_entry24.insert(0,get_bundle_data2[16])
+                                    bt4_entry24.insert(0,get_bundle_data4[16])
                                     bt4_entry25.delete(0,END)
-                                    bt4_entry25.insert(0,get_bundle_data2[20])
+                                    bt4_entry25.insert(0,get_bundle_data4[20])
                                     bt4_entry26.delete(0,END)
-                                    bt4_entry26.insert(0,get_bundle_data2[24])
+                                    bt4_entry26.insert(0,get_bundle_data4[24])
                                     bt4_entry27.delete(0,END)
-                                    bt4_entry27.insert(0,get_bundle_data2[28])
+                                    bt4_entry27.insert(0,get_bundle_data4[28])
                                     bt4_entry28.delete(0,END)
-                                    bt4_entry28.insert(0,get_bundle_data2[32])
+                                    if comp_data[4] == cm_pofsupply.get():
+                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% GST({get_bundle_data4[29]}%)')
+                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% GST({get_bundle_data4[30]}%)')
+                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% GST({get_bundle_data4[31]}%)')
+                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% GST({get_bundle_data4[32]}%)')
+                                    elif comp_data[4] != cm_pofsupply.get():
+                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% IGST({get_bundle_data4[29]}%)')
+                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% IGST({get_bundle_data4[30]}%)')
+                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% IGST({get_bundle_data4[31]}%)')
+                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% IGST({get_bundle_data4[32]}%)')
+                                    else:
+                                        pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry28.get())
-                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry28.get())
-                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry28.get())
-                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry28.get())
+                                qty1 = int(get_bundle_data4[17]) * int(cmt_entry28.get())
+                                qty2 = int(get_bundle_data4[18]) * int(cmt_entry28.get())
+                                qty3 = int(get_bundle_data4[19]) * int(cmt_entry28.get())
+                                qty4 = int(get_bundle_data4[20]) * int(cmt_entry28.get())
                                 if cmt_entry28.get() == "0":
                                     pass
                                 else:
@@ -6060,6 +6097,8 @@ def main_sign_in():
                                 bt4_entry20.insert(0,tot3)
                                 bt4_entry27.delete(0,END)
                                 bt4_entry27.insert(0,tot4)
+
+                        #------------------------------------------
                         
                         def cm_fetch_proDetails1(event):
                             global get_pro_data3
@@ -6194,6 +6233,9 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label67",state='hidden')
                                 except:
                                     pass
+
+                                view_bundleitems(b=1)
+                                
                             
                         cmt_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry1["values"] = product_list
@@ -6247,7 +6289,6 @@ def main_sign_in():
                                         pass
 
                                     cmt_entry8.delete(0,END)
-                                    cmt_entry8.insert(0,float(cmt_entry6.get()) + float(cmt_entry16.get()) + float(cmt_entry23.get()) + float(cmt_entry30.get()))
                                     cmt_entry9.delete(0,END)
                                     cmt_entry10.delete(0,END)
 
@@ -6258,32 +6299,613 @@ def main_sign_in():
                                         split2 = re.split(pattern2,split1[1])
                                         return split2
 
-                                    if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry30.get() == "Choose":
+                                    #product gst -----------------------------
+                                    try:
+                                        gst_value1 = split_gst(cmt_entry7.get())
+                                    except:
                                         pass
-                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                        gst_value1 = split_gst(cmt_entry7.get())
-                                        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
-                                            tax_tot1 = 0
-                                        else:
-                                            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
-                                        cmt_entry9.insert(0,tax_tot1)
-                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                        gst_value1 = split_gst(cmt_entry7.get())
+                                    try:
                                         gst_value2 = split_gst(cmt_entry17.get())
-                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
-                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
-                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2)
-                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
-                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((cmt_entry7.get()).split("%")[0])))/100
-                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((cmt_entry17.get()).split("%")[0])))/100
-                                        tax_tot3 = (float(cmt_entry23.get()) * float(float((cmt_entry24.get()).split("%")[0])))/100
-                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3)
-                                    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
-                                        tax_tot1 = (float(cmt_entry6.get()) * float(float((cmt_entry7.get()).split("%")[0])))/100
-                                        tax_tot2 = (float(cmt_entry16.get()) * float(float((cmt_entry17.get()).split("%")[0])))/100
-                                        tax_tot3 = (float(cmt_entry23.get()) * float(float((cmt_entry24.get()).split("%")[0])))/100
-                                        tax_tot4 = (float(cmt_entry30.get()) * float(float((cmt_entry31.get()).split("%")[0])))/100
-                                        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4)
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value3 = split_gst(cmt_entry24.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value4 = split_gst(cmt_entry31.get())
+                                    except:
+                                        pass
+
+                                    #bundle gst ------------------------------ 
+                                    try:
+                                        bgst_value1 = split_gst(bt1_entry7.get())
+                                        bgst_value2 = split_gst(bt1_entry14.get())
+                                        bgst_value3 = split_gst(bt1_entry21.get())
+                                        bgst_value4 = split_gst(bt1_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value5 = split_gst(bt2_entry7.get())
+                                        bgst_value6 = split_gst(bt2_entry14.get())
+                                        bgst_value7 = split_gst(bt2_entry21.get())
+                                        bgst_value8 = split_gst(bt2_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value9 = split_gst(bt3_entry7.get())
+                                        bgst_value10 = split_gst(bt3_entry14.get())
+                                        bgst_value11 = split_gst(bt3_entry21.get())
+                                        bgst_value12 = split_gst(bt3_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value13 = split_gst(bt4_entry7.get())
+                                        bgst_value14 = split_gst(bt4_entry14.get())
+                                        bgst_value15 = split_gst(bt4_entry21.get())
+                                        bgst_value16 = split_gst(bt4_entry28.get())
+                                    except:
+                                        pass
+
+                                    get_bun_sql = "SELECT name FROM app1_bundle WHERE cid_id=%s"
+                                    get_bun_val = (comp_data[0],)
+                                    fbcursor.execute(get_bun_sql,get_bun_val)
+                                    get_bun_data = fbcursor.fetchall()
+                                    
+                                    b_list = []
+                                    for g in get_bun_data:
+                                        b_list.append(g[0])
+
+                                    #All products ----------------------------------------------------------------------------------------
+                                    if cmt_entry1.get() not in b_list and cmt_entry11.get() not in b_list and cmt_entry18.get() not in b_list and cmt_entry25.get() not in b_list:
+                                        cmt_entry8.insert(0,float(cmt_entry6.get()) + float(cmt_entry16.get()) + float(cmt_entry23.get()) + float(cmt_entry30.get()))
+                                        if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                            pass
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                            gst_value1 = split_gst(cmt_entry7.get())
+                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            cmt_entry9.insert(0,tax_tot1)
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                            gst_value1 = split_gst(cmt_entry7.get())
+                                            gst_value2 = split_gst(cmt_entry17.get())
+                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+                                            cmt_entry9.insert(0,tax_tot1 + tax_tot2)
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                            gst_value1 = split_gst(cmt_entry7.get())
+                                            gst_value2 = split_gst(cmt_entry17.get())
+                                            gst_value3 = split_gst(cmt_entry24.get())
+                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3)
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                            gst_value1 = split_gst(cmt_entry7.get())
+                                            gst_value2 = split_gst(cmt_entry17.get())
+                                            gst_value3 = split_gst(cmt_entry24.get())
+                                            gst_value4 = split_gst(cmt_entry31.get())
+                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4)
+
+                                    #All bundles -----------------------------------------------------------------------------------
+                                    elif cmt_entry1.get() in b_list and cmt_entry11.get() in b_list and cmt_entry18.get() in b_list and cmt_entry25.get() in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cmt_entry8.insert(0,b1_tot + b2_tot + b3_tot + b4_tot)
+
+                                        #Bundle1--------------------------------------------
+                                        if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            pass
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            tax_total1 = b1tax_tot1
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+
+                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                                b1tax_tot4 = 0
+                                            else:
+                                                b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3 + b1tax_tot4
+
+                                        #Bundle2--------------------------------------------
+                                        if bt2_entry7.get() == "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            pass
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            tax_total2 = b2tax_tot1
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() != "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+
+                                            if bgst_value8 == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
+                                                b2tax_tot4 = 0
+                                            else:
+                                                b2tax_tot4 = (float(bt2_entry27.get()) * float(float((bgst_value8[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3 + b2tax_tot4
+
+                                        #Bundle3--------------------------------------------
+                                        if bt3_entry7.get() == "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            pass
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            tax_total3 = b3tax_tot1
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+
+                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                                b3tax_tot3 = 0
+                                            else:
+                                                b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() != "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+
+                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                                b3tax_tot3 = 0
+                                            else:
+                                                b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
+
+                                            if bgst_value12 == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
+                                                b3tax_tot4 = 0
+                                            else:
+                                                b3tax_tot4 = (float(bt3_entry27.get()) * float(float((bgst_value12[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3 + b3tax_tot4
+
+                                        #Bundle4--------------------------------------------
+                                        if bt4_entry7.get() == "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            pass
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            tax_total4 = b4tax_tot1
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+
+                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                                b4tax_tot3 = 0
+                                            else:
+                                                b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() != "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+
+                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                                b4tax_tot3 = 0
+                                            else:
+                                                b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
+
+                                            if bgst_value16 == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
+                                                b4tax_tot4 = 0
+                                            else:
+                                                b4tax_tot4 = (float(bt4_entry27.get()) * float(float((bgst_value16[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3 + b4tax_tot4
+
+                                        cmt_entry9.insert(0,tax_total1 + tax_total2 + tax_total3 + tax_total4)
+                                    #First row bundle-----------------------------------------
+                                    elif cmt_entry1.get() in b_list and cmt_entry11.get() not in b_list and cmt_entry18.get() not in b_list and cmt_entry25.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        cmt_entry8.insert(0,b1_tot + float(cmt_entry16.get()) + float(cmt_entry23.get()) + float(cmt_entry30.get()))
+                                        #Bundle1--------------------------------------------
+                                        if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            pass
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            tax_total1 = b1tax_tot1
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
+                                            
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+
+                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                                b1tax_tot4 = 0
+                                            else:
+                                                b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3 + b1tax_tot4
+
+                                            #Rest products--------------------------------------
+                                            if cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                                pass
+                                            elif cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":                                               
+                                                if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                    tax_tot2 = 0
+                                                else:
+                                                    tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+                                                ptax_total1 = tax_tot2
+                                            elif cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":                                              
+                                                if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                    tax_tot2 = 0
+                                                else:
+                                                    tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                                if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                    tax_tot3 = 0
+                                                else:
+                                                    tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                                ptax_total1 = tax_tot2 + tax_tot3
+                                            elif cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                                if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                    tax_tot2 = 0
+                                                else:
+                                                    tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                                if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                    tax_tot3 = 0
+                                                else:
+                                                    tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                                if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                    tax_tot4 = 0
+                                                else:
+                                                    tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                                ptax_total1 = tax_tot2 + tax_tot3 + tax_tot4
+                                            cmt_entry9.insert(0,tax_total1 + ptax_total1)
+
+                                    #First and Second row Bundle -------------------------------------
+                                    elif cmt_entry1.get() in b_list and cmt_entry11.get() in b_list and cmt_entry18.get() not in b_list and cmt_entry25.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        cmt_entry8.insert(0,b1_tot + b2_tot + float(cmt_entry23.get()) + float(cmt_entry30.get()))
+
+                                        #Bundle1--------------------------------------------
+                                        if bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            pass
+                                        elif bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+                                            tax_total1 = b1tax_tot2
+                                        elif bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
+                                        elif bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+
+                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                                b1tax_tot4 = 0
+                                            else:
+                                                b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3 + b1tax_tot4
+
+                                        #Bundle2--------------------------------------------
+                                        if bt2_entry7.get() == "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            pass
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            tax_total2 = b2tax_tot1
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() != "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+
+                                            if bgst_value8 == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
+                                                b2tax_tot4 = 0
+                                            else:
+                                                b2tax_tot4 = (float(bt2_entry27.get()) * float(float((bgst_value8[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3 + b2tax_tot4
+
+                                        #Rest products--------------------------------------
+                                        if cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                            pass
+                                        elif cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total2 = tax_tot3
+                                        elif cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total2 = tax_tot3 + tax_tot4
+
+                                        cmt_entry9.insert(0,tax_total1 + tax_total2 + ptax_total2)
                                     cmt_entry10.insert(0,float(cmt_entry8.get()) + float(float(cmt_entry9.get())))
                                 else:
                                     pass
@@ -6445,6 +7067,8 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label68",state='hidden')
                                 except:
                                     pass
+
+                                view_bundleitems(b=2)
 
                         cmt_entry11 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry11["values"] = product_list
@@ -6660,6 +7284,8 @@ def main_sign_in():
                                 except:
                                     pass
 
+                                view_bundleitems(b=3)
+
                         cmt_entry18 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry18["values"] = product_list
                         cmt_entry18.current(0)
@@ -6873,6 +7499,8 @@ def main_sign_in():
                                     sr_Canvas_1.itemconfig("label70",state='hidden')
                                 except:
                                     pass
+
+                                view_bundleitems(b=4)
 
                         cmt_entry25 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
                         cmt_entry25["values"] = product_list

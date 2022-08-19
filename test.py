@@ -100,30 +100,128 @@ import PIL.Image
 # App(root).pack()
 # root.mainloop()
 
-root=Tk()
+# root=Tk()
 
-root.geometry("1920x1080+0+0")
+# root.geometry("1920x1080+0+0")
 
-finsysdb = mysql.connector.connect(
-    host="localhost", user="root", password="", database="newfinsys", port="3306"
-)
-fbcursor = finsysdb.cursor(buffered=True)
+# finsysdb = mysql.connector.connect(
+#     host="localhost", user="root", password="", database="newfinsys", port="3306"
+# )
+# fbcursor = finsysdb.cursor(buffered=True)
 
-t1_style = ttk.Style()
-t1_style.theme_use('default')
-t1_style.configure('Treeview.Heading',background='yellow')
-
-
-t1 = ttk.Treeview(root,height=10,columns=('0','1','2'),show='headings')
-t1.column('0',width=50)
-t1.column('1',width=250)
-t1.column('2',width=250)
-t1.heading('0',text='#')
-t1.heading('1',text='name')
-t1.heading('2',text='tax')
-t1.pack()
+# t1_style = ttk.Style()
+# t1_style.theme_use('default')
+# t1_style.configure('Treeview.Heading',background='yellow')
 
 
-root.mainloop()
+# t1 = ttk.Treeview(root,height=10,columns=('0','1','2'),show='headings')
+# t1.column('0',width=50)
+# t1.column('1',width=250)
+# t1.column('2',width=250)
+# t1.heading('0',text='#')
+# t1.heading('1',text='name')
+# t1.heading('2',text='tax')
+# t1.pack()
+
+
+# root.mainloop()
+
+def calculateWithout_bundle():
+    cmt_entry8.insert(0,float(cmt_entry6.get()) + float(cmt_entry16.get()) + float(cmt_entry23.get()) + float(cmt_entry30.get()))
+    if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry30.get() == "Choose":
+        pass
+    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+        gst_value1 = split_gst(cmt_entry7.get())
+        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+            tax_tot1 = 0
+        else:
+            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+        cmt_entry9.insert(0,tax_tot1)
+    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+        gst_value1 = split_gst(cmt_entry7.get())
+        gst_value2 = split_gst(cmt_entry17.get())
+        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+            tax_tot1 = 0
+        else:
+            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+        
+        if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+            tax_tot2 = 0
+        else:
+            tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+        cmt_entry9.insert(0,tax_tot1 + tax_tot2)
+    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+        gst_value1 = split_gst(cmt_entry7.get())
+        gst_value2 = split_gst(cmt_entry17.get())
+        gst_value3 = split_gst(cmt_entry24.get())
+        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+            tax_tot1 = 0
+        else:
+            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+        
+        if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+            tax_tot2 = 0
+        else:
+            tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+        if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+            tax_tot3 = 0
+        else:
+            tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3)
+    elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+        gst_value1 = split_gst(cmt_entry7.get())
+        gst_value2 = split_gst(cmt_entry17.get())
+        gst_value3 = split_gst(cmt_entry24.get())
+        gst_value4 = split_gst(cmt_entry31.get())
+        if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+            tax_tot1 = 0
+        else:
+            tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+        
+        if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+            tax_tot2 = 0
+        else:
+            tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+        if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+            tax_tot3 = 0
+        else:
+            tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+        if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+            tax_tot4 = 0
+        else:
+            tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+        cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4)
+    cmt_entry10.insert(0,float(cmt_entry8.get()) + float(float(cmt_entry9.get())))
+
+def calculateWith_bundle():
+    # if not get_pro_data3:
+    #     tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+    # else:
+    if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+        pass
+    elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+        bgst_value1 = split_gst(bt1_entry7.get())
+        if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+            btax_tot1 = 0
+        else:
+            btax_tot1 = (float(bt1_entry6.get()) * float(float(bgst_value1[0])))/100
+        cmt_entry9.insert(0,btax_tot1)
+    elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
+        bgst_value1 = split_gst(bt1_entry7.get())
+        bgst_value2 = split_gst(bt1_entry14.get())
+        bgst_value3 = split_gst(bt1_entry21.get())
+        bgst_value4 = split_gst(bt1_entry28.get())
+        tax_tot1 = (float(bt1_entry6.get()) * float(float(bgst_value1[0]))) + (float(bt1_entry13.get()) * float(float(bgst_value2[0]))) + (float(bt1_entry20.get()) * float(float(bgst_value3[0]))) + (float(bt1_entry27.get()) * float(float(bgst_value4[0])))
+        print(tax_tot1)
+        # cmt_entry9.insert(0,tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4)
+    cmt_entry10.insert(0,float(cmt_entry8.get()) + float(float(cmt_entry9.get())))
+
+if not get_pro_data3:
+    calculateWithout_bundle()
+else:
+    calculateWith_bundle()
 
 
