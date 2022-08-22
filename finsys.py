@@ -5258,10 +5258,10 @@ def main_sign_in():
                             back_btn = Button(sr_Canvas_4,text='←  Back',font=('arial 10 bold'),bd=0,activebackground='#2f516f',foreground='white',background='#2f516f',command=lambda:bt_goBack())
                             sr_Canvas_4.create_window(0,0,window=back_btn,tags=("button2"))
 
-                            global bt1_entry6,bt1_entry7,bt1_entry13,bt1_entry14,bt1_entry20,bt1_entry21,bt1_entry27,bt1_entry28
-                            global bt2_entry6,bt2_entry7,bt2_entry13,bt2_entry14,bt2_entry20,bt2_entry21,bt2_entry27,bt2_entry28
-                            global bt3_entry6,bt3_entry7,bt3_entry13,bt3_entry14,bt3_entry20,bt3_entry21,bt3_entry27,bt3_entry28
-                            global bt4_entry6,bt4_entry7,bt4_entry13,bt4_entry14,bt4_entry20,bt4_entry21,bt4_entry27,bt4_entry28
+                            global bt1_entry1,bt1_entry4,bt1_entry6,bt1_entry7,bt1_entry8,bt1_entry11,bt1_entry13,bt1_entry14,bt1_entry15,bt1_entry18,bt1_entry20,bt1_entry21,bt1_entry22,bt1_entry25,bt1_entry27,bt1_entry28
+                            global bt2_entry1,bt2_entry4,bt2_entry6,bt2_entry7,bt2_entry8,bt2_entry11,bt2_entry13,bt2_entry14,bt2_entry15,bt2_entry18,bt2_entry20,bt2_entry21,bt2_entry22,bt2_entry25,bt2_entry27,bt2_entry28
+                            global bt3_entry1,bt3_entry4,bt3_entry6,bt3_entry7,bt3_entry8,bt3_entry11,bt3_entry13,bt3_entry14,bt3_entry15,bt3_entry18,bt3_entry20,bt3_entry21,bt3_entry22,bt3_entry25,bt3_entry27,bt3_entry28
+                            global bt4_entry1,bt4_entry4,bt4_entry6,bt4_entry7,bt4_entry8,bt4_entry11,bt4_entry13,bt4_entry14,bt4_entry15,bt4_entry18,bt4_entry20,bt4_entry21,bt4_entry22,bt4_entry25,bt4_entry27,bt4_entry28
 
                             if b == 1:
                                 bt_label1 = Label(sr_Canvas_4,width=18,height=1,text=cmt_entry1.get(),font=('arial 25'),background='#1b3857',fg="white")
@@ -6181,10 +6181,10 @@ def main_sign_in():
                                     cmt_entry5.insert(0,get_pro_data1[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry7.delete(0,END)
-                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry7.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry7.delete(0,END)
-                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry7.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -6208,10 +6208,10 @@ def main_sign_in():
                                     cmt_entry5.insert(0,get_pro_data2[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry7.delete(0,END)
-                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry7.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry7.delete(0,END)
-                                        cmt_entry7.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry7.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -6252,6 +6252,11 @@ def main_sign_in():
                         def cmt_calculateTotal1(event):
                             # try:
                                 if cmt_entry4.get() != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
                                     try:
                                         get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
                                         get_pro_val = (cmt_entry1.get(),comp_data[0])
@@ -6280,7 +6285,7 @@ def main_sign_in():
                                         cmt_entry6.delete(0,END)
                                         cmt_entry6.insert(0,tot)
                                     elif get_pro_data1 is not None:
-                                        tot = int(get_pro_data[8]) * int(cmt_entry4.get())
+                                        tot = int(get_pro_data1[8]) * int(cmt_entry4.get())
                                         cmt_entry6.delete(0,END)
                                         cmt_entry6.insert(0,tot)
                                     elif get_pro_data2 is not None:
@@ -7190,10 +7195,10 @@ def main_sign_in():
                                     cmt_entry15.insert(0,get_pro_data1[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry17.delete(0,END)
-                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry17.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry17.delete(0,END)
-                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry17.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -7216,10 +7221,10 @@ def main_sign_in():
                                     cmt_entry15.insert(0,get_pro_data2[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry17.delete(0,END)
-                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry17.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry17.delete(0,END)
-                                        cmt_entry17.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry17.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -7259,6 +7264,11 @@ def main_sign_in():
                         def cmt_calculateTotal2(event):
                             try:
                                 if cmt_entry14.get() != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
                                     try:
                                         get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
                                         get_pro_val = (cmt_entry11.get(),comp_data[0])
@@ -7287,7 +7297,7 @@ def main_sign_in():
                                         cmt_entry16.delete(0,END)
                                         cmt_entry16.insert(0,tot)
                                     elif get_pro_data1 is not None:
-                                        tot = int(get_pro_data[8]) * int(cmt_entry14.get())
+                                        tot = int(get_pro_data1[8]) * int(cmt_entry14.get())
                                         cmt_entry16.delete(0,END)
                                         cmt_entry16.insert(0,tot)
                                     elif get_pro_data2 is not None:
@@ -8196,10 +8206,10 @@ def main_sign_in():
                                     cmt_entry22.insert(0,get_pro_data1[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry24.delete(0,END)
-                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry24.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry24.delete(0,END)
-                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry24.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -8223,10 +8233,10 @@ def main_sign_in():
                                     cmt_entry22.insert(0,get_pro_data2[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry24.delete(0,END)
-                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry24.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry24.delete(0,END)
-                                        cmt_entry24.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry24.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -8266,6 +8276,31 @@ def main_sign_in():
                         def cmt_calculateTotal3(event):
                             try:
                                 if cmt_entry14.get() != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4,b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
+
+                                    b1tax_tot1 = 0.0
+                                    b1tax_tot2 = 0.0
+                                    b1tax_tot3 = 0.0
+                                    b1tax_tot4 = 0.0
+
+                                    b2tax_tot1 = 0.0
+                                    b2tax_tot2 = 0.0
+                                    b2tax_tot3 = 0.0
+                                    b2tax_tot4 = 0.0
+
+                                    b3tax_tot1 = 0.0
+                                    b3tax_tot2 = 0.0
+                                    b3tax_tot3 = 0.0
+                                    b3tax_tot4 = 0.0
+
+                                    b4tax_tot1 = 0.0
+                                    b4tax_tot2 = 0.0
+                                    b4tax_tot3 = 0.0
+                                    b4tax_tot4 = 0.0
                                     try:
                                         get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
                                         get_pro_val = (cmt_entry18.get(),comp_data[0])
@@ -8294,7 +8329,7 @@ def main_sign_in():
                                         cmt_entry23.delete(0,END)
                                         cmt_entry23.insert(0,tot)
                                     elif get_pro_data1 is not None:
-                                        tot = int(get_pro_data[8]) * int(cmt_entry21.get())
+                                        tot = int(get_pro_data1[8]) * int(cmt_entry21.get())
                                         cmt_entry23.delete(0,END)
                                         cmt_entry23.insert(0,tot)
                                     elif get_pro_data2 is not None:
@@ -9203,10 +9238,10 @@ def main_sign_in():
                                     cmt_entry29.insert(0,get_pro_data1[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry31.delete(0,END)
-                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry31.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry31.delete(0,END)
-                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry31.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -9230,10 +9265,10 @@ def main_sign_in():
                                     cmt_entry29.insert(0,get_pro_data2[8])
                                     if comp_data[4] == cm_pofsupply.get():
                                         cmt_entry31.delete(0,END)
-                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
+                                        cmt_entry31.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
                                         cmt_entry31.delete(0,END)
-                                        cmt_entry31.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
+                                        cmt_entry31.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
                                     else:
                                         pass
                                 except:
@@ -9273,6 +9308,11 @@ def main_sign_in():
                         def cmt_calculateTotal4(event):
                             try:
                                 if cmt_entry14.get() != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
                                     try:
                                         get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
                                         get_pro_val = (cmt_entry25.get(),comp_data[0])
@@ -9301,7 +9341,7 @@ def main_sign_in():
                                         cmt_entry30.delete(0,END)
                                         cmt_entry30.insert(0,tot)
                                     elif get_pro_data1 is not None:
-                                        tot = int(get_pro_data[8]) * int(cmt_entry28.get())
+                                        tot = int(get_pro_data1[8]) * int(cmt_entry28.get())
                                         cmt_entry30.delete(0,END)
                                         cmt_entry30.insert(0,tot)
                                     elif get_pro_data2 is not None:
@@ -10165,13 +10205,759 @@ def main_sign_in():
                                 saleno = "1001"
                             else:
                                 saleno = int(get_sales_data[5]) + 1
+                            
                             salename = cm_custCombo.get()
                             saleemail = cm_email.get()
-                            saleaddress = cm_baddress.get()
+                            saleaddress = cm_baddress.get("1.0","end-1c")
                             saledate = cm_srdate.get_date()
                             salepay = cm_pmethod.get()
                             salerefno = cm_ref.get()
                             saledeposit = cm_depto.get()
+                            if cmt_entry1.get() == "Select Product":
+                                salepro = ''
+                            else:
+                                salepro = cmt_entry1.get()
+                            salesplace = cm_pofsupply.get()
+                            salehsn = cmt_entry2.get()
+                            saledescription = cmt_entry3.get()
+                            saleqty = cmt_entry4.get()
+                            saleprice = cmt_entry5.get()
+                            saaletotal = cmt_entry6.get()
+                            tax = cmt_entry7.get()
+                            salesubtotal = cmt_entry8.get()
+                            saletaxamount = cmt_entry9.get()
+                            salegrandtotal = cmt_entry10.get()
+                            if cmt_entry11.get() == "Select Product":
+                                category2 = ''
+                            else:
+                                category2 = cmt_entry11.get()
+                            categoryhsn2 = cmt_entry12.get()
+                            descrptin2 = cmt_entry13.get()
+                            catqty2 = cmt_entry14.get()
+                            catprice2 = cmt_entry15.get()
+                            cattotal2 = cmt_entry16.get()
+                            tax1 = cmt_entry17.get()
+                            if cmt_entry18.get() == "Select Product":
+                                category3 = ''
+                            else:
+                                category3 = cmt_entry18.get()
+                            categoryhsn3 = cmt_entry19.get()
+                            descrptin3 = cmt_entry20.get()
+                            catqty3 = cmt_entry21.get()
+                            catprice3 = cmt_entry22.get()
+                            cattotal3 = cmt_entry23.get()
+                            tax2 = cmt_entry24.get()
+                            if cmt_entry25.get() == "Select Product":
+                                category4 = ''
+                            else:
+                                category4 = cmt_entry25.get()
+                            categoryhsn4 = cmt_entry26.get()
+                            descrptin4 = cmt_entry27.get()
+                            catqty4 = cmt_entry28.get()
+                            catprice4 = cmt_entry29.get()
+                            cattotal4 = cmt_entry30.get()
+                            tax3 = cmt_entry31.get()
+                            cid_id = comp_data[0]
+
+                            ins_salesr_sql = "INSERT INTO app1_salesrecpts(saleno,salename,saleemail,saleaddress,saledate,salepay,salerefno,saledeposit,salepro,salesplace,salehsn,saledescription,saleqty,saleprice,saaletotal,tax,salesubtotal,saletaxamount,salegrandtotal,category2,categoryhsn2,descrptin2,catqty2,catprice2,cattotal2,tax1,category3,categoryhsn3,descrptin3,catqty3,catprice3,cattotal3,tax2,category4,categoryhsn4,descrptin4,catqty4,catprice4,cattotal4,tax3,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                            ins_salesr_val = (saleno,salename,saleemail,saleaddress,saledate,salepay,salerefno,saledeposit,salepro,salesplace,salehsn,saledescription,saleqty,saleprice,saaletotal,tax,salesubtotal,saletaxamount,salegrandtotal,category2,categoryhsn2,descrptin2,catqty2,catprice2,cattotal2,tax1,category3,categoryhsn3,descrptin3,catqty3,catprice3,cattotal3,tax2,category4,categoryhsn4,descrptin4,catqty4,catprice4,cattotal4,tax3,cid_id)
+                            fbcursor.execute(ins_salesr_sql,ins_salesr_val)
+                            finsysdb.commit()
+
+                            get_accts1_sql = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                            get_accts1_val = (saledeposit,comp_data[0])
+                            fbcursor.execute(get_accts1_sql,get_accts1_val)
+                            get_accts1_data = fbcursor.fetchone()
+
+                            if not get_accts1_data:
+                                pass
+                            else:
+                                if salegrandtotal != 0:
+                                    upd_bal = get_accts1_data[0] + float(salegrandtotal)
+                                    upd_accts1_sql = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                    upd_accts1_val = (upd_bal,saledeposit,comp_data[0])
+                                    fbcursor.execute(upd_accts1_sql,upd_accts1_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+
+                            get_accts_sql = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                            get_accts_val = (saledeposit,comp_data[0])
+                            fbcursor.execute(get_accts_sql,get_accts_val)
+                            get_accts_data = fbcursor.fetchone()
+
+                            if not get_accts_data:
+                                pass
+                            else:
+                                if salegrandtotal != 0:
+                                    upd_bal = get_accts_data[0] + float(salegrandtotal)
+                                    upd_accts_sql = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                    upd_accts_val = (upd_bal,saledeposit,comp_data[0])
+                                    fbcursor.execute(upd_accts_sql,upd_accts_val)
+                                    finsysdb.commit()
+                                else:
+                                    pass
+                            
+                            tax_amounts = [tax_tot1,tax_tot2,tax_tot3,tax_tot4]
+                            quantities = [saleqty,catqty2,catqty3,catqty4]
+                            totals = [saaletotal,cattotal2,cattotal3,cattotal4]
+                            products = [salepro,category2,category3,category4]
+
+                            for (p,q,t,tx) in zip(products,quantities,totals,tax_amounts):
+                                try:
+                                    get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                    get_invent_val = (p,comp_data[0])
+                                    fbcursor.execute(get_invent_sql,get_invent_val)
+                                    get_invent_data = fbcursor.fetchone()
+
+                                    if not get_invent_data:
+                                        pass
+                                    else:
+                                        initial_qty = int(get_invent_data[7]) - int(q)
+
+                                        upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
+                                        upd_invent_val = (initial_qty,p,comp_data[0])
+                                        fbcursor.execute(upd_invent_sql,upd_invent_val)
+                                        finsysdb.commit()
+
+                                        cxq = float(get_invent_data[16]) * float(q)
+
+                                        get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val1 = (get_invent_data[10],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                        get_accts1_data1 = fbcursor.fetchone()
+
+                                        get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val1 = (get_invent_data[10],comp_data[0])
+                                        fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                        get_accts_data1 = fbcursor.fetchone()
+
+                                        if not get_accts_data1 and not get_accts1_data1:
+                                            pass
+                                        elif get_accts1_data1:
+                                            upd_bal1 = get_accts1_data1[0] - float(cxq)
+                                            upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal1 = get_accts_data1[0] - float(cxq)
+                                            upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                            finsysdb.commit()
+
+                                        #----------------------------------------------------------
+                                        get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val2 = (get_invent_data[13],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql2,get_accts1_val2)
+                                        get_accts1_data2 = fbcursor.fetchone()
+
+                                        get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val2 = (get_invent_data[13],comp_data[0])
+                                        fbcursor.execute(get_accts_sql2,get_accts_val2)
+                                        get_accts_data2 = fbcursor.fetchone()
+
+                                        if not get_accts_data2 and not get_accts1_data2:
+                                            pass
+                                        elif get_accts1_data2:
+                                            upd_bal2 = get_accts1_data2[0] + float(t)
+                                            upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal2 = get_accts_data2[0] + float(t)
+                                            upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql2,upd_accts_val2)
+                                            finsysdb.commit()
+
+                                        #---------------------------------------------------
+                                        get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val3 = (get_invent_data[17],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql3,get_accts1_val3)
+                                        get_accts1_data3 = fbcursor.fetchone()
+
+                                        get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val3 = (get_invent_data[17],comp_data[0])
+                                        fbcursor.execute(get_accts_sql3,get_accts_val3)
+                                        get_accts_data3= fbcursor.fetchone()
+
+                                        if not get_accts_data3 and not get_accts1_data3:
+                                            pass
+                                        elif get_accts1_data3:
+                                            upd_bal3 = get_accts1_data3[0] + float(cxq)
+                                            upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal3 = get_accts_data3[0] + float(cxq)
+                                            upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql3,upd_accts_val3)
+                                            finsysdb.commit()
+                                        try:
+                                            if salesplace == comp_data[4]:
+                                                tax = tx/2
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tax
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                get_accts1_data5 = fbcursor.fetchone()
+
+                                                upd_bal5 = get_accts1_data5[0] + tax
+                                                upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                finsysdb.commit()
+                                            else:
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tx
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+                                        except:
+                                            pass
+                                except:
+                                    pass
+
+                                try:
+                                    get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                    get_noninvent_val = (p,comp_data[0])
+                                    fbcursor.execute(get_noninvent_sql,get_noninvent_val)
+                                    get_noninvent_data = fbcursor.fetchone()
+
+                                    if not get_noninvent_data:
+                                        pass
+                                    else:
+                                        qty = int(get_noninvent_data[17]) - int(q)
+
+                                        upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
+                                        upd_noninvent_val = (qty,p,comp_data[0])
+                                        fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
+                                        finsysdb.commit()
+
+                                        get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                        get_accts1_data1 = fbcursor.fetchone()
+
+                                        get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val1 = (get_noninvent_data[9],comp_data[0])
+                                        fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                        get_accts_data1 = fbcursor.fetchone()
+
+                                        if not get_accts_data1 and not get_accts1_data1:
+                                            pass
+                                        elif get_accts1_data1:
+                                            upd_bal1 = get_accts1_data1[0] + float(t)
+                                            upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal1 = get_accts_data1[0] + float(t)
+                                            upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                            finsysdb.commit()
+                                        try:
+                                            if salesplace == comp_data[4]:
+                                                tax = tx/2
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tax
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                get_accts1_data5 = fbcursor.fetchone()
+
+                                                upd_bal5 = get_accts1_data5[0] + tax
+                                                upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                finsysdb.commit()
+                                            else:
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tx
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+                                        except:
+                                            pass
+
+                                except:
+                                    pass
+
+                            #-------------------------------------------------------------
+
+                            try:
+                                get_bun_sql1 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bun_val1 = (cmt_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_bun_sql1,get_bun_val1)
+                                get_bun_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bun_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bun_val2 = (cmt_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_bun_sql2,get_bun_val2)
+                                get_bun_data2 = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bun_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bun_val3 = (cmt_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_bun_sql3,get_bun_val3)
+                                get_bun_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bun_sql4 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bun_val4 = (cmt_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_bun_sql4,get_bun_val4)
+                                get_bun_data4 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            if get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get(),]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get(),]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get(),]
+                            elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is None:
+                                btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4]
+
+                                bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get()]
+
+                                btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get()]
+
+                                bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is None:
+                                btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is not None:
+                                btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is None:
+                                btax_amount = [b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                bqty = [bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                btotals = [bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                bproducts = [bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                btax_amount = [b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is not None:
+                                btax_amount = [b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is not None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is not None:
+                                btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                            else:
+                                pass
+
+                            for (p,q,t,tx) in zip(bproducts,bqty,btotals,btax_amount):
+                                try:
+                                    get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                    get_invent_val = (p,comp_data[0])
+                                    fbcursor.execute(get_invent_sql,get_invent_val)
+                                    get_invent_data = fbcursor.fetchone()
+
+                                    if not get_invent_data:
+                                        pass
+                                    else:
+                                        initial_qty = int(get_invent_data[7]) - int(q)
+
+                                        upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
+                                        upd_invent_val = (initial_qty,p,comp_data[0])
+                                        fbcursor.execute(upd_invent_sql,upd_invent_val)
+                                        finsysdb.commit()
+
+                                        cxq = float(get_invent_data[16]) * float(q)
+
+                                        get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val1 = (get_invent_data[10],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                        get_accts1_data1 = fbcursor.fetchone()
+
+                                        get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val1 = (get_invent_data[10],comp_data[0])
+                                        fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                        get_accts_data1 = fbcursor.fetchone()
+
+                                        if not get_accts_data1 and not get_accts1_data1:
+                                            pass
+                                        elif get_accts1_data1:
+                                            upd_bal1 = get_accts1_data1[0] - float(cxq)
+                                            upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal1 = get_accts_data1[0] - float(cxq)
+                                            upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                            finsysdb.commit()
+
+                                        #----------------------------------------------------------
+                                        get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val2 = (get_invent_data[13],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql2,get_accts1_val2)
+                                        get_accts1_data2 = fbcursor.fetchone()
+
+                                        get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val2 = (get_invent_data[13],comp_data[0])
+                                        fbcursor.execute(get_accts_sql2,get_accts_val2)
+                                        get_accts_data2 = fbcursor.fetchone()
+
+                                        if not get_accts_data2 and not get_accts1_data2:
+                                            pass
+                                        elif get_accts1_data2:
+                                            upd_bal2 = get_accts1_data2[0] + float(t)
+                                            upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal2 = get_accts_data2[0] + float(t)
+                                            upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql2,upd_accts_val2)
+                                            finsysdb.commit()
+
+                                        #---------------------------------------------------
+                                        get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val3 = (get_invent_data[17],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql3,get_accts1_val3)
+                                        get_accts1_data3 = fbcursor.fetchone()
+
+                                        get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val3 = (get_invent_data[17],comp_data[0])
+                                        fbcursor.execute(get_accts_sql3,get_accts_val3)
+                                        get_accts_data3= fbcursor.fetchone()
+
+                                        if not get_accts_data3 and not get_accts1_data3:
+                                            pass
+                                        elif get_accts1_data3:
+                                            upd_bal3 = get_accts1_data3[0] + float(cxq)
+                                            upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal3 = get_accts_data3[0] + float(cxq)
+                                            upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql3,upd_accts_val3)
+                                            finsysdb.commit()
+                                        try:
+                                            if salesplace == comp_data[4]:
+                                                tax = tx/2
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tax
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                get_accts1_data5 = fbcursor.fetchone()
+
+                                                upd_bal5 = get_accts1_data5[0] + tax
+                                                upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                finsysdb.commit()
+                                            else:
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tx
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+                                        except:
+                                            pass
+                                except:
+                                    pass
+
+                                try:
+                                    get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                    get_noninvent_val = (p,comp_data[0])
+                                    fbcursor.execute(get_noninvent_sql,get_noninvent_val)
+                                    get_noninvent_data = fbcursor.fetchone()
+
+                                    if not get_noninvent_data:
+                                        pass
+                                    else:
+                                        qty = int(get_noninvent_data[17]) - int(q)
+
+                                        upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
+                                        upd_noninvent_val = (qty,p,comp_data[0])
+                                        fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
+                                        finsysdb.commit()
+
+                                        get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                        get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
+                                        fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                        get_accts1_data1 = fbcursor.fetchone()
+
+                                        get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                        get_accts_val1 = (get_noninvent_data[9],comp_data[0])
+                                        fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                        get_accts_data1 = fbcursor.fetchone()
+
+                                        if not get_accts_data1 and not get_accts1_data1:
+                                            pass
+                                        elif get_accts1_data1:
+                                            upd_bal1 = get_accts1_data1[0] + float(t)
+                                            upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                            finsysdb.commit()
+                                        else:
+                                            upd_bal1 = get_accts_data1[0] + float(t)
+                                            upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                            upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                            finsysdb.commit()
+                                        try:
+                                            if salesplace == comp_data[4]:
+                                                tax = tx/2
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tax
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                get_accts1_data5 = fbcursor.fetchone()
+
+                                                upd_bal5 = get_accts1_data5[0] + tax
+                                                upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                finsysdb.commit()
+                                            else:
+                                                get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                get_accts1_data4 = fbcursor.fetchone()
+
+                                                upd_bal4 = get_accts1_data4[0] + tx
+                                                upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                finsysdb.commit()
+                                        except:
+                                            pass
+
+                                except:
+                                    pass
+                                
+
 
 
                         save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:save_salesreceipt())
