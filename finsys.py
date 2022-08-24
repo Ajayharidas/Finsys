@@ -1,5 +1,6 @@
 
 from ast import Delete
+from asyncio.windows_events import NULL
 from sys import flags
 from turtle import width
 import matplotlib.pyplot as plt
@@ -5437,11 +5438,21 @@ def main_sign_in():
                                     bt1_entry3.delete(0,END)
                                     bt1_entry3.insert(0,get_bundle_data1[13])
                                     bt1_entry4.delete(0,END)
-                                    bt1_entry4.insert(0,get_bundle_data1[17])
                                     bt1_entry5.delete(0,END)
-                                    bt1_entry5.insert(0,get_bundle_data1[21])
                                     bt1_entry6.delete(0,END)
-                                    bt1_entry6.insert(0,get_bundle_data1[25])
+                                    if get_bundle_data1[17] == '' or get_bundle_data1[17] is None or get_bundle_data1[17] == NULL:
+                                        bt1_entry4.insert(0,0)
+                                    else:
+                                        bt1_entry4.insert(0,get_bundle_data1[17])
+                                    if get_bundle_data1[21] == '' or get_bundle_data1[21] is None or get_bundle_data1[21] == NULL:
+                                        bt1_entry5.insert(0,0)
+                                    else:
+                                        bt1_entry5.insert(0,get_bundle_data1[21])
+                                    if get_bundle_data1[25] == '' or get_bundle_data1[25] is None or get_bundle_data1[25] == NULL:
+                                        bt1_entry6.insert(0,0)
+                                    else:
+                                        bt1_entry6.insert(0,get_bundle_data1[25])
+                                    
                                     bt1_entry7.delete(0,END)
                                     bt1_entry8.delete(0,END)
                                     bt1_entry8.insert(0,get_bundle_data1[6])
@@ -5450,11 +5461,21 @@ def main_sign_in():
                                     bt1_entry10.delete(0,END)
                                     bt1_entry10.insert(0,get_bundle_data1[14])
                                     bt1_entry11.delete(0,END)
-                                    bt1_entry11.insert(0,get_bundle_data1[18])
                                     bt1_entry12.delete(0,END)
-                                    bt1_entry12.insert(0,get_bundle_data1[22])
                                     bt1_entry13.delete(0,END)
-                                    bt1_entry13.insert(0,get_bundle_data1[26])
+                                    if get_bundle_data1[18] == '' or get_bundle_data1[18] is None or get_bundle_data1[22] == NULL:
+                                        bt1_entry11.insert(0,0)
+                                    else:
+                                        bt1_entry11.insert(0,get_bundle_data1[18])
+                                    if get_bundle_data1[22] == '' or get_bundle_data1[22] is None or get_bundle_data1[22] == NULL:
+                                        bt1_entry12.insert(0,0)
+                                    else:
+                                        bt1_entry12.insert(0,get_bundle_data1[22])
+                                    if get_bundle_data1[26] == '' or get_bundle_data1[26] is None or get_bundle_data1[26] == NULL:
+                                        bt1_entry13.insert(0,0)
+                                    else:
+                                        bt1_entry13.insert(0,get_bundle_data1[26])
+
                                     bt1_entry14.delete(0,END)
                                     bt1_entry15.delete(0,END)
                                     bt1_entry15.insert(0,get_bundle_data1[7])
@@ -5463,11 +5484,21 @@ def main_sign_in():
                                     bt1_entry17.delete(0,END)
                                     bt1_entry17.insert(0,get_bundle_data1[15])
                                     bt1_entry18.delete(0,END)
-                                    bt1_entry18.insert(0,get_bundle_data1[19])
                                     bt1_entry19.delete(0,END)
-                                    bt1_entry19.insert(0,get_bundle_data1[23])
                                     bt1_entry20.delete(0,END)
-                                    bt1_entry20.insert(0,get_bundle_data1[27])
+                                    if get_bundle_data1[19] == '' or get_bundle_data1[19] is None or get_bundle_data1[19] == NULL:
+                                        bt1_entry18.insert(0,0)
+                                    else:
+                                        bt1_entry18.insert(0,get_bundle_data1[19])
+                                    if get_bundle_data1[23] == '' or get_bundle_data1[23] is None or get_bundle_data1[23] == NULL:
+                                        bt1_entry19.insert(0,0)
+                                    else:
+                                        bt1_entry19.insert(0,get_bundle_data1[23])
+                                    if get_bundle_data1[27] == '' or get_bundle_data1[27] is None or get_bundle_data1[27] == NULL:
+                                        bt1_entry20.insert(0,0)
+                                    else:
+                                        bt1_entry20.insert(0,get_bundle_data1[27])
+                                    
                                     bt1_entry21.delete(0,END)
                                     bt1_entry22.delete(0,END)
                                     bt1_entry22.insert(0,get_bundle_data1[8])
@@ -5476,47 +5507,95 @@ def main_sign_in():
                                     bt1_entry24.delete(0,END)
                                     bt1_entry24.insert(0,get_bundle_data1[16])
                                     bt1_entry25.delete(0,END)
-                                    bt1_entry25.insert(0,get_bundle_data1[20])
                                     bt1_entry26.delete(0,END)
-                                    bt1_entry26.insert(0,get_bundle_data1[24])
                                     bt1_entry27.delete(0,END)
-                                    bt1_entry27.insert(0,get_bundle_data1[28])
                                     bt1_entry28.delete(0,END)
+                                    if get_bundle_data1[20] == '' or get_bundle_data1[20] is None or get_bundle_data1[20] == NULL:
+                                        bt1_entry25.insert(0,0)
+                                    else:
+                                        bt1_entry25.insert(0,get_bundle_data1[20])
+                                    if get_bundle_data1[24] == '' or get_bundle_data1[24] is None or get_bundle_data1[24] == NULL:
+                                        bt1_entry26.insert(0,0)
+                                    else:
+                                        bt1_entry26.insert(0,get_bundle_data1[24])
+                                    if get_bundle_data1[28] == '' or get_bundle_data1[28] is None or get_bundle_data1[28] == NULL:
+                                        bt1_entry27.insert(0,0)
+                                    else:
+                                        bt1_entry27.insert(0,get_bundle_data1[28])
+                                    
                                     if comp_data[4] == cm_pofsupply.get():
-                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% GST({get_bundle_data1[29]}%)')
-                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% GST({get_bundle_data1[30]}%)')
-                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% GST({get_bundle_data1[31]}%)')
-                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% GST({get_bundle_data1[32]}%)')
+                                        if get_bundle_data1[29] == "" or get_bundle_data1[29] is None or get_bundle_data1[29] == NULL:
+                                            bt1_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry7.insert(0,f'{get_bundle_data1[29]}% GST({get_bundle_data1[29]}%)')
+                                        if get_bundle_data1[30] == "" or get_bundle_data1[30] is None or get_bundle_data1[30] == NULL:
+                                            bt1_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry14.insert(0,f'{get_bundle_data1[30]}% GST({get_bundle_data1[30]}%)')
+                                        if get_bundle_data1[31] == "" or get_bundle_data1[31] is None or get_bundle_data1[31] == NULL:
+                                            bt1_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry21.insert(0,f'{get_bundle_data1[31]}% GST({get_bundle_data1[31]}%)')
+                                        if get_bundle_data1[32] == "" or get_bundle_data1[32] is None or get_bundle_data1[32] == NULL:
+                                            bt1_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry28.insert(0,f'{get_bundle_data1[32]}% GST({get_bundle_data1[32]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
-                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% IGST({get_bundle_data1[29]}%)')
-                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% IGST({get_bundle_data1[30]}%)')
-                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% IGST({get_bundle_data1[31]}%)')
-                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% IGST({get_bundle_data1[32]}%)')
+                                        if get_bundle_data1[29] == "" or get_bundle_data1[29] is None or get_bundle_data1[29] == NULL:
+                                            bt1_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry7.insert(0,f'{get_bundle_data1[29]}% IGST({get_bundle_data1[29]}%)')
+                                        if get_bundle_data1[30] == "" or get_bundle_data1[30] is None or get_bundle_data1[30] == NULL:
+                                            bt1_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry14.insert(0,f'{get_bundle_data1[30]}% IGST({get_bundle_data1[30]}%)')
+                                        if get_bundle_data1[31] == "" or get_bundle_data1[31] is None or get_bundle_data1[31] == NULL:
+                                            bt1_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry21.insert(0,f'{get_bundle_data1[31]}% IGST({get_bundle_data1[31]}%)')
+                                        if get_bundle_data1[32] == "" or get_bundle_data1[32] is None or get_bundle_data1[32] == NULL:
+                                            bt1_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry28.insert(0,f'{get_bundle_data1[32]}% IGST({get_bundle_data1[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data1[17]) * int(cmt_entry4.get())
-                                qty2 = int(get_bundle_data1[18]) * int(cmt_entry4.get())
-                                qty3 = int(get_bundle_data1[19]) * int(cmt_entry4.get())
-                                qty4 = int(get_bundle_data1[20]) * int(cmt_entry4.get())
-                                if cmt_entry4.get() == "0":
+                                try:
+                                    if get_bundle_data1[17] == '' or get_bundle_data1[17] is None or get_bundle_data1[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data1[17]) * int(cmt_entry4.get())
+                                    if get_bundle_data1[18] == '' or get_bundle_data1[18] is None or get_bundle_data1[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data1[18]) * int(cmt_entry4.get())
+                                    if get_bundle_data1[19] == '' or get_bundle_data1[19] is None or get_bundle_data1[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data1[19]) * int(cmt_entry4.get())
+                                    if get_bundle_data1[20] == '' or get_bundle_data1[20] is None or get_bundle_data1[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data1[20]) * int(cmt_entry4.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt1_entry4.delete(0,END)
-                                    bt1_entry4.insert(0,qty1)
-                                    bt1_entry11.delete(0,END)
-                                    bt1_entry11.insert(0,qty2)
-                                    bt1_entry18.delete(0,END)
-                                    bt1_entry18.insert(0,qty3)
-                                    bt1_entry25.delete(0,END)
-                                    bt1_entry25.insert(0,qty4)
+                            
+                                bt1_entry4.delete(0,END)
+                                bt1_entry4.insert(0,qty1)
+                                bt1_entry11.delete(0,END)
+                                bt1_entry11.insert(0,qty2)
+                                bt1_entry18.delete(0,END)
+                                bt1_entry18.insert(0,qty3)
+                                bt1_entry25.delete(0,END)
+                                bt1_entry25.insert(0,qty4)
 
-                                tot1 = int(bt1_entry4.get()) * int(float(bt1_entry6.get()))
-                                tot2 = int(bt1_entry11.get()) * int(float(bt1_entry13.get()))
-                                tot3 = int(bt1_entry18.get()) * int(float(bt1_entry20.get()))
-                                tot4 = int(bt1_entry25.get()) * int(float(bt1_entry27.get()))
+                                tot1 = int(bt1_entry4.get()) * int(float(bt1_entry5.get()))
+                                tot2 = int(bt1_entry11.get()) * int(float(bt1_entry12.get()))
+                                tot3 = int(bt1_entry18.get()) * int(float(bt1_entry19.get()))
+                                tot4 = int(bt1_entry25.get()) * int(float(bt1_entry26.get()))
 
                                 bt1_entry6.delete(0,END)
                                 bt1_entry6.insert(0,tot1)
@@ -5646,11 +5725,21 @@ def main_sign_in():
                                     bt2_entry3.delete(0,END)
                                     bt2_entry3.insert(0,get_bundle_data2[13])
                                     bt2_entry4.delete(0,END)
-                                    bt2_entry4.insert(0,get_bundle_data2[17])
                                     bt2_entry5.delete(0,END)
-                                    bt2_entry5.insert(0,get_bundle_data2[21])
                                     bt2_entry6.delete(0,END)
-                                    bt2_entry6.insert(0,get_bundle_data2[25])
+                                    if get_bundle_data2[17] == '' or get_bundle_data2[17] is None or get_bundle_data2[17] == NULL:
+                                        bt2_entry4.insert(0,0)
+                                    else:
+                                        bt2_entry4.insert(0,get_bundle_data2[17])
+                                    if get_bundle_data2[21] == '' or get_bundle_data2[21] is None or get_bundle_data2[21] == NULL:
+                                        bt2_entry5.insert(0,0)
+                                    else:
+                                        bt2_entry5.insert(0,get_bundle_data2[21])
+                                    if get_bundle_data2[25] == '' or get_bundle_data2[25] is None or get_bundle_data2[25] == NULL:
+                                        bt2_entry6.insert(0,0)
+                                    else:
+                                        bt2_entry6.insert(0,get_bundle_data2[25])
+
                                     bt2_entry7.delete(0,END)
                                     bt2_entry8.delete(0,END)
                                     bt2_entry8.insert(0,get_bundle_data2[6])
@@ -5659,11 +5748,21 @@ def main_sign_in():
                                     bt2_entry10.delete(0,END)
                                     bt2_entry10.insert(0,get_bundle_data2[14])
                                     bt2_entry11.delete(0,END)
-                                    bt2_entry11.insert(0,get_bundle_data2[18])
                                     bt2_entry12.delete(0,END)
-                                    bt2_entry12.insert(0,get_bundle_data2[22])
                                     bt2_entry13.delete(0,END)
-                                    bt2_entry13.insert(0,get_bundle_data2[26])
+                                    if get_bundle_data2[18] == '' or get_bundle_data2[18] is None or get_bundle_data2[22] == NULL:
+                                        bt2_entry11.insert(0,0)
+                                    else:
+                                        bt2_entry11.insert(0,get_bundle_data2[18])
+                                    if get_bundle_data2[22] == '' or get_bundle_data2[22] is None or get_bundle_data2[22] == NULL:
+                                        bt2_entry12.insert(0,0)
+                                    else:
+                                        bt2_entry12.insert(0,get_bundle_data2[22])
+                                    if get_bundle_data2[26] == '' or get_bundle_data2[26] is None or get_bundle_data2[26] == NULL:
+                                        bt2_entry13.insert(0,0)
+                                    else:
+                                        bt2_entry13.insert(0,get_bundle_data2[26])
+
                                     bt2_entry14.delete(0,END)
                                     bt2_entry15.delete(0,END)
                                     bt2_entry15.insert(0,get_bundle_data2[7])
@@ -5672,11 +5771,20 @@ def main_sign_in():
                                     bt2_entry17.delete(0,END)
                                     bt2_entry17.insert(0,get_bundle_data2[15])
                                     bt2_entry18.delete(0,END)
-                                    bt2_entry18.insert(0,get_bundle_data2[19])
                                     bt2_entry19.delete(0,END)
-                                    bt2_entry19.insert(0,get_bundle_data2[23])
                                     bt2_entry20.delete(0,END)
-                                    bt2_entry20.insert(0,get_bundle_data2[27])
+                                    if get_bundle_data2[19] == '' or get_bundle_data2[19] is None or get_bundle_data2[19] == NULL:
+                                        bt2_entry18.insert(0,0)
+                                    else:
+                                        bt2_entry18.insert(0,get_bundle_data2[19])
+                                    if get_bundle_data2[23] == '' or get_bundle_data2[23] is None or get_bundle_data2[23] == NULL:
+                                        bt2_entry19.insert(0,0)
+                                    else:
+                                        bt2_entry19.insert(0,get_bundle_data2[23])
+                                    if get_bundle_data2[27] == '' or get_bundle_data2[27] is None or get_bundle_data2[27] == NULL:
+                                        bt2_entry20.insert(0,0)
+                                    else:
+                                        bt2_entry20.insert(0,get_bundle_data2[27])
                                     bt2_entry21.delete(0,END)
                                     bt2_entry22.delete(0,END)
                                     bt2_entry22.insert(0,get_bundle_data2[8])
@@ -5685,47 +5793,97 @@ def main_sign_in():
                                     bt2_entry24.delete(0,END)
                                     bt2_entry24.insert(0,get_bundle_data2[16])
                                     bt2_entry25.delete(0,END)
-                                    bt2_entry25.insert(0,get_bundle_data2[20])
                                     bt2_entry26.delete(0,END)
-                                    bt2_entry26.insert(0,get_bundle_data2[24])
                                     bt2_entry27.delete(0,END)
-                                    bt2_entry27.insert(0,get_bundle_data2[28])
                                     bt2_entry28.delete(0,END)
+                                    if get_bundle_data2[20] == '' or get_bundle_data2[20] is None or get_bundle_data2[20] == NULL:
+                                        bt2_entry25.insert(0,0)
+                                    else:
+                                        bt2_entry25.insert(0,get_bundle_data2[20])
+                                    if get_bundle_data2[24] == '' or get_bundle_data2[24] is None or get_bundle_data2[24] == NULL:
+                                        bt2_entry26.insert(0,0)
+                                    else:
+                                        bt2_entry26.insert(0,get_bundle_data2[24])
+                                    if get_bundle_data2[28] == '' or get_bundle_data2[28] is None or get_bundle_data2[28] == NULL:
+                                        bt2_entry27.insert(0,0)
+                                    else:
+                                        bt2_entry27.insert(0,get_bundle_data2[28])
+
                                     if comp_data[4] == cm_pofsupply.get():
-                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% GST({get_bundle_data2[29]}%)')
-                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% GST({get_bundle_data2[30]}%)')
-                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% GST({get_bundle_data2[31]}%)')
-                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% GST({get_bundle_data2[32]}%)')
+                                        if get_bundle_data2[29] == "" or get_bundle_data2[29] is None or get_bundle_data2[29] == NULL:
+                                            bt2_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry7.insert(0,f'{get_bundle_data2[29]}% GST({get_bundle_data2[29]}%)')
+                                        if get_bundle_data2[30] == "" or get_bundle_data2[30] is None or get_bundle_data2[30] == NULL:
+                                            bt2_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry14.insert(0,f'{get_bundle_data2[30]}% GST({get_bundle_data2[30]}%)')
+                                        if get_bundle_data2[31] == "" or get_bundle_data2[31] is None or get_bundle_data2[31] == NULL:
+                                            bt2_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry21.insert(0,f'{get_bundle_data2[31]}% GST({get_bundle_data2[31]}%)')
+                                        if get_bundle_data2[32] == "" or get_bundle_data2[32] is None or get_bundle_data2[32] == NULL:
+                                            bt2_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry28.insert(0,f'{get_bundle_data2[32]}% GST({get_bundle_data2[32]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
-                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% IGST({get_bundle_data2[29]}%)')
-                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% IGST({get_bundle_data2[30]}%)')
-                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% IGST({get_bundle_data2[31]}%)')
-                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% IGST({get_bundle_data2[32]}%)')
+                                        if get_bundle_data2[29] == "" or get_bundle_data2[29] is None or get_bundle_data2[29] == NULL:
+                                            bt2_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry7.insert(0,f'{get_bundle_data2[29]}% IGST({get_bundle_data2[29]}%)')
+                                        if get_bundle_data2[30] == "" or get_bundle_data2[30] is None or get_bundle_data2[30] == NULL:
+                                            bt2_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry14.insert(0,f'{get_bundle_data2[30]}% IGST({get_bundle_data2[30]}%)')
+                                        if get_bundle_data2[31] == "" or get_bundle_data2[31] is None or get_bundle_data2[31] == NULL:
+                                            bt2_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry21.insert(0,f'{get_bundle_data2[31]}% IGST({get_bundle_data2[31]}%)')
+                                        if get_bundle_data2[32] == "" or get_bundle_data2[32] is None or get_bundle_data2[32] == NULL:
+                                            bt2_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry28.insert(0,f'{get_bundle_data2[32]}% IGST({get_bundle_data2[32]}%)')
                                     else:
                                         pass
+
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data2[17]) * int(cmt_entry14.get())
-                                qty2 = int(get_bundle_data2[18]) * int(cmt_entry14.get())
-                                qty3 = int(get_bundle_data2[19]) * int(cmt_entry14.get())
-                                qty4 = int(get_bundle_data2[20]) * int(cmt_entry14.get())
-                                if cmt_entry14.get() == "0":
+                                try:
+                                    if get_bundle_data2[17] == '' or get_bundle_data2[17] is None or get_bundle_data2[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data2[17]) * int(cmt_entry14.get())
+                                    if get_bundle_data2[18] == '' or get_bundle_data2[18] is None or get_bundle_data2[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data2[18]) * int(cmt_entry14.get())
+                                    if get_bundle_data2[19] == '' or get_bundle_data2[19] is None or get_bundle_data2[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data2[19]) * int(cmt_entry14.get())
+                                    if get_bundle_data2[20] == '' or get_bundle_data2[20] is None or get_bundle_data2[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data2[20]) * int(cmt_entry14.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt2_entry4.delete(0,END)
-                                    bt2_entry4.insert(0,qty1)
-                                    bt2_entry11.delete(0,END)
-                                    bt2_entry11.insert(0,qty2)
-                                    bt2_entry18.delete(0,END)
-                                    bt2_entry18.insert(0,qty3)
-                                    bt2_entry25.delete(0,END)
-                                    bt2_entry25.insert(0,qty4)
 
-                                tot1 = int(bt2_entry4.get()) * int(float(bt2_entry6.get()))
-                                tot2 = int(bt2_entry11.get()) * int(float(bt2_entry13.get()))
-                                tot3 = int(bt2_entry18.get()) * int(float(bt2_entry20.get()))
-                                tot4 = int(bt2_entry25.get()) * int(float(bt2_entry27.get()))
+                                
+                                bt2_entry4.delete(0,END)
+                                bt2_entry4.insert(0,qty1)
+                                bt2_entry11.delete(0,END)
+                                bt2_entry11.insert(0,qty2)
+                                bt2_entry18.delete(0,END)
+                                bt2_entry18.insert(0,qty3)
+                                bt2_entry25.delete(0,END)
+                                bt2_entry25.insert(0,qty4)
+
+                                tot1 = int(bt2_entry4.get()) * int(float(bt2_entry5.get()))
+                                tot2 = int(bt2_entry11.get()) * int(float(bt2_entry12.get()))
+                                tot3 = int(bt2_entry18.get()) * int(float(bt2_entry19.get()))
+                                tot4 = int(bt2_entry25.get()) * int(float(bt2_entry26.get()))
 
                                 bt2_entry6.delete(0,END)
                                 bt2_entry6.insert(0,tot1)
@@ -5855,11 +6013,20 @@ def main_sign_in():
                                     bt3_entry3.delete(0,END)
                                     bt3_entry3.insert(0,get_bundle_data3[13])
                                     bt3_entry4.delete(0,END)
-                                    bt3_entry4.insert(0,get_bundle_data3[17])
                                     bt3_entry5.delete(0,END)
-                                    bt3_entry5.insert(0,get_bundle_data3[21])
                                     bt3_entry6.delete(0,END)
-                                    bt3_entry6.insert(0,get_bundle_data3[25])
+                                    if get_bundle_data3[17] == '' or get_bundle_data3[17] is None or get_bundle_data3[17] == NULL:
+                                        bt3_entry4.insert(0,0)
+                                    else:
+                                        bt3_entry4.insert(0,get_bundle_data3[17])
+                                    if get_bundle_data3[21] == '' or get_bundle_data3[21] is None or get_bundle_data3[21] == NULL:
+                                        bt3_entry5.insert(0,0)
+                                    else:
+                                        bt3_entry5.insert(0,get_bundle_data3[21])
+                                    if get_bundle_data3[25] == '' or get_bundle_data3[25] is None or get_bundle_data3[25] == NULL:
+                                        bt3_entry6.insert(0,0)
+                                    else:
+                                        bt3_entry6.insert(0,get_bundle_data3[25])
                                     bt3_entry7.delete(0,END)
                                     bt3_entry8.delete(0,END)
                                     bt3_entry8.insert(0,get_bundle_data3[6])
@@ -5868,11 +6035,21 @@ def main_sign_in():
                                     bt3_entry10.delete(0,END)
                                     bt3_entry10.insert(0,get_bundle_data3[14])
                                     bt3_entry11.delete(0,END)
-                                    bt3_entry11.insert(0,get_bundle_data3[18])
                                     bt3_entry12.delete(0,END)
-                                    bt3_entry12.insert(0,get_bundle_data3[22])
                                     bt3_entry13.delete(0,END)
-                                    bt3_entry13.insert(0,get_bundle_data3[26])
+                                    if get_bundle_data3[18] == '' or get_bundle_data3[18] is None or get_bundle_data3[22] == NULL:
+                                        bt3_entry11.insert(0,0)
+                                    else:
+                                        bt3_entry11.insert(0,get_bundle_data3[18])
+                                    if get_bundle_data3[22] == '' or get_bundle_data3[22] is None or get_bundle_data3[22] == NULL:
+                                        bt3_entry12.insert(0,0)
+                                    else:
+                                        bt3_entry12.insert(0,get_bundle_data3[22])
+                                    if get_bundle_data3[26] == '' or get_bundle_data3[26] is None or get_bundle_data3[26] == NULL:
+                                        bt3_entry13.insert(0,0)
+                                    else:
+                                        bt3_entry13.insert(0,get_bundle_data3[26])
+
                                     bt3_entry14.delete(0,END)
                                     bt3_entry15.delete(0,END)
                                     bt3_entry15.insert(0,get_bundle_data3[7])
@@ -5881,11 +6058,21 @@ def main_sign_in():
                                     bt3_entry17.delete(0,END)
                                     bt3_entry17.insert(0,get_bundle_data3[15])
                                     bt3_entry18.delete(0,END)
-                                    bt3_entry18.insert(0,get_bundle_data3[19])
                                     bt3_entry19.delete(0,END)
-                                    bt3_entry19.insert(0,get_bundle_data3[23])
                                     bt3_entry20.delete(0,END)
-                                    bt3_entry20.insert(0,get_bundle_data3[27])
+                                    if get_bundle_data3[19] == '' or get_bundle_data3[19] is None or get_bundle_data3[19] == NULL:
+                                        bt3_entry18.insert(0,0)
+                                    else:
+                                        bt3_entry18.insert(0,get_bundle_data3[19])
+                                    if get_bundle_data3[23] == '' or get_bundle_data3[23] is None or get_bundle_data3[23] == NULL:
+                                        bt3_entry19.insert(0,0)
+                                    else:
+                                        bt3_entry19.insert(0,get_bundle_data3[23])
+                                    if get_bundle_data3[27] == '' or get_bundle_data3[27] is None or get_bundle_data3[27] == NULL:
+                                        bt3_entry20.insert(0,0)
+                                    else:
+                                        bt3_entry20.insert(0,get_bundle_data3[27])
+
                                     bt3_entry21.delete(0,END)
                                     bt3_entry22.delete(0,END)
                                     bt3_entry22.insert(0,get_bundle_data3[8])
@@ -5894,47 +6081,96 @@ def main_sign_in():
                                     bt3_entry24.delete(0,END)
                                     bt3_entry24.insert(0,get_bundle_data3[16])
                                     bt3_entry25.delete(0,END)
-                                    bt3_entry25.insert(0,get_bundle_data3[20])
                                     bt3_entry26.delete(0,END)
-                                    bt3_entry26.insert(0,get_bundle_data3[24])
                                     bt3_entry27.delete(0,END)
-                                    bt3_entry27.insert(0,get_bundle_data3[28])
                                     bt3_entry28.delete(0,END)
+                                    if get_bundle_data3[20] == '' or get_bundle_data3[20] is None or get_bundle_data3[20] == NULL:
+                                        bt3_entry25.insert(0,0)
+                                    else:
+                                        bt3_entry25.insert(0,get_bundle_data3[20])
+                                    if get_bundle_data3[24] == '' or get_bundle_data3[24] is None or get_bundle_data3[24] == NULL:
+                                        bt3_entry26.insert(0,0)
+                                    else:
+                                        bt3_entry26.insert(0,get_bundle_data3[24])
+                                    if get_bundle_data3[28] == '' or get_bundle_data3[28] is None or get_bundle_data3[28] == NULL:
+                                        bt3_entry27.insert(0,0)
+                                    else:
+                                        bt3_entry27.insert(0,get_bundle_data3[28])
+
+
                                     if comp_data[4] == cm_pofsupply.get():
-                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% GST({get_bundle_data3[29]}%)')
-                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% GST({get_bundle_data3[30]}%)')
-                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% GST({get_bundle_data3[31]}%)')
-                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% GST({get_bundle_data3[32]}%)')
+                                        if get_bundle_data3[29] == "" or get_bundle_data3[29] is None or get_bundle_data3[29] == NULL:
+                                            bt3_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry7.insert(0,f'{get_bundle_data3[29]}% GST({get_bundle_data3[29]}%)')
+                                        if get_bundle_data3[30] == "" or get_bundle_data3[30] is None or get_bundle_data3[30] == NULL:
+                                            bt3_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry14.insert(0,f'{get_bundle_data3[30]}% GST({get_bundle_data3[30]}%)')
+                                        if get_bundle_data3[31] == "" or get_bundle_data3[31] is None or get_bundle_data3[31] == NULL:
+                                            bt3_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry21.insert(0,f'{get_bundle_data3[31]}% GST({get_bundle_data3[31]}%)')
+                                        if get_bundle_data3[32] == "" or get_bundle_data3[32] is None or get_bundle_data3[32] == NULL:
+                                            bt3_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry28.insert(0,f'{get_bundle_data3[32]}% GST({get_bundle_data3[32]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
-                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% IGST({get_bundle_data3[29]}%)')
-                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% IGST({get_bundle_data3[30]}%)')
-                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% IGST({get_bundle_data3[31]}%)')
-                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% IGST({get_bundle_data3[32]}%)')
+                                        if get_bundle_data3[29] == "" or get_bundle_data3[29] is None or get_bundle_data3[29] == NULL:
+                                            bt3_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry7.insert(0,f'{get_bundle_data3[29]}% IGST({get_bundle_data3[29]}%)')
+                                        if get_bundle_data3[30] == "" or get_bundle_data3[30] is None or get_bundle_data3[30] == NULL:
+                                            bt3_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry14.insert(0,f'{get_bundle_data3[30]}% IGST({get_bundle_data3[30]}%)')
+                                        if get_bundle_data3[31] == "" or get_bundle_data3[31] is None or get_bundle_data3[31] == NULL:
+                                            bt3_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry21.insert(0,f'{get_bundle_data3[31]}% IGST({get_bundle_data3[31]}%)')
+                                        if get_bundle_data3[32] == "" or get_bundle_data3[32] is None or get_bundle_data3[32] == NULL:
+                                            bt3_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry28.insert(0,f'{get_bundle_data3[32]}% IGST({get_bundle_data3[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data3[17]) * int(cmt_entry21.get())
-                                qty2 = int(get_bundle_data3[18]) * int(cmt_entry21.get())
-                                qty3 = int(get_bundle_data3[19]) * int(cmt_entry21.get())
-                                qty4 = int(get_bundle_data3[20]) * int(cmt_entry21.get())
-                                if cmt_entry21.get() == "0":
+                                try:
+                                    if get_bundle_data3[17] == '' or get_bundle_data3[17] is None or get_bundle_data3[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data3[17]) * int(cmt_entry21.get())
+                                    if get_bundle_data3[18] == '' or get_bundle_data3[18] is None or get_bundle_data3[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data3[18]) * int(cmt_entry21.get())
+                                    if get_bundle_data3[19] == '' or get_bundle_data3[19] is None or get_bundle_data3[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data3[19]) * int(cmt_entry21.get())
+                                    if get_bundle_data3[20] == '' or get_bundle_data3[20] is None or get_bundle_data3[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data3[20]) * int(cmt_entry21.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt3_entry4.delete(0,END)
-                                    bt3_entry4.insert(0,qty1)
-                                    bt3_entry11.delete(0,END)
-                                    bt3_entry11.insert(0,qty2)
-                                    bt3_entry18.delete(0,END)
-                                    bt3_entry18.insert(0,qty3)
-                                    bt3_entry25.delete(0,END)
-                                    bt3_entry25.insert(0,qty4)
+                                
+                                bt3_entry4.delete(0,END)
+                                bt3_entry4.insert(0,qty1)
+                                bt3_entry11.delete(0,END)
+                                bt3_entry11.insert(0,qty2)
+                                bt3_entry18.delete(0,END)
+                                bt3_entry18.insert(0,qty3)
+                                bt3_entry25.delete(0,END)
+                                bt3_entry25.insert(0,qty4)
 
-                                tot1 = int(bt3_entry4.get()) * int(float(bt3_entry6.get()))
-                                tot2 = int(bt3_entry11.get()) * int(float(bt3_entry13.get()))
-                                tot3 = int(bt3_entry18.get()) * int(float(bt3_entry20.get()))
-                                tot4 = int(bt3_entry25.get()) * int(float(bt3_entry27.get()))
+                                tot1 = int(bt3_entry4.get()) * int(float(bt3_entry5.get()))
+                                tot2 = int(bt3_entry11.get()) * int(float(bt3_entry12.get()))
+                                tot3 = int(bt3_entry18.get()) * int(float(bt3_entry19.get()))
+                                tot4 = int(bt3_entry25.get()) * int(float(bt3_entry26.get()))
 
                                 bt3_entry6.delete(0,END)
                                 bt3_entry6.insert(0,tot1)
@@ -6064,11 +6300,20 @@ def main_sign_in():
                                     bt4_entry3.delete(0,END)
                                     bt4_entry3.insert(0,get_bundle_data4[13])
                                     bt4_entry4.delete(0,END)
-                                    bt4_entry4.insert(0,get_bundle_data4[17])
                                     bt4_entry5.delete(0,END)
-                                    bt4_entry5.insert(0,get_bundle_data4[21])
                                     bt4_entry6.delete(0,END)
-                                    bt4_entry6.insert(0,get_bundle_data4[25])
+                                    if get_bundle_data4[17] == '' or get_bundle_data4[17] is None or get_bundle_data4[17] == NULL:
+                                        bt4_entry4.insert(0,0)
+                                    else:
+                                        bt4_entry4.insert(0,get_bundle_data4[17])
+                                    if get_bundle_data4[21] == '' or get_bundle_data4[21] is None or get_bundle_data4[21] == NULL:
+                                        bt4_entry5.insert(0,0)
+                                    else:
+                                        bt4_entry5.insert(0,get_bundle_data4[21])
+                                    if get_bundle_data4[25] == '' or get_bundle_data4[25] is None or get_bundle_data4[25] == NULL:
+                                        bt4_entry6.insert(0,0)
+                                    else:
+                                        bt4_entry6.insert(0,get_bundle_data4[25])
                                     bt4_entry7.delete(0,END)
                                     bt4_entry8.delete(0,END)
                                     bt4_entry8.insert(0,get_bundle_data4[6])
@@ -6077,11 +6322,20 @@ def main_sign_in():
                                     bt4_entry10.delete(0,END)
                                     bt4_entry10.insert(0,get_bundle_data4[14])
                                     bt4_entry11.delete(0,END)
-                                    bt4_entry11.insert(0,get_bundle_data4[18])
                                     bt4_entry12.delete(0,END)
-                                    bt4_entry12.insert(0,get_bundle_data4[22])
                                     bt4_entry13.delete(0,END)
-                                    bt4_entry13.insert(0,get_bundle_data4[26])
+                                    if get_bundle_data4[18] == '' or get_bundle_data4[18] is None or get_bundle_data4[22] == NULL:
+                                        bt4_entry11.insert(0,0)
+                                    else:
+                                        bt4_entry11.insert(0,get_bundle_data4[18])
+                                    if get_bundle_data4[22] == '' or get_bundle_data4[22] is None or get_bundle_data4[22] == NULL:
+                                        bt4_entry12.insert(0,0)
+                                    else:
+                                        bt4_entry12.insert(0,get_bundle_data4[22])
+                                    if get_bundle_data4[26] == '' or get_bundle_data4[26] is None or get_bundle_data4[26] == NULL:
+                                        bt4_entry13.insert(0,0)
+                                    else:
+                                        bt4_entry13.insert(0,get_bundle_data4[26])
                                     bt4_entry14.delete(0,END)
                                     bt4_entry15.delete(0,END)
                                     bt4_entry15.insert(0,get_bundle_data4[7])
@@ -6090,11 +6344,20 @@ def main_sign_in():
                                     bt4_entry17.delete(0,END)
                                     bt4_entry17.insert(0,get_bundle_data4[15])
                                     bt4_entry18.delete(0,END)
-                                    bt4_entry18.insert(0,get_bundle_data4[19])
                                     bt4_entry19.delete(0,END)
-                                    bt4_entry19.insert(0,get_bundle_data4[23])
                                     bt4_entry20.delete(0,END)
-                                    bt4_entry20.insert(0,get_bundle_data4[27])
+                                    if get_bundle_data4[19] == '' or get_bundle_data4[19] is None or get_bundle_data4[19] == NULL:
+                                        bt4_entry18.insert(0,0)
+                                    else:
+                                        bt4_entry18.insert(0,get_bundle_data4[19])
+                                    if get_bundle_data4[23] == '' or get_bundle_data4[23] is None or get_bundle_data4[23] == NULL:
+                                        bt4_entry19.insert(0,0)
+                                    else:
+                                        bt4_entry19.insert(0,get_bundle_data4[23])
+                                    if get_bundle_data4[27] == '' or get_bundle_data4[27] is None or get_bundle_data4[27] == NULL:
+                                        bt4_entry20.insert(0,0)
+                                    else:
+                                        bt4_entry20.insert(0,get_bundle_data4[27])
                                     bt4_entry21.delete(0,END)
                                     bt4_entry22.delete(0,END)
                                     bt4_entry22.insert(0,get_bundle_data4[8])
@@ -6103,47 +6366,95 @@ def main_sign_in():
                                     bt4_entry24.delete(0,END)
                                     bt4_entry24.insert(0,get_bundle_data4[16])
                                     bt4_entry25.delete(0,END)
-                                    bt4_entry25.insert(0,get_bundle_data4[20])
                                     bt4_entry26.delete(0,END)
-                                    bt4_entry26.insert(0,get_bundle_data4[24])
                                     bt4_entry27.delete(0,END)
-                                    bt4_entry27.insert(0,get_bundle_data4[28])
                                     bt4_entry28.delete(0,END)
+                                    if get_bundle_data4[20] == '' or get_bundle_data4[20] is None or get_bundle_data4[20] == NULL:
+                                        bt4_entry25.insert(0,0)
+                                    else:
+                                        bt4_entry25.insert(0,get_bundle_data4[20])
+                                    if get_bundle_data4[24] == '' or get_bundle_data4[24] is None or get_bundle_data4[24] == NULL:
+                                        bt4_entry26.insert(0,0)
+                                    else:
+                                        bt4_entry26.insert(0,get_bundle_data4[24])
+                                    if get_bundle_data4[28] == '' or get_bundle_data4[28] is None or get_bundle_data4[28] == NULL:
+                                        bt4_entry27.insert(0,0)
+                                    else:
+                                        bt4_entry27.insert(0,get_bundle_data4[28])
+
                                     if comp_data[4] == cm_pofsupply.get():
-                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% GST({get_bundle_data4[29]}%)')
-                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% GST({get_bundle_data4[30]}%)')
-                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% GST({get_bundle_data4[31]}%)')
-                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% GST({get_bundle_data4[32]}%)')
+                                        if get_bundle_data4[29] == "" or get_bundle_data4[29] is None or get_bundle_data4[29] == NULL:
+                                            bt4_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry7.insert(0,f'{get_bundle_data4[29]}% GST({get_bundle_data4[29]}%)')
+                                        if get_bundle_data4[30] == "" or get_bundle_data4[30] is None or get_bundle_data4[30] == NULL:
+                                            bt4_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry14.insert(0,f'{get_bundle_data4[30]}% GST({get_bundle_data4[30]}%)')
+                                        if get_bundle_data4[31] == "" or get_bundle_data4[31] is None or get_bundle_data4[31] == NULL:
+                                            bt4_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry21.insert(0,f'{get_bundle_data4[31]}% GST({get_bundle_data4[31]}%)')
+                                        if get_bundle_data4[32] == "" or get_bundle_data4[32] is None or get_bundle_data4[32] == NULL:
+                                            bt4_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry28.insert(0,f'{get_bundle_data4[32]}% GST({get_bundle_data4[32]}%)')
                                     elif comp_data[4] != cm_pofsupply.get():
-                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% IGST({get_bundle_data4[29]}%)')
-                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% IGST({get_bundle_data4[30]}%)')
-                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% IGST({get_bundle_data4[31]}%)')
-                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% IGST({get_bundle_data4[32]}%)')
+                                        if get_bundle_data4[29] == "" or get_bundle_data4[29] is None or get_bundle_data4[29] == NULL:
+                                            bt4_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry7.insert(0,f'{get_bundle_data4[29]}% IGST({get_bundle_data4[29]}%)')
+                                        if get_bundle_data4[30] == "" or get_bundle_data4[30] is None or get_bundle_data4[30] == NULL:
+                                            bt4_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry14.insert(0,f'{get_bundle_data4[30]}% IGST({get_bundle_data4[30]}%)')
+                                        if get_bundle_data4[31] == "" or get_bundle_data4[31] is None or get_bundle_data4[31] == NULL:
+                                            bt4_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry21.insert(0,f'{get_bundle_data4[31]}% IGST({get_bundle_data4[31]}%)')
+                                        if get_bundle_data4[32] == "" or get_bundle_data4[32] is None or get_bundle_data4[32] == NULL:
+                                            bt4_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry28.insert(0,f'{get_bundle_data4[32]}% IGST({get_bundle_data4[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data4[17]) * int(cmt_entry28.get())
-                                qty2 = int(get_bundle_data4[18]) * int(cmt_entry28.get())
-                                qty3 = int(get_bundle_data4[19]) * int(cmt_entry28.get())
-                                qty4 = int(get_bundle_data4[20]) * int(cmt_entry28.get())
-                                if cmt_entry28.get() == "0":
+                                try:
+                                    if get_bundle_data4[17] == '' or get_bundle_data4[17] is None or get_bundle_data4[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data4[17]) * int(cmt_entry28.get())
+                                    if get_bundle_data4[18] == '' or get_bundle_data4[18] is None or get_bundle_data4[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data4[18]) * int(cmt_entry28.get())
+                                    if get_bundle_data4[19] == '' or get_bundle_data4[19] is None or get_bundle_data4[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data4[19]) * int(cmt_entry28.get())
+                                    if get_bundle_data4[20] == '' or get_bundle_data4[20] is None or get_bundle_data4[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data4[20]) * int(cmt_entry28.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt4_entry4.delete(0,END)
-                                    bt4_entry4.insert(0,qty1)
-                                    bt4_entry11.delete(0,END)
-                                    bt4_entry11.insert(0,qty2)
-                                    bt4_entry18.delete(0,END)
-                                    bt4_entry18.insert(0,qty3)
-                                    bt4_entry25.delete(0,END)
-                                    bt4_entry25.insert(0,qty4)
 
-                                tot1 = int(bt4_entry4.get()) * int(float(bt4_entry6.get()))
-                                tot2 = int(bt4_entry11.get()) * int(float(bt4_entry13.get()))
-                                tot3 = int(bt4_entry18.get()) * int(float(bt4_entry20.get()))
-                                tot4 = int(bt4_entry25.get()) * int(float(bt4_entry27.get()))
+                                bt4_entry4.delete(0,END)
+                                bt4_entry4.insert(0,qty1)
+                                bt4_entry11.delete(0,END)
+                                bt4_entry11.insert(0,qty2)
+                                bt4_entry18.delete(0,END)
+                                bt4_entry18.insert(0,qty3)
+                                bt4_entry25.delete(0,END)
+                                bt4_entry25.insert(0,qty4)
+
+                                tot1 = int(bt4_entry4.get()) * int(float(bt4_entry5.get()))
+                                tot2 = int(bt4_entry11.get()) * int(float(bt4_entry12.get()))
+                                tot3 = int(bt4_entry18.get()) * int(float(bt4_entry19.get()))
+                                tot4 = int(bt4_entry25.get()) * int(float(bt4_entry26.get()))
 
                                 bt4_entry6.delete(0,END)
                                 bt4_entry6.insert(0,tot1)
@@ -6384,11 +6695,11 @@ def main_sign_in():
                                             view_bundleitems(b=1)
                                     elif s == 2:
                                         if get_pro_data is not None:
-                                            tot = int(get_pro_data[12]) * int(cmt_entry14.get())
+                                            tot = int(get_pro_data[12]) * int(qty)
                                             cmt_entry16.delete(0,END)
                                             cmt_entry16.insert(0,tot)
                                         elif get_pro_data1 is not None:
-                                            tot = int(get_pro_data1[8]) * int(cmt_entry14.get())
+                                            tot = int(get_pro_data1[8]) * int(qty)
                                             cmt_entry16.delete(0,END)
                                             cmt_entry16.insert(0,tot)
                                         elif get_pro_data2 is not None:
@@ -6397,11 +6708,11 @@ def main_sign_in():
                                             view_bundleitems(b=2)
                                     elif s == 3:
                                         if get_pro_data is not None:
-                                            tot = int(get_pro_data[12]) * int(cmt_entry21.get())
+                                            tot = int(get_pro_data[12]) * int(qty)
                                             cmt_entry23.delete(0,END)
                                             cmt_entry23.insert(0,tot)
                                         elif get_pro_data1 is not None:
-                                            tot = int(get_pro_data1[8]) * int(cmt_entry21.get())
+                                            tot = int(get_pro_data1[8]) * int(qty)
                                             cmt_entry23.delete(0,END)
                                             cmt_entry23.insert(0,tot)
                                         elif get_pro_data2 is not None:
@@ -6410,11 +6721,11 @@ def main_sign_in():
                                             view_bundleitems(b=3)
                                     elif s == 4:
                                         if get_pro_data is not None:
-                                            tot = int(get_pro_data[12]) * int(cmt_entry28.get())
+                                            tot = int(get_pro_data[12]) * int(qty)
                                             cmt_entry30.delete(0,END)
                                             cmt_entry30.insert(0,tot)
                                         elif get_pro_data1 is not None:
-                                            tot = int(get_pro_data1[8]) * int(cmt_entry28.get())
+                                            tot = int(get_pro_data1[8]) * int(qty)
                                             cmt_entry30.delete(0,END)
                                             cmt_entry30.insert(0,tot)
                                         elif get_pro_data2 is not None:
@@ -9331,13 +9642,1465 @@ def main_sign_in():
                             pass
                         else:
                             for i in inv_data:
-                                inv_list.append(str( i[3]) + "   " + i[1])
+                                inv_list.append(str( i[3]) + " - " + i[1])
 
                         inv_list.insert(0,"Select Invoice No")
+
+                        def cn_fetchInvoDetails(event):
+                            inv_no = (cn_invoiceno.get()).split(' - ')[0]
+
+                            get_inv_sql = "SELECT * FROM app1_invoice WHERE cid_id=%s AND invoiceno=%s"
+                            get_inv_val = (comp_data[0],inv_no)
+                            fbcursor.execute(get_inv_sql,get_inv_val)
+                            get_inv_data = fbcursor.fetchone()
+
+                            try:
+                                get_bundle1_sql = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bundle1_val = (get_inv_data[9],comp_data[0])
+                                fbcursor.execute(get_bundle1_sql,get_bundle1_val)
+                                get_bundle1_data = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bundle2_sql = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bundle2_val = (get_inv_data[18],comp_data[0])
+                                fbcursor.execute(get_bundle2_sql,get_bundle2_val)
+                                get_bundle2_data = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bundle3_sql = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bundle3_val = (get_inv_data[25],comp_data[0])
+                                fbcursor.execute(get_bundle3_sql,get_bundle3_val)
+                                get_bundle3_data = fbcursor.fetchone()
+                            except:
+                                pass
+                            try:
+                                get_bundle4_sql = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_bundle4_val = (get_inv_data[32],comp_data[0])
+                                fbcursor.execute(get_bundle4_sql,get_bundle4_val)
+                                get_bundle4_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            if not get_bundle1_data and not get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry71",state='normal')
+                                    sr_Canvas_1.itemconfig("entry72",state='normal')
+                                    sr_Canvas_1.itemconfig("combo27",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
+                                    else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
+                                        pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and get_bundle2_data and get_bundle3_data and get_bundle4_data:
+                                try:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
+                                    else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
+                                        pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and not get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
+                                    else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
+                                        pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and get_bundle2_data and get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry71",state='normal')
+                                    sr_Canvas_1.itemconfig("entry72",state='normal')
+                                    sr_Canvas_1.itemconfig("combo27",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and get_bundle2_data and get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry71",state='normal')
+                                    sr_Canvas_1.itemconfig("entry72",state='normal')
+                                    sr_Canvas_1.itemconfig("combo27",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and get_bundle2_data and not get_bundle3_data and get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and get_bundle2_data and get_bundle3_data and get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and not get_bundle2_data and get_bundle3_data and not get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry71",state='normal')
+                                    sr_Canvas_1.itemconfig("entry72",state='normal')
+                                    sr_Canvas_1.itemconfig("combo27",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and not get_bundle2_data and get_bundle3_data and not get_bundle4_data:
+                                                               
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry71",state='normal')
+                                    sr_Canvas_1.itemconfig("entry72",state='normal')
+                                    sr_Canvas_1.itemconfig("combo27",state='normal')
+                                    sr_Canvas_1.itemconfig("button15",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+                                    cnt_entry25.delete(0,END)
+                                    cnt_entry25.insert(0,get_inv_data[36])
+                                    cnt_entry26.delete(0,END)
+                                    cnt_entry26.insert(0,get_inv_data[37])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry27.delete(0,END)
+                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                    else:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and not get_bundle2_data and get_bundle3_data and get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and not get_bundle2_data and get_bundle3_data and get_bundle4_data:                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                        sr_Canvas_1.itemconfig("button14",state='normal')
+                                        sr_Canvas_1.itemconfig("label84",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif not get_bundle1_data and not get_bundle2_data and not get_bundle3_data and get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry59",state='normal')
+                                    sr_Canvas_1.itemconfig("entry60",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
+                                    sr_Canvas_1.itemconfig("button12",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+                                    cnt_entry4.delete(0,END)
+                                    cnt_entry4.insert(0,get_inv_data[13])
+                                    cnt_entry5.delete(0,END)
+                                    cnt_entry5.insert(0,get_inv_data[14])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry6.delete(0,END)
+                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and not get_bundle2_data and not get_bundle3_data and get_bundle4_data:                                
+                                try:
+                                    sr_Canvas_1.itemconfig("entry63",state='normal')
+                                    sr_Canvas_1.itemconfig("entry64",state='normal')
+                                    sr_Canvas_1.itemconfig("combo23",state='normal')
+                                    sr_Canvas_1.itemconfig("button13",state='hidden')
+                                except:
+                                    pass
+
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+                                    cnt_entry13.delete(0,END)
+                                    cnt_entry13.insert(0,get_inv_data[22])
+                                    cnt_entry14.delete(0,END)
+                                    cnt_entry14.insert(0,get_inv_data[23])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry15.delete(0,END)
+                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            elif get_bundle1_data and get_bundle2_data and not get_bundle3_data and get_bundle4_data:
+                                try:
+                                    sr_Canvas_1.itemconfig("entry67",state='normal')
+                                    sr_Canvas_1.itemconfig("entry68",state='normal')
+                                    sr_Canvas_1.itemconfig("combo25",state='normal')
+                                    sr_Canvas_1.itemconfig("button14",state='hidden')
+                                except:
+                                    pass
+                                
+                                try:
+                                    cnt_entry1.delete(0,END)
+                                    cnt_entry1.insert(0,get_inv_data[9])
+                                    cnt_entry2.delete(0,END)
+                                    cnt_entry2.insert(0,get_inv_data[11])
+                                    cnt_entry3.delete(0,END)
+                                    cnt_entry3.insert(0,get_inv_data[12])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                        sr_Canvas_1.itemconfig("button12",state='normal')
+                                        sr_Canvas_1.itemconfig("label82",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry10.delete(0,END)
+                                    cnt_entry10.insert(0,get_inv_data[18])
+                                    cnt_entry11.delete(0,END)
+                                    cnt_entry11.insert(0,get_inv_data[20])
+                                    cnt_entry12.delete(0,END)
+                                    cnt_entry12.insert(0,get_inv_data[21])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                        sr_Canvas_1.itemconfig("button13",state='normal')
+                                        sr_Canvas_1.itemconfig("label83",state='hidden')
+                                    except:
+                                        pass
+
+                                    cnt_entry16.delete(0,END)
+                                    cnt_entry16.insert(0,get_inv_data[25])
+                                    cnt_entry17.delete(0,END)
+                                    cnt_entry17.insert(0,get_inv_data[27])
+                                    cnt_entry18.delete(0,END)
+                                    cnt_entry18.insert(0,get_inv_data[28])
+                                    cnt_entry19.delete(0,END)
+                                    cnt_entry19.insert(0,get_inv_data[29])
+                                    cnt_entry20.delete(0,END)
+                                    cnt_entry20.insert(0,get_inv_data[30])
+                                    if comp_data[4] == cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                    elif comp_data[4] != cn_pofsupply.get():
+                                        cnt_entry21.delete(0,END)
+                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                    else:
+                                        pass
+
+                                    cnt_entry22.delete(0,END)
+                                    cnt_entry22.insert(0,get_inv_data[32])
+                                    cnt_entry23.delete(0,END)
+                                    cnt_entry23.insert(0,get_inv_data[34])
+                                    cnt_entry24.delete(0,END)
+                                    cnt_entry24.insert(0,get_inv_data[35])
+
+                                    try:
+                                        sr_Canvas_1.itemconfig("entry71",state='normal')
+                                        sr_Canvas_1.itemconfig("entry72",state='normal')
+                                        sr_Canvas_1.itemconfig("combo27",state='normal')
+                                        sr_Canvas_1.itemconfig("button15",state='hidden')
+                                        sr_Canvas_1.itemconfig("label85",state='hidden')
+                                    except:
+                                        pass
+                                except:
+                                    pass
+                            else:
+                                pass
+                            
 
                         cn_invoiceno = ttk.Combobox(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f',foreground='black')
                         cn_invoiceno['values'] = inv_list
                         cn_invoiceno.current(0)
+                        cn_invoiceno.bind("<<ComboboxSelected>>",cn_fetchInvoDetails)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cn_invoiceno,tags=("entry17"))
 
                         cn_label11 = Label(sr_Canvas_1,width=20,height=1,text="AMOUNT",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
@@ -9436,12 +11199,6 @@ def main_sign_in():
                         else:
                             for n in get_noninventory_data:
                                 cn_product_list.append(n[2])
-                                
-                        if not get_service_data:
-                            pass
-                        else:
-                            for s in get_service_data:
-                                cn_product_list.append(s[2])
 
                         if not get_bundle_data:
                             pass
@@ -9739,11 +11496,21 @@ def main_sign_in():
                                     bt1_entry3.delete(0,END)
                                     bt1_entry3.insert(0,get_bundle_data1[13])
                                     bt1_entry4.delete(0,END)
-                                    bt1_entry4.insert(0,get_bundle_data1[17])
                                     bt1_entry5.delete(0,END)
-                                    bt1_entry5.insert(0,get_bundle_data1[21])
                                     bt1_entry6.delete(0,END)
-                                    bt1_entry6.insert(0,get_bundle_data1[25])
+                                    if get_bundle_data1[17] == '' or get_bundle_data1[17] is None or get_bundle_data1[17] == NULL:
+                                        bt1_entry4.insert(0,0)
+                                    else:
+                                        bt1_entry4.insert(0,get_bundle_data1[17])
+                                    if get_bundle_data1[21] == '' or get_bundle_data1[21] is None or get_bundle_data1[21] == NULL:
+                                        bt1_entry5.insert(0,0)
+                                    else:
+                                        bt1_entry5.insert(0,get_bundle_data1[21])
+                                    if get_bundle_data1[25] == '' or get_bundle_data1[25] is None or get_bundle_data1[25] == NULL:
+                                        bt1_entry6.insert(0,0)
+                                    else:
+                                        bt1_entry6.insert(0,get_bundle_data1[25])
+                                    
                                     bt1_entry7.delete(0,END)
                                     bt1_entry8.delete(0,END)
                                     bt1_entry8.insert(0,get_bundle_data1[6])
@@ -9752,11 +11519,21 @@ def main_sign_in():
                                     bt1_entry10.delete(0,END)
                                     bt1_entry10.insert(0,get_bundle_data1[14])
                                     bt1_entry11.delete(0,END)
-                                    bt1_entry11.insert(0,get_bundle_data1[18])
                                     bt1_entry12.delete(0,END)
-                                    bt1_entry12.insert(0,get_bundle_data1[22])
                                     bt1_entry13.delete(0,END)
-                                    bt1_entry13.insert(0,get_bundle_data1[26])
+                                    if get_bundle_data1[18] == '' or get_bundle_data1[18] is None or get_bundle_data1[22] == NULL:
+                                        bt1_entry11.insert(0,0)
+                                    else:
+                                        bt1_entry11.insert(0,get_bundle_data1[18])
+                                    if get_bundle_data1[22] == '' or get_bundle_data1[22] is None or get_bundle_data1[22] == NULL:
+                                        bt1_entry12.insert(0,0)
+                                    else:
+                                        bt1_entry12.insert(0,get_bundle_data1[22])
+                                    if get_bundle_data1[26] == '' or get_bundle_data1[26] is None or get_bundle_data1[26] == NULL:
+                                        bt1_entry13.insert(0,0)
+                                    else:
+                                        bt1_entry13.insert(0,get_bundle_data1[26])
+
                                     bt1_entry14.delete(0,END)
                                     bt1_entry15.delete(0,END)
                                     bt1_entry15.insert(0,get_bundle_data1[7])
@@ -9765,11 +11542,21 @@ def main_sign_in():
                                     bt1_entry17.delete(0,END)
                                     bt1_entry17.insert(0,get_bundle_data1[15])
                                     bt1_entry18.delete(0,END)
-                                    bt1_entry18.insert(0,get_bundle_data1[19])
                                     bt1_entry19.delete(0,END)
-                                    bt1_entry19.insert(0,get_bundle_data1[23])
                                     bt1_entry20.delete(0,END)
-                                    bt1_entry20.insert(0,get_bundle_data1[27])
+                                    if get_bundle_data1[19] == '' or get_bundle_data1[19] is None or get_bundle_data1[19] == NULL:
+                                        bt1_entry18.insert(0,0)
+                                    else:
+                                        bt1_entry18.insert(0,get_bundle_data1[19])
+                                    if get_bundle_data1[23] == '' or get_bundle_data1[23] is None or get_bundle_data1[23] == NULL:
+                                        bt1_entry19.insert(0,0)
+                                    else:
+                                        bt1_entry19.insert(0,get_bundle_data1[23])
+                                    if get_bundle_data1[27] == '' or get_bundle_data1[27] is None or get_bundle_data1[27] == NULL:
+                                        bt1_entry20.insert(0,0)
+                                    else:
+                                        bt1_entry20.insert(0,get_bundle_data1[27])
+                                    
                                     bt1_entry21.delete(0,END)
                                     bt1_entry22.delete(0,END)
                                     bt1_entry22.insert(0,get_bundle_data1[8])
@@ -9778,47 +11565,96 @@ def main_sign_in():
                                     bt1_entry24.delete(0,END)
                                     bt1_entry24.insert(0,get_bundle_data1[16])
                                     bt1_entry25.delete(0,END)
-                                    bt1_entry25.insert(0,get_bundle_data1[20])
                                     bt1_entry26.delete(0,END)
-                                    bt1_entry26.insert(0,get_bundle_data1[24])
                                     bt1_entry27.delete(0,END)
-                                    bt1_entry27.insert(0,get_bundle_data1[28])
                                     bt1_entry28.delete(0,END)
+                                    if get_bundle_data1[20] == '' or get_bundle_data1[20] is None or get_bundle_data1[20] == NULL:
+                                        bt1_entry25.insert(0,0)
+                                    else:
+                                        bt1_entry25.insert(0,get_bundle_data1[20])
+                                    if get_bundle_data1[24] == '' or get_bundle_data1[24] is None or get_bundle_data1[24] == NULL:
+                                        bt1_entry26.insert(0,0)
+                                    else:
+                                        bt1_entry26.insert(0,get_bundle_data1[24])
+                                    if get_bundle_data1[28] == '' or get_bundle_data1[28] is None or get_bundle_data1[28] == NULL:
+                                        bt1_entry27.insert(0,0)
+                                    else:
+                                        bt1_entry27.insert(0,get_bundle_data1[28])
+                                    
                                     if comp_data[4] == cn_pofsupply.get():
-                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% GST({get_bundle_data1[29]}%)')
-                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% GST({get_bundle_data1[30]}%)')
-                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% GST({get_bundle_data1[31]}%)')
-                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% GST({get_bundle_data1[32]}%)')
+                                        if get_bundle_data1[29] == "" or get_bundle_data1[29] is None or get_bundle_data1[29] == NULL:
+                                            bt1_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry7.insert(0,f'{get_bundle_data1[29]}% GST({get_bundle_data1[29]}%)')
+                                        if get_bundle_data1[30] == "" or get_bundle_data1[30] is None or get_bundle_data1[30] == NULL:
+                                            bt1_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry14.insert(0,f'{get_bundle_data1[30]}% GST({get_bundle_data1[30]}%)')
+                                        if get_bundle_data1[31] == "" or get_bundle_data1[31] is None or get_bundle_data1[31] == NULL:
+                                            bt1_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry21.insert(0,f'{get_bundle_data1[31]}% GST({get_bundle_data1[31]}%)')
+                                        if get_bundle_data1[32] == "" or get_bundle_data1[32] is None or get_bundle_data1[32] == NULL:
+                                            bt1_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt1_entry28.insert(0,f'{get_bundle_data1[32]}% GST({get_bundle_data1[32]}%)')
                                     elif comp_data[4] != cn_pofsupply.get():
-                                        bt1_entry7.insert(0,f'{get_bundle_data1[29]}% IGST({get_bundle_data1[29]}%)')
-                                        bt1_entry14.insert(0,f'{get_bundle_data1[30]}% IGST({get_bundle_data1[30]}%)')
-                                        bt1_entry21.insert(0,f'{get_bundle_data1[31]}% IGST({get_bundle_data1[31]}%)')
-                                        bt1_entry28.insert(0,f'{get_bundle_data1[32]}% IGST({get_bundle_data1[32]}%)')
+                                        if get_bundle_data1[29] == "" or get_bundle_data1[29] is None or get_bundle_data1[29] == NULL:
+                                            bt1_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry7.insert(0,f'{get_bundle_data1[29]}% IGST({get_bundle_data1[29]}%)')
+                                        if get_bundle_data1[30] == "" or get_bundle_data1[30] is None or get_bundle_data1[30] == NULL:
+                                            bt1_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry14.insert(0,f'{get_bundle_data1[30]}% IGST({get_bundle_data1[30]}%)')
+                                        if get_bundle_data1[31] == "" or get_bundle_data1[31] is None or get_bundle_data1[31] == NULL:
+                                            bt1_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry21.insert(0,f'{get_bundle_data1[31]}% IGST({get_bundle_data1[31]}%)')
+                                        if get_bundle_data1[32] == "" or get_bundle_data1[32] is None or get_bundle_data1[32] == NULL:
+                                            bt1_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt1_entry28.insert(0,f'{get_bundle_data1[32]}% IGST({get_bundle_data1[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data1[17]) * int(cnt_entry3.get())
-                                qty2 = int(get_bundle_data1[18]) * int(cnt_entry3.get())
-                                qty3 = int(get_bundle_data1[19]) * int(cnt_entry3.get())
-                                qty4 = int(get_bundle_data1[20]) * int(cnt_entry3.get())
-                                if cnt_entry3.get() == "0":
+                                try:
+                                    if get_bundle_data1[17] == '' or get_bundle_data1[17] is None or get_bundle_data1[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data1[17]) * int(cnt_entry3.get())
+                                    if get_bundle_data1[18] == '' or get_bundle_data1[18] is None or get_bundle_data1[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data1[18]) * int(cnt_entry3.get())
+                                    if get_bundle_data1[19] == '' or get_bundle_data1[19] is None or get_bundle_data1[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data1[19]) * int(cnt_entry3.get())
+                                    if get_bundle_data1[20] == '' or get_bundle_data1[20] is None or get_bundle_data1[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data1[20]) * int(cnt_entry3.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt1_entry4.delete(0,END)
-                                    bt1_entry4.insert(0,qty1)
-                                    bt1_entry11.delete(0,END)
-                                    bt1_entry11.insert(0,qty2)
-                                    bt1_entry18.delete(0,END)
-                                    bt1_entry18.insert(0,qty3)
-                                    bt1_entry25.delete(0,END)
-                                    bt1_entry25.insert(0,qty4)
 
-                                tot1 = int(bt1_entry4.get()) * int(float(bt1_entry6.get()))
-                                tot2 = int(bt1_entry11.get()) * int(float(bt1_entry13.get()))
-                                tot3 = int(bt1_entry18.get()) * int(float(bt1_entry20.get()))
-                                tot4 = int(bt1_entry25.get()) * int(float(bt1_entry27.get()))
+                                
+                                bt1_entry4.delete(0,END)
+                                bt1_entry4.insert(0,qty1)
+                                bt1_entry11.delete(0,END)
+                                bt1_entry11.insert(0,qty2)
+                                bt1_entry18.delete(0,END)
+                                bt1_entry18.insert(0,qty3)
+                                bt1_entry25.delete(0,END)
+                                bt1_entry25.insert(0,qty4)
+
+                                tot1 = int(bt1_entry4.get()) * int(float(bt1_entry5.get()))
+                                tot2 = int(bt1_entry11.get()) * int(float(bt1_entry12.get()))
+                                tot3 = int(bt1_entry18.get()) * int(float(bt1_entry19.get()))
+                                tot4 = int(bt1_entry25.get()) * int(float(bt1_entry26.get()))
 
                                 bt1_entry6.delete(0,END)
                                 bt1_entry6.insert(0,tot1)
@@ -9948,11 +11784,21 @@ def main_sign_in():
                                     bt2_entry3.delete(0,END)
                                     bt2_entry3.insert(0,get_bundle_data2[13])
                                     bt2_entry4.delete(0,END)
-                                    bt2_entry4.insert(0,get_bundle_data2[17])
                                     bt2_entry5.delete(0,END)
-                                    bt2_entry5.insert(0,get_bundle_data2[21])
                                     bt2_entry6.delete(0,END)
-                                    bt2_entry6.insert(0,get_bundle_data2[25])
+                                    if get_bundle_data2[17] == '' or get_bundle_data2[17] is None or get_bundle_data2[17] == NULL:
+                                        bt2_entry4.insert(0,0)
+                                    else:
+                                        bt2_entry4.insert(0,get_bundle_data2[17])
+                                    if get_bundle_data2[21] == '' or get_bundle_data2[21] is None or get_bundle_data2[21] == NULL:
+                                        bt2_entry5.insert(0,0)
+                                    else:
+                                        bt2_entry5.insert(0,get_bundle_data2[21])
+                                    if get_bundle_data2[25] == '' or get_bundle_data2[25] is None or get_bundle_data2[25] == NULL:
+                                        bt2_entry6.insert(0,0)
+                                    else:
+                                        bt2_entry6.insert(0,get_bundle_data2[25])
+
                                     bt2_entry7.delete(0,END)
                                     bt2_entry8.delete(0,END)
                                     bt2_entry8.insert(0,get_bundle_data2[6])
@@ -9961,11 +11807,21 @@ def main_sign_in():
                                     bt2_entry10.delete(0,END)
                                     bt2_entry10.insert(0,get_bundle_data2[14])
                                     bt2_entry11.delete(0,END)
-                                    bt2_entry11.insert(0,get_bundle_data2[18])
                                     bt2_entry12.delete(0,END)
-                                    bt2_entry12.insert(0,get_bundle_data2[22])
                                     bt2_entry13.delete(0,END)
-                                    bt2_entry13.insert(0,get_bundle_data2[26])
+                                    if get_bundle_data2[18] == '' or get_bundle_data2[18] is None or get_bundle_data2[22] == NULL:
+                                        bt2_entry11.insert(0,0)
+                                    else:
+                                        bt2_entry11.insert(0,get_bundle_data2[18])
+                                    if get_bundle_data2[22] == '' or get_bundle_data2[22] is None or get_bundle_data2[22] == NULL:
+                                        bt2_entry12.insert(0,0)
+                                    else:
+                                        bt2_entry12.insert(0,get_bundle_data2[22])
+                                    if get_bundle_data2[26] == '' or get_bundle_data2[26] is None or get_bundle_data2[26] == NULL:
+                                        bt2_entry13.insert(0,0)
+                                    else:
+                                        bt2_entry13.insert(0,get_bundle_data2[26])
+
                                     bt2_entry14.delete(0,END)
                                     bt2_entry15.delete(0,END)
                                     bt2_entry15.insert(0,get_bundle_data2[7])
@@ -9974,11 +11830,20 @@ def main_sign_in():
                                     bt2_entry17.delete(0,END)
                                     bt2_entry17.insert(0,get_bundle_data2[15])
                                     bt2_entry18.delete(0,END)
-                                    bt2_entry18.insert(0,get_bundle_data2[19])
                                     bt2_entry19.delete(0,END)
-                                    bt2_entry19.insert(0,get_bundle_data2[23])
                                     bt2_entry20.delete(0,END)
-                                    bt2_entry20.insert(0,get_bundle_data2[27])
+                                    if get_bundle_data2[19] == '' or get_bundle_data2[19] is None or get_bundle_data2[19] == NULL:
+                                        bt2_entry18.insert(0,0)
+                                    else:
+                                        bt2_entry18.insert(0,get_bundle_data2[19])
+                                    if get_bundle_data2[23] == '' or get_bundle_data2[23] is None or get_bundle_data2[23] == NULL:
+                                        bt2_entry19.insert(0,0)
+                                    else:
+                                        bt2_entry19.insert(0,get_bundle_data2[23])
+                                    if get_bundle_data2[27] == '' or get_bundle_data2[27] is None or get_bundle_data2[27] == NULL:
+                                        bt2_entry20.insert(0,0)
+                                    else:
+                                        bt2_entry20.insert(0,get_bundle_data2[27])
                                     bt2_entry21.delete(0,END)
                                     bt2_entry22.delete(0,END)
                                     bt2_entry22.insert(0,get_bundle_data2[8])
@@ -9987,47 +11852,96 @@ def main_sign_in():
                                     bt2_entry24.delete(0,END)
                                     bt2_entry24.insert(0,get_bundle_data2[16])
                                     bt2_entry25.delete(0,END)
-                                    bt2_entry25.insert(0,get_bundle_data2[20])
                                     bt2_entry26.delete(0,END)
-                                    bt2_entry26.insert(0,get_bundle_data2[24])
                                     bt2_entry27.delete(0,END)
-                                    bt2_entry27.insert(0,get_bundle_data2[28])
                                     bt2_entry28.delete(0,END)
+                                    if get_bundle_data2[20] == '' or get_bundle_data2[20] is None or get_bundle_data2[20] == NULL:
+                                        bt2_entry25.insert(0,0)
+                                    else:
+                                        bt2_entry25.insert(0,get_bundle_data2[20])
+                                    if get_bundle_data2[24] == '' or get_bundle_data2[24] is None or get_bundle_data2[24] == NULL:
+                                        bt2_entry26.insert(0,0)
+                                    else:
+                                        bt2_entry26.insert(0,get_bundle_data2[24])
+                                    if get_bundle_data2[28] == '' or get_bundle_data2[28] is None or get_bundle_data2[28] == NULL:
+                                        bt2_entry27.insert(0,0)
+                                    else:
+                                        bt2_entry27.insert(0,get_bundle_data2[28])
+
                                     if comp_data[4] == cn_pofsupply.get():
-                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% GST({get_bundle_data2[29]}%)')
-                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% GST({get_bundle_data2[30]}%)')
-                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% GST({get_bundle_data2[31]}%)')
-                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% GST({get_bundle_data2[32]}%)')
+                                        if get_bundle_data2[29] == "" or get_bundle_data2[29] is None or get_bundle_data2[29] == NULL:
+                                            bt2_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry7.insert(0,f'{get_bundle_data2[29]}% GST({get_bundle_data2[29]}%)')
+                                        if get_bundle_data2[30] == "" or get_bundle_data2[30] is None or get_bundle_data2[30] == NULL:
+                                            bt2_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry14.insert(0,f'{get_bundle_data2[30]}% GST({get_bundle_data2[30]}%)')
+                                        if get_bundle_data2[31] == "" or get_bundle_data2[31] is None or get_bundle_data2[31] == NULL:
+                                            bt2_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry21.insert(0,f'{get_bundle_data2[31]}% GST({get_bundle_data2[31]}%)')
+                                        if get_bundle_data2[32] == "" or get_bundle_data2[32] is None or get_bundle_data2[32] == NULL:
+                                            bt2_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt2_entry28.insert(0,f'{get_bundle_data2[32]}% GST({get_bundle_data2[32]}%)')
                                     elif comp_data[4] != cn_pofsupply.get():
-                                        bt2_entry7.insert(0,f'{get_bundle_data2[29]}% IGST({get_bundle_data2[29]}%)')
-                                        bt2_entry14.insert(0,f'{get_bundle_data2[30]}% IGST({get_bundle_data2[30]}%)')
-                                        bt2_entry21.insert(0,f'{get_bundle_data2[31]}% IGST({get_bundle_data2[31]}%)')
-                                        bt2_entry28.insert(0,f'{get_bundle_data2[32]}% IGST({get_bundle_data2[32]}%)')
+                                        if get_bundle_data2[29] == "" or get_bundle_data2[29] is None or get_bundle_data2[29] == NULL:
+                                            bt2_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry7.insert(0,f'{get_bundle_data2[29]}% IGST({get_bundle_data2[29]}%)')
+                                        if get_bundle_data2[30] == "" or get_bundle_data2[30] is None or get_bundle_data2[30] == NULL:
+                                            bt2_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry14.insert(0,f'{get_bundle_data2[30]}% IGST({get_bundle_data2[30]}%)')
+                                        if get_bundle_data2[31] == "" or get_bundle_data2[31] is None or get_bundle_data2[31] == NULL:
+                                            bt2_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry21.insert(0,f'{get_bundle_data2[31]}% IGST({get_bundle_data2[31]}%)')
+                                        if get_bundle_data2[32] == "" or get_bundle_data2[32] is None or get_bundle_data2[32] == NULL:
+                                            bt2_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt2_entry28.insert(0,f'{get_bundle_data2[32]}% IGST({get_bundle_data2[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data2[17]) * int(cnt_entry12.get())
-                                qty2 = int(get_bundle_data2[18]) * int(cnt_entry12.get())
-                                qty3 = int(get_bundle_data2[19]) * int(cnt_entry12.get())
-                                qty4 = int(get_bundle_data2[20]) * int(cnt_entry12.get())
-                                if cnt_entry12.get() == "0":
+                                try:
+                                    if get_bundle_data2[17] == '' or get_bundle_data2[17] is None or get_bundle_data2[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data2[17]) * int(cnt_entry12.get())
+                                    if get_bundle_data2[18] == '' or get_bundle_data2[18] is None or get_bundle_data2[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data2[18]) * int(cnt_entry12.get())
+                                    if get_bundle_data2[19] == '' or get_bundle_data2[19] is None or get_bundle_data2[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data2[19]) * int(cnt_entry12.get())
+                                    if get_bundle_data2[20] == '' or get_bundle_data2[20] is None or get_bundle_data2[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data2[20]) * int(cnt_entry12.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt2_entry4.delete(0,END)
-                                    bt2_entry4.insert(0,qty1)
-                                    bt2_entry11.delete(0,END)
-                                    bt2_entry11.insert(0,qty2)
-                                    bt2_entry18.delete(0,END)
-                                    bt2_entry18.insert(0,qty3)
-                                    bt2_entry25.delete(0,END)
-                                    bt2_entry25.insert(0,qty4)
 
-                                tot1 = int(bt2_entry4.get()) * int(float(bt2_entry6.get()))
-                                tot2 = int(bt2_entry11.get()) * int(float(bt2_entry13.get()))
-                                tot3 = int(bt2_entry18.get()) * int(float(bt2_entry20.get()))
-                                tot4 = int(bt2_entry25.get()) * int(float(bt2_entry27.get()))
+                                
+                                bt2_entry4.delete(0,END)
+                                bt2_entry4.insert(0,qty1)
+                                bt2_entry11.delete(0,END)
+                                bt2_entry11.insert(0,qty2)
+                                bt2_entry18.delete(0,END)
+                                bt2_entry18.insert(0,qty3)
+                                bt2_entry25.delete(0,END)
+                                bt2_entry25.insert(0,qty4)
+
+                                tot1 = int(bt2_entry4.get()) * int(float(bt2_entry5.get()))
+                                tot2 = int(bt2_entry11.get()) * int(float(bt2_entry12.get()))
+                                tot3 = int(bt2_entry18.get()) * int(float(bt2_entry19.get()))
+                                tot4 = int(bt2_entry25.get()) * int(float(bt2_entry26.get()))
 
                                 bt2_entry6.delete(0,END)
                                 bt2_entry6.insert(0,tot1)
@@ -10157,11 +12071,20 @@ def main_sign_in():
                                     bt3_entry3.delete(0,END)
                                     bt3_entry3.insert(0,get_bundle_data3[13])
                                     bt3_entry4.delete(0,END)
-                                    bt3_entry4.insert(0,get_bundle_data3[17])
                                     bt3_entry5.delete(0,END)
-                                    bt3_entry5.insert(0,get_bundle_data3[21])
                                     bt3_entry6.delete(0,END)
-                                    bt3_entry6.insert(0,get_bundle_data3[25])
+                                    if get_bundle_data3[17] == '' or get_bundle_data3[17] is None or get_bundle_data3[17] == NULL:
+                                        bt3_entry4.insert(0,0)
+                                    else:
+                                        bt3_entry4.insert(0,get_bundle_data3[17])
+                                    if get_bundle_data3[21] == '' or get_bundle_data3[21] is None or get_bundle_data3[21] == NULL:
+                                        bt3_entry5.insert(0,0)
+                                    else:
+                                        bt3_entry5.insert(0,get_bundle_data3[21])
+                                    if get_bundle_data3[25] == '' or get_bundle_data3[25] is None or get_bundle_data3[25] == NULL:
+                                        bt3_entry6.insert(0,0)
+                                    else:
+                                        bt3_entry6.insert(0,get_bundle_data3[25])
                                     bt3_entry7.delete(0,END)
                                     bt3_entry8.delete(0,END)
                                     bt3_entry8.insert(0,get_bundle_data3[6])
@@ -10170,11 +12093,21 @@ def main_sign_in():
                                     bt3_entry10.delete(0,END)
                                     bt3_entry10.insert(0,get_bundle_data3[14])
                                     bt3_entry11.delete(0,END)
-                                    bt3_entry11.insert(0,get_bundle_data3[18])
                                     bt3_entry12.delete(0,END)
-                                    bt3_entry12.insert(0,get_bundle_data3[22])
                                     bt3_entry13.delete(0,END)
-                                    bt3_entry13.insert(0,get_bundle_data3[26])
+                                    if get_bundle_data3[18] == '' or get_bundle_data3[18] is None or get_bundle_data3[22] == NULL:
+                                        bt3_entry11.insert(0,0)
+                                    else:
+                                        bt3_entry11.insert(0,get_bundle_data3[18])
+                                    if get_bundle_data3[22] == '' or get_bundle_data3[22] is None or get_bundle_data3[22] == NULL:
+                                        bt3_entry12.insert(0,0)
+                                    else:
+                                        bt3_entry12.insert(0,get_bundle_data3[22])
+                                    if get_bundle_data3[26] == '' or get_bundle_data3[26] is None or get_bundle_data3[26] == NULL:
+                                        bt3_entry13.insert(0,0)
+                                    else:
+                                        bt3_entry13.insert(0,get_bundle_data3[26])
+
                                     bt3_entry14.delete(0,END)
                                     bt3_entry15.delete(0,END)
                                     bt3_entry15.insert(0,get_bundle_data3[7])
@@ -10183,11 +12116,21 @@ def main_sign_in():
                                     bt3_entry17.delete(0,END)
                                     bt3_entry17.insert(0,get_bundle_data3[15])
                                     bt3_entry18.delete(0,END)
-                                    bt3_entry18.insert(0,get_bundle_data3[19])
                                     bt3_entry19.delete(0,END)
-                                    bt3_entry19.insert(0,get_bundle_data3[23])
                                     bt3_entry20.delete(0,END)
-                                    bt3_entry20.insert(0,get_bundle_data3[27])
+                                    if get_bundle_data3[19] == '' or get_bundle_data3[19] is None or get_bundle_data3[19] == NULL:
+                                        bt3_entry18.insert(0,0)
+                                    else:
+                                        bt3_entry18.insert(0,get_bundle_data3[19])
+                                    if get_bundle_data3[23] == '' or get_bundle_data3[23] is None or get_bundle_data3[23] == NULL:
+                                        bt3_entry19.insert(0,0)
+                                    else:
+                                        bt3_entry19.insert(0,get_bundle_data3[23])
+                                    if get_bundle_data3[27] == '' or get_bundle_data3[27] is None or get_bundle_data3[27] == NULL:
+                                        bt3_entry20.insert(0,0)
+                                    else:
+                                        bt3_entry20.insert(0,get_bundle_data3[27])
+
                                     bt3_entry21.delete(0,END)
                                     bt3_entry22.delete(0,END)
                                     bt3_entry22.insert(0,get_bundle_data3[8])
@@ -10196,47 +12139,96 @@ def main_sign_in():
                                     bt3_entry24.delete(0,END)
                                     bt3_entry24.insert(0,get_bundle_data3[16])
                                     bt3_entry25.delete(0,END)
-                                    bt3_entry25.insert(0,get_bundle_data3[20])
                                     bt3_entry26.delete(0,END)
-                                    bt3_entry26.insert(0,get_bundle_data3[24])
                                     bt3_entry27.delete(0,END)
-                                    bt3_entry27.insert(0,get_bundle_data3[28])
                                     bt3_entry28.delete(0,END)
+                                    if get_bundle_data3[20] == '' or get_bundle_data3[20] is None or get_bundle_data3[20] == NULL:
+                                        bt3_entry25.insert(0,0)
+                                    else:
+                                        bt3_entry25.insert(0,get_bundle_data3[20])
+                                    if get_bundle_data3[24] == '' or get_bundle_data3[24] is None or get_bundle_data3[24] == NULL:
+                                        bt3_entry26.insert(0,0)
+                                    else:
+                                        bt3_entry26.insert(0,get_bundle_data3[24])
+                                    if get_bundle_data3[28] == '' or get_bundle_data3[28] is None or get_bundle_data3[28] == NULL:
+                                        bt3_entry27.insert(0,0)
+                                    else:
+                                        bt3_entry27.insert(0,get_bundle_data3[28])
+
+
                                     if comp_data[4] == cn_pofsupply.get():
-                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% GST({get_bundle_data3[29]}%)')
-                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% GST({get_bundle_data3[30]}%)')
-                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% GST({get_bundle_data3[31]}%)')
-                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% GST({get_bundle_data3[32]}%)')
+                                        if get_bundle_data3[29] == "" or get_bundle_data3[29] is None or get_bundle_data3[29] == NULL:
+                                            bt3_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry7.insert(0,f'{get_bundle_data3[29]}% GST({get_bundle_data3[29]}%)')
+                                        if get_bundle_data3[30] == "" or get_bundle_data3[30] is None or get_bundle_data3[30] == NULL:
+                                            bt3_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry14.insert(0,f'{get_bundle_data3[30]}% GST({get_bundle_data3[30]}%)')
+                                        if get_bundle_data3[31] == "" or get_bundle_data3[31] is None or get_bundle_data3[31] == NULL:
+                                            bt3_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry21.insert(0,f'{get_bundle_data3[31]}% GST({get_bundle_data3[31]}%)')
+                                        if get_bundle_data3[32] == "" or get_bundle_data3[32] is None or get_bundle_data3[32] == NULL:
+                                            bt3_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt3_entry28.insert(0,f'{get_bundle_data3[32]}% GST({get_bundle_data3[32]}%)')
                                     elif comp_data[4] != cn_pofsupply.get():
-                                        bt3_entry7.insert(0,f'{get_bundle_data3[29]}% IGST({get_bundle_data3[29]}%)')
-                                        bt3_entry14.insert(0,f'{get_bundle_data3[30]}% IGST({get_bundle_data3[30]}%)')
-                                        bt3_entry21.insert(0,f'{get_bundle_data3[31]}% IGST({get_bundle_data3[31]}%)')
-                                        bt3_entry28.insert(0,f'{get_bundle_data3[32]}% IGST({get_bundle_data3[32]}%)')
+                                        if get_bundle_data3[29] == "" or get_bundle_data3[29] is None or get_bundle_data3[29] == NULL:
+                                            bt3_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry7.insert(0,f'{get_bundle_data3[29]}% IGST({get_bundle_data3[29]}%)')
+                                        if get_bundle_data3[30] == "" or get_bundle_data3[30] is None or get_bundle_data3[30] == NULL:
+                                            bt3_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry14.insert(0,f'{get_bundle_data3[30]}% IGST({get_bundle_data3[30]}%)')
+                                        if get_bundle_data3[31] == "" or get_bundle_data3[31] is None or get_bundle_data3[31] == NULL:
+                                            bt3_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry21.insert(0,f'{get_bundle_data3[31]}% IGST({get_bundle_data3[31]}%)')
+                                        if get_bundle_data3[32] == "" or get_bundle_data3[32] is None or get_bundle_data3[32] == NULL:
+                                            bt3_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt3_entry28.insert(0,f'{get_bundle_data3[32]}% IGST({get_bundle_data3[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data3[17]) * int(cnt_entry18.get())
-                                qty2 = int(get_bundle_data3[18]) * int(cnt_entry18.get())
-                                qty3 = int(get_bundle_data3[19]) * int(cnt_entry18.get())
-                                qty4 = int(get_bundle_data3[20]) * int(cnt_entry18.get())
-                                if cnt_entry18.get() == "0":
+                                try:
+                                    if get_bundle_data3[17] == '' or get_bundle_data3[17] is None or get_bundle_data3[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data3[17]) * int(cnt_entry18.get())
+                                    if get_bundle_data3[18] == '' or get_bundle_data3[18] is None or get_bundle_data3[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data3[18]) * int(cnt_entry18.get())
+                                    if get_bundle_data3[19] == '' or get_bundle_data3[19] is None or get_bundle_data3[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data3[19]) * int(cnt_entry18.get())
+                                    if get_bundle_data3[20] == '' or get_bundle_data3[20] is None or get_bundle_data3[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data3[20]) * int(cnt_entry18.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt3_entry4.delete(0,END)
-                                    bt3_entry4.insert(0,qty1)
-                                    bt3_entry11.delete(0,END)
-                                    bt3_entry11.insert(0,qty2)
-                                    bt3_entry18.delete(0,END)
-                                    bt3_entry18.insert(0,qty3)
-                                    bt3_entry25.delete(0,END)
-                                    bt3_entry25.insert(0,qty4)
+                                
+                                bt3_entry4.delete(0,END)
+                                bt3_entry4.insert(0,qty1)
+                                bt3_entry11.delete(0,END)
+                                bt3_entry11.insert(0,qty2)
+                                bt3_entry18.delete(0,END)
+                                bt3_entry18.insert(0,qty3)
+                                bt3_entry25.delete(0,END)
+                                bt3_entry25.insert(0,qty4)
 
-                                tot1 = int(bt3_entry4.get()) * int(float(bt3_entry6.get()))
-                                tot2 = int(bt3_entry11.get()) * int(float(bt3_entry13.get()))
-                                tot3 = int(bt3_entry18.get()) * int(float(bt3_entry20.get()))
-                                tot4 = int(bt3_entry25.get()) * int(float(bt3_entry27.get()))
+                                tot1 = int(bt3_entry4.get()) * int(float(bt3_entry5.get()))
+                                tot2 = int(bt3_entry11.get()) * int(float(bt3_entry12.get()))
+                                tot3 = int(bt3_entry18.get()) * int(float(bt3_entry19.get()))
+                                tot4 = int(bt3_entry25.get()) * int(float(bt3_entry26.get()))
 
                                 bt3_entry6.delete(0,END)
                                 bt3_entry6.insert(0,tot1)
@@ -10366,11 +12358,20 @@ def main_sign_in():
                                     bt4_entry3.delete(0,END)
                                     bt4_entry3.insert(0,get_bundle_data4[13])
                                     bt4_entry4.delete(0,END)
-                                    bt4_entry4.insert(0,get_bundle_data4[17])
                                     bt4_entry5.delete(0,END)
-                                    bt4_entry5.insert(0,get_bundle_data4[21])
                                     bt4_entry6.delete(0,END)
-                                    bt4_entry6.insert(0,get_bundle_data4[25])
+                                    if get_bundle_data4[17] == '' or get_bundle_data4[17] is None or get_bundle_data4[17] == NULL:
+                                        bt4_entry4.insert(0,0)
+                                    else:
+                                        bt4_entry4.insert(0,get_bundle_data4[17])
+                                    if get_bundle_data4[21] == '' or get_bundle_data4[21] is None or get_bundle_data4[21] == NULL:
+                                        bt4_entry5.insert(0,0)
+                                    else:
+                                        bt4_entry5.insert(0,get_bundle_data4[21])
+                                    if get_bundle_data4[25] == '' or get_bundle_data4[25] is None or get_bundle_data4[25] == NULL:
+                                        bt4_entry6.insert(0,0)
+                                    else:
+                                        bt4_entry6.insert(0,get_bundle_data4[25])
                                     bt4_entry7.delete(0,END)
                                     bt4_entry8.delete(0,END)
                                     bt4_entry8.insert(0,get_bundle_data4[6])
@@ -10379,11 +12380,20 @@ def main_sign_in():
                                     bt4_entry10.delete(0,END)
                                     bt4_entry10.insert(0,get_bundle_data4[14])
                                     bt4_entry11.delete(0,END)
-                                    bt4_entry11.insert(0,get_bundle_data4[18])
                                     bt4_entry12.delete(0,END)
-                                    bt4_entry12.insert(0,get_bundle_data4[22])
                                     bt4_entry13.delete(0,END)
-                                    bt4_entry13.insert(0,get_bundle_data4[26])
+                                    if get_bundle_data4[18] == '' or get_bundle_data4[18] is None or get_bundle_data4[22] == NULL:
+                                        bt4_entry11.insert(0,0)
+                                    else:
+                                        bt4_entry11.insert(0,get_bundle_data4[18])
+                                    if get_bundle_data4[22] == '' or get_bundle_data4[22] is None or get_bundle_data4[22] == NULL:
+                                        bt4_entry12.insert(0,0)
+                                    else:
+                                        bt4_entry12.insert(0,get_bundle_data4[22])
+                                    if get_bundle_data4[26] == '' or get_bundle_data4[26] is None or get_bundle_data4[26] == NULL:
+                                        bt4_entry13.insert(0,0)
+                                    else:
+                                        bt4_entry13.insert(0,get_bundle_data4[26])
                                     bt4_entry14.delete(0,END)
                                     bt4_entry15.delete(0,END)
                                     bt4_entry15.insert(0,get_bundle_data4[7])
@@ -10392,11 +12402,20 @@ def main_sign_in():
                                     bt4_entry17.delete(0,END)
                                     bt4_entry17.insert(0,get_bundle_data4[15])
                                     bt4_entry18.delete(0,END)
-                                    bt4_entry18.insert(0,get_bundle_data4[19])
                                     bt4_entry19.delete(0,END)
-                                    bt4_entry19.insert(0,get_bundle_data4[23])
                                     bt4_entry20.delete(0,END)
-                                    bt4_entry20.insert(0,get_bundle_data4[27])
+                                    if get_bundle_data4[19] == '' or get_bundle_data4[19] is None or get_bundle_data4[19] == NULL:
+                                        bt4_entry18.insert(0,0)
+                                    else:
+                                        bt4_entry18.insert(0,get_bundle_data4[19])
+                                    if get_bundle_data4[23] == '' or get_bundle_data4[23] is None or get_bundle_data4[23] == NULL:
+                                        bt4_entry19.insert(0,0)
+                                    else:
+                                        bt4_entry19.insert(0,get_bundle_data4[23])
+                                    if get_bundle_data4[27] == '' or get_bundle_data4[27] is None or get_bundle_data4[27] == NULL:
+                                        bt4_entry20.insert(0,0)
+                                    else:
+                                        bt4_entry20.insert(0,get_bundle_data4[27])
                                     bt4_entry21.delete(0,END)
                                     bt4_entry22.delete(0,END)
                                     bt4_entry22.insert(0,get_bundle_data4[8])
@@ -10405,47 +12424,95 @@ def main_sign_in():
                                     bt4_entry24.delete(0,END)
                                     bt4_entry24.insert(0,get_bundle_data4[16])
                                     bt4_entry25.delete(0,END)
-                                    bt4_entry25.insert(0,get_bundle_data4[20])
                                     bt4_entry26.delete(0,END)
-                                    bt4_entry26.insert(0,get_bundle_data4[24])
                                     bt4_entry27.delete(0,END)
-                                    bt4_entry27.insert(0,get_bundle_data4[28])
                                     bt4_entry28.delete(0,END)
+                                    if get_bundle_data4[20] == '' or get_bundle_data4[20] is None or get_bundle_data4[20] == NULL:
+                                        bt4_entry25.insert(0,0)
+                                    else:
+                                        bt4_entry25.insert(0,get_bundle_data4[20])
+                                    if get_bundle_data4[24] == '' or get_bundle_data4[24] is None or get_bundle_data4[24] == NULL:
+                                        bt4_entry26.insert(0,0)
+                                    else:
+                                        bt4_entry26.insert(0,get_bundle_data4[24])
+                                    if get_bundle_data4[28] == '' or get_bundle_data4[28] is None or get_bundle_data4[28] == NULL:
+                                        bt4_entry27.insert(0,0)
+                                    else:
+                                        bt4_entry27.insert(0,get_bundle_data4[28])
+
                                     if comp_data[4] == cn_pofsupply.get():
-                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% GST({get_bundle_data4[29]}%)')
-                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% GST({get_bundle_data4[30]}%)')
-                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% GST({get_bundle_data4[31]}%)')
-                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% GST({get_bundle_data4[32]}%)')
+                                        if get_bundle_data4[29] == "" or get_bundle_data4[29] is None or get_bundle_data4[29] == NULL:
+                                            bt4_entry7.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry7.insert(0,f'{get_bundle_data4[29]}% GST({get_bundle_data4[29]}%)')
+                                        if get_bundle_data4[30] == "" or get_bundle_data4[30] is None or get_bundle_data4[30] == NULL:
+                                            bt4_entry14.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry14.insert(0,f'{get_bundle_data4[30]}% GST({get_bundle_data4[30]}%)')
+                                        if get_bundle_data4[31] == "" or get_bundle_data4[31] is None or get_bundle_data4[31] == NULL:
+                                            bt4_entry21.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry21.insert(0,f'{get_bundle_data4[31]}% GST({get_bundle_data4[31]}%)')
+                                        if get_bundle_data4[32] == "" or get_bundle_data4[32] is None or get_bundle_data4[32] == NULL:
+                                            bt4_entry28.insert(0,f'{0}% GST({0}%)')
+                                        else:
+                                            bt4_entry28.insert(0,f'{get_bundle_data4[32]}% GST({get_bundle_data4[32]}%)')
                                     elif comp_data[4] != cn_pofsupply.get():
-                                        bt4_entry7.insert(0,f'{get_bundle_data4[29]}% IGST({get_bundle_data4[29]}%)')
-                                        bt4_entry14.insert(0,f'{get_bundle_data4[30]}% IGST({get_bundle_data4[30]}%)')
-                                        bt4_entry21.insert(0,f'{get_bundle_data4[31]}% IGST({get_bundle_data4[31]}%)')
-                                        bt4_entry28.insert(0,f'{get_bundle_data4[32]}% IGST({get_bundle_data4[32]}%)')
+                                        if get_bundle_data4[29] == "" or get_bundle_data4[29] is None or get_bundle_data4[29] == NULL:
+                                            bt4_entry7.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry7.insert(0,f'{get_bundle_data4[29]}% IGST({get_bundle_data4[29]}%)')
+                                        if get_bundle_data4[30] == "" or get_bundle_data4[30] is None or get_bundle_data4[30] == NULL:
+                                            bt4_entry14.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry14.insert(0,f'{get_bundle_data4[30]}% IGST({get_bundle_data4[30]}%)')
+                                        if get_bundle_data4[31] == "" or get_bundle_data4[31] is None or get_bundle_data4[31] == NULL:
+                                            bt4_entry21.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry21.insert(0,f'{get_bundle_data4[31]}% IGST({get_bundle_data4[31]}%)')
+                                        if get_bundle_data4[32] == "" or get_bundle_data4[32] is None or get_bundle_data4[32] == NULL:
+                                            bt4_entry28.insert(0,f'{0}% IGST({0}%)')
+                                        else:
+                                            bt4_entry28.insert(0,f'{get_bundle_data4[32]}% IGST({get_bundle_data4[32]}%)')
                                     else:
                                         pass
                                 except:
                                     pass
 
-                                qty1 = int(get_bundle_data4[17]) * int(cnt_entry24.get())
-                                qty2 = int(get_bundle_data4[18]) * int(cnt_entry24.get())
-                                qty3 = int(get_bundle_data4[19]) * int(cnt_entry24.get())
-                                qty4 = int(get_bundle_data4[20]) * int(cnt_entry24.get())
-                                if cnt_entry24.get() == "0":
+                                try:
+                                    if get_bundle_data4[17] == '' or get_bundle_data4[17] is None or get_bundle_data4[17] == NULL:
+                                        qty1 = 0
+                                    else:
+                                        qty1 = int(get_bundle_data4[17]) * int(cnt_entry24.get())
+                                    if get_bundle_data4[18] == '' or get_bundle_data4[18] is None or get_bundle_data4[18] == NULL:
+                                        qty2 = 0
+                                    else:
+                                        qty2 = int(get_bundle_data4[18]) * int(cnt_entry24.get())
+                                    if get_bundle_data4[19] == '' or get_bundle_data4[19] is None or get_bundle_data4[19] == NULL:
+                                        qty3 = 0
+                                    else:
+                                        qty3 = int(get_bundle_data4[19]) * int(cnt_entry24.get())
+                                    if get_bundle_data4[20] == '' or get_bundle_data4[20] is None or get_bundle_data4[20] == NULL:
+                                        qty4 = 0
+                                    else:
+                                        qty4 = int(get_bundle_data4[20]) * int(cnt_entry24.get())
+                                    
+                                except:
                                     pass
-                                else:
-                                    bt4_entry4.delete(0,END)
-                                    bt4_entry4.insert(0,qty1)
-                                    bt4_entry11.delete(0,END)
-                                    bt4_entry11.insert(0,qty2)
-                                    bt4_entry18.delete(0,END)
-                                    bt4_entry18.insert(0,qty3)
-                                    bt4_entry25.delete(0,END)
-                                    bt4_entry25.insert(0,qty4)
+                                
+                                bt4_entry4.delete(0,END)
+                                bt4_entry4.insert(0,qty1)
+                                bt4_entry11.delete(0,END)
+                                bt4_entry11.insert(0,qty2)
+                                bt4_entry18.delete(0,END)
+                                bt4_entry18.insert(0,qty3)
+                                bt4_entry25.delete(0,END)
+                                bt4_entry25.insert(0,qty4)
 
-                                tot1 = int(bt4_entry4.get()) * int(float(bt4_entry6.get()))
-                                tot2 = int(bt4_entry11.get()) * int(float(bt4_entry13.get()))
-                                tot3 = int(bt4_entry18.get()) * int(float(bt4_entry20.get()))
-                                tot4 = int(bt4_entry25.get()) * int(float(bt4_entry27.get()))
+                                tot1 = int(bt4_entry4.get()) * int(float(bt4_entry5.get()))
+                                tot2 = int(bt4_entry11.get()) * int(float(bt4_entry12.get()))
+                                tot3 = int(bt4_entry18.get()) * int(float(bt4_entry19.get()))
+                                tot4 = int(bt4_entry25.get()) * int(float(bt4_entry26.get()))
 
                                 bt4_entry6.delete(0,END)
                                 bt4_entry6.insert(0,tot1)
@@ -10495,7 +12562,7 @@ def main_sign_in():
                                 try:
                                     sr_Canvas_1.itemconfig("entry59",state='normal')
                                     sr_Canvas_1.itemconfig("entry60",state='normal')
-                                    sr_Canvas_1.itemconfig("comb21",state='normal')
+                                    sr_Canvas_1.itemconfig("combo21",state='normal')
                                     sr_Canvas_1.itemconfig("button12",state='hidden')
                                 except:
                                     pass
@@ -10595,13 +12662,933 @@ def main_sign_in():
                         cnt_entry2 = Entry(sr_Canvas_1,width=18,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry2,tags=("entry57"))
 
+                        def cnt_calculateTotal1(event,s):
+                            # try:
+                                if s == 1:
+                                    name = cnt_entry1.get()
+                                    qty = cnt_entry3.get()
+                                elif s == 2:
+                                    name = cnt_entry10.get()
+                                    qty = cnt_entry12.get()
+                                elif s == 3:
+                                    name = cnt_entry16.get()
+                                    qty = cnt_entry18.get()
+                                elif s == 4:
+                                    name = cnt_entry22.get()
+                                    qty = cnt_entry24.get()
+
+
+                                if qty != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4,b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
+
+                                    b1tax_tot1 = 0.0
+                                    b1tax_tot2 = 0.0
+                                    b1tax_tot3 = 0.0
+                                    b1tax_tot4 = 0.0
+
+                                    b2tax_tot1 = 0.0
+                                    b2tax_tot2 = 0.0
+                                    b2tax_tot3 = 0.0
+                                    b2tax_tot4 = 0.0
+
+                                    b3tax_tot1 = 0.0
+                                    b3tax_tot2 = 0.0
+                                    b3tax_tot3 = 0.0
+                                    b3tax_tot4 = 0.0
+
+                                    b4tax_tot1 = 0.0
+                                    b4tax_tot2 = 0.0
+                                    b4tax_tot3 = 0.0
+                                    b4tax_tot4 = 0.0
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
+
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
+                                        get_pro_val2 = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql2,get_pro_val2)
+                                        get_pro_data2 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+                                    if s == 1:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            cnt_entry5.delete(0,END)
+                                            cnt_entry5.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            cnt_entry5.delete(0,END)
+                                            cnt_entry5.insert(0,tot)
+                                        elif get_pro_data2 is not None:
+                                            pass
+                                        else:
+                                            cn_view_bundleitems(b=1)
+                                    elif s == 2:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            cnt_entry14.delete(0,END)
+                                            cnt_entry14.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            cnt_entry14.delete(0,END)
+                                            cnt_entry14.insert(0,tot)
+                                        elif get_pro_data2 is not None:
+                                            pass
+                                        else:
+                                            cn_view_bundleitems(b=2)
+                                    elif s == 3:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            cnt_entry20.delete(0,END)
+                                            cnt_entry20.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            cnt_entry20.delete(0,END)
+                                            cnt_entry20.insert(0,tot)
+                                        elif get_pro_data2 is not None:
+                                            pass
+                                        else:
+                                            cn_view_bundleitems(b=3)
+                                    elif s == 4:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            cnt_entry26.delete(0,END)
+                                            cnt_entry26.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            cnt_entry26.delete(0,END)
+                                            cnt_entry26.insert(0,tot)
+                                        elif get_pro_data2 is not None:
+                                            pass
+                                        else:
+                                            cn_view_bundleitems(b=4)
+
+                                    cnt_entry7.delete(0,END)
+                                    cnt_entry8.delete(0,END)
+                                    cnt_entry9.delete(0,END)
+
+                                    def split_gst(string):
+                                        pattern1 = r'\(+'
+                                        pattern2 = r'\%+'
+                                        split1 = re.split(pattern1,string)
+                                        split2 = re.split(pattern2,split1[1])
+                                        return split2
+
+                                    #product gst -----------------------------
+                                    try:
+                                        gst_value1 = split_gst(cnt_entry6.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value2 = split_gst(cnt_entry15.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value3 = split_gst(cnt_entry21.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value4 = split_gst(cnt_entry27.get())
+                                    except:
+                                        pass
+
+                                    #bundle gst ------------------------------ 
+                                    try:
+                                        bgst_value1 = split_gst(bt1_entry7.get())
+                                        bgst_value2 = split_gst(bt1_entry14.get())
+                                        bgst_value3 = split_gst(bt1_entry21.get())
+                                        bgst_value4 = split_gst(bt1_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value5 = split_gst(bt2_entry7.get())
+                                        bgst_value6 = split_gst(bt2_entry14.get())
+                                        bgst_value7 = split_gst(bt2_entry21.get())
+                                        bgst_value8 = split_gst(bt2_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value9 = split_gst(bt3_entry7.get())
+                                        bgst_value10 = split_gst(bt3_entry14.get())
+                                        bgst_value11 = split_gst(bt3_entry21.get())
+                                        bgst_value12 = split_gst(bt3_entry28.get())
+                                    except:
+                                        pass
+                                    try:
+                                        bgst_value13 = split_gst(bt4_entry7.get())
+                                        bgst_value14 = split_gst(bt4_entry14.get())
+                                        bgst_value15 = split_gst(bt4_entry21.get())
+                                        bgst_value16 = split_gst(bt4_entry28.get())
+                                    except:
+                                        pass
+
+                                    get_bun_sql = "SELECT name FROM app1_bundle WHERE cid_id=%s"
+                                    get_bun_val = (comp_data[0],)
+                                    fbcursor.execute(get_bun_sql,get_bun_val)
+                                    get_bun_data = fbcursor.fetchall()
+                                    
+                                    b_list = []
+                                    for g in get_bun_data:
+                                        b_list.append(g[0])
+
+                #=====================================================================================
+                                    #Bundle1--------------------------------------------
+                                    try:
+                                        if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            pass
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            tax_total1 = b1tax_tot1
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
+                                        elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
+                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                                b1tax_tot1 = 0
+                                            else:
+                                                b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
+                                            
+                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                                b1tax_tot2 = 0
+                                            else:
+                                                b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
+
+                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                                b1tax_tot3 = 0
+                                            else:
+                                                b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
+
+                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                                b1tax_tot4 = 0
+                                            else:
+                                                b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
+                                            tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3 + b1tax_tot4
+                                    except:
+                                        pass
+
+                                    #Bundle2--------------------------------------------
+                                    try:
+                                        if bt2_entry7.get() == "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            pass
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            tax_total2 = b2tax_tot1
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() == "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3
+                                        elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() != "Choose":
+                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                                b2tax_tot1 = 0
+                                            else:
+                                                b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
+                                            
+                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                                b2tax_tot2 = 0
+                                            else:
+                                                b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
+
+                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                                b2tax_tot3 = 0
+                                            else:
+                                                b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
+
+                                            if bgst_value8 == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
+                                                b2tax_tot4 = 0
+                                            else:
+                                                b2tax_tot4 = (float(bt2_entry27.get()) * float(float((bgst_value8[0]))))/100
+                                            tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3 + b2tax_tot4
+                                    except:
+                                        pass
+
+                                    #Bundle3--------------------------------------------
+                                    try:
+                                        if bt3_entry7.get() == "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            pass
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            tax_total3 = b3tax_tot1
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() == "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+
+                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                                b3tax_tot3 = 0
+                                            else:
+                                                b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3
+                                        elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() != "Choose":
+                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                                b3tax_tot1 = 0
+                                            else:
+                                                b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
+                                            
+                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                                b3tax_tot2 = 0
+                                            else:
+                                                b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
+
+                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                                b3tax_tot3 = 0
+                                            else:
+                                                b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
+
+                                            if bgst_value12 == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
+                                                b3tax_tot4 = 0
+                                            else:
+                                                b3tax_tot4 = (float(bt3_entry27.get()) * float(float((bgst_value12[0]))))/100
+                                            tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3 + b3tax_tot4
+                                    except:
+                                        pass
+
+                                    #Bundle4--------------------------------------------
+                                    try:
+                                        if bt4_entry7.get() == "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            pass
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            tax_total4 = b4tax_tot1
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() == "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+
+                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                                b4tax_tot3 = 0
+                                            else:
+                                                b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3
+                                        elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() != "Choose":
+                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                                b4tax_tot1 = 0
+                                            else:
+                                                b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
+                                            
+                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                                b4tax_tot2 = 0
+                                            else:
+                                                b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
+
+                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                                b4tax_tot3 = 0
+                                            else:
+                                                b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
+
+                                            if bgst_value16 == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
+                                                b4tax_tot4 = 0
+                                            else:
+                                                b4tax_tot4 = (float(bt4_entry27.get()) * float(float((bgst_value16[0]))))/100
+                                            tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3 + b4tax_tot4
+                                    except:
+                                        pass
+
+                    #=============================================================================================
+
+                                    #All products ----------------------------------------------------------------------------------------
+                                    if cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + float(cnt_entry20.get()) + float(cnt_entry26.get()))
+                                        if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot3
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4
+
+                                        cnt_entry8.insert(0,ptax_total)
+
+                                    #All bundles -----------------------------------------------------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + b2_tot + b3_tot + b4_tot)
+
+                                        cnt_entry8.insert(0,tax_total1 + tax_total2 + tax_total3 + tax_total4)
+
+                                    #First row bundle-----------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        print(cnt_entry14.get())
+                                        print(cnt_entry20.get())
+                                        print(cnt_entry26.get())
+                                        cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + float(cnt_entry20.get()) + float(cnt_entry26.get()))
+
+                                        #Rest products--------------------------------------
+                                        if cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":                                               
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":                                              
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3 + tax_tot4
+                                        cnt_entry8.insert(0,tax_total1 + ptax_total)
+
+                                    #First and Second row Bundle -------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + b2_tot + float(cnt_entry20.get()) + float(cnt_entry26.get()))
+
+                                        #Rest products--------------------------------------
+                                        if cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot3
+                                        elif cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot3 + tax_tot4
+
+                                        cnt_entry8.insert(0,tax_total1 + tax_total2 + ptax_total)
+
+                                    #First,Second and Third row Bundle -------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + b2_tot + b3_tot + float(cnt_entry26.get()))
+
+                                        #Rest products--------------------------------------
+                                        if cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry27.get() != "Choose":
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot4
+                                        cnt_entry8.insert(0,tax_total1 + tax_total2 + tax_total3 + ptax_total)
+                                    
+                                    #Second row Bundle------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + float(cnt_entry20.get()) + float(cnt_entry26.get()))
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3 + tax_tot4
+                                        cnt_entry8.insert(0,tax_total2 + ptax_total)
+
+                                    #Second,Third row Bundle------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + b3_tot + float(cnt_entry26.get()))
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot4
+                                        cnt_entry8.insert(0,tax_total2 + tax_total3 + ptax_total)
+
+                                    #Second,Fourth row Bundle------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + float(cnt_entry20.get()) + b4_tot)
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry21.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry21.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3
+                                        cnt_entry8.insert(0,tax_total2 + tax_total4 + ptax_total)
+
+                                    #Second,Third and Fourth row Bundle------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + b3_tot + b4_tot)
+
+                                        if cnt_entry6.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        cnt_entry8.insert(0,tax_total2 + tax_total3 + tax_total4 + ptax_total)
+                                    
+                                    #Third row Bundle---------------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + b3_tot + float(cnt_entry26.get()))
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot4
+                                        
+                                        cnt_entry8.insert(0,tax_total3 + ptax_total)
+
+                                    #Third,first row Bundle---------------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + b3_tot + float(cnt_entry26.get()))
+
+                                        if cnt_entry15.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry27.get() == "Choose":                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry27.get() != "Choose":                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot4
+                                        
+                                        cnt_entry8.insert(0,tax_total1 + tax_total3 + ptax_total)
+
+                                    #Third,fourth row Bundle---------------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + b3_tot + b4_tot)
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2
+                                        
+                                        cnt_entry8.insert(0,tax_total3 + tax_total4 + ptax_total)
+
+                                    #Third,first and fourth row Bundle---------------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + b3_tot + b4_tot)
+
+                                        if cnt_entry15.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry15.get() != "Choose":                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        
+                                        cnt_entry8.insert(0,tax_total1 + tax_total3 + tax_total4 + ptax_total)
+
+                                    #Fourth row Bundle -----------------------------------------------------
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + float(cnt_entry20.get()) + b4_tot)
+
+                                        if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose":
+                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot3
+                                        cnt_entry8.insert(0,tax_total4 + ptax_total)
+
+                                    #Fourth,First row Bundle -----------------------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + float(cnt_entry20.get()) + b4_tot)
+
+                                        if cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose":                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose":                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3
+                                        cnt_entry8.insert(0,tax_total1 + tax_total4 + ptax_total)
+
+                                    #Fourth,First and Second row Bundle -----------------------------------------------------
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                        b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
+                                        b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
+                                        b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
+                                        cnt_entry7.insert(0,b1_tot + b2_tot + float(cnt_entry20.get()) + b4_tot)
+
+                                        if cnt_entry21.get() == "Choose":
+                                            ptax_total = 0
+                                        elif cnt_entry21.get() != "Choose":
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot3
+                                        cnt_entry8.insert(0,tax_total1 + tax_total2 + tax_total4 + ptax_total)
+                                    cnt_entry9.insert(0,float(cnt_entry7.get()) + float(float(cnt_entry8.get())))
+                                else:
+                                    pass
+                            # except:
+                            #     pass
+
                         cnt_entry3 = Spinbox(sr_Canvas_1,width=8,justify=RIGHT,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry3.bind("<Key>",lambda event,sp = 1:cnt_calculateTotal1(event,sp))
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry3,tags=("entry58"))
 
                         cnt_entry4 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry4,tags=("entry59"))
 
                         cnt_entry5 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry5.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry5,tags=("entry60"))
 
                         cnt_entry6 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
@@ -10757,11 +13744,10 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry13,tags=("entry63"))
 
                         cnt_entry14 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry14.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry14,tags=("entry64"))
 
                         cnt_entry15 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
                         cnt_entry15["values"] = cplace_gstlist
                         cnt_entry15.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry15,tags=("combo23"))
@@ -10915,11 +13901,10 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry19,tags=("entry67"))
 
                         cnt_entry20 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry20.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry20,tags=("entry68"))
 
                         cnt_entry21 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
                         cnt_entry21["values"] = cplace_gstlist
                         cnt_entry21.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry21,tags=("combo25"))
@@ -11073,11 +14058,10 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry25,tags=("entry71"))
 
                         cnt_entry26 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry26.insert(0,0)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry26,tags=("entry72"))
 
                         cnt_entry27 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='black')
-                        cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
-                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
                         cnt_entry27["values"] = cplace_gstlist
                         cnt_entry27.current(0)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry27,tags=("combo27"))
