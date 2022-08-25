@@ -1,6 +1,7 @@
 
 from ast import Delete
 from asyncio.windows_events import NULL
+from msilib.schema import ComboBox
 from sys import flags
 from turtle import width
 import matplotlib.pyplot as plt
@@ -2020,6 +2021,39 @@ def main_sign_in():
                             dcanvas.coords("entry70",dwidth/2.45,dheight/0.487)
                             dcanvas.coords("entry71",dwidth/1.965,dheight/0.487)
                             dcanvas.coords("entry72",dwidth/1.525,dheight/0.487)
+
+                            dcanvas.coords("line81",dwidth/1.465,dheight/0.7,dwidth/1.465,dheight/0.464)
+                            dcanvas.coords("line82",dwidth/1.2,dheight/0.7,dwidth/1.2,dheight/0.464)
+                            
+                            dcanvas.coords("label86",dwidth/1.65,dheight/0.675)
+                            dcanvas.coords("label87",dwidth/1.325,dheight/0.675)
+                            dcanvas.coords("label88",dwidth/1.115,dheight/0.675)
+
+                            dcanvas.coords("entry73",dwidth/5.13,dheight/0.63)
+                            dcanvas.coords("entry74",dwidth/3.39,dheight/0.63)
+                            dcanvas.coords("entry75",dwidth/2.24,dheight/0.63)
+                            dcanvas.coords("entry76",dwidth/1.848,dheight/0.63)
+                            dcanvas.coords("entry77",dwidth/1.45,dheight/0.63)
+                            dcanvas.coords("entry78",dwidth/5.13,dheight/0.5745)
+                            dcanvas.coords("entry79",dwidth/3.39,dheight/0.5745)
+                            dcanvas.coords("entry80",dwidth/2.24,dheight/0.5745)
+                            dcanvas.coords("entry81",dwidth/1.848,dheight/0.5745)
+                            dcanvas.coords("entry82",dwidth/1.45,dheight/0.5745)
+                            dcanvas.coords("entry83",dwidth/5.13,dheight/0.527)
+                            dcanvas.coords("entry84",dwidth/3.39,dheight/0.527)
+                            dcanvas.coords("entry85",dwidth/2.24,dheight/0.527)
+                            dcanvas.coords("entry86",dwidth/1.848,dheight/0.527)
+                            dcanvas.coords("entry87",dwidth/1.45,dheight/0.527)
+                            dcanvas.coords("entry88",dwidth/5.13,dheight/0.487)
+                            dcanvas.coords("entry89",dwidth/3.39,dheight/0.487)
+                            dcanvas.coords("entry90",dwidth/2.24,dheight/0.487)
+                            dcanvas.coords("entry91",dwidth/1.848,dheight/0.487)
+                            dcanvas.coords("entry92",dwidth/1.45,dheight/0.487)
+
+                            dcanvas.coords("combo28",dwidth/1.112,dheight/0.62)
+                            dcanvas.coords("combo29",dwidth/1.112,dheight/0.5655)
+                            dcanvas.coords("combo30",dwidth/1.112,dheight/0.519)
+                            dcanvas.coords("combo31",dwidth/1.112,dheight/0.481)
                         except:
                             pass
 
@@ -3979,17 +4013,6 @@ def main_sign_in():
                                         pass
                             except:
                                 pass
-
-                                    # if not inv_data:
-                                    #     pass
-                                    # else:
-                                    #     count = 1
-                                    #     for i in inv_data:
-                                    #         rp_tree.insert(parent='',index='end',iid=i,text='',values=(count,str(i[3]) + " " + i[5],i[6],i[17],i[41],0))
-
-                            
-                                    
-
 
                         cm_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
                         cm_custCombo["values"] = cust_list
@@ -6807,55 +6830,55 @@ def main_sign_in():
                                         if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
                                             pass
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             tax_total1 = b1tax_tot1
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
                                             tax_total1 = b1tax_tot1 + b1tax_tot2
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
 
-                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value3[0] == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
                                                 b1tax_tot3 = 0
                                             else:
                                                 b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
                                             tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
 
-                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value3[0] == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
                                                 b1tax_tot3 = 0
                                             else:
                                                 b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
 
-                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value4[0] == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
                                                 b1tax_tot4 = 0
                                             else:
                                                 b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
@@ -6868,55 +6891,55 @@ def main_sign_in():
                                         if bt2_entry7.get() == "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
                                             pass
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             tax_total2 = b2tax_tot1
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
                                             tax_total2 = b2tax_tot1 + b2tax_tot2
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
 
-                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value7[0] == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
                                                 b2tax_tot3 = 0
                                             else:
                                                 b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
                                             tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() != "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
 
-                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value7[0] == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
                                                 b2tax_tot3 = 0
                                             else:
                                                 b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
 
-                                            if bgst_value8 == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value8[0] == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
                                                 b2tax_tot4 = 0
                                             else:
                                                 b2tax_tot4 = (float(bt2_entry27.get()) * float(float((bgst_value8[0]))))/100
@@ -6929,55 +6952,55 @@ def main_sign_in():
                                         if bt3_entry7.get() == "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
                                             pass
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             tax_total3 = b3tax_tot1
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
                                             tax_total3 = b3tax_tot1 + b3tax_tot2
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
 
-                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value11[0] == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
                                                 b3tax_tot3 = 0
                                             else:
                                                 b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
                                             tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() != "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
 
-                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value11[0] == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
                                                 b3tax_tot3 = 0
                                             else:
                                                 b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
 
-                                            if bgst_value12 == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value12[0] == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
                                                 b3tax_tot4 = 0
                                             else:
                                                 b3tax_tot4 = (float(bt3_entry27.get()) * float(float((bgst_value12[0]))))/100
@@ -6990,55 +7013,55 @@ def main_sign_in():
                                         if bt4_entry7.get() == "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
                                             pass
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             tax_total4 = b4tax_tot1
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
                                             tax_total4 = b4tax_tot1 + b4tax_tot2
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
 
-                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value15[0] == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
                                                 b4tax_tot3 = 0
                                             else:
                                                 b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
                                             tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() != "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
 
-                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value15[0] == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
                                                 b4tax_tot3 = 0
                                             else:
                                                 b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
 
-                                            if bgst_value16 == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value16[0] == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
                                                 b4tax_tot4 = 0
                                             else:
                                                 b4tax_tot4 = (float(bt4_entry27.get()) * float(float((bgst_value16[0]))))/100
@@ -7054,13 +7077,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7071,7 +7094,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7086,8 +7109,129 @@ def main_sign_in():
                                             else:
                                                 tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2 + tax_tot3
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot4
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3 + tax_tot4
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot3
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot3 + tax_tot4
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cmt_entry24.get() == "Exempt GST(0%)" or cmt_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3 + tax_tot4
+                                        elif cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot4
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot4
+                                        elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cmt_entry17.get() == "Exempt GST(0%)" or cmt_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cmt_entry31.get() == "Exempt GST(0%)" or cmt_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cmt_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot4
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7218,13 +7362,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry24.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7235,7 +7379,7 @@ def main_sign_in():
                                                 tax_tot3 = (float(cmt_entry23.get()) * float(float((gst_value3[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot3
                                         elif cmt_entry7.get() != "Choose" and cmt_entry24.get() != "Choose" and cmt_entry31.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7261,13 +7405,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry31.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry31.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7288,13 +7432,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry24.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry24.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry24.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7316,7 +7460,7 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7331,13 +7475,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry31.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry31.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7348,7 +7492,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry31.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7403,13 +7547,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7448,13 +7592,13 @@ def main_sign_in():
                                         if cmt_entry7.get() == "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose":
                                             ptax_total = 0
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() == "Choose" and cmt_entry24.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() == "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -7465,7 +7609,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cmt_entry16.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cmt_entry7.get() != "Choose" and cmt_entry17.get() != "Choose" and cmt_entry24.get() != "Choose":
-                                            if gst_value1 == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cmt_entry7.get() == "Exempt GST(0%)" or cmt_entry7.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cmt_entry6.get()) * float(float((gst_value1[0]))))/100
@@ -8095,6 +8239,13 @@ def main_sign_in():
                             fbcursor.execute(get_sales_sql)
                             get_sales_data = fbcursor.fetchone()
 
+                            def split_gst(string):
+                                pattern1 = r'\(+'
+                                pattern2 = r'\%+'
+                                split1 = re.split(pattern1,string)
+                                split2 = re.split(pattern2,split1[1])
+                                return split2[0]
+
                             if not get_sales_data:
                                 saleno = "1001"
                             else:
@@ -8117,7 +8268,10 @@ def main_sign_in():
                             saleqty = cmt_entry4.get()
                             saleprice = cmt_entry5.get()
                             saaletotal = cmt_entry6.get()
-                            tax = cmt_entry7.get()
+                            try:
+                                tax = split_gst(cmt_entry7.get())
+                            except:
+                                tax = 0
                             salesubtotal = cmt_entry8.get()
                             saletaxamount = cmt_entry9.get()
                             salegrandtotal = cmt_entry10.get()
@@ -8130,7 +8284,10 @@ def main_sign_in():
                             catqty2 = cmt_entry14.get()
                             catprice2 = cmt_entry15.get()
                             cattotal2 = cmt_entry16.get()
-                            tax1 = cmt_entry17.get()
+                            try:
+                                tax1 = split_gst(cmt_entry17.get())
+                            except:
+                                tax1 = 0
                             if cmt_entry18.get() == "Select Product":
                                 category3 = ''
                             else:
@@ -8140,7 +8297,10 @@ def main_sign_in():
                             catqty3 = cmt_entry21.get()
                             catprice3 = cmt_entry22.get()
                             cattotal3 = cmt_entry23.get()
-                            tax2 = cmt_entry24.get()
+                            try:
+                                tax2 = split_gst(cmt_entry24.get())
+                            except:
+                                tax2 = 0
                             if cmt_entry25.get() == "Select Product":
                                 category4 = ''
                             else:
@@ -8150,7 +8310,10 @@ def main_sign_in():
                             catqty4 = cmt_entry28.get()
                             catprice4 = cmt_entry29.get()
                             cattotal4 = cmt_entry30.get()
-                            tax3 = cmt_entry31.get()
+                            try:
+                                tax3 = split_gst(cmt_entry31.get())
+                            except:
+                                tax3 = 0
                             cid_id = comp_data[0]
 
                             if salename == "Select Customer" or salename == '' or salesplace == '' or salepay == '' or salerefno == '':
@@ -8237,12 +8400,14 @@ def main_sign_in():
                                                 upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
                                                 fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
                                                 finsysdb.commit()
-                                            else:
+                                            elif get_accts_data1:
                                                 upd_bal1 = get_accts_data1[0] - float(cxq)
                                                 upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
                                                 upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
                                                 fbcursor.execute(upd_accts_sql1,upd_accts_val1)
                                                 finsysdb.commit()
+                                            else:
+                                                pass
 
                                             #----------------------------------------------------------
                                             get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
@@ -8263,12 +8428,14 @@ def main_sign_in():
                                                 upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
                                                 fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
                                                 finsysdb.commit()
-                                            else:
+                                            elif get_accts_data2:
                                                 upd_bal2 = get_accts_data2[0] + float(t)
                                                 upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
                                                 upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
                                                 fbcursor.execute(upd_accts_sql2,upd_accts_val2)
                                                 finsysdb.commit()
+                                            else:
+                                                pass
 
                                             #---------------------------------------------------
                                             get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
@@ -8289,12 +8456,15 @@ def main_sign_in():
                                                 upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
                                                 fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
                                                 finsysdb.commit()
-                                            else:
+                                            elif get_accts_data3:
                                                 upd_bal3 = get_accts_data3[0] + float(cxq)
                                                 upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
                                                 upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
                                                 fbcursor.execute(upd_accts_sql3,upd_accts_val3)
                                                 finsysdb.commit()
+                                            else:
+                                                pass
+
                                             try:
                                                 if salesplace == comp_data[4]:
                                                     tax = tx/2
@@ -8369,12 +8539,15 @@ def main_sign_in():
                                                 upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
                                                 fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
                                                 finsysdb.commit()
-                                            else:
+                                            elif get_accts_data1:
                                                 upd_bal1 = get_accts_data1[0] + float(t)
                                                 upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
                                                 upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
                                                 fbcursor.execute(upd_accts_sql1,upd_accts_val1)
                                                 finsysdb.commit()
+                                            else:
+                                                pass
+
                                             try:
                                                 if salesplace == comp_data[4]:
                                                     tax = tx/2
@@ -8637,223 +8810,236 @@ def main_sign_in():
                                     bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
                                 else:
                                     pass
+                                
+                                try:
+                                    for (p,q,t,tx) in zip(bproducts,bqty,btotals,btax_amount):
+                                        try:
+                                            get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                            get_invent_val = (p,comp_data[0])
+                                            fbcursor.execute(get_invent_sql,get_invent_val)
+                                            get_invent_data = fbcursor.fetchone()
 
-                                for (p,q,t,tx) in zip(bproducts,bqty,btotals,btax_amount):
-                                    try:
-                                        get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
-                                        get_invent_val = (p,comp_data[0])
-                                        fbcursor.execute(get_invent_sql,get_invent_val)
-                                        get_invent_data = fbcursor.fetchone()
-
-                                        if not get_invent_data:
-                                            pass
-                                        else:
-                                            initial_qty = int(get_invent_data[7]) - int(q)
-
-                                            upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
-                                            upd_invent_val = (initial_qty,p,comp_data[0])
-                                            fbcursor.execute(upd_invent_sql,upd_invent_val)
-                                            finsysdb.commit()
-
-                                            cxq = float(get_invent_data[16]) * float(q)
-
-                                            get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                            get_accts1_val1 = (get_invent_data[10],comp_data[0])
-                                            fbcursor.execute(get_accts1_sql1,get_accts1_val1)
-                                            get_accts1_data1 = fbcursor.fetchone()
-
-                                            get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
-                                            get_accts_val1 = (get_invent_data[10],comp_data[0])
-                                            fbcursor.execute(get_accts_sql1,get_accts_val1)
-                                            get_accts_data1 = fbcursor.fetchone()
-
-                                            if not get_accts_data1 and not get_accts1_data1:
+                                            if not get_invent_data:
                                                 pass
-                                            elif get_accts1_data1:
-                                                upd_bal1 = get_accts1_data1[0] - float(cxq)
-                                                upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
-                                                fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
-                                                finsysdb.commit()
                                             else:
-                                                upd_bal1 = get_accts_data1[0] - float(cxq)
-                                                upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
-                                                fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                initial_qty = int(get_invent_data[7]) - int(q)
+
+                                                upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
+                                                upd_invent_val = (initial_qty,p,comp_data[0])
+                                                fbcursor.execute(upd_invent_sql,upd_invent_val)
                                                 finsysdb.commit()
 
-                                            #----------------------------------------------------------
-                                            get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                            get_accts1_val2 = (get_invent_data[13],comp_data[0])
-                                            fbcursor.execute(get_accts1_sql2,get_accts1_val2)
-                                            get_accts1_data2 = fbcursor.fetchone()
+                                                cxq = float(get_invent_data[16]) * float(q)
 
-                                            get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
-                                            get_accts_val2 = (get_invent_data[13],comp_data[0])
-                                            fbcursor.execute(get_accts_sql2,get_accts_val2)
-                                            get_accts_data2 = fbcursor.fetchone()
+                                                get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val1 = (get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                                get_accts1_data1 = fbcursor.fetchone()
 
-                                            if not get_accts_data2 and not get_accts1_data2:
-                                                pass
-                                            elif get_accts1_data2:
-                                                upd_bal2 = get_accts1_data2[0] + float(t)
-                                                upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
-                                                fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
-                                                finsysdb.commit()
-                                            else:
-                                                upd_bal2 = get_accts_data2[0] + float(t)
-                                                upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
-                                                fbcursor.execute(upd_accts_sql2,upd_accts_val2)
-                                                finsysdb.commit()
+                                                get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val1 = (get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                                get_accts_data1 = fbcursor.fetchone()
 
-                                            #---------------------------------------------------
-                                            get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                            get_accts1_val3 = (get_invent_data[17],comp_data[0])
-                                            fbcursor.execute(get_accts1_sql3,get_accts1_val3)
-                                            get_accts1_data3 = fbcursor.fetchone()
-
-                                            get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
-                                            get_accts_val3 = (get_invent_data[17],comp_data[0])
-                                            fbcursor.execute(get_accts_sql3,get_accts_val3)
-                                            get_accts_data3= fbcursor.fetchone()
-
-                                            if not get_accts_data3 and not get_accts1_data3:
-                                                pass
-                                            elif get_accts1_data3:
-                                                upd_bal3 = get_accts1_data3[0] + float(cxq)
-                                                upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
-                                                fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
-                                                finsysdb.commit()
-                                            else:
-                                                upd_bal3 = get_accts_data3[0] + float(cxq)
-                                                upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
-                                                fbcursor.execute(upd_accts_sql3,upd_accts_val3)
-                                                finsysdb.commit()
-                                            try:
-                                                if salesplace == comp_data[4]:
-                                                    tax = tx/2
-                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val4 = ('Output CGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
-                                                    get_accts1_data4 = fbcursor.fetchone()
-
-                                                    upd_bal4 = get_accts1_data4[0] + tax
-                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                if not get_accts_data1 and not get_accts1_data1:
+                                                    pass
+                                                elif get_accts1_data1:
+                                                    upd_bal1 = get_accts1_data1[0] - float(cxq)
+                                                    upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
                                                     finsysdb.commit()
-
-                                                    get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val5 = ('Output SGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql5,get_accts1_val5)
-                                                    get_accts1_data5 = fbcursor.fetchone()
-
-                                                    upd_bal5 = get_accts1_data5[0] + tax
-                                                    upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                elif get_accts_data1:
+                                                    upd_bal1 = get_accts_data1[0] - float(cxq)
+                                                    upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql1,upd_accts_val1)
                                                     finsysdb.commit()
                                                 else:
-                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val4 = ('Output IGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
-                                                    get_accts1_data4 = fbcursor.fetchone()
+                                                    pass
 
-                                                    upd_bal4 = get_accts1_data4[0] + tx
-                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                #----------------------------------------------------------
+                                                get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val2 = (get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql2,get_accts1_val2)
+                                                get_accts1_data2 = fbcursor.fetchone()
+
+                                                get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val2 = (get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(get_accts_sql2,get_accts_val2)
+                                                get_accts_data2 = fbcursor.fetchone()
+
+                                                if not get_accts_data2 and not get_accts1_data2:
+                                                    pass
+                                                elif get_accts1_data2:
+                                                    upd_bal2 = get_accts1_data2[0] + float(t)
+                                                    upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
                                                     finsysdb.commit()
-                                            except:
-                                                pass
-                                    except:
-                                        pass
-
-                                    try:
-                                        get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
-                                        get_noninvent_val = (p,comp_data[0])
-                                        fbcursor.execute(get_noninvent_sql,get_noninvent_val)
-                                        get_noninvent_data = fbcursor.fetchone()
-
-                                        if not get_noninvent_data:
-                                            pass
-                                        else:
-                                            qty = int(get_noninvent_data[17]) - int(q)
-
-                                            upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
-                                            upd_noninvent_val = (qty,p,comp_data[0])
-                                            fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
-                                            finsysdb.commit()
-
-                                            get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                            get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
-                                            fbcursor.execute(get_accts1_sql1,get_accts1_val1)
-                                            get_accts1_data1 = fbcursor.fetchone()
-
-                                            get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
-                                            get_accts_val1 = (get_noninvent_data[9],comp_data[0])
-                                            fbcursor.execute(get_accts_sql1,get_accts_val1)
-                                            get_accts_data1 = fbcursor.fetchone()
-
-                                            if not get_accts_data1 and not get_accts1_data1:
-                                                pass
-                                            elif get_accts1_data1:
-                                                upd_bal1 = get_accts1_data1[0] + float(t)
-                                                upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
-                                                fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
-                                                finsysdb.commit()
-                                            else:
-                                                upd_bal1 = get_accts_data1[0] + float(t)
-                                                upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
-                                                fbcursor.execute(upd_accts_sql1,upd_accts_val1)
-                                                finsysdb.commit()
-                                            try:
-                                                if salesplace == comp_data[4]:
-                                                    tax = tx/2
-                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val4 = ('Output CGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
-                                                    get_accts1_data4 = fbcursor.fetchone()
-
-                                                    upd_bal4 = get_accts1_data4[0] + tax
-                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
-                                                    finsysdb.commit()
-
-                                                    get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val5 = ('Output SGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql5,get_accts1_val5)
-                                                    get_accts1_data5 = fbcursor.fetchone()
-
-                                                    upd_bal5 = get_accts1_data5[0] + tax
-                                                    upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                elif get_accts_data2:
+                                                    upd_bal2 = get_accts_data2[0] + float(t)
+                                                    upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql2,upd_accts_val2)
                                                     finsysdb.commit()
                                                 else:
-                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
-                                                    get_accts1_val4 = ('Output IGST',comp_data[0])
-                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
-                                                    get_accts1_data4 = fbcursor.fetchone()
+                                                    pass
 
-                                                    upd_bal4 = get_accts1_data4[0] + tx
-                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
-                                                    upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
-                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                #---------------------------------------------------
+                                                get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val3 = (get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql3,get_accts1_val3)
+                                                get_accts1_data3 = fbcursor.fetchone()
+
+                                                get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val3 = (get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(get_accts_sql3,get_accts_val3)
+                                                get_accts_data3= fbcursor.fetchone()
+
+                                                if not get_accts_data3 and not get_accts1_data3:
+                                                    pass
+                                                elif get_accts1_data3:
+                                                    upd_bal3 = get_accts1_data3[0] + float(cxq)
+                                                    upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
                                                     finsysdb.commit()
-                                            except:
-                                                pass
+                                                elif get_accts_data3:
+                                                    upd_bal3 = get_accts_data3[0] + float(cxq)
+                                                    upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql3,upd_accts_val3)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
 
-                                    except:
-                                        pass
-                            
+                                                try:
+                                                    if salesplace == comp_data[4]:
+                                                        tax = tx/2
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] + tax
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+
+                                                        get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                        get_accts1_data5 = fbcursor.fetchone()
+
+                                                        upd_bal5 = get_accts1_data5[0] + tax
+                                                        upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                        finsysdb.commit()
+                                                    else:
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] + tx
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+                                                except:
+                                                    pass
+                                        except:
+                                            pass
+
+                                        try:
+                                            get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                            get_noninvent_val = (p,comp_data[0])
+                                            fbcursor.execute(get_noninvent_sql,get_noninvent_val)
+                                            get_noninvent_data = fbcursor.fetchone()
+
+                                            if not get_noninvent_data:
+                                                pass
+                                            else:
+                                                qty = int(get_noninvent_data[17]) - int(q)
+
+                                                upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
+                                                upd_noninvent_val = (qty,p,comp_data[0])
+                                                fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                                get_accts1_data1 = fbcursor.fetchone()
+
+                                                get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val1 = (get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                                get_accts_data1 = fbcursor.fetchone()
+
+                                                if not get_accts_data1 and not get_accts1_data1:
+                                                    pass
+                                                elif get_accts1_data1:
+                                                    upd_bal1 = get_accts1_data1[0] + float(t)
+                                                    upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                                    finsysdb.commit()
+                                                elif get_accts_data1:
+                                                    upd_bal1 = get_accts_data1[0] + float(t)
+                                                    upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
+
+                                                try:
+                                                    if salesplace == comp_data[4]:
+                                                        tax = tx/2
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] + tax
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+
+                                                        get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                        get_accts1_data5 = fbcursor.fetchone()
+
+                                                        upd_bal5 = get_accts1_data5[0] + tax
+                                                        upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                        finsysdb.commit()
+                                                    else:
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] + tx
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+                                                except:
+                                                    pass
+
+                                        except:
+                                            pass
+                                except:
+                                    pass
+
                                 sr_Frame_1.destroy()
                                 sr_Frame.grid(row=0,column=0,sticky='nsew')
 
@@ -8871,6 +9057,11 @@ def main_sign_in():
                                 get_srp_val = (comp_data[0],)
                                 fbcursor.execute(get_srp_sql,get_srp_val)
                                 get_srp_data = fbcursor.fetchall()
+
+                                get_crdn_sql = "SELECT * FROM app1_credit WHERE cid_id=%s"
+                                get_crdn_val = (comp_data[0],)
+                                fbcursor.execute(get_crdn_sql,get_crdn_val)
+                                get_crdn_data = fbcursor.fetchall()
                                 
                                 try:
                                     for p in get_payment_data:
@@ -8887,6 +9078,12 @@ def main_sign_in():
                                 try:
                                     for s in get_srp_data:
                                         sr_tree.insert(parent='',index='end',values=(s[4],'Sales reciept',s[5],s[1],'','0.00',s[16],s[18],s[19]))
+                                except:
+                                    pass
+
+                                try:
+                                    for c in get_crdn_data:
+                                        sr_tree.insert(parent='',index='end',values=(c[4],'Credit Note',c[5],c[1],c[4],c[16],c[14],c[17],c[16]))
                                 except:
                                     pass
                                 
@@ -9972,145 +10169,169 @@ def main_sign_in():
                                     pass
                             elif get_bundle1_data and get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
                                     else:
-                                        pass
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
-                                    else:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif get_bundle1_data and get_bundle2_data and get_bundle3_data and not get_bundle4_data:
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and get_bundle2_data and not get_bundle3_data and not get_bundle4_data:
@@ -10139,78 +10360,90 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
                                     else:
-                                        pass
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
-                                    else:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and get_bundle2_data and get_bundle3_data and not get_bundle4_data:
@@ -10231,75 +10464,86 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and get_bundle2_data and not get_bundle3_data and get_bundle4_data:
@@ -10320,75 +10564,87 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
                                     else:
-                                        pass
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and get_bundle2_data and get_bundle3_data and get_bundle4_data:
@@ -10401,72 +10657,84 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
 
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
 
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
-                                        pass
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and not get_bundle2_data and get_bundle3_data and not get_bundle4_data:
@@ -10495,78 +10763,90 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
                                     else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif get_bundle1_data and not get_bundle2_data and get_bundle3_data and not get_bundle4_data:
@@ -10588,75 +10868,87 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_inv_data[36])
-                                    cnt_entry26.delete(0,END)
-                                    cnt_entry26.insert(0,get_inv_data[37])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+                                        cnt_entry25.delete(0,END)
+                                        cnt_entry25.insert(0,get_inv_data[36])
+                                        cnt_entry26.delete(0,END)
+                                        cnt_entry26.insert(0,get_inv_data[37])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% GST({get_inv_data[38]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry27.delete(0,END)
+                                            cnt_entry27.insert(0,f'{get_inv_data[38]}% IGST({get_inv_data[38]}%)')
+                                        else:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and not get_bundle2_data and get_bundle3_data and get_bundle4_data:
@@ -10677,75 +10969,87 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
 
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
-                                        pass
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif get_bundle1_data and not get_bundle2_data and get_bundle3_data and get_bundle4_data:                                
@@ -10758,72 +11062,84 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                        sr_Canvas_1.itemconfig("button14",state='normal')
-                                        sr_Canvas_1.itemconfig("label84",state='hidden')
-                                    except:
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry67",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry68",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo25",state='hidden')
+                                            sr_Canvas_1.itemconfig("button14",state='normal')
+                                            sr_Canvas_1.itemconfig("label84",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif not get_bundle1_data and not get_bundle2_data and not get_bundle3_data and get_bundle4_data:
@@ -10852,78 +11168,90 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_inv_data[13])
-                                    cnt_entry5.delete(0,END)
-                                    cnt_entry5.insert(0,get_inv_data[14])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
+                                        pass
                                     else:
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
+                                        cnt_entry4.delete(0,END)
+                                        cnt_entry4.insert(0,get_inv_data[13])
+                                        cnt_entry5.delete(0,END)
+                                        cnt_entry5.insert(0,get_inv_data[14])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% GST({get_inv_data[15]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry6.delete(0,END)
+                                            cnt_entry6.insert(0,f'{get_inv_data[15]}% IGST({get_inv_data[15]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
                                     else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
-                                        pass
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif get_bundle1_data and not get_bundle2_data and not get_bundle3_data and get_bundle4_data:                                
@@ -10944,75 +11272,86 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_inv_data[22])
-                                    cnt_entry14.delete(0,END)
-                                    cnt_entry14.insert(0,get_inv_data[23])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
                                     else:
-                                        pass
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
 
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
+                                        pass
                                     else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+                                        cnt_entry13.delete(0,END)
+                                        cnt_entry13.insert(0,get_inv_data[22])
+                                        cnt_entry14.delete(0,END)
+                                        cnt_entry14.insert(0,get_inv_data[23])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% GST({get_inv_data[24]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry15.delete(0,END)
+                                            cnt_entry15.insert(0,f'{get_inv_data[24]}% IGST({get_inv_data[24]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
                                         pass
-
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
                                         pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             elif get_bundle1_data and get_bundle2_data and not get_bundle3_data and get_bundle4_data:
@@ -11025,76 +11364,95 @@ def main_sign_in():
                                     pass
                                 
                                 try:
-                                    cnt_entry1.delete(0,END)
-                                    cnt_entry1.insert(0,get_inv_data[9])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_inv_data[11])
-                                    cnt_entry3.delete(0,END)
-                                    cnt_entry3.insert(0,get_inv_data[12])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                        sr_Canvas_1.itemconfig("button12",state='normal')
-                                        sr_Canvas_1.itemconfig("label82",state='hidden')
-                                    except:
+                                    if get_inv_data[9] == '' or get_inv_data[9] is None:
                                         pass
-
-                                    cnt_entry10.delete(0,END)
-                                    cnt_entry10.insert(0,get_inv_data[18])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_inv_data[20])
-                                    cnt_entry12.delete(0,END)
-                                    cnt_entry12.insert(0,get_inv_data[21])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                        sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                        sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                        sr_Canvas_1.itemconfig("button13",state='normal')
-                                        sr_Canvas_1.itemconfig("label83",state='hidden')
-                                    except:
-                                        pass
-
-                                    cnt_entry16.delete(0,END)
-                                    cnt_entry16.insert(0,get_inv_data[25])
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_inv_data[27])
-                                    cnt_entry18.delete(0,END)
-                                    cnt_entry18.insert(0,get_inv_data[28])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_inv_data[29])
-                                    cnt_entry20.delete(0,END)
-                                    cnt_entry20.insert(0,get_inv_data[30])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
                                     else:
-                                        pass
+                                        cnt_entry1.delete(0,END)
+                                        cnt_entry1.insert(0,get_inv_data[9])
+                                        cnt_entry2.delete(0,END)
+                                        cnt_entry2.insert(0,get_inv_data[11])
+                                        cnt_entry3.delete(0,END)
+                                        cnt_entry3.insert(0,get_inv_data[12])
 
-                                    cnt_entry22.delete(0,END)
-                                    cnt_entry22.insert(0,get_inv_data[32])
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_inv_data[34])
-                                    cnt_entry24.delete(0,END)
-                                    cnt_entry24.insert(0,get_inv_data[35])
-
-                                    try:
-                                        sr_Canvas_1.itemconfig("entry71",state='normal')
-                                        sr_Canvas_1.itemconfig("entry72",state='normal')
-                                        sr_Canvas_1.itemconfig("combo27",state='normal')
-                                        sr_Canvas_1.itemconfig("button15",state='hidden')
-                                        sr_Canvas_1.itemconfig("label85",state='hidden')
-                                    except:
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry59",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry60",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo21",state='hidden')
+                                            sr_Canvas_1.itemconfig("button12",state='normal')
+                                            sr_Canvas_1.itemconfig("label82",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[18] == '' or get_inv_data[18] is None:
                                         pass
+                                    else:
+                                        cnt_entry10.delete(0,END)
+                                        cnt_entry10.insert(0,get_inv_data[18])
+                                        cnt_entry11.delete(0,END)
+                                        cnt_entry11.insert(0,get_inv_data[20])
+                                        cnt_entry12.delete(0,END)
+                                        cnt_entry12.insert(0,get_inv_data[21])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry63",state='hidden')
+                                            sr_Canvas_1.itemconfig("entry64",state='hidden')
+                                            sr_Canvas_1.itemconfig("combo23",state='hidden')
+                                            sr_Canvas_1.itemconfig("button13",state='normal')
+                                            sr_Canvas_1.itemconfig("label83",state='hidden')
+                                        except:
+                                            pass
+                                    
+                                    if get_inv_data[25] == '' or get_inv_data[25] is None:
+                                        pass
+                                    else:
+                                        cnt_entry16.delete(0,END)
+                                        cnt_entry16.insert(0,get_inv_data[25])
+                                        cnt_entry17.delete(0,END)
+                                        cnt_entry17.insert(0,get_inv_data[27])
+                                        cnt_entry18.delete(0,END)
+                                        cnt_entry18.insert(0,get_inv_data[28])
+                                        cnt_entry19.delete(0,END)
+                                        cnt_entry19.insert(0,get_inv_data[29])
+                                        cnt_entry20.delete(0,END)
+                                        cnt_entry20.insert(0,get_inv_data[30])
+                                        if comp_data[4] == cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% GST({get_inv_data[31]}%)')
+                                        elif comp_data[4] != cn_pofsupply.get():
+                                            cnt_entry21.delete(0,END)
+                                            cnt_entry21.insert(0,f'{get_inv_data[31]}% IGST({get_inv_data[31]}%)')
+                                        else:
+                                            pass
+                                    
+                                    if get_inv_data[32] == '' or get_inv_data[32] is None:
+                                        pass
+                                    else:
+                                        cnt_entry22.delete(0,END)
+                                        cnt_entry22.insert(0,get_inv_data[32])
+                                        cnt_entry23.delete(0,END)
+                                        cnt_entry23.insert(0,get_inv_data[34])
+                                        cnt_entry24.delete(0,END)
+                                        cnt_entry24.insert(0,get_inv_data[35])
+
+                                        try:
+                                            sr_Canvas_1.itemconfig("entry71",state='normal')
+                                            sr_Canvas_1.itemconfig("entry72",state='normal')
+                                            sr_Canvas_1.itemconfig("combo27",state='normal')
+                                            sr_Canvas_1.itemconfig("button15",state='hidden')
+                                            sr_Canvas_1.itemconfig("label85",state='hidden')
+                                        except:
+                                            pass
                                 except:
                                     pass
                             else:
                                 pass
+
+                            cnt_entry7.delete(0,END)
+                            cnt_entry7.insert(0,get_inv_data[16])
+                            cnt_entry8.delete(0,END)
+                            cnt_entry8.insert(0,get_inv_data[40])
+                            cnt_entry9.delete(0,END)
+                            cnt_entry9.insert(0,get_inv_data[17])
                             
 
                         cn_invoiceno = ttk.Combobox(sr_Canvas_1,width=19,font=('arial 15'),background='#2f516f',foreground='black')
@@ -11205,8 +11563,6 @@ def main_sign_in():
                         else:
                             for b in get_bundle_data:
                                 cn_product_list.append(b[2])
-                        
-                        cn_product_list.insert(0,"Select Product")
 
 
                         def cn_view_bundleitems(b):
@@ -12523,140 +12879,8 @@ def main_sign_in():
                                 bt4_entry27.delete(0,END)
                                 bt4_entry27.insert(0,tot4)
 
-                        def cn_fetch_proDetails1(event):
-                            global get_pro_data3
-                            try:
-                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val = (cnt_entry1.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql,get_pro_val)
-                                get_pro_data = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val1 = (cnt_entry1.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql1,get_pro_val1)
-                                get_pro_data1 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
-                                get_pro_val2 = (cnt_entry1.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql2,get_pro_val2)
-                                get_pro_data2 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                get_pro_val3 = (cnt_entry1.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql3,get_pro_val3)
-                                get_pro_data3 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            #--------------------------------------------------------
-                            if get_pro_data is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry59",state='normal')
-                                    sr_Canvas_1.itemconfig("entry60",state='normal')
-                                    sr_Canvas_1.itemconfig("combo21",state='normal')
-                                    sr_Canvas_1.itemconfig("button12",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label82",state='normal')
-                                    cn_label31.config(text="Available Qty : " + get_pro_data[7])
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_pro_data[11])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_pro_data[12])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data1 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry59",state='normal')
-                                    sr_Canvas_1.itemconfig("entry60",state='normal')
-                                    sr_Canvas_1.itemconfig("combo21",state='normal')
-                                    sr_Canvas_1.itemconfig("button12",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label82",state='normal')
-                                    cn_label31.config(text="Available Qty : " + get_pro_data1[17])
-                                    
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_pro_data1[7])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_pro_data1[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data2 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry59",state='normal')
-                                    sr_Canvas_1.itemconfig("entry60",state='normal')
-                                    sr_Canvas_1.itemconfig("combo21",state='normal')
-                                    sr_Canvas_1.itemconfig("button12",state='hidden')
-                                    sr_Canvas_1.itemconfig("label82",state='hidden')
-                                except:
-                                    pass
-
-                                try:
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_pro_data2[7])
-                                    cnt_entry4.delete(0,END)
-                                    cnt_entry4.insert(0,get_pro_data2[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry6.delete(0,END)
-                                        cnt_entry6.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            else:
-                                try:
-                                    cnt_entry2.delete(0,END)
-                                    cnt_entry2.insert(0,get_pro_data3[4])
-                                except:
-                                    pass
-
-                                try:
-                                    sr_Canvas_1.itemconfig("entry59",state='hidden')
-                                    sr_Canvas_1.itemconfig("entry60",state='hidden')
-                                    sr_Canvas_1.itemconfig("combo21",state='hidden')
-                                    sr_Canvas_1.itemconfig("button12",state='normal')
-                                    sr_Canvas_1.itemconfig("label82",state='hidden')
-                                except:
-                                    pass
-
-                                cn_view_bundleitems(b=1)
-
-
                         cnt_entry1 = ttk.Combobox(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='black')
                         cnt_entry1["values"] = cn_product_list
-                        cnt_entry1.current(0)
-                        cnt_entry1.bind("<<ComboboxSelected>>",cn_fetch_proDetails1)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry1,tags=("combo20"))
 
                         cnt_entry2 = Entry(sr_Canvas_1,width=18,font=('arial 15'),background='#2f516f',foreground='white')
@@ -12788,7 +13012,7 @@ def main_sign_in():
                                         pattern2 = r'\%+'
                                         split1 = re.split(pattern1,string)
                                         split2 = re.split(pattern2,split1[1])
-                                        return split2
+                                        return split2[0]
 
                                     #product gst -----------------------------
                                     try:
@@ -12853,55 +13077,55 @@ def main_sign_in():
                                         if bt1_entry7.get() == "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
                                             pass
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() == "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             tax_total1 = b1tax_tot1
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() == "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
                                             tax_total1 = b1tax_tot1 + b1tax_tot2
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() == "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
 
-                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value3[0] == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
                                                 b1tax_tot3 = 0
                                             else:
                                                 b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
                                             tax_total1 = b1tax_tot1 + b1tax_tot2 + b1tax_tot3
                                         elif bt1_entry7.get() != "Choose" and bt1_entry14.get() != "Choose" and bt1_entry21.get() != "Choose" and bt1_entry28.get() != "Choose":
-                                            if bgst_value1 == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value1[0] == "0" or bt1_entry7.get() == "Exempt GST(0%)" or bt1_entry7.get() == "Out of Scope(0%)":
                                                 b1tax_tot1 = 0
                                             else:
                                                 b1tax_tot1 = (float(bt1_entry6.get()) * float(float((bgst_value1[0]))))/100
                                             
-                                            if bgst_value2 == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value2[0] == "0" or bt1_entry14.get() == "Exempt GST(0%)" or bt1_entry14.get() == "Out of Scope(0%)":
                                                 b1tax_tot2 = 0
                                             else:
                                                 b1tax_tot2 = (float(bt1_entry13.get()) * float(float((bgst_value2[0]))))/100
 
-                                            if bgst_value3 == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value3[0] == "0" or bt1_entry21.get() == "Exempt GST(0%)" or bt1_entry21.get() == "Out of Scope(0%)":
                                                 b1tax_tot3 = 0
                                             else:
                                                 b1tax_tot3 = (float(bt1_entry20.get()) * float(float((bgst_value3[0]))))/100
 
-                                            if bgst_value4 == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value4[0] == "0" or bt1_entry28.get() == "Exempt GST(0%)" or bt1_entry28.get() == "Out of Scope(0%)":
                                                 b1tax_tot4 = 0
                                             else:
                                                 b1tax_tot4 = (float(bt1_entry27.get()) * float(float((bgst_value4[0]))))/100
@@ -12914,55 +13138,55 @@ def main_sign_in():
                                         if bt2_entry7.get() == "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
                                             pass
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() == "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             tax_total2 = b2tax_tot1
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() == "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
                                             tax_total2 = b2tax_tot1 + b2tax_tot2
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() == "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
 
-                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value7[0] == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
                                                 b2tax_tot3 = 0
                                             else:
                                                 b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
                                             tax_total2 = b2tax_tot1 + b2tax_tot2 + b2tax_tot3
                                         elif bt2_entry7.get() != "Choose" and bt2_entry14.get() != "Choose" and bt2_entry21.get() != "Choose" and bt2_entry28.get() != "Choose":
-                                            if bgst_value5 == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value5[0] == "0" or bt2_entry7.get() == "Exempt GST(0%)" or bt2_entry7.get() == "Out of Scope(0%)":
                                                 b2tax_tot1 = 0
                                             else:
                                                 b2tax_tot1 = (float(bt2_entry6.get()) * float(float((bgst_value5[0]))))/100
                                             
-                                            if bgst_value6 == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value6[0] == "0" or bt2_entry14.get() == "Exempt GST(0%)" or bt2_entry14.get() == "Out of Scope(0%)":
                                                 b2tax_tot2 = 0
                                             else:
                                                 b2tax_tot2 = (float(bt2_entry13.get()) * float(float((bgst_value6[0]))))/100
 
-                                            if bgst_value7 == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value7[0] == "0" or bt2_entry21.get() == "Exempt GST(0%)" or bt2_entry21.get() == "Out of Scope(0%)":
                                                 b2tax_tot3 = 0
                                             else:
                                                 b2tax_tot3 = (float(bt2_entry20.get()) * float(float((bgst_value7[0]))))/100
 
-                                            if bgst_value8 == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value8[0] == "0" or bt2_entry28.get() == "Exempt GST(0%)" or bt2_entry28.get() == "Out of Scope(0%)":
                                                 b2tax_tot4 = 0
                                             else:
                                                 b2tax_tot4 = (float(bt2_entry27.get()) * float(float((bgst_value8[0]))))/100
@@ -12975,55 +13199,55 @@ def main_sign_in():
                                         if bt3_entry7.get() == "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
                                             pass
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() == "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             tax_total3 = b3tax_tot1
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() == "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
                                             tax_total3 = b3tax_tot1 + b3tax_tot2
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() == "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
 
-                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value11[0] == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
                                                 b3tax_tot3 = 0
                                             else:
                                                 b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
                                             tax_total3 = b3tax_tot1 + b3tax_tot2 + b3tax_tot3
                                         elif bt3_entry7.get() != "Choose" and bt3_entry14.get() != "Choose" and bt3_entry21.get() != "Choose" and bt3_entry28.get() != "Choose":
-                                            if bgst_value9 == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value9[0] == "0" or bt3_entry7.get() == "Exempt GST(0%)" or bt3_entry7.get() == "Out of Scope(0%)":
                                                 b3tax_tot1 = 0
                                             else:
                                                 b3tax_tot1 = (float(bt3_entry6.get()) * float(float((bgst_value9[0]))))/100
                                             
-                                            if bgst_value10 == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value10[0] == "0" or bt3_entry14.get() == "Exempt GST(0%)" or bt3_entry14.get() == "Out of Scope(0%)":
                                                 b3tax_tot2 = 0
                                             else:
                                                 b3tax_tot2 = (float(bt3_entry13.get()) * float(float((bgst_value10[0]))))/100
 
-                                            if bgst_value11 == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value11[0] == "0" or bt3_entry21.get() == "Exempt GST(0%)" or bt3_entry21.get() == "Out of Scope(0%)":
                                                 b3tax_tot3 = 0
                                             else:
                                                 b3tax_tot3 = (float(bt3_entry20.get()) * float(float((bgst_value11[0]))))/100
 
-                                            if bgst_value12 == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value12[0] == "0" or bt3_entry28.get() == "Exempt GST(0%)" or bt3_entry28.get() == "Out of Scope(0%)":
                                                 b3tax_tot4 = 0
                                             else:
                                                 b3tax_tot4 = (float(bt3_entry27.get()) * float(float((bgst_value12[0]))))/100
@@ -13036,55 +13260,55 @@ def main_sign_in():
                                         if bt4_entry7.get() == "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
                                             pass
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() == "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             tax_total4 = b4tax_tot1
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() == "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
                                             tax_total4 = b4tax_tot1 + b4tax_tot2
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() == "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
 
-                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value15[0] == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
                                                 b4tax_tot3 = 0
                                             else:
                                                 b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
                                             tax_total4 = b4tax_tot1 + b4tax_tot2 + b4tax_tot3
                                         elif bt4_entry7.get() != "Choose" and bt4_entry14.get() != "Choose" and bt4_entry21.get() != "Choose" and bt4_entry28.get() != "Choose":
-                                            if bgst_value13 == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
+                                            if bgst_value13[0] == "0" or bt4_entry7.get() == "Exempt GST(0%)" or bt4_entry7.get() == "Out of Scope(0%)":
                                                 b4tax_tot1 = 0
                                             else:
                                                 b4tax_tot1 = (float(bt4_entry6.get()) * float(float((bgst_value13[0]))))/100
                                             
-                                            if bgst_value14 == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
+                                            if bgst_value14[0] == "0" or bt4_entry14.get() == "Exempt GST(0%)" or bt4_entry14.get() == "Out of Scope(0%)":
                                                 b4tax_tot2 = 0
                                             else:
                                                 b4tax_tot2 = (float(bt4_entry13.get()) * float(float((bgst_value14[0]))))/100
 
-                                            if bgst_value15 == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
+                                            if bgst_value15[0] == "0" or bt4_entry21.get() == "Exempt GST(0%)" or bt4_entry21.get() == "Out of Scope(0%)":
                                                 b4tax_tot3 = 0
                                             else:
                                                 b4tax_tot3 = (float(bt4_entry20.get()) * float(float((bgst_value15[0]))))/100
 
-                                            if bgst_value16 == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
+                                            if bgst_value16[0] == "0" or bt4_entry28.get() == "Exempt GST(0%)" or bt4_entry28.get() == "Out of Scope(0%)":
                                                 b4tax_tot4 = 0
                                             else:
                                                 b4tax_tot4 = (float(bt4_entry27.get()) * float(float((bgst_value16[0]))))/100
@@ -13095,18 +13319,18 @@ def main_sign_in():
                     #=============================================================================================
 
                                     #All products ----------------------------------------------------------------------------------------
-                                    if cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                    if cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() not in b_list:
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + float(cnt_entry20.get()) + float(cnt_entry26.get()))
                                         if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13117,7 +13341,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13132,8 +13356,129 @@ def main_sign_in():
                                             else:
                                                 tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2 + tax_tot3
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot4
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3 + tax_tot4
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot3
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot3 + tax_tot4
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or cnt_entry21.get() == "Exempt GST(0%)" or cnt_entry21.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3 + tax_tot4
+                                        elif cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot4
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot4
+                                        elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() != "Choose":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or cnt_entry15.get() == "Exempt GST(0%)" or cnt_entry15.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or cnt_entry27.get() == "Exempt GST(0%)" or cnt_entry27.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(cnt_entry26.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot4
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13157,7 +13502,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,ptax_total)
 
                                     #All bundles -----------------------------------------------------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
@@ -13167,11 +13512,8 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total2 + tax_total3 + tax_total4)
 
                                     #First row bundle-----------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() not in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
-                                        print(cnt_entry14.get())
-                                        print(cnt_entry20.get())
-                                        print(cnt_entry26.get())
                                         cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + float(cnt_entry20.get()) + float(cnt_entry26.get()))
 
                                         #Rest products--------------------------------------
@@ -13213,7 +13555,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + ptax_total)
 
                                     #First and Second row Bundle -------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() not in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         cnt_entry7.insert(0,b1_tot + b2_tot + float(cnt_entry20.get()) + float(cnt_entry26.get()))
@@ -13242,7 +13584,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total2 + ptax_total)
 
                                     #First,Second and Third row Bundle -------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() not in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
@@ -13260,20 +13602,20 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total2 + tax_total3 + ptax_total)
                                     
                                     #Second row Bundle------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() not in b_list:
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + float(cnt_entry20.get()) + float(cnt_entry26.get()))
 
                                         if cnt_entry6.get() == "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry21.get() == "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13284,7 +13626,7 @@ def main_sign_in():
                                                 tax_tot3 = (float(cnt_entry20.get()) * float(float((gst_value3[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot3
                                         elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose" and cnt_entry27.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13302,7 +13644,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total2 + ptax_total)
 
                                     #Second,Third row Bundle------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() not in b_list:
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + b3_tot + float(cnt_entry26.get()))
@@ -13310,13 +13652,13 @@ def main_sign_in():
                                         if cnt_entry6.get() == "Choose" and cnt_entry27.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry27.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13329,7 +13671,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total2 + tax_total3 + ptax_total)
 
                                     #Second,Fourth row Bundle------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() in b_list:
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + b2_tot + float(cnt_entry20.get()) + b4_tot)
@@ -13337,13 +13679,13 @@ def main_sign_in():
                                         if cnt_entry6.get() == "Choose" and cnt_entry21.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry21.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry21.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13356,7 +13698,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total2 + tax_total4 + ptax_total)
 
                                     #Second,Third and Fourth row Bundle------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() in b_list:
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
@@ -13365,7 +13707,7 @@ def main_sign_in():
                                         if cnt_entry6.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13373,20 +13715,20 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total2 + tax_total3 + tax_total4 + ptax_total)
                                     
                                     #Third row Bundle---------------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() not in b_list:
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + b3_tot + float(cnt_entry26.get()))
 
                                         if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry27.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry27.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13397,7 +13739,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry27.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13416,7 +13758,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total3 + ptax_total)
 
                                     #Third,first row Bundle---------------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() not in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() not in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + b3_tot + float(cnt_entry26.get()))
@@ -13444,7 +13786,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total3 + ptax_total)
 
                                     #Third,fourth row Bundle---------------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() in b_list:
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + b3_tot + b4_tot)
@@ -13452,13 +13794,13 @@ def main_sign_in():
                                         if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13472,7 +13814,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total3 + tax_total4 + ptax_total)
 
                                     #Third,first and fourth row Bundle---------------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() in b_list and cnt_entry22.get() in b_list:
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b3_tot = float(bt3_entry6.get()) + float(bt3_entry13.get()) + float(bt3_entry20.get()) + float(bt3_entry27.get())
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
@@ -13490,20 +13832,20 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total3 + tax_total4 + ptax_total)
 
                                     #Fourth row Bundle -----------------------------------------------------
-                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() not in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() in b_list:
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
                                         cnt_entry7.insert(0,float(cnt_entry5.get()) + float(cnt_entry14.get()) + float(cnt_entry20.get()) + b4_tot)
 
                                         if cnt_entry6.get() == "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose":
                                             ptax_total = 0
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() == "Choose" and cnt_entry21.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
                                             ptax_total = tax_tot1
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() == "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13514,7 +13856,7 @@ def main_sign_in():
                                                 tax_tot2 = (float(cnt_entry14.get()) * float(float((gst_value2[0]))))/100
                                             ptax_total = tax_tot1 + tax_tot2
                                         elif cnt_entry6.get() != "Choose" and cnt_entry15.get() != "Choose" and cnt_entry21.get() != "Choose":
-                                            if gst_value1 == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
+                                            if gst_value1[0] == "0" or cnt_entry6.get() == "Exempt GST(0%)" or cnt_entry6.get() == "Out of Scope(0%)":
                                                 tax_tot1 = 0
                                             else:
                                                 tax_tot1 = (float(cnt_entry5.get()) * float(float((gst_value1[0]))))/100
@@ -13532,7 +13874,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total4 + ptax_total)
 
                                     #Fourth,First row Bundle -----------------------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() not in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() in b_list:
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         cnt_entry7.insert(0,b1_tot + float(cnt_entry14.get()) + float(cnt_entry20.get()) + b4_tot)
@@ -13559,7 +13901,7 @@ def main_sign_in():
                                         cnt_entry8.insert(0,tax_total1 + tax_total4 + ptax_total)
 
                                     #Fourth,First and Second row Bundle -----------------------------------------------------
-                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry21.get() in b_list:
+                                    elif cnt_entry1.get() in b_list and cnt_entry10.get() in b_list and cnt_entry16.get() not in b_list and cnt_entry22.get() in b_list:
                                         b4_tot = float(bt4_entry6.get()) + float(bt4_entry13.get()) + float(bt4_entry20.get()) + float(bt4_entry27.get())
                                         b1_tot = float(bt1_entry6.get()) + float(bt1_entry13.get()) + float(bt1_entry20.get()) + float(bt1_entry27.get())
                                         b2_tot = float(bt2_entry6.get()) + float(bt2_entry13.get()) + float(bt2_entry20.get()) + float(bt2_entry27.get())
@@ -13601,143 +13943,15 @@ def main_sign_in():
                         cnt_button1 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b1 = 1:cn_view_bundleitems(b1))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cnt_button1,tags=("button12"))
 
-                        def cn_fetch_proDetails2(event):
-                            try:
-                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val = (cnt_entry10.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql,get_pro_val)
-                                get_pro_data = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val1 = (cnt_entry10.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql1,get_pro_val1)
-                                get_pro_data1 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
-                                get_pro_val2 = (cnt_entry10.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql2,get_pro_val2)
-                                get_pro_data2 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                get_pro_val3 = (cnt_entry10.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql3,get_pro_val3)
-                                get_pro_data3 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            #----------------------------------------------------
-                            if get_pro_data is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry63",state='normal')
-                                    sr_Canvas_1.itemconfig("entry64",state='normal')
-                                    sr_Canvas_1.itemconfig("combo23",state='normal')
-                                    sr_Canvas_1.itemconfig("button13",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label83",state='normal')
-                                    cn_label32.config(text="Available Qty : " + get_pro_data[7])
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_pro_data[11])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_pro_data[12])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data1 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry63",state='normal')
-                                    sr_Canvas_1.itemconfig("entry64",state='normal')
-                                    sr_Canvas_1.itemconfig("combo23",state='normal')
-                                    sr_Canvas_1.itemconfig("button13",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label83",state='normal')
-                                    cn_label32.config(text="Available Qty : " + get_pro_data1[17])
-                                    
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_pro_data1[7])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_pro_data1[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data2 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry63",state='normal')
-                                    sr_Canvas_1.itemconfig("entry64",state='normal')
-                                    sr_Canvas_1.itemconfig("combo23",state='normal')
-                                    sr_Canvas_1.itemconfig("button13",state='hidden')
-                                    sr_Canvas_1.itemconfig("label83",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_pro_data2[7])
-                                    cnt_entry13.delete(0,END)
-                                    cnt_entry13.insert(0,get_pro_data2[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry15.delete(0,END)
-                                        cnt_entry15.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            else:
-                                try:
-                                    cnt_entry11.delete(0,END)
-                                    cnt_entry11.insert(0,get_pro_data3[4])
-                                except:
-                                    pass
-
-                                try:
-                                    sr_Canvas_1.itemconfig("entry63",state='hidden')
-                                    sr_Canvas_1.itemconfig("entry64",state='hidden')
-                                    sr_Canvas_1.itemconfig("combo23",state='hidden')
-                                    sr_Canvas_1.itemconfig("button13",state='normal')
-                                    sr_Canvas_1.itemconfig("label83",state='hidden')
-                                except:
-                                    pass
-
-                                cn_view_bundleitems(b=2)
-
                         cnt_entry10 = ttk.Combobox(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='black')
                         cnt_entry10["values"] = cn_product_list
-                        cnt_entry10.current(0)
-                        cnt_entry10.bind("<<ComboboxSelected>>",cn_fetch_proDetails2)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry10,tags=("combo22"))
 
                         cnt_entry11 = Entry(sr_Canvas_1,width=18,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry11,tags=("entry61"))
 
                         cnt_entry12 = Spinbox(sr_Canvas_1,width=8,justify=RIGHT,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry12.bind("<Key>",lambda event,sp = 2:cnt_calculateTotal1(event,sp))
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry12,tags=("entry62"))
 
                         cnt_entry13 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
@@ -13755,146 +13969,15 @@ def main_sign_in():
                         cnt_button2 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b2 = 2:cn_view_bundleitems(b2))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cnt_button2,tags=("button13"))
 
-                        def cn_fetch_proDetails3(event):
-                            try:
-                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val = (cnt_entry16.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql,get_pro_val)
-                                get_pro_data = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val1 = (cnt_entry16.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql1,get_pro_val1)
-                                get_pro_data1 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
-                                get_pro_val2 = (cnt_entry16.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql2,get_pro_val2)
-                                get_pro_data2 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                get_pro_val3 = (cnt_entry16.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql3,get_pro_val3)
-                                get_pro_data3 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            #--------------------------------------------------------
-                            if get_pro_data is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry67",state='normal')
-                                    sr_Canvas_1.itemconfig("entry68",state='normal')
-                                    sr_Canvas_1.itemconfig("combo25",state='normal')
-                                    sr_Canvas_1.itemconfig("button14",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label84",state='normal')
-                                    cn_label33.config(text="Available Qty : " + get_pro_data[7])
-                                    
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_pro_data[11])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_pro_data[12])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data1 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry67",state='normal')
-                                    sr_Canvas_1.itemconfig("entry68",state='normal')
-                                    sr_Canvas_1.itemconfig("combo25",state='normal')
-                                    sr_Canvas_1.itemconfig("button14",state='hidden')
-                                except:
-                                    pass
-                                
-                                try:
-                                    sr_Canvas_1.itemconfig("label84",state='normal')
-                                    cn_label33.config(text="Available Qty : " + get_pro_data1[17])
-                                    
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_pro_data1[7])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_pro_data1[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data2 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry67",state='normal')
-                                    sr_Canvas_1.itemconfig("entry68",state='normal')
-                                    sr_Canvas_1.itemconfig("combo25",state='normal')
-                                    sr_Canvas_1.itemconfig("button14",state='hidden')
-                                    sr_Canvas_1.itemconfig("label84",state='hidden')
-                                except:
-                                    pass
-
-                                try:
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_pro_data2[7])
-                                    cnt_entry19.delete(0,END)
-                                    cnt_entry19.insert(0,get_pro_data2[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry21.delete(0,END)
-                                        cnt_entry21.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            else:
-                                try:
-                                    cnt_entry17.delete(0,END)
-                                    cnt_entry17.insert(0,get_pro_data3[4])
-                                except:
-                                    pass
-
-                                try:
-                                    sr_Canvas_1.itemconfig("entry67",state='hidden')
-                                    sr_Canvas_1.itemconfig("entry68",state='hidden')
-                                    sr_Canvas_1.itemconfig("combo25",state='hidden')
-                                    sr_Canvas_1.itemconfig("button14",state='normal')
-                                    sr_Canvas_1.itemconfig("label84",state='hidden')
-                                except:
-                                    pass
-
-                                cn_view_bundleitems(b=3)
-
                         cnt_entry16 = ttk.Combobox(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='black')
                         cnt_entry16["values"] = cn_product_list
-                        cnt_entry16.current(0)
-                        cnt_entry16.bind("<<ComboboxSelected>>",cn_fetch_proDetails3)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry16,tags=("combo24"))
 
                         cnt_entry17 = Entry(sr_Canvas_1,width=18,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry17,tags=("entry65"))
 
                         cnt_entry18 = Spinbox(sr_Canvas_1,width=8,justify=RIGHT,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry18.bind("<Key>",lambda event,sp = 3:cnt_calculateTotal1(event,sp))
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry18,tags=("entry66"))
 
                         cnt_entry19 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
@@ -13912,146 +13995,15 @@ def main_sign_in():
                         cnt_button3 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b3 = 3:cn_view_bundleitems(b3))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cnt_button3,tags=("button14"))
 
-                        def cn_fetch_proDetails4(event):
-                            try:
-                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val = (cnt_entry22.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql,get_pro_val)
-                                get_pro_data = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
-                                get_pro_val1 = (cnt_entry22.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql1,get_pro_val1)
-                                get_pro_data1 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql2 = "SELECT * FROM app1_service WHERE name=%s AND cid_id=%s"
-                                get_pro_val2 = (cnt_entry22.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql2,get_pro_val2)
-                                get_pro_data2 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            try:
-                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
-                                get_pro_val3 = (cnt_entry22.get(),comp_data[0])
-                                fbcursor.execute(get_pro_sql3,get_pro_val3)
-                                get_pro_data3 = fbcursor.fetchone()
-                            except:
-                                pass
-
-                            #--------------------------------------------------------
-                            if get_pro_data is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry71",state='normal')
-                                    sr_Canvas_1.itemconfig("entry72",state='normal')
-                                    sr_Canvas_1.itemconfig("combo27",state='normal')
-                                    sr_Canvas_1.itemconfig("button15",state='hidden')
-                                except:
-                                    pass
-                                try:
-                                    sr_Canvas_1.itemconfig("label85",state='normal')
-                                    cn_label34.config(text="Available Qty : " + get_pro_data[7])
-                                    
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_pro_data[11])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_pro_data[12])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data[14]}% GST({get_pro_data[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data[14]}% IGST({get_pro_data[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data1 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry71",state='normal')
-                                    sr_Canvas_1.itemconfig("entry72",state='normal')
-                                    sr_Canvas_1.itemconfig("combo27",state='normal')
-                                    sr_Canvas_1.itemconfig("button15",state='hidden')
-                                except:
-                                    pass
-                                
-                                try:
-                                    sr_Canvas_1.itemconfig("label85",state='normal')
-                                    cn_label34.config(text="Available Qty : " + get_pro_data1[17])
-                                    
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_pro_data1[7])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_pro_data1[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data1[14]}% GST({get_pro_data1[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data1[14]}% IGST({get_pro_data1[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            elif get_pro_data2 is not None:
-                                try:
-                                    sr_Canvas_1.itemconfig("entry71",state='normal')
-                                    sr_Canvas_1.itemconfig("entry72",state='normal')
-                                    sr_Canvas_1.itemconfig("combo27",state='normal')
-                                    sr_Canvas_1.itemconfig("button15",state='hidden')
-                                    sr_Canvas_1.itemconfig("label85",state='hidden')
-                                except:
-                                    pass
-
-                                try:
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_pro_data2[7])
-                                    cnt_entry25.delete(0,END)
-                                    cnt_entry25.insert(0,get_pro_data2[8])
-                                    if comp_data[4] == cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data2[14]}% GST({get_pro_data2[14]}%)')
-                                    elif comp_data[4] != cn_pofsupply.get():
-                                        cnt_entry27.delete(0,END)
-                                        cnt_entry27.insert(0,f'{get_pro_data2[14]}% IGST({get_pro_data2[14]}%)')
-                                    else:
-                                        pass
-                                except:
-                                    pass
-                            else:
-                                try:
-                                    cnt_entry23.delete(0,END)
-                                    cnt_entry23.insert(0,get_pro_data3[4])
-                                except:
-                                    pass
-
-                                try:
-                                    sr_Canvas_1.itemconfig("entry71",state='hidden')
-                                    sr_Canvas_1.itemconfig("entry72",state='hidden')
-                                    sr_Canvas_1.itemconfig("combo27",state='hidden')
-                                    sr_Canvas_1.itemconfig("button15",state='normal')
-                                    sr_Canvas_1.itemconfig("label85",state='hidden')
-                                except:
-                                    pass
-
-                                cn_view_bundleitems(b=4)
-
                         cnt_entry22 = ttk.Combobox(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='black')
                         cnt_entry22["values"] = cn_product_list
-                        cnt_entry22.current(0)
-                        cnt_entry22.bind("<<ComboboxSelected>>",cn_fetch_proDetails4)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=cnt_entry22,tags=("combo26"))
 
                         cnt_entry23 = Entry(sr_Canvas_1,width=18,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry23,tags=("entry69"))
 
                         cnt_entry24 = Spinbox(sr_Canvas_1,width=8,justify=RIGHT,from_=0,to=100,font=('arial 15'),background='#2f516f',foreground='white')
+                        cnt_entry24.bind("<Key>",lambda event,sp = 4:cnt_calculateTotal1(event,sp))
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry24,tags=("entry70"))
 
                         cnt_entry25 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
@@ -14069,17 +14021,17 @@ def main_sign_in():
                         cnt_button4 = Button(sr_Canvas_1,text='View',width=7,font=('arial 12'),background='#1b3857',activebackground='#1b3857',foreground='white',command=lambda b4 = 4:cn_view_bundleitems(b4))
                         sr_Canvas_1.create_window(0,0,anchor='c',state=HIDDEN,window=cnt_button4,tags=("button15"))
 
-                        cn_label31 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=cn_label31,state=HIDDEN,tags=('label82'))
+                        # cn_label31 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        # sr_Canvas_1.create_window(0,0,window=cn_label31,state=HIDDEN,tags=('label82'))
 
-                        cn_label32 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=cn_label32,state=HIDDEN,tags=('label83'))
+                        # cn_label32 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        # sr_Canvas_1.create_window(0,0,window=cn_label32,state=HIDDEN,tags=('label83'))
 
-                        cn_label33 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=cn_label33,state=HIDDEN,tags=('label84'))
+                        # cn_label33 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        # sr_Canvas_1.create_window(0,0,window=cn_label33,state=HIDDEN,tags=('label84'))
 
-                        cn_label34 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=cn_label34,state=HIDDEN,tags=('label85'))
+                        # cn_label34 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        # sr_Canvas_1.create_window(0,0,window=cn_label34,state=HIDDEN,tags=('label85'))
 
                         cn_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=cn_label25,tags=('label40'))
@@ -14099,7 +14051,826 @@ def main_sign_in():
                         cnt_entry9 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=cnt_entry9,tags=("entry25"))
 
-                        save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                        def cn_saveCreditnote():
+                            get_credit_sql = "SELECT * FROM app1_credit ORDER BY creditnoteid DESC LIMIT 1"
+                            fbcursor.execute(get_credit_sql)
+                            get_credit_data = fbcursor.fetchone()
+
+                            def split_gst(string):
+                                pattern1 = r'\(+'
+                                pattern2 = r'\%+'
+                                split1 = re.split(pattern1,string)
+                                split2 = re.split(pattern2,split1[1])
+                                return split2[0]
+
+                            customer = cn_custCombo.get()
+                            mail = cn_email.get()
+                            biladdr = cn_baddress.get("1.0","end-1c")
+                            creditdate = cn_creditdate.get_date()
+                            place = cn_pofsupply.get()
+
+                            if not get_credit_data:
+                                creditno = "1001"
+                            else:
+                                creditno = int(get_credit_data[5]) + 1
+                            
+                            invnum = (cn_invoiceno.get()).split(' - ')[0]
+                            subtot = cnt_entry7.get()
+                            try:
+                                tax = split_gst(cnt_entry6.get())
+                            except:
+                                tax = 0
+                            taxamnt = cnt_entry8.get()
+                            grndtot = cnt_entry9.get()
+                            product = cnt_entry1.get()
+                            descrip = cnt_entry2.get()
+                            qty = cnt_entry3.get()
+                            price = cnt_entry4.get()
+                            total = cnt_entry5.get()
+                            product1 = cnt_entry10.get()
+                            descrip1 = cnt_entry11.get()
+                            qty1 = cnt_entry12.get()
+                            price1 = cnt_entry13.get()
+                            total1 = cnt_entry14.get()
+                            try:
+                                tax1 = split_gst(cnt_entry15.get()) 
+                            except:
+                                tax1 = 0
+                            product2 = cnt_entry16.get()
+                            descrip2 = cnt_entry17.get()
+                            qty2 = cnt_entry18.get()
+                            price2 = cnt_entry19.get()
+                            total2 = cnt_entry20.get()
+                            try:
+                                tax2 = split_gst(cnt_entry21.get())
+                            except:
+                                tax2 = 0
+                            product3 = cnt_entry22.get()
+                            descrip3 = cnt_entry23.get()
+                            qty3 = cnt_entry24.get()
+                            price3 = cnt_entry25.get()
+                            total3 = cnt_entry26.get()
+                            try:
+                                tax3 = split_gst(cnt_entry27.get())
+                            except:
+                                tax3 = 0
+                            cid_id = comp_data[0]
+
+                            if customer == "Select Customer" or customer == '' or place == '' or cn_invoiceno.get() == 'Select Invoice No':
+                                pass
+                            else:
+                                ins_credit_sql = "INSERT INTO app1_credit(customer,mail,biladdr,creditdate,place,creditno,invnum,subtot,tax,taxamnt,grndtot,product,descrip,qty,price,total,product1,descrip1,qty1,price1,total1,tax1,product2,descrip2,qty2,price2,total2,tax2,product3,descrip3,qty3,price3,total3,tax3,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_credit_val = (customer,mail,biladdr,creditdate,place,creditno,invnum,subtot,tax,taxamnt,grndtot,product,descrip,qty,price,total,product1,descrip1,qty1,price1,total1,tax1,product2,descrip2,qty2,price2,total2,tax2,product3,descrip3,qty3,price3,total3,tax3,cid_id)
+                                fbcursor.execute(ins_credit_sql,ins_credit_val)
+                                finsysdb.commit()
+
+                                get_accts1_sql = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                get_accts1_val = ('Account Receivable(Debtors)',comp_data[0])
+                                fbcursor.execute(get_accts1_sql,get_accts1_val)
+                                get_accts1_data = fbcursor.fetchone()
+
+                                if not get_accts1_data:
+                                    pass
+                                else:
+                                    if grndtot != 0:
+                                        upd_bal = get_accts1_data[0] - float(grndtot)
+                                        upd_accts1_sql = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                        upd_accts1_val = (upd_bal,'Account Receivable(Debtors)',comp_data[0])
+                                        fbcursor.execute(upd_accts1_sql,upd_accts1_val)
+                                        finsysdb.commit()
+                                    else:
+                                        pass
+
+                                tax_amounts = [tax_tot1,tax_tot2,tax_tot3,tax_tot4]
+                                quantities = [qty,qty1,qty2,qty3]
+                                totals = [total,total1,total2,total3]
+                                products = [product,product1,product2,product3]
+
+                                for (p,q,t,tx) in zip(products,quantities,totals,tax_amounts):
+                                    try:
+                                        get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_invent_val = (p,comp_data[0])
+                                        fbcursor.execute(get_invent_sql,get_invent_val)
+                                        get_invent_data = fbcursor.fetchone()
+
+                                        if not get_invent_data:
+                                            pass
+                                        else:
+                                            initial_qty = int(get_invent_data[7]) + int(q)
+
+                                            upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
+                                            upd_invent_val = (initial_qty,p,comp_data[0])
+                                            fbcursor.execute(upd_invent_sql,upd_invent_val)
+                                            finsysdb.commit()
+
+                                            newcost = float(get_invent_data[16]) * float(q)
+
+                                            get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                            get_accts1_val1 = (get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                            get_accts1_data1 = fbcursor.fetchone()
+
+                                            get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                            get_accts_val1 = (get_invent_data[10],comp_data[0])
+                                            fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                            get_accts_data1 = fbcursor.fetchone()
+
+                                            if not get_accts_data1 and not get_accts1_data1:
+                                                pass
+                                            elif get_accts1_data1:
+                                                upd_bal1 = get_accts1_data1[0] + float(newcost)
+                                                upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                                finsysdb.commit()
+                                            elif get_accts_data1:
+                                                upd_bal1 = get_accts_data1[0] + float(newcost)
+                                                upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                finsysdb.commit()
+                                            else:
+                                                pass
+
+                                            #----------------------------------------------------------
+                                            get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                            get_accts1_val2 = (get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(get_accts1_sql2,get_accts1_val2)
+                                            get_accts1_data2 = fbcursor.fetchone()
+
+                                            get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                            get_accts_val2 = (get_invent_data[13],comp_data[0])
+                                            fbcursor.execute(get_accts_sql2,get_accts_val2)
+                                            get_accts_data2 = fbcursor.fetchone()
+
+                                            if not get_accts_data2 and not get_accts1_data2:
+                                                pass
+                                            elif get_accts1_data2:
+                                                upd_bal2 = get_accts1_data2[0] - float(t)
+                                                upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
+                                                finsysdb.commit()
+                                            elif get_accts_data2:
+                                                upd_bal2 = get_accts_data2[0] - float(t)
+                                                upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(upd_accts_sql2,upd_accts_val2)
+                                                finsysdb.commit()
+                                            else:
+                                                pass
+
+                                            #---------------------------------------------------
+                                            get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                            get_accts1_val3 = (get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(get_accts1_sql3,get_accts1_val3)
+                                            get_accts1_data3 = fbcursor.fetchone()
+
+                                            get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                            get_accts_val3 = (get_invent_data[17],comp_data[0])
+                                            fbcursor.execute(get_accts_sql3,get_accts_val3)
+                                            get_accts_data3= fbcursor.fetchone()
+
+                                            if not get_accts_data3 and not get_accts1_data3:
+                                                pass
+                                            elif get_accts1_data3:
+                                                upd_bal3 = get_accts1_data3[0] - float(newcost)
+                                                upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
+                                                finsysdb.commit()
+                                            elif get_accts_data3:
+                                                upd_bal3 = get_accts_data3[0] - float(newcost)
+                                                upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(upd_accts_sql3,upd_accts_val3)
+                                                finsysdb.commit()
+                                            else:
+                                                pass
+
+                                            try:
+                                                if place == comp_data[4]:
+                                                    tax = tx/2
+                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                    get_accts1_data4 = fbcursor.fetchone()
+
+                                                    upd_bal4 = get_accts1_data4[0] - tax
+                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                    finsysdb.commit()
+
+                                                    get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                    get_accts1_data5 = fbcursor.fetchone()
+
+                                                    upd_bal5 = get_accts1_data5[0] - tax
+                                                    upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                    finsysdb.commit()
+                                                else:
+                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                    get_accts1_data4 = fbcursor.fetchone()
+
+                                                    upd_bal4 = get_accts1_data4[0] - tx
+                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                    finsysdb.commit()
+                                            except:
+                                                pass
+                                    except:
+                                        pass
+
+                                    try:
+                                        get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_noninvent_val = (p,comp_data[0])
+                                        fbcursor.execute(get_noninvent_sql,get_noninvent_val)
+                                        get_noninvent_data = fbcursor.fetchone()
+
+                                        if not get_noninvent_data:
+                                            pass
+                                        else:
+                                            qty = int(get_noninvent_data[17]) + int(q)
+
+                                            upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
+                                            upd_noninvent_val = (qty,p,comp_data[0])
+                                            fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
+                                            finsysdb.commit()
+
+                                            get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                            get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                            get_accts1_data1 = fbcursor.fetchone()
+
+                                            get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                            get_accts_val1 = (get_noninvent_data[9],comp_data[0])
+                                            fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                            get_accts_data1 = fbcursor.fetchone()
+
+                                            if not get_accts_data1 and not get_accts1_data1:
+                                                pass
+                                            elif get_accts1_data1:
+                                                upd_bal1 = get_accts1_data1[0] - float(t)
+                                                upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                                finsysdb.commit()
+                                            elif get_accts_data1:
+                                                upd_bal1 = get_accts_data1[0] - float(t)
+                                                upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                finsysdb.commit()
+                                            else:
+                                                pass
+
+                                            try:
+                                                if place == comp_data[4]:
+                                                    tax = tx/2
+                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                    get_accts1_data4 = fbcursor.fetchone()
+
+                                                    upd_bal4 = get_accts1_data4[0] - tax
+                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                    finsysdb.commit()
+
+                                                    get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                    get_accts1_data5 = fbcursor.fetchone()
+
+                                                    upd_bal5 = get_accts1_data5[0] - tax
+                                                    upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                    finsysdb.commit()
+                                                else:
+                                                    get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                    get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                    fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                    get_accts1_data4 = fbcursor.fetchone()
+
+                                                    upd_bal4 = get_accts1_data4[0] - tx
+                                                    upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                    finsysdb.commit()
+                                            except:
+                                                pass
+
+                                    except:
+                                        pass
+
+                                #-------------------------------------------------------------
+
+                                try:
+                                    get_bun_sql1 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bun_val1 = (cnt_entry1.get(),comp_data[0])
+                                    fbcursor.execute(get_bun_sql1,get_bun_val1)
+                                    get_bun_data1 = fbcursor.fetchone()
+                                except:
+                                    pass
+                                try:
+                                    get_bun_sql2 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bun_val2 = (cnt_entry10.get(),comp_data[0])
+                                    fbcursor.execute(get_bun_sql2,get_bun_val2)
+                                    get_bun_data2 = fbcursor.fetchone()
+                                except:
+                                    pass
+                                try:
+                                    get_bun_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bun_val3 = (cnt_entry16.get(),comp_data[0])
+                                    fbcursor.execute(get_bun_sql3,get_bun_val3)
+                                    get_bun_data3 = fbcursor.fetchone()
+                                except:
+                                    pass
+                                try:
+                                    get_bun_sql4 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                    get_bun_val4 = (cnt_entry22.get(),comp_data[0])
+                                    fbcursor.execute(get_bun_sql4,get_bun_val4)
+                                    get_bun_data4 = fbcursor.fetchone()
+                                except:
+                                    pass
+
+                                if get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get(),]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get(),]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get(),]
+                                elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is None:
+                                    btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4]
+
+                                    bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get()]
+
+                                    btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get()]
+
+                                    bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is None:
+                                    btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                    bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                    btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                    bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is not None:
+                                    btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is not None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                    btax_amount = [b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is None:
+                                    btax_amount = [b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                    bqty = [bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                    btotals = [bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                    bproducts = [bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                    btax_amount = [b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is not None and get_bun_data4 is not None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b3tax_tot1,b3tax_tot2,b3tax_tot3,b3tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt3_entry4.get(),bt3_entry11.get(),bt3_entry18.get(),bt3_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt3_entry6.get(),bt3_entry13.get(),bt3_entry20.get(),bt3_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt3_entry1.get(),bt3_entry8.get(),bt3_entry15.get(),bt3_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is not None:
+                                    btax_amount = [b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is None and get_bun_data3 is None and get_bun_data4 is not None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                elif get_bun_data1 is not None and get_bun_data2 is not None and get_bun_data3 is None and get_bun_data4 is not None:
+                                    btax_amount = [b1tax_tot1,b1tax_tot2,b1tax_tot3,b1tax_tot4,
+                                    b2tax_tot1,b2tax_tot2,b2tax_tot3,b2tax_tot4,
+                                    b4tax_tot1,b4tax_tot2,b4tax_tot3,b4tax_tot4]
+
+                                    bqty = [bt1_entry4.get(),bt1_entry11.get(),bt1_entry18.get(),bt1_entry25.get(),
+                                    bt2_entry4.get(),bt2_entry11.get(),bt2_entry18.get(),bt2_entry25.get(),
+                                    bt4_entry4.get(),bt4_entry11.get(),bt4_entry18.get(),bt4_entry25.get()]
+
+                                    btotals = [bt1_entry6.get(),bt1_entry13.get(),bt1_entry20.get(),bt1_entry27.get(),
+                                    bt2_entry6.get(),bt2_entry13.get(),bt2_entry20.get(),bt2_entry27.get(),
+                                    bt4_entry6.get(),bt4_entry13.get(),bt4_entry20.get(),bt4_entry27.get()]
+
+                                    bproducts = [bt1_entry1.get(),bt1_entry8.get(),bt1_entry15.get(),bt1_entry22.get(),
+                                    bt2_entry1.get(),bt2_entry8.get(),bt2_entry15.get(),bt2_entry22.get(),
+                                    bt4_entry1.get(),bt4_entry8.get(),bt4_entry15.get(),bt4_entry22.get()]
+                                else:
+                                    pass
+                                
+                                try:
+                                    for (p,q,t,tx) in zip(bproducts,bqty,btotals,btax_amount):
+                                        try:
+                                            get_invent_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                            get_invent_val = (p,comp_data[0])
+                                            fbcursor.execute(get_invent_sql,get_invent_val)
+                                            get_invent_data = fbcursor.fetchone()
+
+                                            if not get_invent_data:
+                                                pass
+                                            else:
+                                                initial_qty = int(get_invent_data[7]) + int(q)
+
+                                                upd_invent_sql = "UPDATE app1_inventory SET initialqty=%s WHERE name=%s AND cid_id=%s"
+                                                upd_invent_val = (initial_qty,p,comp_data[0])
+                                                fbcursor.execute(upd_invent_sql,upd_invent_val)
+                                                finsysdb.commit()
+
+                                                newcost = float(get_invent_data[16]) * float(q)
+
+                                                get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val1 = (get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                                get_accts1_data1 = fbcursor.fetchone()
+
+                                                get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val1 = (get_invent_data[10],comp_data[0])
+                                                fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                                get_accts_data1 = fbcursor.fetchone()
+
+                                                if not get_accts_data1 and not get_accts1_data1:
+                                                    pass
+                                                elif get_accts1_data1:
+                                                    upd_bal1 = get_accts1_data1[0] + float(newcost)
+                                                    upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                                    finsysdb.commit()
+                                                elif get_accts_data1:
+                                                    upd_bal1 = get_accts_data1[0] + float(newcost)
+                                                    upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val1 = (upd_bal1,get_invent_data[10],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
+
+                                                #----------------------------------------------------------
+                                                get_accts1_sql2 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val2 = (get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql2,get_accts1_val2)
+                                                get_accts1_data2 = fbcursor.fetchone()
+
+                                                get_accts_sql2 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val2 = (get_invent_data[13],comp_data[0])
+                                                fbcursor.execute(get_accts_sql2,get_accts_val2)
+                                                get_accts_data2 = fbcursor.fetchone()
+
+                                                if not get_accts_data2 and not get_accts1_data2:
+                                                    pass
+                                                elif get_accts1_data2:
+                                                    upd_bal2 = get_accts1_data2[0] - float(t)
+                                                    upd_accts1_sql2 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql2,upd_accts1_val2)
+                                                    finsysdb.commit()
+                                                elif get_accts_data2:
+                                                    upd_bal2 = get_accts_data2[0] - float(t)
+                                                    upd_accts_sql2 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val2 = (upd_bal2,get_invent_data[13],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql2,upd_accts_val2)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
+
+                                                #---------------------------------------------------
+                                                get_accts1_sql3 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val3 = (get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql3,get_accts1_val3)
+                                                get_accts1_data3 = fbcursor.fetchone()
+
+                                                get_accts_sql3 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val3 = (get_invent_data[17],comp_data[0])
+                                                fbcursor.execute(get_accts_sql3,get_accts_val3)
+                                                get_accts_data3= fbcursor.fetchone()
+
+                                                if not get_accts_data3 and not get_accts1_data3:
+                                                    pass
+                                                elif get_accts1_data3:
+                                                    upd_bal3 = get_accts1_data3[0] - float(newcost)
+                                                    upd_accts1_sql3 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql3,upd_accts1_val3)
+                                                    finsysdb.commit()
+                                                elif get_accts_data3:
+                                                    upd_bal3 = get_accts_data3[0] - float(newcost)
+                                                    upd_accts_sql3 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val3 = (upd_bal3,get_invent_data[17],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql3,upd_accts_val3)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
+
+                                                try:
+                                                    if place == comp_data[4]:
+                                                        tax = tx/2
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] - tax
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+
+                                                        get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                        get_accts1_data5 = fbcursor.fetchone()
+
+                                                        upd_bal5 = get_accts1_data5[0] - tax
+                                                        upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                        finsysdb.commit()
+                                                    else:
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] - tx
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+                                                except:
+                                                    pass
+                                        except:
+                                            pass
+
+                                        try:
+                                            get_noninvent_sql = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                            get_noninvent_val = (p,comp_data[0])
+                                            fbcursor.execute(get_noninvent_sql,get_noninvent_val)
+                                            get_noninvent_data = fbcursor.fetchone()
+
+                                            if not get_noninvent_data:
+                                                pass
+                                            else:
+                                                qty = int(get_noninvent_data[17]) + int(q)
+
+                                                upd_noninvent_sql = "UPDATE app1_noninventory SET qty=%s WHERE name=%s AND cid_id=%s"
+                                                upd_noninvent_val = (qty,p,comp_data[0])
+                                                fbcursor.execute(upd_noninvent_sql,upd_noninvent_val)
+                                                finsysdb.commit()
+
+                                                get_accts1_sql1 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                get_accts1_val1 = (get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(get_accts1_sql1,get_accts1_val1)
+                                                get_accts1_data1 = fbcursor.fetchone()
+
+                                                get_accts_sql1 = "SELECT balance FROM app1_accounts WHERE name=%s AND cid_id=%s"
+                                                get_accts_val1 = (get_noninvent_data[9],comp_data[0])
+                                                fbcursor.execute(get_accts_sql1,get_accts_val1)
+                                                get_accts_data1 = fbcursor.fetchone()
+
+                                                if not get_accts_data1 and not get_accts1_data1:
+                                                    pass
+                                                elif get_accts1_data1:
+                                                    upd_bal1 = get_accts1_data1[0] - float(t)
+                                                    upd_accts1_sql1 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts1_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                    fbcursor.execute(upd_accts1_sql1,upd_accts1_val1)
+                                                    finsysdb.commit()
+                                                elif get_accts_data1:
+                                                    upd_bal1 = get_accts_data1[0] - float(t)
+                                                    upd_accts_sql1 = "UPDATE app1_accounts SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                    upd_accts_val1 = (upd_bal1,get_noninvent_data[9],comp_data[0])
+                                                    fbcursor.execute(upd_accts_sql1,upd_accts_val1)
+                                                    finsysdb.commit()
+                                                else:
+                                                    pass
+
+                                                try:
+                                                    if place == comp_data[4]:
+                                                        tax = tx/2
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output CGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] - tax
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output CGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+
+                                                        get_accts1_sql5 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val5 = ('Output SGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql5,get_accts1_val5)
+                                                        get_accts1_data5 = fbcursor.fetchone()
+
+                                                        upd_bal5 = get_accts1_data5[0] - tax
+                                                        upd_accts1_sql5 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val5 = (upd_bal5,'Output SGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql5,upd_accts1_val5)
+                                                        finsysdb.commit()
+                                                    else:
+                                                        get_accts1_sql4 = "SELECT balance FROM app1_accounts1 WHERE name=%s AND cid_id=%s"
+                                                        get_accts1_val4 = ('Output IGST',comp_data[0])
+                                                        fbcursor.execute(get_accts1_sql4,get_accts1_val4)
+                                                        get_accts1_data4 = fbcursor.fetchone()
+
+                                                        upd_bal4 = get_accts1_data4[0] - tx
+                                                        upd_accts1_sql4 = "UPDATE app1_accounts1 SET balance=%s WHERE name=%s AND cid_id=%s"
+                                                        upd_accts1_val4 = (upd_bal4,'Output IGST',comp_data[0])
+                                                        fbcursor.execute(upd_accts1_sql4,upd_accts1_val4)
+                                                        finsysdb.commit()
+                                                except:
+                                                    pass
+
+                                        except:
+                                            pass
+                                except:
+                                    pass
+                            
+                                sr_Frame_1.destroy()
+                                sr_Frame.grid(row=0,column=0,sticky='nsew')
+
+                                get_payment_sql = "SELECT * FROM app1_payment WHERE cid_id=%s"
+                                get_payment_val = (comp_data[0],)
+                                fbcursor.execute(get_payment_sql,get_payment_val)
+                                get_payment_data = fbcursor.fetchall()
+
+                                get_ta_sql = "SELECT * FROM app1_timeactsale WHERE cid_id=%s"
+                                get_ta_val = (comp_data[0],)
+                                fbcursor.execute(get_ta_sql,get_ta_val)
+                                get_ta_data = fbcursor.fetchall()
+                                
+                                get_srp_sql = "SELECT * FROM app1_salesrecpts WHERE cid_id=%s"
+                                get_srp_val = (comp_data[0],)
+                                fbcursor.execute(get_srp_sql,get_srp_val)
+                                get_srp_data = fbcursor.fetchall()
+
+                                get_crdn_sql = "SELECT * FROM app1_credit WHERE cid_id=%s"
+                                get_crdn_val = (comp_data[0],)
+                                fbcursor.execute(get_crdn_sql,get_crdn_val)
+                                get_crdn_data = fbcursor.fetchall()
+                                
+                                try:
+                                    for p in get_payment_data:
+                                        sr_tree.insert(parent='',index='end',values=(p[4],'Payment',p[6],p[1],p[4],p[12],p[11],'0',p[11]))
+                                except:
+                                    pass
+
+                                try:
+                                    for t in get_ta_data:
+                                        sr_tree.insert(parent='',index='end',values=(t[1],'Time Activity','',t[3],t[1],'0.00','0.00','0.00','0.00'))
+                                except:
+                                    pass
+
+                                try:
+                                    for s in get_srp_data:
+                                        sr_tree.insert(parent='',index='end',values=(s[4],'Sales reciept',s[5],s[1],'','0.00',s[16],s[18],s[19]))
+                                except:
+                                    pass
+
+                                try:
+                                    for c in get_crdn_data:
+                                        sr_tree.insert(parent='',index='end',values=(c[4],'Credit Note',c[5],c[1],c[4],c[16],c[14],c[17],c[16]))
+                                except:
+                                    pass
+
+                        save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:cn_saveCreditnote())
                         sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button7")) 
 
                         def sr_goBack():
@@ -14141,7 +14912,7 @@ def main_sign_in():
                         fbcursor.execute(user_sql,user_val)
                         user_data = fbcursor.fetchone()
 
-                        comp_sql = 'SELECT cid FROM app1_company WHERE id_id=%s'
+                        comp_sql = 'SELECT * FROM app1_company WHERE id_id=%s'
                         comp_val = (user_data[0],)
                         fbcursor.execute(comp_sql,comp_val)
                         comp_data = fbcursor.fetchone()
@@ -14159,9 +14930,38 @@ def main_sign_in():
                                 cust_list.append(c[0] + " " + c[1])
                             cust_list.insert(0,'Select Customer')
 
+                        def es_fetch_custDetails(event):
+                            cust_name = es_custCombo.get()
+                            cust_fname = cust_name.split(" ")[0]
+                            cust_lname = cust_name.split(" ")[1]
+
+                            cust_sql = "SELECT * FROM app1_customer WHERE firstname=%s and lastname=%s and cid_id=%s"
+                            cust_val = (cust_fname,cust_lname,comp_data[0])
+                            fbcursor.execute(cust_sql,cust_val)
+                            cust_data = fbcursor.fetchone()
+
+                            inv_sql = "SELECT * FROM app1_invoice WHERE customername=%s and cid_id=%s"
+                            inv_val = (cust_name,comp_data[0])
+                            fbcursor.execute(inv_sql,inv_val)
+                            inv_data = fbcursor.fetchall()
+
+                            try:
+                                if not cust_data:
+                                    pass
+                                else:
+                                    es_email.delete(0,END)
+                                    es_email.insert(0,cust_data[9])
+                                    es_baddress.delete("1.0","end-1c")
+                                    es_baddress.insert("1.0",cust_data[2] + " " + cust_data[3] + "\n" + cust_data[4] + "\n" + cust_data[12] + "\n" + cust_data[13] + "\n" + cust_data[14] + "\n" + cust_data[15] + "\n" + cust_data[16])
+                                    es_pofsupply.delete(0,END)
+                                    es_pofsupply.insert(0,comp_data[4])
+                            except:
+                                pass
+
                         es_custCombo = ttk.Combobox(sr_Canvas_1,width=15,font=('arial 15'))
                         es_custCombo["values"] = cust_list
                         es_custCombo.current(0)
+                        es_custCombo.bind("<<ComboboxSelected>>",es_fetch_custDetails)
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=es_custCombo,tags=("combo3"))
 
                         def sr_addCustomer_1():
@@ -14757,7 +15557,7 @@ def main_sign_in():
                         es_label7 = Label(sr_Canvas_1,width=20,height=1,text="Place of Supply",font=('arial 12'),background='#1b3857',anchor="w",fg="white")
                         sr_Canvas_1.create_window(0,0,window=es_label7,tags=('label25'))
 
-                        es_pofsupply = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f')
+                        es_pofsupply = Entry(sr_Canvas_1,width=20,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=es_pofsupply,tags=("entry15"))
 
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line17"))
@@ -14773,8 +15573,8 @@ def main_sign_in():
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line27"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line28"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line29"))
-                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line30"))
-                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line31"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line81"))
+                        sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line82"))
 
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line32"))
                         sr_Canvas_1.create_line(0, 0, 0, 0, fill='gray',width=1,tags=("line33"))
@@ -14790,10 +15590,19 @@ def main_sign_in():
                         es_label14 = Label(sr_Canvas_1,width=3,height=1,text="1",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=es_label14,tags=('label32'))
 
+                        es_label29 = Label(sr_Canvas_1,width=3,height=1,text="2",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label29,tags=('label64'))
+
+                        es_label30 = Label(sr_Canvas_1,width=3,height=1,text="3",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label30,tags=('label65'))
+
+                        es_label31 = Label(sr_Canvas_1,width=3,height=1,text="4",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label31,tags=('label66'))
+
                         es_label18 = Label(sr_Canvas_1,width=15,height=1,text="Product / Service",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=es_label18,tags=('label33'))
 
-                        es_label19 = Label(sr_Canvas_1,width=14,height=1,text="HSN",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
+                        es_label19 = Label(sr_Canvas_1,width=10,height=1,text="HSN",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=es_label19,tags=('label34'))
 
                         es_label20 = Label(sr_Canvas_1,width=18,height=1,text="Description",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
@@ -14803,34 +15612,748 @@ def main_sign_in():
                         sr_Canvas_1.create_window(0,0,window=es_label21,tags=('label36'))
 
                         es_label22 = Label(sr_Canvas_1,width=10,height=1,text="Price",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=es_label22,tags=('label37'))
+                        sr_Canvas_1.create_window(0,0,window=es_label22,tags=('label86'))
 
                         es_label23 = Label(sr_Canvas_1,width=10,height=1,text="Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=es_label23,tags=('label38'))
+                        sr_Canvas_1.create_window(0,0,window=es_label23,tags=('label87'))
 
                         es_label24 = Label(sr_Canvas_1,width=10,height=1,text="Tax (%)",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
-                        sr_Canvas_1.create_window(0,0,window=es_label24,tags=('label39'))
+                        sr_Canvas_1.create_window(0,0,window=es_label24,tags=('label88'))
 
-                        est_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
+                        user_sql = "SELECT id FROM auth_user WHERE username=%s"
+                        user_val = (nm_ent.get(),)
+                        fbcursor.execute(user_sql,user_val)
+                        user_data = fbcursor.fetchone()
+
+                        comp_sql = 'SELECT * FROM app1_company WHERE id_id=%s'
+                        comp_val = (user_data[0],)
+                        fbcursor.execute(comp_sql,comp_val)
+                        comp_data = fbcursor.fetchone()
+
+                        get_inventory_sql = "SELECT * FROM app1_inventory WHERE cid_id=%s" 
+                        get_inventory_val = (comp_data[0],)                      
+                        fbcursor.execute(get_inventory_sql,get_inventory_val)
+                        get_inventory_data = fbcursor.fetchall()
+
+                        get_noninventory_sql = "SELECT * FROM app1_noninventory WHERE cid_id=%s" 
+                        get_noninventory_val = (comp_data[0],)                      
+                        fbcursor.execute(get_noninventory_sql,get_noninventory_val)
+                        get_noninventory_data = fbcursor.fetchall()
+
+                        get_bundle_sql = "SELECT * FROM app1_bundle WHERE cid_id=%s" 
+                        get_bundle_val = (comp_data[0],)                      
+                        fbcursor.execute(get_bundle_sql,get_bundle_val)
+                        get_bundle_data = fbcursor.fetchall()
+
+                        product_list = []
+
+                        if not get_inventory_data:
+                            pass
+                        else:
+                            for i in get_inventory_data:
+                                product_list.append(i[2])
+
+                        if not get_noninventory_data:
+                            pass
+                        else:
+                            for n in get_noninventory_data:
+                                product_list.append(n[2])
+
+                        if not get_bundle_data:
+                            pass
+                        else:
+                            for b in get_bundle_data:
+                                product_list.append(b[2])
+                        
+                        product_list.insert(0,"Select Product")
+
+                        def es_fetch_proDetails1(event):
+                            global get_pro_data3
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (est_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (est_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (est_entry1.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label67",state='normal')
+                                    es_label32.config(text="Available Qty : " + get_pro_data[7])
+                                    est_entry2.delete(0,END)
+                                    est_entry2.insert(0,get_pro_data[4])
+                                    est_entry3.delete(0,END)
+                                    est_entry3.insert(0,get_pro_data[11])
+                                    est_entry5.delete(0,END)
+                                    est_entry5.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label67",state='normal')
+                                    es_label32.config(text="Available Qty : " + get_pro_data1[17])
+                                    est_entry2.delete(0,END)
+                                    est_entry2.insert(0,get_pro_data1[4])
+                                    est_entry3.delete(0,END)
+                                    est_entry3.insert(0,get_pro_data1[7])
+                                    est_entry5.delete(0,END)
+                                    est_entry5.insert(0,get_pro_data1[8])
+                                except:
+                                    pass
+                            else:
+                                try:
+                                    sr_Canvas_1.itemconfig("label67",state='hidden')
+                                    est_entry2.delete(0,END)
+                                    est_entry2.insert(0,get_pro_data3[3])
+                                    est_entry3.delete(0,END)
+                                    est_entry3.insert(0,get_pro_data3[4])
+                                    est_entry5.delete(0,END)
+                                    est_entry5.insert(0,get_pro_data3[33])
+                                except:
+                                    pass
+
+                        est_entry1 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry1['values'] = product_list
+                        est_entry1.current(0)
+                        est_entry1.bind("<<ComboboxSelected>>",es_fetch_proDetails1)
                         sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry1,tags=("combo5"))
 
-                        est_entry2 = Entry(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry2,tags=("entry18"))
+                        est_entry2 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry2,tags=("entry73"))
 
-                        est_entry3 = Entry(sr_Canvas_1,width=17,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry3,tags=("entry19"))
+                        est_entry3 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry3,tags=("entry74"))
 
-                        est_entry4 = Entry(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry4,tags=("entry20"))
+                        def est_calculateTotal1(event,s):
+                            try:
+                                if s == 1:
+                                    name = est_entry1.get()
+                                    qty = est_entry4.get()
+                                elif s == 2:
+                                    name = est_entry11.get()
+                                    qty = est_entry14.get()
+                                elif s == 3:
+                                    name = est_entry18.get()
+                                    qty = est_entry21.get()
+                                elif s == 4:
+                                    name = est_entry25.get()
+                                    qty = est_entry28.get()
 
-                        est_entry5 = Entry(sr_Canvas_1,width=14,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry5,tags=("entry21"))
+                                if qty != 0:
+                                    global tax_tot1,tax_tot2,tax_tot3,tax_tot4
+                                    tax_tot1 = 0.0
+                                    tax_tot2 = 0.0
+                                    tax_tot3 = 0.0
+                                    tax_tot4 = 0.0
 
-                        est_entry6 = Entry(sr_Canvas_1,width=13,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry6,tags=("entry22"))
+                                    try:
+                                        get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql,get_pro_val)
+                                        get_pro_data = fbcursor.fetchone()
 
-                        est_entry7 = ttk.Combobox(sr_Canvas_1,width=7,font=('arial 15'),background='#2f516f',foreground='white')
-                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry7,tags=("combo6"))
+                                        get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                        get_pro_val1 = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                        get_pro_data1 = fbcursor.fetchone()
+
+                                        get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                        get_pro_val3 = (name,comp_data[0])
+                                        fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                        get_pro_data3 = fbcursor.fetchone()
+                                    except:
+                                        pass
+                                    if s == 1:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            est_entry6.delete(0,END)
+                                            est_entry6.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            est_entry6.delete(0,END)
+                                            est_entry6.insert(0,tot)
+                                        else:
+                                            tot = int(get_pro_data3[33]) * int(qty)
+                                            est_entry6.delete(0,END)
+                                            est_entry6.insert(0,tot)
+                                    elif s == 2:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            est_entry16.delete(0,END)
+                                            est_entry16.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            est_entry16.delete(0,END)
+                                            est_entry16.insert(0,tot)
+                                        else:
+                                            tot = int(get_pro_data3[33]) * int(qty)
+                                            est_entry16.delete(0,END)
+                                            est_entry16.insert(0,tot)
+                                    elif s == 3:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            est_entry23.delete(0,END)
+                                            est_entry23.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            est_entry23.delete(0,END)
+                                            est_entry23.insert(0,tot)
+                                        else:
+                                            tot = int(get_pro_data3[33]) * int(qty)
+                                            est_entry23.delete(0,END)
+                                            est_entry23.insert(0,tot)
+                                    elif s == 4:
+                                        if get_pro_data is not None:
+                                            tot = int(get_pro_data[12]) * int(qty)
+                                            est_entry30.delete(0,END)
+                                            est_entry30.insert(0,tot)
+                                        elif get_pro_data1 is not None:
+                                            tot = int(get_pro_data1[8]) * int(qty)
+                                            est_entry30.delete(0,END)
+                                            est_entry30.insert(0,tot)
+                                        else:
+                                            tot = int(get_pro_data3[33]) * int(qty)
+                                            est_entry30.delete(0,END)
+                                            est_entry30.insert(0,tot)
+                                    
+                                    est_entry8.delete(0,END)
+                                    est_entry9.delete(0,END)
+                                    est_entry10.delete(0,END)
+
+                                    def split_gst(string):
+                                        pattern1 = r'\(+'
+                                        pattern2 = r'\%+'
+                                        split1 = re.split(pattern1,string)
+                                        split2 = re.split(pattern2,split1[1])
+                                        return split2
+
+                                    #product gst -----------------------------
+                                    try:
+                                        gst_value1 = split_gst(est_entry7.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value2 = split_gst(est_entry17.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value3 = split_gst(est_entry24.get())
+                                    except:
+                                        pass
+                                    try:
+                                        gst_value4 = split_gst(est_entry31.get())
+                                    except:
+                                        pass
+
+
+                                    try:
+                                        est_entry8.insert(0,float(est_entry6.get()) + float(est_entry16.get()) + float(est_entry23.get()) + float(est_entry30.get()))
+                                        if est_entry7.get() == "Choose" and est_entry17.get() == "Choose" and est_entry24.get() == "Choose" and est_entry31.get() == "Choose":
+                                            ptax_total = 0
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() == "Choose" and est_entry24.get() == "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            ptax_total = tax_tot1
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() != "Choose" and est_entry24.get() == "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() != "Choose" and est_entry24.get() != "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot3
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() != "Choose" and est_entry24.get() == "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+                                            ptax_total = tax_tot2
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() != "Choose" and est_entry24.get() != "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() != "Choose" and est_entry24.get() == "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot4
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() != "Choose" and est_entry24.get() != "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot2 + tax_tot3 + tax_tot4
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() == "Choose" and est_entry24.get() != "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot3
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() == "Choose" and est_entry24.get() != "Choose" and est_entry31.get() == "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() == "Choose" and est_entry24.get() != "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot3 + tax_tot4
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() == "Choose" and est_entry24.get() != "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot3 + tax_tot4
+                                        elif est_entry7.get() == "Choose" and est_entry17.get() == "Choose" and est_entry24.get() == "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot4
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() == "Choose" and est_entry24.get() == "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot4
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() != "Choose" and est_entry24.get() == "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot4
+                                        elif est_entry7.get() != "Choose" and est_entry17.get() != "Choose" and est_entry24.get() != "Choose" and est_entry31.get() != "Choose":
+                                            if gst_value1[0] == "0" or est_entry7.get() == "Exempt GST(0%)" or est_entry7.get() == "Out of Scope(0%)":
+                                                tax_tot1 = 0
+                                            else:
+                                                tax_tot1 = (float(est_entry6.get()) * float(float((gst_value1[0]))))/100
+                                            
+                                            if gst_value2 == "0" or est_entry17.get() == "Exempt GST(0%)" or est_entry17.get() == "Out of Scope(0%)":
+                                                tax_tot2 = 0
+                                            else:
+                                                tax_tot2 = (float(est_entry16.get()) * float(float((gst_value2[0]))))/100
+
+                                            if gst_value3 == "0" or est_entry24.get() == "Exempt GST(0%)" or est_entry24.get() == "Out of Scope(0%)":
+                                                tax_tot3 = 0
+                                            else:
+                                                tax_tot3 = (float(est_entry23.get()) * float(float((gst_value3[0]))))/100
+
+                                            if gst_value4 == "0" or est_entry31.get() == "Exempt GST(0%)" or est_entry31.get() == "Out of Scope(0%)":
+                                                tax_tot4 = 0
+                                            else:
+                                                tax_tot4 = (float(est_entry30.get()) * float(float((gst_value4[0]))))/100
+                                            ptax_total = tax_tot1 + tax_tot2 + tax_tot3 + tax_tot4
+
+                                        est_entry9.insert(0,ptax_total)
+                                        est_entry10.insert(0,float(est_entry8.get()) + float(float(est_entry9.get())))
+                                    except:
+                                        pass
+                            except:
+                                pass
+
+                        est_entry4 = Spinbox(sr_Canvas_1,from_=0,to=100,width=7,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        est_entry4.bind("<Key>",lambda event,sp = 1:est_calculateTotal1(event,sp))
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry4,tags=("entry75"))
+
+                        est_entry5 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry5,tags=("entry76"))
+
+                        est_entry6 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        est_entry6.delete(0,END)
+                        est_entry6.insert(0,0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry6,tags=("entry77"))
+
+                        est_entry7 = ttk.Combobox(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='black')
+                        cplace_gstlist = ['Choose','28.0% GST(28%)','18.0% GST(18%)','12.0% GST(12%)','06.0% GST(06%)',
+                            '05.0% GST(05%)','03.0% GST(03%)','0.25% GST(0.25%)','0.0% GST(0%)','Exempt GST(0%)','Out of Scope(0%)']
+                        est_entry7['values'] = cplace_gstlist
+                        est_entry7.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry7,tags=("combo28"))
+
+                        def es_fetch_proDetails2(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (est_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (est_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (est_entry11.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #----------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label68",state='normal')
+                                    es_label33.config(text="Available Qty : " + get_pro_data[7])
+                                    est_entry12.delete(0,END)
+                                    est_entry12.insert(0,get_pro_data[4])
+                                    est_entry13.delete(0,END)
+                                    est_entry13.insert(0,get_pro_data[11])
+                                    est_entry15.delete(0,END)
+                                    est_entry15.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label68",state='normal')
+                                    es_label33.config(text="Available Qty : " + get_pro_data1[17])
+                                    est_entry12.delete(0,END)
+                                    est_entry12.insert(0,get_pro_data1[4])
+                                    est_entry13.delete(0,END)
+                                    est_entry13.insert(0,get_pro_data1[7])
+                                    est_entry15.delete(0,END)
+                                    est_entry15.insert(0,get_pro_data1[8])
+                                except:
+                                    pass
+                            else:
+                                try:
+                                    sr_Canvas_1.itemconfig("label68",state='hidden')
+                                    est_entry12.delete(0,END)
+                                    est_entry12.insert(0,get_pro_data3[3])
+                                    est_entry13.delete(0,END)
+                                    est_entry13.insert(0,get_pro_data3[4])
+                                    est_entry15.delete(0,END)
+                                    est_entry15.insert(0,get_pro_data3[33])
+                                except:
+                                    pass
+
+                        est_entry11 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry11['values'] = product_list
+                        est_entry11.current(0)
+                        est_entry11.bind("<<ComboboxSelected>>",es_fetch_proDetails2)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry11,tags=("combo14"))
+
+                        est_entry12 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry12,tags=("entry78"))
+
+                        est_entry13 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry13,tags=("entry79"))
+
+                        est_entry14 = Spinbox(sr_Canvas_1,from_=0,to=100,width=7,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        est_entry14.bind("<Key>",lambda event,sp = 2:est_calculateTotal1(event,sp))
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry14,tags=("entry80"))
+
+                        est_entry15 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry15,tags=("entry81"))
+
+                        est_entry16 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        est_entry16.delete(0,END)
+                        est_entry16.insert(0,0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry16,tags=("entry82"))
+
+                        est_entry17 = ttk.Combobox(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry17['values'] = cplace_gstlist
+                        est_entry17.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry17,tags=("combo29"))
+
+                        def es_fetch_proDetails3(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (est_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (est_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (est_entry18.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label69",state='normal')
+                                    es_label34.config(text="Available Qty : " + get_pro_data[7])
+                                    est_entry19.delete(0,END)
+                                    est_entry19.insert(0,get_pro_data[4])
+                                    est_entry20.delete(0,END)
+                                    est_entry20.insert(0,get_pro_data[11])
+                                    est_entry22.delete(0,END)
+                                    est_entry22.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label69",state='normal')
+                                    es_label34.config(text="Available Qty : " + get_pro_data1[17])
+                                    est_entry19.delete(0,END)
+                                    est_entry19.insert(0,get_pro_data1[4])
+                                    est_entry20.delete(0,END)
+                                    est_entry20.insert(0,get_pro_data1[7])
+                                    est_entry22.delete(0,END)
+                                    est_entry22.insert(0,get_pro_data1[8])
+                                except:
+                                    pass
+                            else:
+                                try:
+                                    sr_Canvas_1.itemconfig("label69",state='hidden')
+                                    est_entry19.delete(0,END)
+                                    est_entry19.insert(0,get_pro_data3[3])
+                                    est_entry20.delete(0,END)
+                                    est_entry20.insert(0,get_pro_data3[4])
+                                    est_entry22.delete(0,END)
+                                    est_entry22.insert(0,get_pro_data3[33])
+                                except:
+                                    pass
+
+                        est_entry18 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry18['values'] = product_list
+                        est_entry18.current(0)
+                        est_entry18.bind("<<ComboboxSelected>>",es_fetch_proDetails3)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry18,tags=("combo16"))
+
+                        est_entry19 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry19,tags=("entry83"))
+
+                        est_entry20 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry20,tags=("entry84"))
+
+                        est_entry21 = Spinbox(sr_Canvas_1,from_=0,to=100,width=7,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        est_entry21.bind("<Key>",lambda event,sp = 3:est_calculateTotal1(event,sp))
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry21,tags=("entry85"))
+
+                        est_entry22 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry22,tags=("entry86"))
+
+                        est_entry23 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        est_entry23.delete(0,END)
+                        est_entry23.insert(0,0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry23,tags=("entry87"))
+
+                        est_entry24 = ttk.Combobox(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry24['values'] = cplace_gstlist
+                        est_entry24.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry24,tags=("combo30"))
+
+                        def es_fetch_proDetails4(event):
+                            try:
+                                get_pro_sql = "SELECT * FROM app1_inventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val = (est_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql,get_pro_val)
+                                get_pro_data = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql1 = "SELECT * FROM app1_noninventory WHERE name=%s AND cid_id=%s"
+                                get_pro_val1 = (est_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql1,get_pro_val1)
+                                get_pro_data1 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            try:
+                                get_pro_sql3 = "SELECT * FROM app1_bundle WHERE name=%s AND cid_id=%s"
+                                get_pro_val3 = (est_entry25.get(),comp_data[0])
+                                fbcursor.execute(get_pro_sql3,get_pro_val3)
+                                get_pro_data3 = fbcursor.fetchone()
+                            except:
+                                pass
+
+                            #--------------------------------------------------------
+                            if get_pro_data is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label70",state='normal')
+                                    es_label35.config(text="Available Qty : " + get_pro_data[7])
+                                    est_entry26.delete(0,END)
+                                    est_entry26.insert(0,get_pro_data[4])
+                                    est_entry27.delete(0,END)
+                                    est_entry27.insert(0,get_pro_data[11])
+                                    est_entry29.delete(0,END)
+                                    est_entry29.insert(0,get_pro_data[12])
+                                except:
+                                    pass
+                            elif get_pro_data1 is not None:
+                                try:
+                                    sr_Canvas_1.itemconfig("label70",state='normal')
+                                    es_label35.config(text="Available Qty : " + get_pro_data1[17])
+                                    est_entry26.delete(0,END)
+                                    est_entry26.insert(0,get_pro_data1[4])
+                                    est_entry27.delete(0,END)
+                                    est_entry27.insert(0,get_pro_data1[7])
+                                    est_entry29.delete(0,END)
+                                    est_entry29.insert(0,get_pro_data1[8])
+                                except:
+                                    pass
+                            else:
+                                try:
+                                    sr_Canvas_1.itemconfig("label70",state='hidden')
+                                    est_entry26.delete(0,END)
+                                    est_entry26.insert(0,get_pro_data3[3])
+                                    est_entry27.delete(0,END)
+                                    est_entry27.insert(0,get_pro_data3[4])
+                                    est_entry29.delete(0,END)
+                                    est_entry29.insert(0,get_pro_data3[33])
+                                except:
+                                    pass
+
+                        est_entry25 = ttk.Combobox(sr_Canvas_1,width=10,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry25['values'] = product_list
+                        est_entry25.current(0)
+                        est_entry25.bind("<<ComboboxSelected>>",es_fetch_proDetails4)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry25,tags=("combo18"))
+
+                        est_entry26 = Entry(sr_Canvas_1,width=9,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry26,tags=("entry88"))
+
+                        est_entry27 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry27,tags=("entry89"))
+
+                        est_entry28 = Spinbox(sr_Canvas_1,from_=0,to=100,width=7,font=('arial 15'),background='#2f516f',foreground='white',justify=RIGHT)
+                        est_entry28.bind("<Key>",lambda event,sp = 4:est_calculateTotal1(event,sp))
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry28,tags=("entry90"))
+
+                        est_entry29 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry29,tags=("entry91"))
+
+                        est_entry30 = Entry(sr_Canvas_1,width=15,font=('arial 15'),background='#2f516f',foreground='white')
+                        est_entry30.delete(0,END)
+                        est_entry30.insert(0,0)
+                        sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry30,tags=("entry92"))
+
+                        est_entry31 = ttk.Combobox(sr_Canvas_1,width=11,font=('arial 15'),background='#2f516f',foreground='black')
+                        est_entry31['values'] = cplace_gstlist
+                        est_entry31.current(0)
+                        sr_Canvas_1.create_window(0,0,anchor='c',window=est_entry31,tags=("combo31"))
+
+                        es_label32 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label32,state=HIDDEN,tags=('label67'))
+
+                        es_label33 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label33,state=HIDDEN,tags=('label68'))
+
+                        es_label34 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label34,state=HIDDEN,tags=('label69'))
+
+                        es_label35 = Label(sr_Canvas_1,width=17,height=1,text="",font=('arial 8'),background='#1b3857',anchor="c",fg="white")
+                        sr_Canvas_1.create_window(0,0,window=es_label35,state=HIDDEN,tags=('label70'))
 
                         es_label25 = Label(sr_Canvas_1,width=10,height=1,text="Sub Total",font=('arial 12'),background='#1b3857',anchor="c",fg="white")
                         sr_Canvas_1.create_window(0,0,window=es_label25,tags=('label40'))
@@ -14850,7 +16373,155 @@ def main_sign_in():
                         est_entry10 = Entry(sr_Canvas_1,width=24,font=('arial 15'),background='#2f516f',foreground='white')
                         sr_Canvas_1.create_window(0,0,anchor='nw',window=est_entry10,tags=("entry25"))
 
-                        save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0)
+                        def es_saveEstimate():
+                            get_est_sql = "SELECT * FROM app1_estimate ORDER BY estimateid DESC LIMIT 1"
+                            fbcursor.execute(get_est_sql)
+                            get_est_data = fbcursor.fetchone()
+
+                            def split_gst(string):
+                                pattern1 = r'\(+'
+                                pattern2 = r'\%+'
+                                split1 = re.split(pattern1,string)
+                                split2 = re.split(pattern2,split1[1])
+                                return split2[0]
+
+                            customer = es_custCombo.get()
+                            email = es_email.get()
+                            billingaddress = es_baddress.get("1.0","end-1c")
+                            estimatedate = es_estdate.get_date()
+                            expirationdate = es_expdate.get_date()
+                            placeofsupply = es_pofsupply.get()
+
+                            if not get_est_data:
+                                estimateno = "1001"
+                            else:
+                                estimateno = int(get_est_data[6]) + 1
+                            if est_entry1.get() == "Select Product" or est_entry1.get() == '':
+                                product = ''
+                            else:
+                                product = est_entry1.get()
+                            description = est_entry3.get()
+                            hsn = est_entry2.get()
+                            qty = est_entry4.get()
+                            rate = est_entry5.get()
+                            try:
+                                tax = split_gst(est_entry7.get())
+                            except:
+                                tax = 0
+                            total = est_entry6.get()
+                            taxamount = est_entry9.get()
+                            subtotal = est_entry8.get()
+                            estimatetotal = est_entry10.get()
+                            if est_entry11.get() == "Select Product" or est_entry11.get() == '':
+                                product1 = ''
+                            else:
+                                product1 = est_entry11.get()
+                            description1 = est_entry13.get()
+                            hsn1 = est_entry12.get()
+                            qty1 = est_entry14.get()
+                            rate1 = est_entry15.get()
+                            try:
+                                tax1 = split_gst(est_entry17.get()) 
+                            except:
+                                tax1 = 0
+                            total1 = est_entry16.get()
+                            if est_entry18.get() == "Select Product" or est_entry18.get() == '':
+                                product2 = ''
+                            else:
+                                product2 = est_entry18.get()
+                            description2 = est_entry20.get()
+                            hsn2 = est_entry19.get()
+                            qty2 = est_entry21.get()
+                            rate2 = est_entry22.get()
+                            try:
+                                tax2 = split_gst(est_entry24.get())
+                            except:
+                                tax2 = 0
+                            total2 = est_entry23.get()
+                            if est_entry25.get() == "Select Product" or est_entry25.get() == '':
+                                product3 = ''
+                            else:
+                                product3 = est_entry25.get()
+                            description3 = est_entry27.get()
+                            hsn3 = est_entry26.get()
+                            qty3 = est_entry28.get()
+                            rate3 = est_entry29.get()
+                            try:
+                                tax3 = split_gst(est_entry31.get())
+                            except:
+                                tax3 = 0
+                            total3 = est_entry30.get()
+                            cid_id = comp_data[0]
+
+                            if customer == "Select Customer" or customer == "" or placeofsupply == "":
+                                pass
+                            else:
+                                ins_est_sql = "INSERT INTO app1_estimate(customer,email,billingaddress,estimatedate,expirationdate,placeofsupply,estimateno,product,description,hsn,qty,rate,tax,total,taxamount,subtotal,estimatetotal,product1,description1,hsn1,qty1,rate1,tax1,total1,product2,description2,hsn2,qty2,rate2,tax2,total2,product3,description3,hsn3,qty3,rate3,tax3,total3,cid_id) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                                ins_est_val = (customer,email,billingaddress,estimatedate,expirationdate,placeofsupply,estimateno,product,description,hsn,qty,rate,tax,total,taxamount,subtotal,estimatetotal,product1,description1,hsn1,qty1,rate1,tax1,total1,product2,description2,hsn2,qty2,rate2,tax2,total2,product3,description3,hsn3,qty3,rate3,tax3,total3,cid_id)
+                                fbcursor.execute(ins_est_sql,ins_est_val)
+                                finsysdb.commit()
+
+
+                            sr_Frame_1.destroy()
+                            sr_Frame.grid(row=0,column=0,sticky='nsew')
+
+                            get_payment_sql = "SELECT * FROM app1_payment WHERE cid_id=%s"
+                            get_payment_val = (comp_data[0],)
+                            fbcursor.execute(get_payment_sql,get_payment_val)
+                            get_payment_data = fbcursor.fetchall()
+
+                            get_ta_sql = "SELECT * FROM app1_timeactsale WHERE cid_id=%s"
+                            get_ta_val = (comp_data[0],)
+                            fbcursor.execute(get_ta_sql,get_ta_val)
+                            get_ta_data = fbcursor.fetchall()
+                            
+                            get_srp_sql = "SELECT * FROM app1_salesrecpts WHERE cid_id=%s"
+                            get_srp_val = (comp_data[0],)
+                            fbcursor.execute(get_srp_sql,get_srp_val)
+                            get_srp_data = fbcursor.fetchall()
+
+                            get_crdn_sql = "SELECT * FROM app1_credit WHERE cid_id=%s"
+                            get_crdn_val = (comp_data[0],)
+                            fbcursor.execute(get_crdn_sql,get_crdn_val)
+                            get_crdn_data = fbcursor.fetchall()
+
+                            get_est_sql = "SELECT * FROM app1_estimate WHERE cid_id=%s"
+                            get_est_val = (comp_data[0],)
+                            fbcursor.execute(get_est_sql,get_est_val)
+                            get_est_data = fbcursor.fetchall()
+                            
+                            try:
+                                for p in get_payment_data:
+                                    sr_tree.insert(parent='',index='end',values=(p[4],'Payment',p[6],p[1],p[4],p[12],p[11],'0',p[11]))
+                            except:
+                                pass
+
+                            try:
+                                for t in get_ta_data:
+                                    sr_tree.insert(parent='',index='end',values=(t[1],'Time Activity','',t[3],t[1],'0.00','0.00','0.00','0.00'))
+                            except:
+                                pass
+
+                            try:
+                                for s in get_srp_data:
+                                    sr_tree.insert(parent='',index='end',values=(s[4],'Sales reciept',s[5],s[1],'','0.00',s[16],s[18],s[19]))
+                            except:
+                                pass
+
+                            try:
+                                for c in get_crdn_data:
+                                    sr_tree.insert(parent='',index='end',values=(c[4],'Credit Note',c[5],c[1],c[4],c[16],c[14],c[17],c[16]))
+                            except:
+                                pass
+
+                            try:
+                                for e in get_est_data:
+                                    sr_tree.insert(parent='',index='end',values=(e[4],'Estimate',e[6],e[1],e[4],"0.00",e[15],e[38],e[16]))
+                            except:
+                                pass
+
+
+                        save_btn = Button(sr_Canvas_1,text='Save',width=20,height=2,font=('arial 10 bold'),background="#198fed",activebackground="#198fed",foreground="white",activeforeground="white",bd=0,command=lambda:es_saveEstimate())
                         sr_Canvas_1.create_window(0,0,window=save_btn,tags=("button7")) 
 
                         def sr_goBack():
@@ -14868,18 +16539,18 @@ def main_sign_in():
 
                         cwidth = root.winfo_screenwidth()
 
-                        es_creditdate = DateEntry(sr_Canvas_1,width=19,date_pattern="yyyy-mm-dd",font=('arial 15'),background='#2f516f',foreground='white')
+                        es_estdate = DateEntry(sr_Canvas_1,width=19,date_pattern="yyyy-mm-dd",font=('arial 15'),background='#2f516f',foreground='white')
 
                         es_expdate = DateEntry(sr_Canvas_1,width=19,date_pattern="yyyy-mm-dd",font=('arial 15'),background='#2f516f',foreground='white') 
 
                         if cwidth > 1280:
-                            sr_Canvas_1.create_window(495,442,anchor='nw',window=es_creditdate,tags=("date"))
+                            sr_Canvas_1.create_window(495,442,anchor='nw',window=es_estdate,tags=("date"))
                             sr_Canvas_1.create_window(775,442,anchor='nw',window=es_expdate,tags=("date1"))
                         elif cwidth <= 1024:
-                            sr_Canvas_1.create_window(370,455,anchor='nw',window=es_creditdate,tags=("date"))
+                            sr_Canvas_1.create_window(370,455,anchor='nw',window=es_estdate,tags=("date"))
                             sr_Canvas_1.create_window(580,455,anchor='nw',window=es_expdate,tags=("date1"))
                         else:
-                            sr_Canvas_1.create_window(465,407,anchor='nw',window=es_creditdate,tags=("date"))
+                            sr_Canvas_1.create_window(465,407,anchor='nw',window=es_estdate,tags=("date"))
                             sr_Canvas_1.create_window(730,407,anchor='nw',window=es_expdate,tags=("date1"))
                     elif sr_transCombo.get() == "Delayed Charge":
                         sr_Canvas_1.create_polygon(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,smooth=True,fill="#1b3857",tags=("poly1"))
